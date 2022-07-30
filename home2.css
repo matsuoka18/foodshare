@@ -1,0 +1,181 @@
+body{
+    margin:0;
+   padding:0;
+}
+.name{
+    margin:0;
+    padding:0;
+    width:15vw;
+    height:15vw;
+    background-color:#3A1F00;
+  }
+.name p {
+    margin:0;
+   color:white;
+   font-size:30px;
+   font-weight:600;
+   text-align:center;
+   padding-top:5vw;
+}
+.name2{
+  width:100vw;
+  height:10vw;
+  border-bottom:2px solid;
+  border-color:#5A3A1A;
+}
+.name2 h1{
+  float:right;
+  margin-right:40vw;
+  margin-top:3vw;
+  color:#5A3A1A;
+}
+.form{
+  width:85vw;
+  height:70vw;
+  margin-left:7vw;
+  margin-top:2.5vw;
+  border-radius:10px;
+  background-color:#C6AC8F;
+  text-align:center;
+}
+.form p{
+  font-size:30px;
+  padding-top:2.5vw;
+}
+.form input{
+  width:50vw;
+  height:4vw;
+ font-size:25px;
+ border-radius:10px;
+ text-align:center;
+ border:none;
+ outline-color:white;
+}
+.form2{
+  margin-left:15vw;
+  width:60vw;
+  height:20vw;
+  background-color:white;
+  border-radius:10px;
+  color:#5A3A1A;
+}
+.form2 p{
+  background-color:#3A1F00;
+  color:white;
+  border-radius:5px;
+  margin-left:-10px;
+ margin-right:-10px;
+ font-weight:600;
+ padding-top:20px;
+ padding-bottom:20px;
+}
+.form2 span{
+  display:inline;
+}
+.form3{
+  margin-left:15vw;
+  width:60vw;
+  height:30vw;
+  background-color:white;
+  border-radius:10px;
+  color:#5A3A1A;
+}
+.form3 p{
+  background-color:#3A1F00;
+  color:white;
+  border-radius:5px;
+  margin-left:-10px;
+ margin-right:-10px;
+ font-weight:600;
+ padding-top:20px;
+ padding-bottom:20px;
+}
+.form3 h2{
+  
+  margin-top:3vw;
+  font-size:30px;
+}
+.form4{
+  margin-left:15vw;
+  width:60vw;
+  height:20vw;
+  background-color:white;
+  border-radius:10px;
+  color:#5A3A1A;
+}
+.form4 p{
+  background-color:#3A1F00;
+  color:white;
+  border-radius:5px;
+  margin-left:-10px;
+ margin-right:-10px;
+ font-weight:600;
+ padding-top:20px;
+ padding-bottom:20px;
+}
+.form4 span{
+  display:inline;
+}
+
+.form5{
+  width:85vw;
+  height:60vw;
+  margin-left:7vw;
+  margin-top:2.5vw;
+  border-radius:10px;
+  background-color:#C6AC8F;
+  text-align:center;
+}
+.form5 p{
+  font-size:30px;
+  padding-top:2.5vw;
+}
+.form5 input{
+  width:50vw;
+  height:4vw;
+ font-size:25px;
+ border-radius:10px;
+ text-align:center;
+ border:none;
+ outline-color:white;
+}
+.passw{
+  background-color: white;
+}
+button{
+  background-color: #3A1F00;
+  width:15vw;
+  height:5vw;
+  color:white;
+  font-size:20px;
+  border:none;
+  border-radius:100px;
+  margin-top:5vw;
+}
+.che{
+ margin-top:10vw;
+ background-color:#C6AC8F;
+ border-radius:10px;
+ padding-top:10px;
+ padding-bottom:20px;
+}
+.che h2{
+  width:60vw;
+  background-color:#3A1F00;
+  color:white;
+  border-radius:5px;
+  margin-left:-10px;
+  padding-right:20px;
+ font-weight:600;
+ padding-top:20px;
+ padding-bottom:20px;
+ text-align:center;
+}
+.che2{
+  background-color:white;
+  width:60vw;
+  margin-left:15vw;
+  border-radius:10px;
+  padding-bottom:5vw;
+
+}

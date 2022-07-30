@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>商品編集ページ</title>
+  </head>
+  <body>
+        <inut type="text" id="shopname" placeholder="店舗名を入力" value="">
+        <input type="text" id="shopID" placeholder="店舗番号" value="">
+    <h1>商品を追加する</h1>
+    <div class="all1" id="all1"> <!--nh1 np1~3 np11~33-->
+    <div class="n2" id="n1">
+    <input type="text"class="nh1" id="nh1"value="店舗名を入力"></input>
+
+    <div class="nn2">
+      <input type="text"class="np1" id="np1"value="商品名を入力"></input>
+      <input type="text"class="np1" id="np11"value="値段を入力"></input>
+  </div>
+
+         <input type="text"class="np3" id="np111"value="商品説明を入力"></input>
+         <input type="file" id="example" multiple>
+         <p>商品のジャンルを選ぶ</p>
+         <select id="jan"name="example">
+     <option value="飯類">飯類</option>
+     <option value="麺類">麺類</option>
+     <option value="スイーツ">スイーツ</option>
+     </select>
+    </div>
+    <div class="n1" id="n1">
+    <h1 class="nh1" id="nh11">お店</h1>
+
+    <div class="nn1">
+    <p class="np1" id="np1_1"></p>
+    <p class="np2" id="np2_2"></p>
+  </div>
+         <div class="pic"id="pic"></div>
+                <p class="np3" id="np3_3"></p>
+                <p class="np4" id="np4_4"></p>
+                <p>完成型</p>
+    </div>
+  </div>
+
+<button onclick="send()">追加する</button>
+<button onclick="sen()">kako</button>
+<div id="preview"></div>
+<div id="preview2"></div>
+    <p id="text1"></p>
+    <p id="text2"></p>
+    <p id="text3"></p>
+<h1>店舗・商品の編集を行う</h1><!--この変更は編集追加で行える-->
+<div id="shopchange0">
+<button onclick="shop123()">店舗の変更をする</button>
+<input type="text" id="shopchange" value="">
+<p id="shopchange2"></p>
+</div>
+
+
+<button onclick="menuu()">商品の変更をする</button>
+<p>変更する商品を選ぶ</p>
+<input type="text" id="shopID2" value="">
+<form name="fo">
+<select id="name" name="name2">
+  <option>ジャンルを選ぶ</option>
+  <option id="na1"value=""></option>
+  <option id="na2"value=""></option>
+  <option id="na3"value=""></option>
+  <option id="na4"value=""></option>
+  <option id="na5"value=""></option>
+  <option id="na6"value=""></option>
+  <option id="na7"value=""></option>
+  <option id="na8"value=""></option>
+  <option id="na9"value=""></option>
+  <option id="na10"value=""></option>
+</select>
+</form>
+<button onclick="i32()">前の１０個を見る</button>
+<button onclick="i3()"id="ii3">次の１０個を見る</button>
+    <div class="all1" id="all1"> <!--nh1 np1~3 np11~33-->
+    <div class="n2" id="n1">
+    <input type="text"class="nh1" id="change1" value="店舗名を入力">
+
+    <div class="nn2">
+      <input type="text" class="np1"id="change2" value="">
+      <input type="text"class="np1" id="change3"value="値段を入力"></input>
+  </div>
+
+         <input type="text"class="np3" id="change4"value="商品説明を入力"></input>
+         <input type="file" id="change5" multiple>
+         <p>商品のジャンルを選ぶ</p>
+         <form name="fo2">
+         <select id="change6"name="example">
+     <option id="change6.2"value="">ジャンルを選んでください</option>
+     <option value="飯類">飯類</option>
+     <option value="麺類">麺類</option>
+     <option value="スイーツ">スイーツ</option>
+     </select>
+   </form>
+    </div>
+    <div class="n1" id="n1">
+    <h1 class="nh1" id="chancha1">お店</h1>
+
+    <div class="nn1">
+    <p class="np1" id="chanchan2"></p>
+    <p class="np2" id="chanchan3"></p>
+  </div>
+         <div class="pic"id="pic"></div>
+                <p class="np3" id="chanchan4"></p>
+                <p class="np4" id="chanchan5"></p>
+                <p>完成型</p>
+    </div>
+  </div>
+  <button onclick="change12()">変更</button>
+  <h1>商品の削除をする</h1>
+  <form name="fo3">
+<select name="name3">
+  <option>削除する商品を選ぶ</option>
+  <option id="na11"value=""></option>
+  <option id="na22"value=""></option>
+  <option id="na33"value=""></option>
+  <option id="na44"value=""></option>
+  <option id="na55"value=""></option>
+  <option id="na66"value=""></option>
+  <option id="na77"value=""></option>
+  <option id="na88"value=""></option>
+  <option id="na99"value=""></option>
+  <option id="na1010"value=""></option>
+</select>
+</form>
+<button onclick="i32()">前の１０個を見る</button>
+<button onclick="i3()"id="ii3">次の１０個を見る</button>
+<button onclick="kill()">削除</button>
+<button onclick="ki2()">削除2</button>
+
+           <style>
+           .n1{
+             border:1px solid;
+             width:40vw;
+             height:25vw;
+           }
+           .n1 p {
+             padding-bottom: 0px;
+             margin-bottom: 0px;
+             padding-right:10px;
+
+           }
+           .n1 h1{
+             padding-bottom:0;
+             margin-bottom:0;
+             margin-top:0;
+             padding-top:5;
+           }
+           .n1 img{
+             width:25vw;
+             float:right;
+           }
+           .nn1{
+             display:flex;
+              font-size:25px;
+           }
+           .nh1{
+             border:none;
+             font-size:25px;
+             font-weight:bold;
+           }
+           .n2{
+             border:1px solid;
+             width:40vw;
+             height:25vw;
+             margin-right:5vw;
+             float:right;
+           }
+           .n2 p {
+             padding-bottom: 0px;
+             margin-bottom: 0px;
+             padding-right:10px;
+
+           }
+           .n2 h1{
+             padding-bottom:0;
+             margin-bottom:0;
+             margin-top:0;
+             padding-top:5;
+           }
+           .n2 img{
+             width:25vw;
+             float:right;
+           }
+           .nn2{
+             display:flex;
+              font-size:25px;
+           }
+           .np1{
+             border:none;
+             font-size:25px;
+             margin-top:10px;
+           }
+           .np2{
+             margin-top:10px;
+             padding-left:10vw;
+           }
+           .np3{
+             border:none;
+             font-size:15px;
+             margin-top:0px;
+           }
+           .pic{
+             width:200px;
+             float:right;
+           }
+           </style>
+    <script>
+
+      //cookieから来る予定の情報たちの仮入力
+ shop = document.getElementById("shopname").value;
+  shopID = document.getElementById("shopID").value;
+      //プレビューと商品の変数追加
+//店舗名の変更
+document.getElementById("shopchange").addEventListener('keyup',shopcha);
+function shopcha(){
+  shop = document.getElementById("shopchange").value;
+  document.getElementById("shopchange2").innerHTML = "変更する店舗名"+shop;
+}
+//商品の編集
+function menuu(){
+  //name4/name5
+  shopID2 = document.getElementById("shopID2").value;
+  var url = "https://script.google.com/macros/s/AKfycbzgBDgDTZDt6D__ZX1WkTe01WIxfcq1puB0-VaC4OQIZvqME70W5axh-kkrdV8tAZQ/exec";
+  var data = [{
+    "name4":"商品編集",
+    "name5": shopID2
+  }]
+  var params = {
+    "method":"post",
+    "mode":"no-cors",
+    "Content-Type":"application/json",
+    "body":JSON.stringify(data)
+  }
+  fetch(url, params);
+  n();
+}
+function n(){
+  fetch('https://script.google.com/macros/s/AKfycbzgBDgDTZDt6D__ZX1WkTe01WIxfcq1puB0-VaC4OQIZvqME70W5axh-kkrdV8tAZQ/exec', {
+            method: "GET",
+            mode: "cors"
+          })
+          .then(response => {
+            if (response.ok) {
+              return response.json();
+            }
+            // 404 や 500 ステータスならここに到達する
+            throw new Error('Network response was not ok.');
+          })
+          .then(resJson => {
+          jj = resJson;
+          console.log(jj);
+          jjj = resJson.changedata[0].last;
+          console.log(jjj);
+          i = 0;
+          q = 0;
+          i4 = 0;
+          p1 = 0;
+          if(jjj>10){
+          i2 = 1;
+          p1 = 0;
+          n2();
+          }else{
+            p1 = 0;
+            i2 = 0;
+            document.getElementById("ii3").style.visibility = "hidden";
+n2();
+          }
+          })
+          .catch(error => {
+            // ネットワークエラーの場合はここに到達する
+            console.error(error);
+          })
+}
+function ki2(){
+  u = 0;
+  p1 = 0;
+  u4 = 0;
+  ki();
+}
+document.getElementById("name").addEventListener('change',aaa);
+function aaa(){
+namee = document.fo.name2;
+namee2 = namee.selectedIndex;
+if(namee2 == 0){
+  return;
+}else{
+namee2 = i4+namee2-1;
+console.log(namee2);
+}
+menu = jj.changedata[0].name[namee2];
+fee = jj.changedata[0].fee[namee2];
+express = jj.changedata[0].express[namee2];
+pic = jj.changedata[0].base64[namee2];
+genre = jj.changedata[0].genre[namee2];
+ne();
+}
+function ne(){
+  document.getElementById("change2").value = menu;
+  document.getElementById("change3").value = fee;
+  document.getElementById("change4").value = express;
+  //document.getElementById("change5").value = pic;
+  document.getElementById("change6.2").innerHTML = genre;
+  console.log(menu+fee+express+pic+genre);
+}
+
+function n2(){
+if(i == 0 && q < jjj){
+  document.getElementById("na1").innerHTML = jj.changedata[0].name[q];
+    document.getElementById("na11").innerHTML = jj.changedata[0].name[q];
+  i++;
+  q++;
+  n2();
+}
+else if(i == 1 && q < jjj){
+  document.getElementById("na2").innerHTML = jj.changedata[0].name[q];
+  document.getElementById("na22").innerHTML = jj.changedata[0].name[q];
+  i++;
+  q++;
+  n2();
+}
+else if(i == 2 && q < jjj){
+  document.getElementById("na3").innerHTML = jj.changedata[0].name[q];
+  document.getElementById("na33").innerHTML = jj.changedata[0].name[q];
+  i++;q++;
+  n2();
+}
+else if(i ==3 && q < jjj){
+  document.getElementById("na4").innerHTML = jj.changedata[0].name[q];
+  document.getElementById("na44").innerHTML = jj.changedata[0].name[q];
+  i++;q++;
+  n2();
+}
+else if(i ==4 && q < jjj){
+  document.getElementById("na5").innerHTML = jj.changedata[0].name[q];
+  document.getElementById("na55").innerHTML = jj.changedata[0].name[q];
+  i++;q++;
+  n2();
+}
+else if(i ==5 && q < jjj){
+  document.getElementById("na6").innerHTML = jj.changedata[0].name[q];
+    document.getElementById("na66").innerHTML = jj.changedata[0].name[q];
+  i++;q++;
+  n2();
+}
+else if(i ==6 && q < jjj){
+  document.getElementById("na7").innerHTML = jj.changedata[0].name[q];
+  document.getElementById("na77").innerHTML = jj.changedata[0].name[q];
+  i++;q++;
+  n2();
+}
+else if(i ==7 && q < jjj){
+  document.getElementById("na8").innerHTML = jj.changedata[0].name[q];
+    document.getElementById("na88").innerHTML = jj.changedata[0].name[q];
+  i++;q++;
+  n2();
+}
+else if(i ==8 && q < jjj){
+  document.getElementById("na9").innerHTML = jj.changedata[0].name[q];
+  document.getElementById("na99").innerHTML = jj.changedata[0].name[q];
+  i++;q++;
+  n2();
+}
+else if(i ==9 && q < jjj){
+  document.getElementById("na10").innerHTML = jj.changedata[0].name[q];
+    document.getElementById("na1010").innerHTML = jj.changedata[0].name[q];
+  i++;q++;
+  n2();
+}
+}
+function i3(){
+console.log(q);
+i = 0;
+i4 = 10;
+document.getElementById("na1").innerHTML = "";
+document.getElementById("na2").innerHTML = "";
+document.getElementById("na3").innerHTML = "";
+document.getElementById("na4").innerHTML = "";
+document.getElementById("na5").innerHTML = "";
+document.getElementById("na6").innerHTML = "";
+document.getElementById("na7").innerHTML = "";
+document.getElementById("na8").innerHTML = "";
+document.getElementById("na9").innerHTML = "";
+document.getElementById("na10").innerHTML = "";
+document.getElementById("na11").innerHTML = "";
+document.getElementById("na22").innerHTML = "";
+document.getElementById("na33").innerHTML = "";
+document.getElementById("na44").innerHTML = "";
+document.getElementById("na55").innerHTML = "";
+document.getElementById("na66").innerHTML = "";
+document.getElementById("na77").innerHTML = "";
+document.getElementById("na88").innerHTML = "";
+document.getElementById("na99").innerHTML = "";
+document.getElementById("na1010").innerHTML = "";
+n2();
+}
+function i32(){
+  i = 0;
+  i4 = 0;
+  q = 0;
+  document.getElementById("na1").innerHTML = "";
+  document.getElementById("na2").innerHTML = "";
+  document.getElementById("na3").innerHTML = "";
+  document.getElementById("na4").innerHTML = "";
+  document.getElementById("na5").innerHTML = "";
+  document.getElementById("na6").innerHTML = "";
+  document.getElementById("na7").innerHTML = "";
+  document.getElementById("na8").innerHTML = "";
+  document.getElementById("na9").innerHTML = "";
+  document.getElementById("na10").innerHTML = "";
+  document.getElementById("na11").innerHTML = "";
+document.getElementById("na22").innerHTML = "";
+document.getElementById("na33").innerHTML = "";
+document.getElementById("na44").innerHTML = "";
+document.getElementById("na55").innerHTML = "";
+document.getElementById("na66").innerHTML = "";
+document.getElementById("na77").innerHTML = "";
+document.getElementById("na88").innerHTML = "";
+document.getElementById("na99").innerHTML = "";
+document.getElementById("na1010").innerHTML = "";
+  n2();
+}
+function kill(){
+  killnum = document.fo3.name3;
+  killnum2 = killnum.selectedIndex;
+  console.log(killnum2);
+  if(killnum2 == 0){
+    return;
+  }else{
+  killnumber = i4+killnum2+1;
+  console.log(killnumber);
+}
+shopID2 = document.getElementById("shopID2").value;
+var url="https://script.google.com/macros/s/AKfycbzgBDgDTZDt6D__ZX1WkTe01WIxfcq1puB0-VaC4OQIZvqME70W5axh-kkrdV8tAZQ/exec";
+var data = [{
+  "name4":"商品削除",
+  "name5":shopID2,
+  "name10":killnumber
+}]
+var params = {
+"method":"post",
+"mode":"no-cors",
+"Content-Type":"application/json",
+"body":JSON.stringify(data)
+}
+fetch(url,params)
+}
+document.getElementById("change2").addEventListener('keyup',datachange);
+document.getElementById("change3").addEventListener('keyup',datachange);
+document.getElementById("change4").addEventListener('keyup',datachange);
+document.getElementById("change5").addEventListener('keyup',datachange);
+document.getElementById("change6").addEventListener('change',datachange);
+function datachange(){
+document.getElementById("chanchan2").innerHTML = document.getElementById("change2").value;
+document.getElementById("chanchan3").innerHTML = document.getElementById("change3").value;
+document.getElementById("chanchan4").innerHTML = document.getElementById("change4").value;
+//document.getElementById("pic").innerHTML = document.getElementById("cahnge5").value;
+form = document.fo2.example;
+form2 = form.selectedIndex;
+console.log(form2);
+if(form2 == 0){
+  document.getElementById("chanchan5").innerHTML = genre;
+  lgenre = genre;
+}else{
+document.getElementById("chanchan5").innerHTML = document.getElementById("change6").value;
+lgenre = document.getElementById("change6").value;
+}
+lmenu = document.getElementById("change2").value;
+lfee = document.getElementById("change3").value;
+lexpress = document.getElementById("change4").value;
+}
+
+
+
+     document.getElementById("np1").addEventListener('keyup',change);
+     document.getElementById("np11").addEventListener('keyup',change);
+     document.getElementById("np111").addEventListener('keyup',change);
+     document.getElementById("jan").addEventListener('change',change);
+     //nh1はクッキーから取得してくい本固定
+     function change(){
+       shop = document.getElementById("shopname").value;
+        shopID = document.getElementById("shopID").value;
+       menu  = document.getElementById("np1").value;
+       fee  = document.getElementById("np11").value;
+       express  = document.getElementById("np111").value;
+       janru  = document.getElementById("jan").value;
+
+document.getElementById("nh11").innerHTML = shop;
+document.getElementById("np1_1").innerHTML = menu;
+document.getElementById("np2_2").innerHTML = fee;
+document.getElementById("np3_3").innerHTML = express;
+document.getElementById("np4_4").innerHTML = janru;
+     }
+//画像処理
+      const fileInput = document.getElementById('example');
+const handleFileSelect = () => {
+  const files = fileInput.files;
+  for (let i = 0; i < files.length; i++) {
+    previewFile(files[i]);
+  }
+}
+fileInput.addEventListener('change', handleFileSelect);
+      function previewFile(file) {
+        // プレビュー画像を追加する要素
+        const preview = document.getElementById('pic');
+
+        // FileReaderオブジェクトを作成
+        const reader = new FileReader();
+
+        // URLとして読み込まれたときに実行する処理
+        reader.onload = function (e) {
+          imageUrl = e.target.result; // URLはevent.target.resultで呼び出せる
+          img = document.createElement("img"); // img要素を作成
+          img.src = imageUrl; // URLをimg要素にセット
+          preview.appendChild(img); // #previewの中に追加
+          alert(imageUrl);
+        }
+
+        // いざファイルをURLとして読み込む
+        reader.readAsDataURL(file);
+      }
+function sen(){
+  alert(document.getElementById("jan").value);
+}
+      //画像処理ここまで
+      //送信処理
+      function send(){
+        shop = document.getElementById("shopname").value;
+        shopID = document.getElementById("shopID").value;
+        var url="https://script.google.com/macros/s/AKfycbzgBDgDTZDt6D__ZX1WkTe01WIxfcq1puB0-VaC4OQIZvqME70W5axh-kkrdV8tAZQ/exec";
+        var data = [{
+          "name":shop,
+          "name1":menu,
+          "name2":fee,
+          "name3":express,
+          "name4":"追加",
+          "name5":shopID,
+          "name8":jan,
+          "name9":imageUrl
+        }]
+      var params = {
+        "method":"post",
+        "mode":"no-cors",
+        "Content-Type":"application/json",
+        "body":JSON.stringify(data)
+      }
+      fetch(url,params)
+    }
+      //送信処理ここまで
+      function shop123(){
+        shop12 = document.getElementById("shopchange").value;
+        shopID = document.getElementById("shopID").value;
+        console.log(shop12);
+        var url = "https://script.google.com/macros/s/AKfycbzgBDgDTZDt6D__ZX1WkTe01WIxfcq1puB0-VaC4OQIZvqME70W5axh-kkrdV8tAZQ/exec";
+        var data = [{
+          "name":shop12,
+          "name4":"店舗名編集",
+          "name5":shopID
+        }]
+        var params = {
+          "method":"post",
+          "mode":"no-cors",
+          "Content-Type":"application/json",
+          "body":JSON.stringify(data)
+        }
+        fetch(url,params)
+      }
+    function change12(){
+      shopID = document.getElementById("shopID").value;
+      namee2 = namee2 + 2;
+      alert(namee2);
+      var url = "https://script.google.com/macros/s/AKfycbzgBDgDTZDt6D__ZX1WkTe01WIxfcq1puB0-VaC4OQIZvqME70W5axh-kkrdV8tAZQ/exec";
+      var data = [{
+        "name":shopID,
+        "name1":lmenu,
+        "name2":lfee,
+        "name3":lexpress,
+        "name4":"商品関係編集",
+        "name5":shopID,
+        "name8":lgenre,
+        "name10":namee2
+      }]
+      var params = {
+        "method":"post",
+        "mode":"no-cors",
+        "Content-Type":"application/json",
+        "body":JSON.stringify(data)
+      }
+      console.log(data);
+      fetch(url,params)
+    }//y座用はnamee2から代用
+</script>
+  </body>
+</html>

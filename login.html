@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ログイン</title>
+  <link rel="stylesheet" href="home2.css">
+  </head>
+  <body>
+    <div class="name2">
+      <h1>ログイン</h1>
+<div class="name">
+<p>foodshare</p>
+</div>
+
+</div>
+<div class="form5">
+  　<div class="form2">
+     <p>店舗名</p>
+      <input type="text" id="shopname" placeholder="店舗名を入力" value="">
+      </div>
+      <div class="form4">
+      <p>パスワード</p>
+      <span id="passw"></span>
+      <input type="text" class="password"id="password" value="" placeholder="パスワードを入力">
+      </div>
+      <button onclick="login()">ログイン</button>
+      </div>
+      <style>
+
+      </style>
+          <script>
+            function login(){
+              fetch('https://script.google.com/macros/s/AKfycbz85vkB6zpJPOUFoNvpEplvGaiwpJjCxKKD52x7edAUOpwgJvOEoXToL7Mwvf0R22Y/exec', {
+                  method: "GET",
+                  mode: "cors"
+                })
+                .then(response => {
+                  if (response.ok) {
+                    return response.json();
+                  }
+                  // 404 や 500 ステータスならここに到達する
+                  throw new Error('Network response was not ok.');
+                })
+                .then(resJson => {
+                  text = JSON.stringify(resJson);
+                  console.log(text);
+                  text = JSON.parse(text);
+                  inputtext = document.getElementById("shopname").value;
+                  inputpassword = document.getElementById("password").value;
+                  sum = text.logindata[0].合計;
+                  //sum = sum.parseInt(sum);
+                  c = 0;
+                  for(var i = 0; i<sum; i++){
+                    text2 = text.logindata[0];
+                    name ="店舗"+i;
+                    shop = text2[name];
+                    console.log(shop)
+                    if(shop == inputtext){
+                      number = name;
+                      number2 =i;
+                      i = sum+1;
+                      c = 1;
+                      login2();
+                    }
+                    }
+                    if(c == 0){
+                      alert("店舗名を発見出来ませんでした");
+                  }
+
+              })
+                .catch(error => {
+                  // ネットワークエラーの場合はここに到達する
+                  console.error(error);
+                })
+            }
+      function login2(){
+      name2 = "パスワード"+number2;
+      password = text2[name2];
+      console.log(password);
+      if(password == inputpassword){
+        alert("ログインしました")
+        loginID = "loginID="+ inputtext;
+        PA = "pass="+ inputpassword;
+        shopnumber = "shopnumber="+number2;
+        document.cookie = loginID;
+        document.cookie = PA;
+        document.cookie = shopnumber;
+        location.href="店舗側.html"
+      }else{
+        alert("パスワードが間違っています")
+      }
+        //最初に店舗だけでデータが存在するか確認→その際０から変数をカウントして店舗を発見したときの変数の値でJSONからデータを取り、最後にパスワードとあっているか確認をする仕組みを作る
+      }
+      //ここのファイルでログイン情報をクッキーに書き込む
+          </script>
+    </body>
+</html>
