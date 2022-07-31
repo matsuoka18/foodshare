@@ -177,5 +177,268 @@ button{
   margin-left:15vw;
   border-radius:10px;
   padding-bottom:5vw;
+}
 
+.center{
+  width:85vw;
+  height:40vw;
+  margin-left:7vw;
+  margin-top:-2.5vw;
+  border-radius:10px;
+  background-color:#C6AC8F;
+  text-align:center;
+display: flex;
+}
+.center h1{
+  height:50px;
+  width:30vw;
+  text-align:center;
+ margin-right:0;
+ margin-left:30vw;
+  margin-top:0;
+  margin-bottom:0;
+  padding-top:2.5vw;
+}
+.center p {
+  margin-top:5vw;
+}
+.a{
+  height:50px;
+  margin-bottom:0;
+}
+.center button{
+  margin:50px;
+  width:250px;
+}
+.menu{
+margin-left:-50vw;
+margin-top:10vw;
+margin-bottom:5px;
+  width:40vw;
+  height:30vw;
+background-color:white;
+border-radius:10px;
+}
+.menu2{
+  margin-top:10vw;
+  margin-right:10vw;
+  margin-left:5vw;
+    width:40vw;
+    height:30vw;
+    background-color:white;
+    border-radius:10px;
+  }
+  .div1{
+    margin-left:5vw;
+    width:90vw;
+    
+    border-radius:10px;
+  }
+  .n1{
+    border:5px solid;
+    border-radius:10px;
+    border-color:#5A3A1A;
+    width:40vw;
+    height:25vw;
+  }
+  .n1 h1{
+    color:black;
+    margin:0;
+    margin-top:10px;
+    float:left;
+  }
+  .n1 p {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    padding-right:10px;
+
+  }
+  .n1 img{
+    width:25vw;
+    float:right;
+  } 
+
+  .nh1{
+    border:none;
+    font-size:25px;
+    font-weight:bold;
+    margin-right:0;
+    margin-top:10px;
+  
+  }
+  .nn1{
+    display:flex;
+    margin-top:5vw;
+    margin-left:0;
+  }
+  .npp1{
+    font-size:25px;
+  }
+  .npp2{
+    font-size:25px;
+    margin-left:15vw;
+  }
+  .npp3{
+    width:20vw;
+  }
+  .n2{
+    border:5px solid;
+    border-radius:10px;
+    border-color:#5A3A1A;
+    width:40vw;
+    height:25vw;
+    margin-right:5vw;
+    float:right;
+    background-color:white;
+  }
+  .n2 p {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    padding-right:10px;
+
+  }
+  .n2 h1{
+    padding-bottom:0;
+    margin-bottom:0;
+    margin-top:0;
+    padding-top:5;
+  }
+  .n2 img{
+    width:25vw;
+    float:right;
+  }
+  .nn2{
+    display:flex;
+     font-size:25px;
+  }
+  .np1{
+    border:none;
+    width:19vw;
+    height:30px;
+    font-size:25px;
+    margin-left:0;
+    margin-top:2vw;
+ 
+  }
+  .np2{
+   margin-top:2vw;
+    margin-right:0;
+    margin-left:0;
+
+  }
+  .np3{
+    border:none;
+    font-size:15px;
+    margin-top:0px;
+
+  }
+  .pic{
+    width:200px;
+    float:right;
+  }
+  .div1{
+    background-color:#C6AC8F;
+    margin-right:2vw;
+    margin-top:-2vw;
+    padding-bottom:5vw;
+    padding-left:2vw;
+    padding-top:1vw;
+  }
+  .div1p{
+    font-size:30px;
+    color:#5A3A1A;
+    font-weight:600;
+    text-align:center;
+  }
+  .div1 button{
+    margin-left:37vw;
+  }
+ .n1{
+  background-color:white;
+  border-radius:10px;
+  border-color:#5A3A1A;
+ }
+.div2{
+  background-color:#C6AC8F;
+  width:92vw;
+  margin-left:5vw;
+  border-radius:10px;
+}
+.div2 h1{
+ position:relative;left:7vw;
+}
+.shopchange{
+  width:90vw;
+margin-left:32vw;
+padding-bottom:20px;
+}
+
+.shopchange input{
+  width:30vw;
+  height:5vw;
+  border:none;
+  margin-top:1vw;
+  font-size:25px;
+}
+.shopchange p{
+  font-size:20px;
+}
+.shopchange button{
+  margin-top:0;
+  margin-left:7vw;
+}
+.div3{
+  width:90vw;
+  background-color:#C6AC8F;
+  margin-left:5vw;
+  margin-top:5vw;
+  border-radius:10px;
+  padding-left:30px;
+  padding-bottom:2vw;
+}
+
+.bt{
+  margin-top:2vw;
+  display: flex;
+}
+.bt1{
+  font-size:12px;
+  height:2vw;
+  width:8vw;
+  margin-bottom:2vw;
+  margin-left:1vw;
+  margin-top:0;
+}
+.fm1{
+  margin-top:10vw;
+  width:20vw;
+  height:3vw;
+  font-size:15px;
+  border:none;
+  background-color:white;
+  border-radius:10px;
+  margin-left:1vw;
+}
+.change12{
+  margin-top:2vw;
+  margin-left:35vw;
+}
+.div4{
+  margin-top:2vw;
+  margin-left:5vw;
+  border-radius:10px;
+  padding-left:30px;
+  width:90vw;
+  background-color: #C6AC8F;
+}
+.bt2{
+  margin-left:10vw;
+}
+.bt3{
+  font-size:15px;
+  height:3vw;
+  width:10vw;
+  margin-bottom:2vw;
+  margin-left:1vw;
+  margin-top:0;
 }
