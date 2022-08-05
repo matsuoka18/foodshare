@@ -85,7 +85,7 @@
 </form>
 <div class="bt">
 <button class="bt1"onclick="i32()">前の１０個を見る</button>
-<button class="bt1"onclick="i3()"id="ii3">次の１０個を見る</button>
+<button class="bt1"onclick="i3()">次の１０個を見る</button><!--id="ii3"-->
 </div>
     <div class="all1" id="all1"> <!--nh1 np1~3 np11~33-->
     <div class="n2" id="n1">
@@ -128,7 +128,7 @@
   <form name="fo3">
 <select class="fm1" id="na11"value="">
   <option>削除する商品を選ぶ</option>
-  <option id="na1"value=""></option>
+  <option id="na11"value=""></option>
   <option id="na22"value=""></option>
   <option id="na33"value=""></option>
   <option id="na44"value=""></option>
@@ -142,7 +142,7 @@
 </form>
 
 <button class="bt3"onclick="i32()">前の１０個を見る</button>
-<button class="bt3"onclick="i3()"id="ii3">次の１０個を見る</button>
+<button class="bt3"onclick="i3()">次の１０個を見る</button><!--id="ii3"-->
 <button class="bt2"onclick="kill()">削除</button>
 </div>
            <style>
@@ -234,7 +234,7 @@ function n(){
           }else{
             p1 = 0;
             i2 = 0;
-            document.getElementById("ii3").style.visibility = "hidden";
+            //document.getElementById("ii3").style.visibility = "hidden";
 n2();
           }
           })
