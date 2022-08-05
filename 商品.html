@@ -5,7 +5,7 @@
     <title>商品編集ページ</title>
      <link rel="stylesheet" href="home2.css">
   </head>
-  <body>
+  <body onload="getdata()">
     <div class="name2">
       <h1>商品編集</h1>
 <div class="name">
@@ -149,7 +149,7 @@
       
            </style>
     <script>
-/*function getdata(){
+function getdata(){
   cookie = document.cookie;
 cookie2 = cookie.indexOf("loginID");
   cookie2 = cookie2+8;
@@ -163,7 +163,7 @@ cookie7 = cookie.indexOf("shopnumber=");
   cookie6 = cookie.substring(cookie5,cookie7);//pass
   shopID = cookie.substring(cookie8,);//shopID
   menuu();
-}*/
+}
 document.getElementById("np1").addEventListener('keyup',change);
      document.getElementById("np11").addEventListener('keyup',change);
      document.getElementById("np111").addEventListener('keyup',change);
