@@ -24,6 +24,7 @@ margin:0;
   border-bottom:1px solid;
   border-color:#5A3A1A;
   height:10vw;
+  z-index:100;
 }
 
 .head{
@@ -32,7 +33,7 @@ margin:0;
 }
 .searchform{
   float:right;
-    margin-right:20vw;
+    margin-right:15vw;
     margin-top:5vw;
 
 }
@@ -58,7 +59,12 @@ color:#5A3A1A;
 
 }
 .p{
+  margin-left:0;
+  margin-right:0;
+  width:22.5vw;
+  height:10vw;
   float:right;
+  z-index:100;
 }
 .p p{
   width:100px;
@@ -70,13 +76,21 @@ color:#5A3A1A;
   float:right;
   margin-top:6vw;
   margin-right:10px;
+  margin-bottom:0;
+  transition:0.2s;
 }
+
+.p p:hover{
+  background-color:#BC9A78;
+  color:#3A1F00;
+  }
+
 .img1{
   width:90vw;
   margin-top:2vw;
   margin-left:2vw;
   margin-bottom:2vw;
-  z-index: 10;
+  z-index: 20;
   position:relative;
 }
 .img2{
@@ -85,7 +99,7 @@ color:#5A3A1A;
   margin-left:6vw;
   margin-top:2vw;
   background-color:#78512B	;
-  
+  z-index: 20;
 }
 .img3{
   width:15vw;
@@ -203,4 +217,103 @@ background-color:#BC9A78;
 }
 .p2 p{
   margin-right:10px;
+}
+.a1{
+  transition: 0.5s;
+  visibility:none;
+  padding-left:0;
+  opacity:0;
+  width:10vw;
+}
+.a2{
+  transition: 0.75s;
+  visibility:none;
+  padding-left:0;
+  opacity:0;
+  width:10vw;
+  margin-top:1vw;
+}
+.a22{
+  transition: 1.0s;
+  visibility:none;
+  opacity:0;
+  padding-left:0;
+  width:10vw;
+margin-top:1vw;
+}
+.ul3 > li:hover .a1{
+  transition:0.5s;
+  visibility:visible;
+     opacity:1;
+     margin-right: 2vw;
+}
+.ul3 > li:hover .a2{
+  transition:0.75s;
+  visibility:visible;
+     opacity:1;
+     margin-right: 2vw;
+}
+.ul3 > li:hover .a22{
+  transition:1.0s;
+  visibility:visible;
+  opacity:1;
+  margin-right: 2vw;
+}
+.a3{
+  list-style-type:none;
+  width:10vw;
+  height:80px;
+  margin-right: 2vw;
+  
+  position:relative;left:-10px;
+}
+.a3 a{
+  width:100px;
+  height:30px;
+  background-color:#5A3A1A;
+  color:white;
+  text-align:center;
+ 
+  padding-right:1vw;
+  padding-left:1vw;
+  padding-bottom:1vw;
+  padding-top:1vw;
+}
+.ul3{
+  list-style-type:none;
+  margin-top:0;
+  margin-bottom:0;
+  width:10vw;
+}
+.a1 a{
+  padding-right:1.3vw;
+  padding-top:0.2vw;
+  transition:0.2s;
+  text-decoration:none;
+}
+.a2 a{
+  padding-right:1.3vw;
+  padding-top:0.2vw;
+  transition:0.2s;
+  text-decoration:none;
+}
+.a22 a{
+  padding-right:1.3vw;
+  padding-top:0.2vw;
+  transition:0.2s;
+  text-decoration:none;
+    z-index:100;
+}
+.a1 a:hover{
+  background-color:#BC9A78;
+  color:#3A1F00;
+}
+.a2 a:hover{
+  background-color:#BC9A78;
+  color:#3A1F00;
+}
+.a22 a:hover{
+  background-color:#BC9A78;
+  color:#3A1F00;
+  z-index:100;
 }
