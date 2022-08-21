@@ -5,7 +5,7 @@
   <title>ログイン</title>
   <link rel="stylesheet" href="home2.css">
   </head>
-  <body>
+  <body onload="te()">
     <div class="name2">
       <h1>ログイン</h1>
 <div class="name">
@@ -23,23 +23,43 @@
       <span id="passw"></span>
       <input type="text" class="password"id="password" value="" placeholder="パスワードを入力">
       </div>
-      <button onclick="login()">ログイン</button>
+      <div class="loading">
+      <button id="but4"class="button1"onclick="login()">ログイン</button>
+      <span id="but3"class="button2 a"></span>
+      </div>
+      <!--button id="but3"><span id="but3"class="button2 a">通信中</span></button!-->
       </div>
       <style>
 
       </style>
           <script>
+         function te(){
+          document.getElementById("but3").style.visibility = "none";
+         document.getElementById("but3").style.opacity = "0";
+         }
             function login(){
+              document.getElementById("but4").style.visibility = "none";
+              document.getElementById("but4").style.opacity = "0";
+              document.getElementById("but3").style.visibility = "visible";
+              document.getElementById("but3").innerHTML = "loading...";
+              document.getElementById("but3").style.opacity = "1";
               fetch('https://script.google.com/macros/s/AKfycbz85vkB6zpJPOUFoNvpEplvGaiwpJjCxKKD52x7edAUOpwgJvOEoXToL7Mwvf0R22Y/exec', {
                   method: "GET",
                   mode: "cors"
                 })
                 .then(response => {
                   if (response.ok) {
+                    document.getElementById("but3").style.visibility = "hidden";
+          document.getElementById("but3").style.opacity = "0";
+           document.getElementById("but3").innerHTML = "";
+          document.getElementById("but4").style.visibility = "visible";
+          document.getElementById("but4").style.opacity = "1";
                     return response.json();
+                    
                   }
                   // 404 や 500 ステータスならここに到達する
                   throw new Error('Network response was not ok.');
+               
                 })
                 .then(resJson => {
                   text = JSON.stringify(resJson);

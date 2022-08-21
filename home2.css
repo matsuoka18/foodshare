@@ -442,3 +442,35 @@ padding-bottom:20px;
   margin-left:1vw;
   margin-top:0;
 }
+
+.button1:hover{
+  border:3px solid;
+  }
+.button1:active{
+  background-color:#C6AC8F;
+}
+.button2{
+  animation-name:ani;
+  animation-duration:1s;
+}
+.a{
+
+  animation-iteration-count : infinite;
+}
+@keyframes ani{
+  0%{
+   visibility:hidden;
+   opacity: 0;
+  }
+  100%{
+visibility:visible;
+opacity: 1;
+  }
+}
+.loading span{
+  display:block;
+  color:white;
+  font-size:30px;
+  font-weight:600;
+  position:relative;top:-4.5vw;
+}
