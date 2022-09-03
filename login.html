@@ -100,11 +100,11 @@
       if(password == inputpassword){
         alert("ログインしました")
         loginID = "loginID="+ inputtext;
-        PA = "pass="+ inputpassword;
+        pass = "pass="+ inputpassword;
         number2 = number2+1;
         shopnumber = "shopnumber="+number2;
         document.cookie = loginID;
-        document.cookie = PA;
+        document.cookie = pass;
         document.cookie = shopnumber;
         location.href="店舗側.html"
       }else{
