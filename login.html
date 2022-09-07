@@ -99,6 +99,8 @@
       console.log(password);
       if(password == inputpassword){
         alert("ログインしました");
+        inputtext = encodeURL(inputtext);
+        inputpassword = encodeURL(inputpassword);
         loginID = "loginID="+ inputtext;
         pass = "pass="+ inputpassword;
         number2 = number2+1;
