@@ -65,6 +65,12 @@ cookie7 = cookie.indexOf("shopnumber=");
           "body":JSON.stringify(data)
         }
         fetch(url,params)
+                 loginID = "loginID="+shop12;
+pass = "pass="+cookie6;
+shopID2 = "shopnumber="+shopID;
+document.cookie = loginID;
+document.cookie = pass;
+document.cookie = shopID2;
       }
         </script>
     </body>
