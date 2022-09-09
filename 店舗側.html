@@ -26,11 +26,11 @@
           <div class="menu2">
             <h2>店舗情報の変更</h2>
             <p>このページでは店舗情報の変更が行えます</p>
-    <button onclick="">店舗情報の編集</button>
+    <button onclick="shopinfo()">店舗情報の編集</button>
      </div>
   </div>
     <script>
-    document.getElementById("hide").style.visibility = "hidden";
+   /* document.getElementById("hide").style.visibility = "hidden";
     function check2(){
       cookie = document.cookie;
   cookie2 = cookie.indexOf("loginID");
@@ -46,10 +46,9 @@ cookie7 = cookie.indexOf("shopnumber=");
       cookie9 = cookie.substring(cookie8,);//shopID
       cookie3 = cookie3-2;
         if(cookie4 && cookie6){
-alert(cookie4+":"+cookie6);
           dis();
         }else{
-          alert(cookie4+":"+cookie6);
+          
           alert("ログインしてください");
         location.href="login.html";
         }
@@ -57,9 +56,14 @@ alert(cookie4+":"+cookie6);
     function dis(){
       document.getElementById("no").style.display = "none";
       document.getElementById("hide").style.visibility = "visible";
-    }
+    }*/
       function content(){
+        alert("de");
         location.href="商品.html";
+      }
+      function shopinfo(){
+        alert("j");
+        location.href = "店舗情報.html";
       }
       function co(){
       document.cookie='name=hey';

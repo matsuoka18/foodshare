@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>店舗情報編集</title>
+        <link rel="stylesheet" href="home3.css">
+    </head>
+    <body onload="start()">
+        <div class="name2">
+            <h1>店舗情報編集</h1>
+      <div class="name">
+      <p>foodshare</p>
+      </div>
+      </div>
+      <div class="div2">
+        <!--この変更は編集追加で行える-->
+        <h1 class="cs1">店舗・商品の編集を行う</h1>
+        <div class="shopchange" id="shopchange0">
+          <p class="now1" id="nowname">12345</p>
+          <input type="text" id="shopchange" placeholder="店舗名を入力"value="">
+        <p id="shopchange2"></p>
+        <button class="商品button"onclick="shop123()">店舗の変更をする</button>
+        </div>
+        </div>
+        <div class="div2">
+            <!--この変更は編集追加で行える-->
+            <h1 class="cs1">店舗のパスワードを変更する</h1>
+            <div class="shopchange" id="shopchange0">
+                <p class="now1" id="nowpass">123456</p>
+              <input type="text" id="shopchange" placeholder="パスワードを入力"value="">
+            <p id="shopchange2"></p>
+            <button class="商品button"onclick="shop123()">パスワードを変更</button>
+            </div>
+            </div>
+        <script>
+            function start(){
+               /* cookie = document.cookie;
+cookie2 = cookie.indexOf("loginID");
+  cookie2 = cookie2+8;
+cookie3 = cookie.indexOf("pass=");
+cookie7 = cookie.indexOf("shopnumber=");
+  cookie3 = cookie3-2;
+  cookie5 = cookie3+7;
+  cookie8 = cookie7+11;
+   cookie7 = cookie7-2;
+  cookie4 = cookie.substring(cookie2,cookie3);//loginID
+  cookie6 = cookie.substring(cookie5,cookie7);//pass
+  shopID = cookie.substring(cookie8,);//shopID
+  document.getElementById("change1").value = cookie4;
+  document.getElementById("nh1").value = cookie4;
+  document.getElementById("nh11").innerHTML = cookie4
+  document.getElementById("chanchan1").innerHTML = cookie4*/
+  cookie4 = "hello";
+  cookie6 = "hehehe";
+  document.getElementById("nowname").innerHTML = "現在の店舗名は："+cookie4;
+  document.getElementById("nowpass").innerHTML = "現在のパスワードは："+cookie6;
+            }
+             function shop123(){
+        shop12 = document.getElementById("shopchange").value;
+        console.log(shop12);
+        var url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+        var data = [{
+          "name":shop12,
+          "name4":"店舗名編集",
+          "name5":shopID
+        }]
+        var params = {
+          "method":"post",
+          "mode":"no-cors",
+          "Content-Type":"application/json",
+          "body":JSON.stringify(data)
+        }
+        fetch(url,params)
+      }
+        </script>
+    </body>
+</html>

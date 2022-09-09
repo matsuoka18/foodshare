@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>商品編集ページ</title>
-     <link rel="stylesheet" href="home2.css">
+         <link rel="stylesheet" href="home2.css">
   </head>
   <body onload="getdata()">
     <div class="name2">
@@ -47,7 +47,7 @@
     </div>
   </div>
 
-<button onclick="send()">追加する</button>
+<button class="商品button"onclick="send()">追加する</button>
 </div>
 
 <div id="preview"></div>
@@ -56,16 +56,7 @@
     <p id="text2"></p>
     <p id="text3"></p>
 
-<div class="div2">
-<!--この変更は編集追加で行える-->
-<h1>店舗・商品の編集を行う</h1>
-<div class="shopchange" id="shopchange0">
 
-  <input type="text" id="shopchange" value="">
-<p id="shopchange2"></p>
-<button onclick="shop123()">店舗の変更をする</button>
-</div>
-</div>
 
 <div class="div3">
   <h1>商品の情報を変更する</h1>
@@ -164,8 +155,6 @@ cookie7 = cookie.indexOf("shopnumber=");
   cookie4 = cookie.substring(cookie2,cookie3);//loginID
   cookie6 = cookie.substring(cookie5,cookie7);//pass
   shopID = cookie.substring(cookie8,);//shopID
-  cookie4 = decodeURI(cookie4);
-  cookie6 = decodeURI(cookie6);
   document.getElementById("change1").value = cookie4;
   document.getElementById("nh1").value = cookie4;
   document.getElementById("nh11").innerHTML = cookie4
@@ -607,6 +596,23 @@ function sen(){
       fetch(url,params)
       menuu();
     }
+    //alert design
+    angular.module('ionicApp', ['ionic'])
+
+.controller('PlaylistsCtrl', function($scope, $ionicPopup, $timeout) {
+  $scope.data = {}
+  
+  // Triggered on a button click, or some other target
+  $scope.showPopup = function() {
+    var alertPopup = $ionicPopup.alert({
+      title: 'Dont eat that!',
+      template: 'It might taste good'
+    });
+    alertPopup.then(function(res) {
+      console.log('Thank you for not eating my delicious ice cream cone');
+    });
+  };
+});
 </script>
   </body>
 </html>

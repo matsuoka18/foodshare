@@ -1,7 +1,6 @@
 body{
     margin:0;
    padding:0;
-    font-family:monospace;
 }
 .name{
     margin:0;
@@ -410,6 +409,9 @@ padding-bottom:20px;
   margin-left:1vw;
   margin-top:0;
 }
+.bt1:active{
+  background-color: #C6AC8F;
+}
 .fm1{
   margin-top:10vw;
   width:20vw;
@@ -424,6 +426,13 @@ padding-bottom:20px;
   margin-top:2vw;
   margin-left:35vw;
 }
+.change12:hover{
+  border:3px solid;
+border-color:white;
+}
+.change12:active{
+  background-color: #C6AC8F;
+}
 .div4{
   margin-top:2vw;
   margin-left:5vw;
@@ -435,6 +444,13 @@ padding-bottom:20px;
 .bt2{
   margin-left:10vw;
 }
+.bt2:hover{
+  border:3px solid;
+border-color:white;
+}
+.bt2:active{
+  background-color: #C6AC8F;
+}
 .bt3{
   font-size:15px;
   height:3vw;
@@ -443,7 +459,12 @@ padding-bottom:20px;
   margin-left:1vw;
   margin-top:0;
 }
-
+.bt3:active{
+  background-color: #C6AC8F;
+}
+.button1{
+  margin-top:2vw;
+}
 .button1:hover{
   border:3px solid;
   }
@@ -474,4 +495,41 @@ opacity: 1;
   font-size:30px;
   font-weight:600;
   position:relative;top:-4.5vw;
+}
+.商品button:hover{
+border:3px solid;
+border-color:white;
+}
+.商品button:active{
+background-color:#C6AC8F;
+}
+.passfo{
+  font-size:15px;
+  padding:5px;
+  margin-left:65vw;
+  margin-top:1vw;
+  margin-bottom:0;
+  background-color:#5A3A1A;
+width:10vw;
+border-radius:10px;
+color:white;
+}
+.passfo a{
+  text-decoration: none;
+  color:white;
+}
+.passfo:hover{
+  border:1px solid;
+border-color:white;
+}
+.passfo:active{
+  background-color:#C6AC8F;
+}
+.cs1{
+  color:#5A3A1A;
+  margin-left:27vw;
+  padding-top:2vw;
+}
+.now1{
+  font-size:25px;
 }
