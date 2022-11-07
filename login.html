@@ -44,7 +44,7 @@
               document.getElementById("but3").style.visibility = "visible";
               document.getElementById("but3").innerHTML = "loading...";
               document.getElementById("but3").style.opacity = "1";
-              fetch('https://script.google.com/macros/s/AKfycbz85vkB6zpJPOUFoNvpEplvGaiwpJjCxKKD52x7edAUOpwgJvOEoXToL7Mwvf0R22Y/exec', {
+              fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec', {
                   method: "GET",
                   mode: "cors"
                 })
@@ -99,6 +99,7 @@
       name3 = "取得用"+number2;
       password = text2[name2];
       shopnumber = text2[name3];
+      alert(shopnumber);  
       console.log(password);
       if(password == inputpassword){
         alert("ログインしました");
