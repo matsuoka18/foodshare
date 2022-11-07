@@ -99,7 +99,6 @@
       name3 = "取得用"+number2;
       password = text2[name2];
       shopnumber = text2[name3];
-      alert(shopnumber);  
       console.log(password);
       if(password == inputpassword){
         alert("ログインしました");
@@ -107,7 +106,6 @@
         inputpassword = encodeURI(inputpassword);
         loginID = "loginID="+ inputtext;
         pass = "pass="+ inputpassword;
-        alert(loginID);
         number2 = number2+1;
         shopnumber = "shopnumber="+shopnumber;
         document.cookie = loginID;
