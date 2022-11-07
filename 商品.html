@@ -11,6 +11,7 @@
 <div class="name">
 <p>foodshare</p>
 </div>
+<p id="loda">dsf</p>
 <div  class="div1">
   <p class="div1p">商品追加</p>
     <div class="all1" id="all1"> <!--nh1 np1~3 np11~33-->
@@ -47,7 +48,7 @@
     </div>
   </div>
 
-<button class="商品button"onclick="send()">追加する</button>
+<button class="商品button"id="商品button"onclick="send()">追加する</button>
 </div>
 
 <div id="preview"></div>
@@ -114,7 +115,7 @@
                 <p>完成型</p>
     </div>
   </div>
-  <button class="change12"onclick="change12()">変更</button>
+  <button class="change12"id="change12"onclick="change12()">変更</button>
 </div>
 <div class="div4">
   <h1>商品の削除をする</h1>
@@ -136,11 +137,9 @@
 
 <button class="bt3"onclick="i32()">前の１０個を見る</button>
 <button class="bt3"onclick="i3()">次の１０個を見る</button><!--id="ii3"-->
-<button class="bt2"onclick="kill()">削除</button>
+<button class="bt2"id="bt2"onclick="kill()">削除</button>
 </div>
-           <style>
-      
-           </style>
+<script src="a.js"></script>
     <script>
 function getdata(){
 cookie = document.cookie;
@@ -181,7 +180,7 @@ document.getElementById("np4_4").innerHTML = janru;
       //cookieから来る予定の情報たちの仮入力
       //プレビューと商品の変数追加
 //店舗名の変更
-document.getElementById("shopchange").addEventListener('keyup',shopcha);
+//document.getElementById("shopchange").addEventListener('keyup',shopcha);
 function shopcha(){
   shop = document.getElementById("shopchange").value;
   document.getElementById("shopchange2").innerHTML = "変更する店舗名"+shop;
@@ -193,7 +192,7 @@ function menuu(){
   var data = [{
     "name4":"商品編集",
     "name5": shopID
-  }]
+      }]
   var params = {
     "method":"post",
     "mode":"no-cors",
@@ -201,8 +200,10 @@ function menuu(){
     "body":JSON.stringify(data)
   }
   fetch(url, params);
+  document.getElementById("loda").innerHTML = "loading";
   n();
 }
+
 function n(){
   fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec', {
             method: "GET",          
@@ -221,9 +222,27 @@ function n(){
           jjj = resJson.changedata[0].last;
           console.log(jjj);
           i = 0;
+          ii = 0;
           q = 0;
           i4 = 0;
           p1 = 0;
+          document.getElementById("loda").innerHTML = "";
+          if(typeof rel1 == "string" && jjj > rel1){
+            a=0;
+            document.getElementById("商品button").innerHTML = "追加する";
+            alert("完了");
+          }
+          else if(typeof rel2 == "string" && jjj < rel2){
+            a=0;
+            document.getElementById("bt2").innerHTML = "削除";  
+            alert("完了");
+          }
+          else if(typeof rel3 == "string" && jjj == rel3){
+            a=0;
+            document.getElementById("change12").innerHTML = "変更";
+            alert("完了");
+          }
+
           if(jjj>10){
           i2 = 1;
           p1 = 0;
@@ -275,6 +294,7 @@ function ne(){
 ii = 0;
 
 function n2(){
+
 if(i == 0 && q < jjj){
   document.getElementById("na1").innerHTML = jj.changedata[0].name[q];
     document.getElementById("na11").innerHTML = jj.changedata[0].name[q];
@@ -432,6 +452,7 @@ var params = {
 "body":JSON.stringify(data)
 }
 fetch(url,params);
+rel2 = jjj;
 fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
  method:"GET",
  mode:"cors"
@@ -450,6 +471,10 @@ fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935f
             // ネットワークエラーの場合はここに到達する
             console.error(error);
           })
+  a=10000;
+  ai = 1;
+  aniname="bt2";
+  ani();
 menuu();
 }
 }
@@ -551,8 +576,42 @@ function sen(){
         "body":JSON.stringify(data)
       }
       fetch(url,params)
+      rel1 = jjj;
+      a = 10000;
+      ai=1;
+      aniname = "商品button";
+      ani();
       menuu();
     }
+    function ani(){
+      if(a>0 && ai == 1){
+        a--;
+        ai++;
+        document.getElementById(aniname).innerHTML = "Loading";
+        setTimeout(ani,500);
+      }
+      else if(a>0 && ai == 2){
+        a--;
+        ai++;
+        document.getElementById(aniname).innerHTML = "Loading.";
+        setTimeout(ani,500);
+      }
+      else if(a>0 && ai == 3){
+        a--;
+        ai++;
+        document.getElementById(aniname).innerHTML = "Loading..";
+        setTimeout(ani,500);
+      }
+      else if(a>0 && ai == 4){
+        a--;
+        ai=1;
+        document.getElementById(aniname).innerHTML = "Loading...";
+        setTimeout(ani,500);
+      }
+    else if(a==0){
+     return;
+    }
+  }
       //送信処理ここまで
       function shop123(){
         shop12 = document.getElementById("shopchange").value;
@@ -574,7 +633,7 @@ function sen(){
       }
     function change12(){
       namee2 = namee2 + 2;
-      alert(namee2);
+
       var url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
       var data = [{
         "name":shopID,
@@ -594,6 +653,11 @@ function sen(){
       }
       console.log(data);
       fetch(url,params)
+      a = 10000;
+      ai=1;
+      aniname = "change12";
+      rel3 = jjj;
+      ani();
       menuu();
     }
     //alert design
