@@ -27,19 +27,19 @@
             <h1 class="cs1">店舗のパスワードを変更する</h1>
             <div class="shopchange" id="shopchange0">
                 <p class="now1" id="nowpass">123456</p>
-              <input type="text" id="shopchange" placeholder="パスワードを入力"value="">
+              <input type="text" id="passchange" placeholder="パスワードを入力"value="">
             <p id="shopchange2"></p>
-            <button class="商品button"id="passchange"onclick="pass()">パスワードを変更</button>
+            <button class="商品button"onclick="pass()">パスワードを変更</button>
             </div>
             </div>
         <script>
             function start(){
             cookie = document.cookie;
-loginIDp1 = cookie.indexOf("loginID=")+8;
+loginIDp1 = cookie.indexOf("loginID=")+9;
 loginIDp2 = cookie.indexOf("!");
-passp1 = cookie.indexOf("pass=")+5;
+passp1 = cookie.indexOf("pass=")+6;
 passp2 = cookie.indexOf("?");
-shopnumberp1 = cookie.indexOf("shopnumber=")+11;
+shopnumberp1 = cookie.indexOf("shopnumber=")+12;
 shopnumberp2 = cookie.indexOf("#");
   cookie4 = cookie.substring(loginIDp1,loginIDp2);//loginID
   cookie6 = cookie.substring(passp1,passp2);//pass
@@ -63,9 +63,9 @@ shopnumberp2 = cookie.indexOf("#");
           "body":JSON.stringify(data)
         }
         fetch(url,params)
-                 loginID = "loginID="+shop12;
-pass = "pass="+cookie6;
-shopID2 = "shopnumber="+shopID;
+                 loginID = "loginID="+shop12+"!";
+pass = "pass="+cookie6+"?";
+shopID2 = "shopnumber="+shopID+"#";
 document.cookie = loginID;
 document.cookie = pass;
 document.cookie = shopID2;

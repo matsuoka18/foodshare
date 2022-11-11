@@ -142,18 +142,16 @@
 <script src="a.js"></script>
     <script>
 function getdata(){
-cookie = document.cookie;
-cookie2 = cookie.indexOf("loginID");
-  cookie2 = cookie2+8;
-cookie3 = cookie.indexOf("pass=");
-cookie7 = cookie.indexOf("shopnumber=");
-  cookie3 = cookie3-2;
-  cookie5 = cookie3+7;
-  cookie8 = cookie7+11;
-   cookie7 = cookie7-2;
-  cookie4 = cookie.substring(cookie2,cookie3);//loginID
-  cookie6 = cookie.substring(cookie5,cookie7);//pass
-  shopID = cookie.substring(cookie8,);//shopID
+  cookie = document.cookie;
+loginIDp1 = cookie.indexOf("loginID=")+9;
+loginIDp2 = cookie.indexOf("!");
+passp1 = cookie.indexOf("pass=")+6;
+passp2 = cookie.indexOf("?");
+shopnumberp1 = cookie.indexOf("shopnumber=")+12;
+shopnumberp2 = cookie.indexOf("#");
+  cookie4 = cookie.substring(loginIDp1,loginIDp2);//loginID
+  cookie6 = cookie.substring(passp1,passp2);//pass
+  shopID = cookie.substring(shopnumberp1,shopnumberp2);//shopID
   document.getElementById("change1").value = cookie4;
   document.getElementById("nh1").value = cookie4;
   document.getElementById("nh11").innerHTML = cookie4
