@@ -29,12 +29,12 @@
                 <p class="now1" id="nowpass">123456</p>
               <input type="text" id="shopchange" placeholder="パスワードを入力"value="">
             <p id="shopchange2"></p>
-            <button class="商品button"onclick="shop123()">パスワードを変更</button>
+            <button class="商品button"id="passchange"onclick="pass()">パスワードを変更</button>
             </div>
             </div>
         <script>
             function start(){
-            cookie = document.cookie;
+            czookie = document.cookie;
 cookie2 = cookie.indexOf("loginID");
   cookie2 = cookie2+8;
 cookie3 = cookie.indexOf("pass=");
@@ -67,6 +67,29 @@ cookie7 = cookie.indexOf("shopnumber=");
         fetch(url,params)
                  loginID = "loginID="+shop12;
 pass = "pass="+cookie6;
+shopID2 = "shopnumber="+shopID;
+document.cookie = loginID;
+document.cookie = pass;
+document.cookie = shopID2;
+location.href="店舗情報.html";
+      }
+      function pass(){
+        password = document.getElementById("passchange").value;
+        var url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+        var data = [{
+          "name":password,
+          "name4":"パス編集",
+          "name5":shopID
+        }]
+        var params = {
+          "method":"post",
+          "mode":"no-cors",
+          "Content-Type":"application/json",
+          "body":JSON.stringify(data)
+        }
+        fetch(url,params)
+                 loginID = "loginID="+cookie4;
+pass = "pass="+password;
 shopID2 = "shopnumber="+shopID;
 document.cookie = loginID;
 document.cookie = pass;
