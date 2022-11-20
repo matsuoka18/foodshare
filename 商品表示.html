@@ -9,15 +9,21 @@
     <body onload="start()">
    <div class="name2">
  <h1 id="h1"></h1>
-<div class="name">
-<p>foodshare</p>
+<div class="name" onclick="location.href='index.html'">
+<p class="namep">foodshare</p>
 </div>
 
 </div>
-<button onclick="test()">test</button>
-<div id="all">
+<section>
+<div id="all"class="all">
   
-    </div>
+</div>
+</section>
+  <div class="all2">
+        <div class="bt1" onclick="back()">前の10個</div> 
+        <div class="bt2" onclick="next()">次の10個</div> 
+        </div>
+ 
         <script>
             function start(){
                 cd= document.cookie;
@@ -53,8 +59,9 @@
             .then(resJson =>{
                 json = JSON.stringify(resJson);
                 json = JSON.parse(json);
-                alert("成功");
                 console.log(json);
+                number = 0;
+                number2 = 10;
                 show();
             })
            .catch(error =>{
@@ -65,22 +72,56 @@
             function show(){
                 sd = json.getmenudata[0];
                 lm = sd.last;
-                for(num = 0; num<lm; num++){
+                for(num = number; num<number2; num++){
                 name = sd.name[num];
-                fee = sd.name[num];
-                express = sd.name[num];
-                genre = sd.name[num];
+                fee = sd.fee[num]+"円";
+                express = sd.express[num];
+                genre = sd.genre[num];
                 //pic = sd.name[num];
+                 data =  "<div class="+"\""+"no1"+"\""+"><p class="+"\""+"shopname"+"\""+">"+sn2+"</p><div class="+"\""+"menufee"+"\""+"><p class="+"\""+"menu"+"\""+">"+name+"</p><p class="+"\""+"fee"+"\""+">"+fee+"</p></div><p class="+"\""+"express"+"\""+">"+express+"<div class="+"\""+"pic"+"\""+"></div></div>";
+            all.insertAdjacentHTML('beforeend',data);
+
+            }
+            }
+            function next(){
+                number+=10;
+                number2+=10;
+                if(lm <number2){
+                    number2 = lm;
+               
                 }
+                if(lm <number){
+                    number-=10;
+                         alert("最後のページです");
+                    return;
+                }
+                show();
+            }
+            function back(){
+                number-=10;
+                number2-=10;
+                if(10 > number2){
+                    number2 = 10;
+               
+                }
+                if(0 > number){
+                    number=0;
+                         alert("最初のページです");
+                    return;
+                }
+                show();
             }
             function test(){
-                name = "potato";
+                /*name = "potato";
                 fee = "500";
                 express = "this potato is the most delicious potato all over the world!! let's eat this!!"
                 data =  "<div class="+"\""+"no1"+"\""+"><p class="+"\""+"shopname"+"\""+">"+sn2+"</p><div class="+"\""+"menufee"+"\""+"><p class="+"\""+"menu"+"\""+">"+name+"</p><p class="+"\""+"fee"+"\""+">"+fee+"</p></div><p class="+"\""+"express"+"\""+">"+express+"<div class="+"\""+"pic"+"\""+"></div></div>";
-            all.insertAdjacentHTML('afterbegin',data)
+            all.insertAdjacentHTML('afterbegin',data)*/
+                 
+           
                 
             }
         </script>
     </body>
+ 
 </html>

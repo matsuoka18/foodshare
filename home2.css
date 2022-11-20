@@ -534,3 +534,10 @@ border-color:white;
 .now1{
   font-size:25px;
 }
+  .name:hover{
+    background-color:#BC9A78;
+
+  }
+  .name p:hover{
+           color:#5A3A1A;
+  }
