@@ -92,6 +92,12 @@
                 .catch(error => {
                   // ネットワークエラーの場合はここに到達する
                   console.error(error);
+                                      document.getElementById("but3").style.visibility = "hidden";
+          document.getElementById("but3").style.opacity = "0";
+           document.getElementById("but3").innerHTML = "";
+          document.getElementById("but4").style.visibility = "visible";
+          document.getElementById("but4").style.opacity = "1";
+                  alert("エラーが発生しました")
                 })
             }
       function login2(){

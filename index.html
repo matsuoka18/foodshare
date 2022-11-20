@@ -10,15 +10,18 @@
       <div class="head">
         <div class="p">
           <p onclick="カート()">カート</p>
-          <ul class="ul3">           
+           <p>店舗登録⬇</p>
+          <ul class="ul3">    
+         
             <li>
-              <p>店舗登録⬇</p>
+              
                 <ul class="a3">
-                  <li class="a1"><a href="店舗側.html">店舗側ページ</a>
+                  <li class="a1"><a href="店舗側.html">店舗側ページ</a> </li>
                     
-                    <li class="a22"><a href="登録ページ.html">店舗登録</a>
+                    <li class="a22"><a href="登録ページ.html">店舗登録</a> </li>
+                    <li class="a222"><a href="login.html">ログイン</a> </li>
                 </ul>
-            </li>
+           </li>
             </ul>
 
             
@@ -188,6 +191,43 @@
         }
         function shop(){
           location.href="登録ページ.html";
+        }
+        function searching(){
+          shopname = document.getElementById("search").value;
+          fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
+            method:"GET",
+            moe:"cors"
+          })
+          .then(response =>{
+            if(response.ok){
+              return response.json()
+            }
+          })
+          .then(resJson =>{
+shopsearch(resJson);
+          })
+        .catch(error =>{
+          alert("通信失敗")
+        })
+        }
+        
+        function shopsearch(resJson){
+          json = JSON.stringify(resJson);
+json = JSON.parse(json);
+a = "n1";
+json = json.shopdata[0];
+num = json.num;
+for(a = -5; a<num; a+=6){
+  text = "n"+a;
+  shopname2 = json[text];
+  if(shopname == shopname2){
+    text2 = "searchnum="+a+"$";
+    text3 = "searchname="+shopname2+"%";
+    document.cookie = text2;
+    document.cookie = text3;
+    location.href="商品表示.html";
+  }
+}
         }
         </script>
     </body>

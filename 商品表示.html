@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>商品表示</title>
+        <link rel="stylesheet" href="home1.css">
+         
+    </head>
+    <body onload="start()">
+   <div class="name2">
+ <h1 id="h1"></h1>
+<div class="name">
+<p>foodshare</p>
+</div>
+
+</div>
+<button onclick="test()">test</button>
+<div id="all">
+  
+    </div>
+        <script>
+            function start(){
+                cd= document.cookie;
+                num1 = cd.indexOf("searchnum=");
+                num2 = cd.indexOf("$");
+                num3 = cd.indexOf("searchname=");
+                num4 = cd.indexOf("%");
+                sn = cd.substring(num1+10,num2);
+                sn2 = cd.substring(num3+11,num4);
+                console.log(sn+":"+sn2);
+        document.getElementById("h1").innerHTML = sn2;
+        url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+        data = [{
+            "name4":"店舗商品取得",
+            "name5":sn
+        }];
+        params={
+            "method":"post",
+            "mode":"no-cors",
+            "Content-Type":"application/json",
+            "body":JSON.stringify(data)
+        }
+        fetch(url,params);
+        fetch(url,{ 
+            method:"GET",
+            mode:"cors"
+        })
+            .then(response =>{
+                if(response.ok){
+                    return response.json()
+                }
+            })
+            .then(resJson =>{
+                json = JSON.stringify(resJson);
+                json = JSON.parse(json);
+                alert("成功");
+                console.log(json);
+                show();
+            })
+           .catch(error =>{
+               alert("エラー");
+           })
+       
+            }
+            function show(){
+                sd = json.getmenudata[0];
+                lm = sd.last;
+                for(num = 0; num<lm; num++){
+                name = sd.name[num];
+                fee = sd.name[num];
+                express = sd.name[num];
+                genre = sd.name[num];
+                //pic = sd.name[num];
+                }
+            }
+            function test(){
+                name = "potato";
+                fee = "500";
+                express = "this potato is the most delicious potato all over the world!! let's eat this!!"
+                data =  "<div class="+"\""+"no1"+"\""+"><p class="+"\""+"shopname"+"\""+">"+sn2+"</p><div class="+"\""+"menufee"+"\""+"><p class="+"\""+"menu"+"\""+">"+name+"</p><p class="+"\""+"fee"+"\""+">"+fee+"</p></div><p class="+"\""+"express"+"\""+">"+express+"<div class="+"\""+"pic"+"\""+"></div></div>";
+            all.insertAdjacentHTML('afterbegin',data)
+                
+            }
+        </script>
+    </body>
+</html>

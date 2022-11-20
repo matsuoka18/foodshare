@@ -27,7 +27,8 @@
          <input type="file" id="example" multiple>
          <p>商品のジャンルを選ぶ</p>
          <form name="example2">
-         <select id="jann"name="example">
+         <select id="jann"name="example3">
+           <option value="ジャンルを選んでください">ジャンルを選んでください</option>
      <option value="飯類">飯類</option>
      <option value="麺類">麺類</option>
      <option value="スイーツ">スイーツ</option>
@@ -165,6 +166,8 @@ document.getElementById("np1").addEventListener('keyup',change);
      document.getElementById("jann").addEventListener('change',change);
      //nh1はクッキーから取得してくい本固定
      function change(){
+       form = document.example2.example3;
+       formn = form.selectedIndex+1;
        //shop = document.getElementById("shopname").value;
        menu  = document.getElementById("np1").value;
        fee  = document.getElementById("np11").value;
@@ -174,7 +177,7 @@ document.getElementById("nh11").innerHTML = cookie4;//店舗名
 document.getElementById("np1_1").innerHTML = menu;
 document.getElementById("np2_2").innerHTML = fee;
 document.getElementById("np3_3").innerHTML = express;
-document.getElementById("np4_4").innerHTML = janru;
+document.getElementById("np4_4").innerHTML = document.getElementById("jann").value;
      }
       //cookieから来る予定の情報たちの仮入力
       //プレビューと商品の変数追加
@@ -283,9 +286,9 @@ ne();
 }
 function ne(){
   document.getElementById("change1").value = cookie4;//店舗名
-  document.getElementById("change2").value = menu;
-  document.getElementById("change3").value =  express;
-  document.getElementById("change4").value =fee;
+  document.getElementById("change2").value = menu;  //商品名
+  document.getElementById("change3").value =  fee; //料金
+  document.getElementById("change4").value =express; //説明
 
   //document.getElementById("change5").value = pic;
   document.getElementById("change6.2").innerHTML = genre;
@@ -566,7 +569,7 @@ function sen(){
           "name3":express,
           "name4":"追加",
           "name5":shopID,
-          "name8":jann,
+          "name8":janru,
           "name9":imageUrl
         }]
       var params = {
