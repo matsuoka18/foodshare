@@ -4,6 +4,14 @@
         <meta charset="utf-8">
         <title>パスワードを忘れ</title>
         <link rel="stylesheet" href="home2.css">
+          <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("WIptzQo9RsrV7VK_G");
+   })();
+</script>
     </head>
     <body>
         <div class="name2">
@@ -29,6 +37,17 @@
         name = document.getElementById("name").value;
         adress = document.getElementById("mailad").value;
         //まずnameのやつがあるかをチェック次にメール送信→再設定のページを飛ばす 
+        var templateParams = {
+    name: 'hello',
+    pass: 'Check this out!'
+};
+ 
+emailjs.send('service_ay90m8q', 'template_booi3af', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
         }
         </script>
     </body>
