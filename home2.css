@@ -182,7 +182,7 @@ button{
 
 .center{
   width:85vw;
-  height:40vw;
+  padding-bottom:30px;
   margin-left:7vw;
   margin-top:-2.5vw;
   border-radius:10px;
@@ -541,3 +541,54 @@ border-color:white;
   .name p:hover{
            color:#5A3A1A;
   }
+  .top{
+  width:85vw;
+  padding-bottom:5vw;
+  margin-left:7vw;
+  border-radius:10px;
+  text-align:center;
+  background-color:#C6AC8F;
+  }
+  .top h1{
+  font-size:40px;
+  color:#3A1F00;
+  padding-top:15px;
+  }
+  .top2{
+  margin-left:15vw;
+  width:60vw;
+  height:15vw;
+  background-color:white;
+  border-radius:10px;
+  color:#5A3A1A;
+}
+.top2 p{
+  background-color:#3A1F00;
+  color:white;
+  border-radius:5px;
+  margin-left:-10px;
+ margin-right:-10px;
+ font-size:20px;
+ font-weight:600;
+ padding-top:20px;
+ padding-bottom:20px;
+}
+.top2 input{
+  width:50vw;
+  height:4vw;
+ font-size:25px;
+ border-radius:10px;
+ text-align:center;
+ border:none;
+ outline-color:white;
+}
+.top button{
+  background-color: #3A1F00;
+  width:15vw;
+  height:5vw;
+  color:white;
+  font-size:20px;
+  border:none;
+  border-radius:100px;
+  margin-top:5vw;
+}
