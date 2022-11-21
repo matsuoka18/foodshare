@@ -3,8 +3,33 @@
     <head>
         <meta charset="utf-8">
         <title>パスワードを忘れ</title>
+        <link rel="stylesheet" href="home2.css">
     </head>
     <body>
+        <div class="name2">
+            <h1>パスワードを忘れた</h1>
+      <div class="name" onclick="location.href='index.html'">
+      <p>foodshare</p>
+          </div>
+      </div>
+      <div class="top">
         <h1>パスワードを再発行する</h1>
+        <div class="top2">
+        <p>名前を入力</p>
+        <input type="text"id="name"value=""placeholder="名前を入力">
+        </div>
+        <div class="top2">
+        <p>登録したメールアドレスを入力</p>
+        <input type="text" id="mailad"value=""placeholder="メールアドレスを入力">
+        </div>
+        <button onclick="send()">送信</button>
+        </div>
+        <script>
+        function send(){
+        name = document.getElementById("name").value;
+        adress = document.getElementById("mailad").value;
+        //まずnameのやつがあるかをチェック次にメール送信→再設定のページを飛ばす 
+        }
+        </script>
     </body>
 </html>
