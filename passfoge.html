@@ -34,12 +34,36 @@
         </div>
         <script>
         function send(){
-        name = document.getElementById("name").value;
+        name2 = document.getElementById("name").value;
         adress = document.getElementById("mailad").value;
+        fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
+        method:"GET",
+        mode:"cors"
+        })
+        .then(response =>{
+        if(response.ok){
+        return response.json();
+        }
+        })
+        .then(resJson=>{
+        json = JSON.stringify(resJson);
+        json = JSON.parse(json);
+         check(); 
+        })
+        .catch(error=>{
+        alert("error");
+        })
+        }
+        function check(){
+        cn1 = json.logindata[0];
+        alert(cn1);
+        }
         //まずnameのやつがあるかをチェック次にメール送信→再設定のページを飛ばす 
+        function mailsend(){
         var templateParams = {
-    name: 'hello',
-    pass: 'Check this out!'
+    name: name2,
+    pass: 'Check this out!',
+    mail:adress
 };
  
 emailjs.send('service_ay90m8q', 'template_booi3af', templateParams)
