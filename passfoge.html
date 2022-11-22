@@ -56,14 +56,36 @@
         }
         function check(){
         cn1 = json.logindata[0];
-        alert(cn1);
-            mailsend();
+        sum = cn1.合計;
+        alert(sum);
+        for(var a = 0; a<sum; a++){
+            search = "店舗"+a;
+            shopname = cn1[search];
+            if(name2 == shopname){
+                console.log("店舗発見");
+                scheck = '';
+                getpassnumber = a;
+                mailchack();
+            }
+        }
+        if(typeof scheck == 'undefined'){
+            alert("店舗を発見できまへんで");
+        }
+        }
+        function mailchack(){
+       
+            passget();
+        }
+        function passget(){
+            search2 = "パスワード"+getpassnumber;
+            pass2 = cn1[search2];
+           mailsend();
         }
         //まずnameのやつがあるかをチェック次にメール送信→再設定のページを飛ばす 
         function mailsend(){
         var templateParams = {
     name: name2,
-    pass: 'Check this out!',
+    pass: pass2,
     mail:adress
 };
  
