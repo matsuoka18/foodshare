@@ -57,7 +57,6 @@
         function check(){
         cn1 = json.logindata[0];
         sum = cn1.合計;
-        alert(sum);
         for(var a = 0; a<sum; a++){
             search = "店舗"+a;
             shopname = cn1[search];
@@ -73,9 +72,15 @@
         }
         }
         function mailchack(){
-       
+            search = "メールアドレス"+getpassnumber;
+alert(search);
+            adress2 = cn1[search];
+alert(adress2);
+            if(adress2 == adress){
+                console.log("メールアドレス確認");
             passget();
-        }
+}
+}
         function passget(){
             search2 = "パスワード"+getpassnumber;
             pass2 = cn1[search2];
@@ -92,6 +97,7 @@
 emailjs.send('service_ay90m8q', 'template_booi3af', templateParams)
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
+alert("完了しました")
     }, function(error) {
        console.log('FAILED...', error);
     });
