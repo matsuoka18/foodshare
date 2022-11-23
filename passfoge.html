@@ -83,6 +83,7 @@
             search2 = "パスワード"+getpassnumber;
             pass2 = cn1[search2];
            mailsend();
+time = 1000;
 ani();
         }
         //まずnameのやつがあるかをチェック次にメール送信→再設定のページを飛ばす 
@@ -96,7 +97,8 @@ ani();
 emailjs.send('service_ay90m8q', 'template_booi3af', templateParams)
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
-alert("メールを送信しました")
+alert("メールを送信しました");
+time=0;
     }, function(error) {
        console.log('FAILED...', error);
     });
@@ -105,17 +107,30 @@ function ani(){
 for(var a = 0; a<time; a++){
 if(times == 1){
 document.getElementById("text").innerHTML = loading;
-ser
+times++;
+setTimeout(ani,500);
 }
 else if(times == 2){
 document.getElementById("text").innerHTML = loading.;
+times++;
+setTimeout(ani,500);
 }
 else if(times == 3){
 document.getElementById("text").innerHTML = loading..;
+times++;
+setTimeout(ani,500);
 }
 else if(times == 4){
 document.getElementById("text").innerHTML = loading...;
+times=1;
+setTimeout(ani,500);
+}else if(time=0){
+document.getElementById("text").innerHTML = "送信
+";
 }
+if(time=0){
+document.getElementById("text").innerHTML = "送信
+";
 }
 }
         </script>
