@@ -20,8 +20,8 @@
 </div>
 </section>
   <div class="all2">
-        <div class="bt1" onclick="back()">前の10個</div> 
-        <div class="bt2" onclick="next()">次の10個</div> 
+        <!--div class="bt1" onclick="back()">前の10個</div--> 
+        <!--div class="bt2" onclick="next()">次の10個</div--> 
         </div>
  
         <script>
@@ -34,6 +34,8 @@
                 sn = cd.substring(num1+10,num2);
                 sn2 = cd.substring(num3+11,num4);
                 console.log(sn+":"+sn2);
+                sn2 = decodeURI(sn2);
+                
         document.getElementById("h1").innerHTML = sn2;
         url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
         data = [{
