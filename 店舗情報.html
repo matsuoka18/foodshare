@@ -65,6 +65,8 @@ shopnumberp2 = cookie.indexOf("#");
           "body":JSON.stringify(data)
         }
         fetch(url,params)
+                 shop12 = encodeURI(shop12);
+                 cookie6 = encodeURI(cookie6);
                  loginID = "loginID="+shop12+"!";
 pass = "pass="+cookie6+"?";
 shopID2 = "shopnumber="+shopID+"#";
@@ -88,6 +90,8 @@ location.href="店舗情報.html";
           "body":JSON.stringify(data)
         }
         fetch(url,params)
+          cookie4 = encodeURI(cookie4);
+          password = encodeURL(password);
                  loginID = "loginID="+cookie4+"!";
 pass = "pass="+password+"?";
 shopID2 = "shopnumber="+shopID+"#";
