@@ -44,6 +44,8 @@ shopnumberp2 = cookie.indexOf("#");
   cookie4 = cookie.substring(loginIDp1,loginIDp2);//loginID
   cookie6 = cookie.substring(passp1,passp2);//pass
   shopID = cookie.substring(shopnumberp1,shopnumberp2);//shopID
+                cookie4 = decodeURI(cookie4);
+                cookie6 = decodeURI(cookie6);
   document.getElementById("nowname").innerHTML = "現在の店舗名は："+cookie4;
   document.getElementById("nowpass").innerHTML = "現在のパスワードは："+cookie6;
             }
