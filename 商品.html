@@ -154,6 +154,7 @@ shopnumberp2 = cookie.indexOf("#");
   cookie6 = cookie.substring(passp1,passp2);//pass
   shopID = cookie.substring(shopnumberp1,shopnumberp2);//shopID
   console.log(shopID);
+  cookie4 = decodeURI(cookie4);
   document.getElementById("change1").value = cookie4;
   document.getElementById("nh1").value = cookie4;
   document.getElementById("nh11").innerHTML = cookie4
