@@ -186,9 +186,7 @@
         }
         document.getElementById("search").addEventListener('keyup',event =>{
  if(event.keyCode == 13){
-  alert("ok");
- }else{
-  alert("chaeu")
+  searching();
  }
         });
         function searching(){
@@ -221,7 +219,7 @@ for(a = -5; a<num; a+=6){
   shopname2 = json[text];
   if(shopname == shopname2){
     text2 = "searchnum="+a+"$";
-    text3 = "searchname="+shopname2+"`";
+    text3 = "searchname="+shopname2+"^";
     document.cookie = text2;
     document.cookie = text3;
     location.href="商品表示.html";
