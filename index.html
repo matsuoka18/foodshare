@@ -219,6 +219,7 @@ for(a = -5; a<num; a+=6){
   shopname2 = json[text];
   if(shopname == shopname2){
     text2 = "searchnum="+a+"$";
+        shopname2 = encodeURI(shopname2);
     text3 = "searchname="+shopname2+"^";
     document.cookie = text2;
     document.cookie = text3;
