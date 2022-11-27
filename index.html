@@ -20,7 +20,7 @@
         </div>
         <div class="searchform">
       <input type="text"class="search"id="search"placeholder="shopname or menu"value="">
-      <button id="s"onclick="searching()">search</button>
+      <button id="s"onclick="searching()"><span id="ss">search</span></button>
       <p class="genre">ジャンルを一覧</p>
     </div>
 
@@ -168,6 +168,7 @@
 <p>沖縄県</p>                                              
 </div>
 </div>
+<script src="a.js"></script>
         <script>
           a = 0;
           function pic(){
@@ -190,7 +191,10 @@
  }
         });
         function searching(){
-document.getElementById("s").innerHTML = "loading";
+          num = 100;
+          ani();
+document.getElementById("ss").innerHTML = "loading";
+document.getElementById("s").style.backgroundColor ="#C6AC8F"
           shopname = document.getElementById("search").value;
           fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
             method:"GET",
@@ -205,7 +209,14 @@ document.getElementById("s").innerHTML = "loading";
 shopsearch(resJson);
           })
         .catch(error =>{
-          alert("通信失敗")
+          num = 1;
+ani();
+$('#ss').clearQueue();
+   $('#ss').stop();
+   document.getElementById("ss").innerHTML = "search";
+   document.getElementById("s").style.backgroundColor ="#5A3A1A";
+
+   alert("通信失敗")
         })
         }
         
@@ -224,18 +235,50 @@ for(a = -5; a<num; a+=6){
     text3 = "searchname="+shopname2+"^";
     document.cookie = text2;
     document.cookie = text3;
-document.getElementById("s").innerHTML = "jumping";
+document.getElementById("ss").innerHTML = "jumping";
 ttt = '';
     setTimeout(jump,2000);
   }
 }
 if(typeof ttt == 'undefined'){
 alert("店舗を発見できません");
-document.getElementById("s").innerHTML = "search";
+document.getElementById("ss").innerHTML = "search";
+num = 1;
+ani();
+$('#ss').clearQueue();
+   $('#ss').stop();
+   document.getElementById("s").style.backgroundColor ="#5A3A1A";
 }
         }
 function jump(){
+  num = 1;
+          ani();
+          document.getElementById("s").style.backgroundColor ="#5A3A1A";
 location.href="商品表示.html";
+}
+function ani(){
+  //alert(num);
+  for(var a = 0; a<num; a++){
+    $("#ss").animate({
+    opacity:1
+  },{
+    'duration':0
+    })
+  $("#ss").animate({
+    opacity:0
+  },{
+    'duration':1000
+  })
+  $("#ss").animate({
+    opacity:1
+  },{
+    'duration':0
+    })
+}
+if(num == 1){
+  document.getElementById("ss").style.opacity = "1";
+  document.getElementById("s").style.backgroundColor ="#5A3A1A";
+}
 }
         </script>
     </body>
