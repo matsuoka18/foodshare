@@ -374,18 +374,20 @@ background-color:#BC9A78;
   bottom:10px;
 }
       .bt1{
-
+padding-top:20px;
                      width:100px;
               height:40px;
               background-color:#5A3A1A;
               color:white;
               font-size:20px;
               font-weight:600;
-              text-algin:center;
+              text-align:center;
               border-radius:10px;
               float:left;
       }
+      
           .bt2{
+              padding-left:5px;
               
                      width:100px;
               height:40px;

@@ -20,24 +20,25 @@
 </div>
 </section>
   <div class="all2">
-        <!--div class="bt1" onclick="back()">前の10個</div--> 
-        <!--div class="bt2" onclick="next()">次の10個</div--> 
+        <div class="bt1" id="bt1">Loading</div>
         </div>
  
         <script>
             function start(){
+            document.getElementById("bt1").innerHTML = "Loading";
                 cd= document.cookie;
+alert(cd);
                 num1 = cd.indexOf("searchnum=");
                 num2 = cd.indexOf("$");
                 num3 = cd.indexOf("searchname=");
                 num4 = cd.indexOf("^");
                 sn = cd.substring(num1+10,num2);
-                sn2 = cd.substring(num3+11,num4);
-                console.log(sn+":"+sn2);
-                sn2 = decodeURI(sn2);
+                sn2 = decodeURI(cd.substring(num3+11,num4));
                 
+                console.log(sn+":"+sn2);
         document.getElementById("h1").innerHTML = sn2;
         url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+        //一旦getして店舗名があるかをチェック→なければ"name4"を商品取得"としてpost
         data = [{
             "name4":"店舗商品取得",
             "name5":sn
@@ -49,6 +50,10 @@
             "body":JSON.stringify(data)
         }
         fetch(url,params);
+        setTimeout(start2,5000);
+        }
+        function start2(){
+        document.getElementById("bt1").innerHTML = "Getting";
         fetch(url,{ 
             method:"GET",
             mode:"cors"
@@ -72,6 +77,7 @@
        
             }
             function show(){
+            document.getElementById("bt1").style.opacity = "0";
                 sd = json.getmenudata[0];
                 lm = sd.last;
                 for(num = number; num<lm; num++){
