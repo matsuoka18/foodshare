@@ -196,6 +196,20 @@
 document.getElementById("ss").innerHTML = "loading";
 document.getElementById("s").style.backgroundColor ="#C6AC8F"
           shopname = document.getElementById("search").value;
+          url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+var data = [{
+"branch":"shopdata"
+}]
+var params={
+"method":"post",
+"mode":"no-cors",
+"Content-Type":"application/json",
+"body":JSON.stringify(data)
+}
+fetch(url,params);
+setTimeout(searching2,3000);
+        }
+function searching2(){
           fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
             method:"GET",
             moe:"cors"
