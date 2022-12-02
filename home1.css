@@ -399,3 +399,88 @@ padding-top:20px;
               border-radius:10px;
               float:left;
       }
+      .allq{
+        width:520px;
+        position: relative;
+        cursor:pointer;
+        margin:4vw;
+    float: left;
+    }
+    .allq::before{
+        content: "";
+        display:block;
+        padding-top:320px;
+    }
+    .outq{
+        width:520px;
+    height:320px;
+    background-color: #C6AC8F;
+    border-radius:30px;
+    
+    }
+    .out2q{
+    width:520px;
+    height:320px;
+    background-color: #C6AC8F;
+    border-radius:30px;
+    }
+    .outq,.out2q{
+        transition:0.5s;
+        position:absolute;
+        left:0;
+        top:0;
+        height: 100%;
+         width: 100%;
+    backface-visibility: hidden;
+    }
+    
+    .out2q{
+        transform:rotateX(180deg);
+    }
+    .outq{
+    transform:rotateX(0deg);
+    }
+    .allq:hover .out2q{
+    transform:rotateX(0);
+    }
+    .allq:hover .outq{
+    transform:rotateX(180deg);
+    }
+    .nameq{
+        color:#5A3A1A;
+        font-size:30px;
+        font-weight:600;
+        width:490px;
+        margin:0;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .feeq{
+    color:white;
+    background-color:#78512B ;
+    text-align:center;
+    padding-top:5px;
+    width:150px;
+    height:45px;
+    border-radius:15px;
+    font-size:25px;
+    font-weight: 600;
+    float:right;
+    }
+    .picq{
+    
+    height:240px;
+    background-color:white;
+    border-radius:30px;
+    
+    margin-top:15px;
+    margin-right:0;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0;
+    }
+    .picq img{
+        height:240px;
+        width: auto;
+    }
