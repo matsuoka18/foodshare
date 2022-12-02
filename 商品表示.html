@@ -80,6 +80,10 @@ alert(cd);
             }
             function show(){
             document.getElementById("bt1").style.opacity = "0";
+                            if(json[0] == "error"){
+                    alert("商品が登録されていません");
+                location.href="index.html";
+                }
                 sd = json.getmenudata[0];
                 lm = sd.last;
                 for(num = number; num<lm; num++){
