@@ -47,6 +47,19 @@
            time=0;
            return;
         }
+        var data = [{
+        "branch":"logindata"
+        }];
+            var params = {
+            "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',params);
+            setTimeout(send2,3000);
+        }
+            function send2(){
         fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
         method:"GET",
         mode:"cors"
