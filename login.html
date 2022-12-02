@@ -42,8 +42,22 @@
               document.getElementById("but4").style.visibility = "none";
               document.getElementById("but4").style.opacity = "0";
               document.getElementById("but3").style.visibility = "visible";
-              document.getElementById("but3").innerHTML = "loading...";
+              document.getElementById("but3").innerHTML = "Sending...";
               document.getElementById("but3").style.opacity = "1";
+              var data=[{
+                "branch":"logindata"
+              }]
+              var params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+              }
+              fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',params)
+            setTimeout(login12,3000);
+            }
+            function login12(){
+              document.getElementById("but3").innerHTML = "loading...";
               fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec', {
                   method: "GET",
                   mode: "cors"
