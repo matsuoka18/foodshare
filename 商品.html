@@ -194,7 +194,8 @@ function menuu(){
     var url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   var data = [{
     "name4":"商品編集",
-    "name5": shopID
+    "name5": shopID,
+    "branch":"changedata"
       }]
   var params = {
     "method":"post",
@@ -204,7 +205,7 @@ function menuu(){
   }
   fetch(url, params);
   document.getElementById("loda").innerHTML = "loading";
-  n();
+  setTimeout(n,3000);
 }
 
 function n(){
@@ -549,7 +550,7 @@ fileInput.addEventListener('change', handleFileSelect);
           img = document.createElement("img"); // img要素を作成
           img.src = imageUrl; // URLをimg要素にセット
           preview.appendChild(img); // #previewの中に追加
-          alert(imageUrl);
+          //alert(imageUrl);
         }
 
         // いざファイルをURLとして読み込む
