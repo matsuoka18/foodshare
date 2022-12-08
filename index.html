@@ -230,7 +230,7 @@ $('#ss').clearQueue();
    document.getElementById("ss").innerHTML = "search";
    document.getElementById("s").style.backgroundColor ="#5A3A1A";
 
-   alert("通信失敗")
+   alert("通信失敗1")
         })
         }
         
@@ -251,23 +251,27 @@ for(a = -5; a<num; a+=6){
     document.cookie = text3;
 document.getElementById("ss").innerHTML = "jumping";
 ttt = '';
+document.cookie = "branch=shop|";
     setTimeout(jump,2000);
   }
 }
 if(typeof ttt == 'undefined'){
-alert("店舗を発見できません");
+/*alert("店舗を発見できません");
 document.getElementById("ss").innerHTML = "search";
 num = 1;
 ani();
 $('#ss').clearQueue();
    $('#ss').stop();
-   document.getElementById("s").style.backgroundColor ="#5A3A1A";
+   document.getElementById("s").style.backgroundColor ="#5A3A1A";*/
+   menusearch();
 }
+
         }
 function jump(){
   num = 1;
           ani();
           document.getElementById("s").style.backgroundColor ="#5A3A1A";
+
 location.href="商品表示.html";
 }
 function ani(){
@@ -292,6 +296,119 @@ function ani(){
 if(num == 1){
   document.getElementById("ss").style.opacity = "1";
   document.getElementById("s").style.backgroundColor ="#5A3A1A";
+}
+}
+function menusearch(){
+  console.log("menusearch ok");
+  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+var data = [{
+"branch":"menu"
+}]
+var params={
+"method":"post",
+"mode":"no-cors",
+"Content-Type":"application/json",
+"body":JSON.stringify(data)
+}
+fetch(url,params);
+setTimeout(menu2,3000);
+}
+function menu2(){
+  console.log("menu2 ok");
+  fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
+            method:"GET",
+            moe:"cors"
+          })
+          .then(response =>{
+            if(response.ok){
+              return response.json()
+            }
+          })
+          .then(resJson =>{
+            console.log("menusearch2 ok");
+menusearch2(resJson);
+          })
+        .catch(error =>{
+          num = 1;  
+ani();
+$('#ss').clearQueue();
+   $('#ss').stop();
+   document.getElementById("ss").innerHTML = "search";
+   document.getElementById("s").style.backgroundColor ="#5A3A1A";
+
+   alert("通信失敗2")
+        })
+}
+function menusearch2(resJson2){
+jsonnn = JSON.stringify(resJson2);
+console.log("JSON文字列↓");
+console.log(jsonnn);
+jsonn = JSON.parse(jsonnn);
+console.log("JS文字列↓");
+console.log(jsonn)
+last = jsonn["last"];
+console.log("last:"+last);
+nummemo = [];
+nummemo = [];
+nummemo2 = [];
+nummemo3 = 0;
+for(var a = 1; a<=last; a+=6){
+  shopp  = String("shop"+a);
+  shoppi = "\""+shopp+"\""+":";
+  if(jsonnn.includes(shopp) === true){
+    menu = jsonn[shopp];
+  console.log(menu);
+   menulast = menu.length;
+   console.log(menulast);
+  }else{
+    console.log(shopp+":undefined");
+  }
+  for(var i = 0; i<menulast; i++){
+     menuname = menu[i];
+  if(menuname == shopname){
+    nummemo3++;
+    console.log(menuname+"発見");
+    nummemo2.push(i);
+    console.log(nummemo2);
+    aa = 'ok';
+  }
+}
+if(typeof aa == 'string'){
+nummemo2 = JSON.stringify(nummemo2);
+console.log(nummemo2);
+info = shoppi+nummemo2;
+console.log(info);
+nummemo.push(info);
+nummemo2 = [];
+aa = 0;
+ss = a;
+}
+}
+console.log(a)
+if(a >= last && nummemo3 > 0){
+  console.log(nummemo);
+  nummemo = nummemo.toString().replace("\'","");
+  nummemo = "{"+nummemo+","+"\""+"last"+"\""+":"+"["+ss+"]"+"}";
+  console.log(nummemo);
+  console.log(nummemo3+":店舗発見")
+  num = 1;  
+ani();
+$('#ss').clearQueue();
+   $('#ss').stop();
+   document.getElementById("ss").innerHTML = "search";
+   document.getElementById("s").style.backgroundColor ="#5A3A1A";
+   cc = "menumemo="+nummemo+"-";
+   document.cookie = "branch=menu|";
+   document.cookie = cc;
+   document.getElementById("ss").innerHTML = "jumping";
+//jump();
+  }else{
+  ani();
+$('#ss').clearQueue();
+   $('#ss').stop();
+   document.getElementById("ss").innerHTML = "search";
+   document.getElementById("s").style.backgroundColor ="#5A3A1A";
+
 }
 }
         </script>
