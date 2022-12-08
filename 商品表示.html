@@ -28,15 +28,27 @@
             function start(){
             document.getElementById("bt1").innerHTML = "Loading";
                 cd= document.cookie;
-alert(cd);
+//alert(cd);
                 num1 = cd.indexOf("searchnum=");
                 num2 = cd.indexOf("$");
                 num3 = cd.indexOf("searchname=");
                 num4 = cd.indexOf("^");
+                num5 = cd.indexOf("branch=");
+                num6 = cd.indexOf("|");
+                num7 = cd.indexOf("menumemo=");
+                num8 = cd.indexOf("-");
                 sn = cd.substring(num1+10,num2);
                 sn2 = decodeURI(cd.substring(num3+11,num4));
-                
+                sn3 = cd.substring(num5+8,num6);
+                sn4 = cd.substring(num7+9,num8);
+               /* sn = 1;
+                sn2 = "hhh";
+                sn3 = "menu";
+                sn4 ={"shop1":["0","22","38"],"shop7":["14","36","52"],"shop13":["4","26","42"],"shop19":["1","23","39"],"shop25":["1","23","39"],"shop31":["1","23","39"],"shop37":["1","23","39"],"shop43":["1","23","39"],"shop49":["1","23","39"],"shop55":["23","39"],"shop61":["23","39"],"shop67":["23","39"],"shop73":["23","39"],"shop79":["23","39"],"last":["79"]};
+*/
                 console.log(sn+":"+sn2);
+                console.log(sn4);
+        if(sn3 == "shop"){
         document.getElementById("h1").innerHTML = sn2;
         url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
         //一旦getして店舗名があるかをチェック→なければ"name4"を商品取得"としてpost
@@ -53,7 +65,12 @@ alert(cd);
         }
         fetch(url,params);
         setTimeout(start2,5000);
+        }else if(sn3 == "menu"){
+    
+            console.log("menu")
+          menu();
         }
+    }
         function start2(){
         document.getElementById("bt1").innerHTML = "Getting";
         fetch(url,{ 
@@ -76,7 +93,7 @@ alert(cd);
            .catch(error =>{
                alert("エラー");
            })
-       
+        
             }
             function show(){
             document.getElementById("bt1").style.opacity = "0";
@@ -124,6 +141,67 @@ alert(cd);
                     return;
                 }
                 show();
+            }
+            function menu(){
+   
+                console.log("送信開始");
+                url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+             var data = [{
+              "searching1":sn4,
+              "branch":"searching"
+             }];
+             var params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+             }
+              fetch(url,params)
+              setTimeout(menu2,3000);
+            }
+            function menu2(){
+                document.getElementById("bt1").innerHTML = "Getting";
+                fetch(url,{ 
+            method:"GET",
+            mode:"cors"
+        })
+            .then(response =>{
+                if(response.ok){
+                    return response.json()
+                }
+            })
+            .then(resJson =>{
+                json = JSON.stringify(resJson);
+                json = JSON.parse(json);
+                console.log(json);
+                show2();
+            })
+           .catch(error =>{
+               alert("エラー");
+           })
+        
+            }
+            function show2(){
+
+                document.getElementById("bt1").style.opacity = "0";
+                            if(json == "error"){
+                    alert("商品が登録されていません");
+                location.href="index.html";
+                }
+                sd = json;
+                lm = sd.menu;
+                lm = lm.length;
+                alert(lm);
+                for(num = 0; num<lm; num++){
+                name = sd.menu[num];
+                fee = sd.fee[num]+"円";
+                express = sd.express[num];
+                genre = sd.genru[num];
+                //pic = sd.name[num];
+                data = "<div class="+"\""+"allq"+"\""+"><div class="+"\""+"out2q"+"\""+">"+"<div class="+"\""+"nameq"+"\""+">"+name+"<div class="+"\""+"feeq"+"\""+">"+fee+"</div><div class="+"\""+"picq"+"\""+">"+express+"</div></div></div><div class="+"\""+"outq"+"\""+"><div class="+"\""+"nameq"+"\""+">"+name+"<div class="+"\""+"feeq"+"\""+">"+fee+"</div><div class="+"\""+"picq"+"\""+"><img src="+"\""+"a.jpeg"+"\""+"></div></div></div></div>";
+            all.insertAdjacentHTML('beforeend',data);
+
+            }
             }
             function test(){
                 /*name = "potato";
