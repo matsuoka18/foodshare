@@ -27,7 +27,7 @@
         <script>
             function start(){
             document.getElementById("bt1").innerHTML = "Loading";
-                cd= document.cookie;
+               cd= document.cookie;
 //alert(cd);
                 num1 = cd.indexOf("searchnum=");
                 num2 = cd.indexOf("$");
@@ -39,14 +39,15 @@
                 num8 = cd.indexOf("-");
                 sn = cd.substring(num1+10,num2);
                 sn2 = decodeURI(cd.substring(num3+11,num4));
-                sn3 = cd.substring(num5+7,num6);
+                sn3 = cd.substring(num5+8,num6);
                 sn4 = cd.substring(num7+9,num8);
-               /* sn = 1;
-                sn2 = "hhh";
-                sn3 = "menu";
-                sn4 ={"shop1":["0","22","38"],"shop7":["14","36","52"],"shop13":["4","26","42"],"shop19":["1","23","39"],"shop25":["1","23","39"],"shop31":["1","23","39"],"shop37":["1","23","39"],"shop43":["1","23","39"],"shop49":["1","23","39"],"shop55":["23","39"],"shop61":["23","39"],"shop67":["23","39"],"shop73":["23","39"],"shop79":["23","39"],"last":["79"]};
-*/
+               // sn = 1;
+                //sn2 = "hhh";
+                //sn3 = "menu";
+                //sn4 = {"shop1":["0","22","38"],"shop7":["14","36","52"],"shop13":["4","26","42"],"shop19":["1","23","39"],"shop25":["1","23","39"],"shop31":["1","23","39"],"shop37":["1","23","39"],"shop43":["1","23","39"],"shop49":["1","23","39"],"shop55":["23","39"],"shop61":["23","39"],"shop67":["23","39"],"shop73":["23","39"],"shop79":["23","39"],"last":["79"]};
+
                 console.log(sn+":"+sn2);
+                console.log(sn3);
                 console.log(sn4);
         if(sn3 == "shop"){
         document.getElementById("h1").innerHTML = sn2;
@@ -143,7 +144,8 @@
                 show();
             }
             function menu(){
-   
+              sn4 = JSON.stringify(sn4);
+              sn4 = JSON.parse(sn4);
                 console.log("送信開始");
                 url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
              var data = [{
