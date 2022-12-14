@@ -43,7 +43,6 @@ console.log(cd);
                     console.log("1");
                     sn3 = cd.substring(num5+7,num6);
                 sn4 = cd.substring(num7+9,num8);
-                sn2 = "商品検索";
                 console.log(sn3);
                 console.log(sn4);
                 }else{
@@ -79,7 +78,7 @@ console.log(cd);
         fetch(url,params);
         setTimeout(start2,5000);
         }else if(sn3 == "menu"){
-    
+            document.getElementById("h1").innerHTML = "商品検索";
             console.log("menu")
           menu();
         }
