@@ -39,7 +39,7 @@ console.log(cd);
                 num6 = cd.indexOf("|");
                 num7 = cd.indexOf("menumemo=");
                 num8 = cd.indexOf("-");
-                if(num1 != 0 || num2 != 0 || num3 != 0 || num4 != 0){
+              if(num1 < 0 || num2 < 0 || num3 < 0 || num4 < 0){
                     console.log("1");
                     sn3 = cd.substring(num5+7,num6);
                 sn4 = cd.substring(num7+9,num8);
