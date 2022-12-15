@@ -5,7 +5,11 @@
   <title>フードロスなくそう</title>
   <link rel="stylesheet" href="home1.css">
   </head>
-  <body onload="pic()">
+  <body onload="start()">
+    <div class="alll2" id="alll2">
+      <input type="text" id="logp" value="" placeholder="パスワードを入力してください">
+    </div>
+    <div class="alll" id="alll">
     <div class="section1">
       <div class="head">
         <div class="p">
@@ -168,9 +172,43 @@
 <p>沖縄県</p>                                              
 </div>
 </div>
+</div>
+<style>
+  .alll{
+    opacity:0;
+  }
+  .alll2{
+    opacity:0;
+  }
+</style>
 <script src="a.js"></script>
         <script>
           a = 0;
+          ipadress='';
+          function start(){
+            fetch('https://ipinfo.io?callback')
+  .then(res => res.json())
+  .then(json => {
+    ip = json.ip;
+  if(ip == '60.134.235.1'){
+    document.getElementById("alll").style.opacity = "1";
+    pic();
+  }else{
+    document.getElementById("alll2").style.opacity = "1";
+    data = "<h1>ログインせい</h1><h2>パスワード</h2>";
+    alll2.insertAdjacentHTML('afterbegin',data);
+  }
+});
+          }
+          logp = document.getElementById("logp");
+          document.getElementById("logp").addEventListener('keyup',keycheck);
+          function keycheck(){
+            if(logp.value == "papa"){
+              document.getElementById("alll2").style.display = "none";
+              document.getElementById("alll").style.opacity = "1";
+              pic();
+            }
+          }
           function pic(){
             if(a == 0){
               a = 1;
@@ -368,6 +406,7 @@ for(var a = 1; a<=last; a+=6){
   if(menuname == shopname){
     nummemo3++;
     console.log(menuname+"発見");
+    i = String(i);
     nummemo2.push(i);
     console.log(nummemo2);
     aa = 'ok';
@@ -381,14 +420,14 @@ console.log(info);
 nummemo.push(info);
 nummemo2 = [];
 aa = 0;
-ss = a;
+ss = String(a);
 }
 }
 console.log(a)
 if(a >= last && nummemo3 > 0){
   console.log(nummemo);
   nummemo = nummemo.toString().replace("\'","");
-  nummemo = "{"+nummemo+","+"\""+"last"+"\""+":"+"["+ss+"]"+"}";
+  nummemo = "{"+nummemo+","+"\""+"last"+"\""+":"+"["+"\""+ss+"\""+"]"+"}";
   console.log(nummemo);
   console.log(nummemo3+":店舗発見")
   num = 1;  
@@ -401,7 +440,7 @@ $('#ss').clearQueue();
    document.cookie = "branch=menu|";
    document.cookie = cc;
    document.getElementById("ss").innerHTML = "jumping";
-jump();
+//jump();
   }else{
   ani();
 $('#ss').clearQueue();
