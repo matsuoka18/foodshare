@@ -8,8 +8,10 @@
   <body onload="start()">
     <div class="alll2" id="alll2">
       <input type="text" id="logp" value="" placeholder="パスワードを入力してください">
+      <div id="a"></div>
     </div>
     <div class="alll" id="alll">
+      <div id="a"></div>
     <div class="section1">
       <div class="head">
         <div class="p">
@@ -179,6 +181,8 @@
   }
   .alll2{
     opacity:0;
+    padding: 0;
+    margin:0;
   }
 </style>
 <script src="a.js"></script>
@@ -192,6 +196,7 @@
     ip = json.ip;
   if(ip == '60.134.235.1'){
     document.getElementById("alll").style.opacity = "1";
+    document.getElementById("alll2").style.display = "none";
     pic();
   }else{
     document.getElementById("alll2").style.opacity = "1";
