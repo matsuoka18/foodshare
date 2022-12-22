@@ -154,13 +154,16 @@
         }
     </style>
     <script>
+        key = '';
         window.onload = (event) => {
             text = document.cookie;
-        text = text.replace(/=/g,"\""+":"+"\"");
+            text = text.replace(/=/g,"\""+":"+"\"");
         text = text.replace(/;/g,"\""+","+"\"");
         text2 = "{"+"\""+text+"\""+"}";
+        console.log(text2);
         text2 = JSON.parse(text2);
-        key = text2[key];
+        console.log(text2);
+        key = text2.key;
         console.log(key);
         data = "<h2>"+key+"様"+"</h2>";
         namee.insertAdjacentHTML("beforeend",data);
