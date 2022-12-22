@@ -157,8 +157,10 @@
         key = '';
         window.onload = (event) => {
             text = document.cookie;
+                        text = text.replace(/={/g,"\""+":"+"{");
+            text = text.replace(/-; /g,","+"\"");
             text = text.replace(/=/g,"\""+":"+"\"");
-        text = text.replace(/;/g,"\""+","+"\"");
+            text = text.replace(/; /g,"\""+","+"\"");
         text2 = "{"+"\""+text+"\""+"}";
         console.log(text2);
         text2 = JSON.parse(text2);
