@@ -18,6 +18,7 @@
 <p>foodshare</p>
 </div>
 </div>
+<div class="all2"id="all2"></div>
 <div id="all"class="all">
 <div class="form">
   　<div class="form2">
@@ -34,14 +35,12 @@
       <input type="text" class="password"id="password" value="" placeholder="8文字以上で入力してください">
       <h2>もう一度入力してください</h2>
       <input type="text" class="password"id="password" value="" placeholder="パスワードを再入力">
-      </div>
+    </div>
       <button onclick="check()">確認</button>
-
       </div>
       <div id="che"class="che">
         <div class="che2">
       <h2>登録内容の確認</h2>
-      
       <p id="check1"></p>
 <p id="check4"></p>
       <p id="check2"></p>
@@ -57,7 +56,10 @@
    text-align:center;
    font-size:50px;
    font-weight:500;
-}
+   background-color:white;
+  opacity: 0;
+  display: none;
+  }
       </style>
       <script>
       function hello(){
@@ -115,6 +117,7 @@ fetch(url,params)
 fetch(url,params2)
 document.getElementById("all").style.opacity = 0;
 document.getElementById("all2").style.opacity = 1;
+document.getElementById("all2").style.display = "block";
 data = "<p>メールアドレスに本登録ページを送信しました</p>";
 all2.insertAdjacentHTML('beforeend',data);
 cookie = "key="+text;
