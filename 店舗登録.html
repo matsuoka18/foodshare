@@ -4,6 +4,12 @@
   <meta charset="utf-8">
   <title>登録</title>
   <link rel="stylesheet" href="home2.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+       emailjs.init("WIptzQo9RsrV7VK_G");
+    })();
+ </script>
   </head>
   <body>
     <div class="name2">
@@ -13,6 +19,8 @@
 </div>
 
 </div>
+<div id="all2" class="all2"></div>
+<div id="all"class="all">
 <div class="form">
   　<div class="form2">
      <p>登録する店舗名を入力してください</p>
@@ -41,10 +49,15 @@
       </div>
       <button id="send"class="商品button"onclick="send()">登録する</button>
       </div>
-      <button onclick="hello()">cookie</button>
+      </div>
       </div>
       <style>
-
+.all2{
+   width:100vw;  
+   text-align:center;
+   font-size:50px;
+   font-weight:500;
+}
       </style>
       <script>
       function hello(){
@@ -100,8 +113,27 @@ var params2 = {
 }
 fetch(url,params)
 fetch(url,params2)
-alert("登録が完了しました");
-location.href="login.html";
+document.getElementById("all").style.opacity = 0;
+document.getElementById("all2").style.opacity = 1;
+data = "<p>メールアドレスに本登録ページを送信しました</p>";
+all2.insertAdjacentHTML('beforeend',data);
+cookie = "key="+text;
+document.cookie = cookie;
+var templateParams = {
+ mail : mailad,
+ shop : text
+};
+emailjs.send('service_42f6qvc', 'template_2fm7ssi', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+alert("メールを送信しました");
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+    window.scrollTo(0,0);
+//cookieに次の店舗登録2.htmlでデータを受け取る用のkeyを記載
+///alert("登録が完了しました");
+//location.href="login.html";
 }
 </script>
     </body>

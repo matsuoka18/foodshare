@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="home2.css">
+    <title>店舗本登録</title>
+</head>
+
+<body>
+    <div class="name2">
+        <h1>店舗本登録</h1>
+        <div class="name" onclick="location.href='index.html'">
+            <p>foodshare</p>
+        </div>
+        <div id="namee">
+
+        </div>
+            
+    </div>
+
+    <div id="all" class="all">
+
+        <div id="form" class="form">
+            <img class="img"id="img"src="2.PNG">
+            <div class="form6">
+                <p>都道府県</p>
+                <input type="text" id="todouhu" value="" placeholder="都道府県を入力">
+            </div>
+            <div class="form6">
+                <p>市町村郡</p>
+                <input type="text" id="city" value="" placeholder="市町村郡(区のみの場合は空欄）">
+            </div>
+            <div class="form6">
+                <p>区</p>
+                <input type="text" id="ku" value="" placeholder="区（区でない場合は空欄）">
+            </div>
+            <div class="form6">
+                <p>上記以下の住所</p>
+                <input type="text" id="ad" value="" placeholder="上記以下の住所">
+            </div>
+            <div class="form6">
+                <p>郵便番号</p>
+                <input type="text" id="po" value="" placeholder="郵便番号(ハイフンなし)">
+            </div>
+            <div class="form6">
+                <p>電話番号</p>
+                <input type="text" id="phone" value="" placeholder="電話番号(ハイフンなし)">
+            </div>
+            <button class="商品button" onclick="first()">確認</button>
+        </div>
+        <div id="formm" class="formm">
+            <img class="img"id="img"src="3.PNG">
+            <div class="form6">
+                <p>都道府県</p>
+                <input type="text" id="todouhu2" value="" placeholder="都道府県を入力">
+            </div>
+            <div class="form6">
+                <p>市町村郡</p>
+                <input type="text" id="city2" value="" placeholder="市町村郡">
+            </div>
+            <div class="form6">
+                <p>区</p>
+                <input type="text" id="ku2" value="" placeholder="区">
+            </div>
+            <div class="form6">
+                <p>上記以下の住所</p>
+                <input type="text" id="ad2" value="" placeholder="上記以下の住所">
+            </div>
+            <div class="form6">
+                <p>郵便番号</p>
+                <input type="text" id="po2" value="" placeholder="郵便番号(ハイフンなし)">
+            </div>
+            <div class="form6">
+                <p>電話番号</p>
+                <input type="text" id="phone2" value="" placeholder="電話番号(ハイフンなし)">
+            </div>
+            <button class="商品button" onclick="second2()">戻る</button>
+            <button class="商品button" onclick="second()">次へ</button>
+        </div>
+    </div>
+    <div id="all2" class="all2">
+                    <img class="img"id="img"src="4.PNG">
+        <div class="form6">
+            <p>店舗紹介文</p>
+            <textarea id="introduce" class="introduce" cols="60" rows="10" wrap="hrad"
+                placeholder="例：〜〜がおすすめ！など"></textarea>
+        </div>
+        <div class="form6">
+            <p>営業時間</p>
+            <input type="text" id="time" value="" placeholder="営業時間">
+        </div>
+        <p>店舗のジャンル</p>
+        <form name="name1">
+            <select id="name2"name="name2">
+                <option value="">ジャンルを選択</option>
+                <option value="ファストフード">ファストフード</option>
+                <option value="洋食">洋食</option>
+                <option value="和食">和食</option>
+                <option value="その他">その他</option>
+            </select>
+        </form>
+        <button class="商品button" onclick="third2()">戻る</button>
+        <button class="商品button" onclick="third()">次へ</button>
+    </div>
+    <div id="all3" class="all3">
+        <img class="img"id="img"src="5.PNG">
+        <div class="form7">
+            <p>住所</p>
+            <p class="p" id="p11"></p>
+        </div>
+        <div class="form7">
+            <p>電話番号</p>
+            <p class="p" id="p22"></p>
+        </div>
+        <div class="form7">
+            <p>郵便番号</p>
+            <p class="p" id="p33"></p>
+        </div>
+        <div class="form7">
+            <p>店舗紹介</p>
+            <p class="pp" id="p44"></p>
+        </div>
+        <div class="form7">
+            <p>営業時間</p>
+            <p class="p" id="p55"></p>
+        </div>
+        <div class="form7">
+            <p>ジャンル
+            </p>
+            <p class="p" id="p66"></p>
+        </div>
+        <button class="商品button" onclick="fourth2()">戻る</button>
+        <button class="商品button" onclick="fourth()">登録</button>
+    </div>
+    <style>
+        .form {
+            opacity: 1;
+        }
+
+        .formm {
+            opacity: 0;
+        }
+
+        .all2 {
+            opacity: 0;
+        }
+
+        .all3 {
+            opacity: 0;
+        }
+        h2{
+            margin-left:10px;
+        }
+    </style>
+    <script>
+        window.onload = (event) => {
+            text = document.cookie;
+        text = text.replace(/=/g,"\""+":"+"\"");
+        text = text.replace(/;/g,"\""+","+"\"");
+        text2 = "{"+"\""+text+"\""+"}";
+        text2 = JSON.parse(text2);
+        key = text2[key];
+        console.log(key);
+        data = "<h2>"+key+"様"+"</h2>";
+        namee.insertAdjacentHTML("beforeend",data);
+        };
+
+        to = '';
+        city = '';
+        ku = '';
+        ad = '';
+        po = '';
+        phone = '';
+        introduce = '';
+        time = '';
+        adress = '';
+        function first() {
+            to = document.getElementById("todouhu").value;
+            city = document.getElementById("city").value;
+            ku = document.getElementById("ku").value;
+            ad = document.getElementById("ad").value;
+            po = document.getElementById("po").value;
+            phone = document.getElementById("phone").value;
+            if(city.length == 0){
+                city = "**";
+            }
+            if(ku.length == 0){
+                ku = "**";
+            }
+            if(to.length == 0 || city.length == 0 || ku.length ==0 || ad.length == 0 || po.length == 0 || phone.length == 0){
+                alert("未記入欄があります");
+                return;
+            }
+            document.getElementById("todouhu2").value = to;
+            document.getElementById("city2").value = city;
+            document.getElementById("ku2").value = ku;
+            document.getElementById("ad2").value = ad;
+            document.getElementById("po2").value = po;
+            document.getElementById("phone2").value = phone;
+            document.getElementById("form").style.display = "none";
+            document.getElementById("form").style.opacity = "0";
+            document.getElementById("formm").style.opacity = "1";
+            window.scrollTo(0,0);
+        }
+
+        function second() {
+            document.getElementById("formm").style.opacity = "0";
+            document.getElementById("formm").style.display = "none";
+            document.getElementById("all2").style.opacity = "1";
+            window.scrollTo(0,0);
+        }
+        function second2(){
+            document.getElementById("form").style.display = "block";
+            document.getElementById("form").style.opacity = "1";
+            document.getElementById("formm").style.opacity = "0";
+            window.scrollTo(0,0);
+        }
+        function third() {
+            introduce = document.getElementById("introduce").value;
+            time = document.getElementById("time").value;
+            genru = document.getElementById("name2").value;
+            document.getElementById("all2").style.opacity = "0";
+            document.getElementById("all2").style.display = "none";
+            document.getElementById("all3").style.opacity = "1";
+            adress = to + city + ku + ad;
+            document.getElementById("p11").innerHTML = adress;
+            document.getElementById("p22").innerHTML = phone;
+            document.getElementById("p33").innerHTML = po;
+            document.getElementById("p44").innerHTML = introduce;
+            document.getElementById("p55").innerHTML = time;
+            document.getElementById("p66").innerHTML = genru;
+            window.scrollTo(0,0);
+        }
+        function third2(){
+            document.getElementById("formm").style.opacity = "1";
+            document.getElementById("formm").style.display = "block";
+            document.getElementById("all2").style.opacity = "0";
+            window.scrollTo(0,0);
+        }
+        function fourth() {
+            url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+data = [{
+    "name":key,
+    "pre":to,
+    "city":city,
+    "ku":ku,
+    "ad":ad,
+    "po":po,
+    "phone":phone,
+    "intr":introduce,
+    "time":time,
+    "genru":genru,
+    "branch":"shopmake"
+}]
+params = {
+    "method":"post",
+    "mode":"no-cors",
+    "Content-Type":"application/json",
+    "body":JSON.stringify(data)
+}
+console.log(JSON.stringify(data));
+fetch(url,params)
+alert("登録完了");
+location.hrf = "login.html";
+        }
+        function fourth2(){
+            document.getElementById("all2").style.opacity = "1";
+            document.getElementById("all2").style.display = "block";
+            document.getElementById("all3").style.opacity = "0";
+            window.scrollTo(0,0);
+        }
+    </script>
+</body>
+
+</html>
