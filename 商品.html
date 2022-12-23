@@ -8,7 +8,7 @@
   <body onload="getdata()">
     <div class="name2">
       <h1>商品編集</h1>
-<div class="name" onclick="location.href='index.html'">
+<div class="name">
 <p>foodshare</p>
 </div>
 <p id="loda">dsf</p>
@@ -27,8 +27,7 @@
          <input type="file" id="example" multiple>
          <p>商品のジャンルを選ぶ</p>
          <form name="example2">
-         <select id="jann"name="example3">
-           <option value="ジャンルを選んでください">ジャンルを選んでください</option>
+         <select id="jann"name="example">
      <option value="飯類">飯類</option>
      <option value="麺類">麺類</option>
      <option value="スイーツ">スイーツ</option>
@@ -153,8 +152,6 @@ shopnumberp2 = cookie.indexOf("#");
   cookie4 = cookie.substring(loginIDp1,loginIDp2);//loginID
   cookie6 = cookie.substring(passp1,passp2);//pass
   shopID = cookie.substring(shopnumberp1,shopnumberp2);//shopID
-  console.log(shopID);
-  cookie4 = decodeURI(cookie4);
   document.getElementById("change1").value = cookie4;
   document.getElementById("nh1").value = cookie4;
   document.getElementById("nh11").innerHTML = cookie4
@@ -167,8 +164,6 @@ document.getElementById("np1").addEventListener('keyup',change);
      document.getElementById("jann").addEventListener('change',change);
      //nh1はクッキーから取得してくい本固定
      function change(){
-       form = document.example2.example3;
-       formn = form.selectedIndex+1;
        //shop = document.getElementById("shopname").value;
        menu  = document.getElementById("np1").value;
        fee  = document.getElementById("np11").value;
@@ -178,7 +173,7 @@ document.getElementById("nh11").innerHTML = cookie4;//店舗名
 document.getElementById("np1_1").innerHTML = menu;
 document.getElementById("np2_2").innerHTML = fee;
 document.getElementById("np3_3").innerHTML = express;
-document.getElementById("np4_4").innerHTML = document.getElementById("jann").value;
+document.getElementById("np4_4").innerHTML = janru;
      }
       //cookieから来る予定の情報たちの仮入力
       //プレビューと商品の変数追加
@@ -194,8 +189,7 @@ function menuu(){
     var url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   var data = [{
     "name4":"商品編集",
-    "name5": shopID,
-    "branch":"changedata"
+    "name5": shopID
       }]
   var params = {
     "method":"post",
@@ -205,7 +199,7 @@ function menuu(){
   }
   fetch(url, params);
   document.getElementById("loda").innerHTML = "loading";
-  setTimeout(n,3000);
+  n();
 }
 
 function n(){
@@ -288,10 +282,9 @@ ne();
 }
 function ne(){
   document.getElementById("change1").value = cookie4;//店舗名
-  document.getElementById("change2").value = menu;  //商品名
-  document.getElementById("change3").value =  fee; //料金
-  document.getElementById("change4").value =express; //説明
-
+  document.getElementById("change2").value = menu;
+  document.getElementById("change3").value = express;
+  document.getElementById("change4").value =  fee;
   //document.getElementById("change5").value = pic;
   document.getElementById("change6.2").innerHTML = genre;
   console.log(menu+fee+express+pic+genre);
@@ -550,7 +543,7 @@ fileInput.addEventListener('change', handleFileSelect);
           img = document.createElement("img"); // img要素を作成
           img.src = imageUrl; // URLをimg要素にセット
           preview.appendChild(img); // #previewの中に追加
-          //alert(imageUrl);
+          alert(imageUrl);
         }
 
         // いざファイルをURLとして読み込む
@@ -571,7 +564,7 @@ function sen(){
           "name3":express,
           "name4":"追加",
           "name5":shopID,
-          "name8":janru,
+          "name8":jann,
           "name9":imageUrl
         }]
       var params = {
