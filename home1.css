@@ -47,6 +47,7 @@ margin:0;
   border-radius:10px;
   font-size:15px;
   font-weight:600;
+  margin-top:0;
 }
 .searchform button:hover{
   background-color:#BC9A78;
@@ -269,105 +270,6 @@ background-color:#BC9A78;
   font-size:50px;
 }
 
-            li{
-                 position:absolute;top:6vw;left:85vw;
-                  text-decoration:none;
-                   list-style-type:none;
-                   width:100px;
-                   color:white;
-                   font-weight:600;
-            height:30px;
-              border-radius:10px;
-              background-color:#5A3A1A;
-              text-align:center;
-            }
-            a{
-               text-decoration:none;
-                 color:white;
-                   font-weight:600;
-               
-            }
-            .l1{
-               text-decoration:none;
-              
-                transition:1.0s;
-            }
-            .l2{
-               
-                transition:1.0s;
-            }
-            .l3{
-              
-           
-                transition:1.0s;
-            }
-            .l4{
-                width:100px;
-                height:30px;
-                padding:0;
-                margin:0;
-            }
-            .l5{
-              transition:1s;
-            }
-            .l5:hover {
-                  background-color:#BC9A78;
-                  color:#5A3A1A;
-            }
-            
-            .l4:hover .l1{
-                transform:translate(0px,30px);
-            }
-              .l4:hover .l2{
-                transform:translate(0px,60px);
-               
-            }
-              .l4:hover .l3{
-                transform:translate(0px,90px);
-               
-            }
-            .l1:hover{
-               transition:0.2s;
-                   background-color:#BC9A78;
-                   color:#5A3A1A;
-            }
-               .l2:hover{
-               transition:0.2s;
-                   background-color:#BC9A78;
-                   color:#5A3A1A;
-            }
-               .l3:hover{
-               transition:0.2s;
-                   background-color:#BC9A78;
-                   color:#5A3A1A;
-            }
-                  .a1:hover{
-               transition:0.2s;
-                   background-color:#BC9A78;
-                   color:#5A3A1A;
-            }
-               .a2:hover{
-               transition:0.2s;
-                   background-color:#BC9A78;
-                   color:#5A3A1A;
-            }
-               .a3:hover{
-               transition:0.2s;
-                   background-color:#BC9A78;
-                   color:#5A3A1A;
-            }
-            .l1 a:active{
-             
-              color:white;
-            }
-              .l2 a:active{
-          
-              color:white;
-            }
-              .l3 a:active{
-          
-              color:white;
-            }
 .all{
   width:100vw;
   position: relative;top:7vw;
