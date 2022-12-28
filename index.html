@@ -241,7 +241,7 @@ padding-top:1vw;
     margin:0;
   }
 
-  li{
+  .head li{
                  position:absolute;top:6vw;left:85vw;
                   text-decoration:none;
                    list-style-type:none;
@@ -354,6 +354,8 @@ padding-top:1vw;
     document.getElementById("alll").style.opacity = "1";
     document.getElementById("alll2").style.display = "none";
     pic();
+    console.log("firstdata start>>");
+    firstsearch();//ページ読み込みの際に全データを取得
   }else{
     document.getElementById("alll2").style.opacity = "1";
     data = "<h1>ログインせい</h1><h2>パスワード</h2>";
@@ -389,12 +391,115 @@ padding-top:1vw;
   searching();
  }
         });
+
+//取得時に全データ取得　始
+
+        function firstsearch(){
+          url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+var data = [{
+"branch":"shopdata"
+}]
+var params={
+"method":"post",
+"mode":"no-cors",
+"Content-Type":"application/json",
+"body":JSON.stringify(data)
+}
+fetch(url,params);
+console.log("firstsearch1 ok")
+setTimeout(firstsearch2,2000);
+        }
+        firstdata1 = '';
+        firstdata2 = '';
+        success1 =  '';
+        success2 =  '';
+        function firstsearch2(){
+          fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
+            method:"GET",
+            moe:"cors"
+          })
+          .then(response =>{
+            if(response.ok){
+              return response.json()
+            }
+          })
+          .then(resJson =>{
+firstdata1 = resJson;
+success1 = "ok";
+console.log("firstsearch2 ok");
+console.log("firstsearch finish");
+console.log("firstmenusearch start>>");
+firstmenu();
+
+          })
+        .catch(error =>{
+          num = 1;
+ani();
+$('#ss').clearQueue();
+   $('#ss').stop();
+   document.getElementById("ss").innerHTML = "search";
+   document.getElementById("s").style.backgroundColor ="#5A3A1A";
+
+   alert("通信失敗1")
+        })
+        }
+function firstmenu(){
+  console.log("menusearch ok");
+  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+var data = [{
+"branch":"menu"
+}]
+var params={
+"method":"post",
+"mode":"no-cors",
+"Content-Type":"application/json",
+"body":JSON.stringify(data)
+}
+fetch(url,params);
+console.log("firstmenusearch1 ok");
+setTimeout(firstmenu2,2000);
+}
+function firstmenu2(){
+  console.log("menu2 ok");
+  fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
+            method:"GET",
+            moe:"cors"
+          })
+          .then(response =>{
+            if(response.ok){
+              return response.json()
+            }
+          })
+          .then(resJson =>{
+            console.log("firstmenusearch2 ok");
+firstdata2 = resJson;
+console.log("firstdata 1/2 finish");
+console.log("wait for instructions");
+success2 = "ok";
+          })
+        .catch(error =>{
+          num = 1;  
+ani();
+$('#ss').clearQueue();
+   $('#ss').stop();
+   document.getElementById("ss").innerHTML = "search";
+   document.getElementById("s").style.backgroundColor ="#5A3A1A";
+
+   alert("通信失敗2")
+        })
+}
+//ロード時に全データ取得のコード　終
+
         function searching(){
           num = 100;
           ani();
 document.getElementById("ss").innerHTML = "loading";
 document.getElementById("s").style.backgroundColor ="#C6AC8F"
           shopname = document.getElementById("search").value;
+          if(success1 == "ok"){
+            console.log("data:"+firstdata1)
+shopsearch(firstdata1);
+          }else{
           url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
 "branch":"shopdata"
@@ -408,6 +513,7 @@ var params={
 fetch(url,params);
 setTimeout(searching2,3000);
         }
+      }
 function searching2(){
           fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
             method:"GET",
@@ -462,9 +568,13 @@ ani();
 $('#ss').clearQueue();
    $('#ss').stop();
    document.getElementById("s").style.backgroundColor ="#5A3A1A";*/
+if(success2 == "ok"){
+console.log("data2:"+firstdata2);
+menusearch2(firstdata2);
+}else{
    menusearch();
 }
-
+}
         }
 function jump(){
   num = 1;
@@ -608,7 +718,8 @@ $('#ss').clearQueue();
    $('#ss').stop();
    document.getElementById("ss").innerHTML = "search";
    document.getElementById("s").style.backgroundColor ="#5A3A1A";
-
+console.log("店舗・商品がありません");
+alert("店舗・商品がありません");
 }
 }
         </script>
