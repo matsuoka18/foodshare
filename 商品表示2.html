@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>hello</title>
+    <link rel="stylesheet" href="home1.css">
+    <link rel="stylesheet" href="home2.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="alll" id="alll">
+    <div class="section1">
+        <div class="head">
+          <div class="p">
+            <p onclick="カート()">カート</p>
+         <ul class="l4">
+              <li class="l1"><a class="a1"href="店舗側.html">店舗側ページ</a></li>
+              <li class="l2"><a class="a2"href="店舗登録.html">店舗登録</a></li>
+              <li class="l3"><a class="a3"href="login.html">ログイン</a></li>
+              <li class="l5">店舗情報</li>
+          </ul>
+              
+          </div>
+          <div class="searchform">
+        <input type="text"class="search"id="search"placeholder="shopname or menu"value="">
+        <button id="s"onclick="searching()"><span id="ss">search</span></button>
+        <p class="genre">ジャンルを一覧</p>
+      </div>
+  
+    </div>
+      <h1 class="h1">foodshare</h1>
+</div>
+    <div class="hey">
+        <img src="test.jpg">
+        <div class="intro">
+            <div class="hyouka">
+
+                <h1>マクドナルド</h1>
+                <div class="cart">カートに追加</div>
+                <p>評価とか</p>
+
+            </div>
+            <div class="info">
+                <li class="time">営業時間
+                    <ul>12:00~13:00</ul>
+                </li>
+                <li>住所
+                    <ul>神奈川県鎌倉市手広4-28-14</ul>
+                </li>
+                <li>電話番号
+                    <ul>
+                        0467-91-5460
+                    </ul>
+                </li>
+                <li>ホームページとか
+                    <ul>
+                        https://matsuoka18.github.io/foodshare
+                    </ul>
+                </li>
+            </div>
+            <div class="sho">
+                <span>松尾家の子ども部屋。</span>
+            <pre>
+紹介文とか
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <h1>メニュー</h1>
+        <div class="buttons"id="buttons">
+            <button class="but1" id="but1" onclick="but1()">トップ</button>
+            <button class="but2" id="but2" onclick="but2()">期間限定</button>
+            <button class="but3" id="but3" onclick="but3()">人気</button>
+            <button class="but4"id="but4" onclick="but4()">一覧</button>
+            <button class="but5"id="but5" onclick="but5()">残りわずか</button>
+            <button class="but6" id="but6" onclick="but6()">廃棄寸前</button>
+        </div>
+
+    </div>
+    <div class="button11"id="button11">
+        <h2>おすすめメニュー</h2>
+        <div class="menu1">
+            <img src="a.jpeg">
+<div class="menu11">
+            <h2 class="time1  hh2"id="menuh2">ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+    </div>
+    <div class="button22"id="button22">
+        <h2>期間限定</h2>
+        <div class="menu1">
+            <img src="a.jpeg">
+<div class="menu11">
+            <h2 class="time1  hh2"id="menuh2">期間限定</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+    </div>
+    <div class="button33"id="button33">
+        <h2>人気</h2>
+        <div class="menu1">
+            <img src="a.jpeg">
+<div class="menu11">
+            <h2 class="time1  hh2"id="menuh2">人気</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+    </div>
+    <div class="button44"id="button44">
+        <h2>一覧</h2>
+        <div class="menu1">
+            <img src="a.jpeg">
+<div class="menu11">
+            <h2 class="time1  hh2"id="menuh2">一覧</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+    </div>
+        <div class="button55"id="button55">
+        <h2>残りわずか</h2>
+        <div class="menu1">
+            <img src="a.jpeg">
+<div class="menu11">
+            <h2 class="time1  hh2"id="menuh2">残りわずか</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+    </div>
+    <div class="button66"id="button66">
+        <h2>廃棄寸前</h2>
+        <div class="menu1">
+            <img src="a.jpeg">
+<div class="menu11">
+            <h2 class="time1  hh2"id="menuh2">廃棄寸前</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg">
+            <h2>ビックマック</h2>
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+    </div>
+    <style>
+                    .button11{
+                border:none;
+            }
+            .menu1 img{
+                width:auto;
+                height:15vw;
+               margin-right:10px;
+            }
+
+            .button11 h2{
+                padding-left:2vw;
+                font-size:30px;
+            }
+            .button22 h2{
+                padding-left:2vw;
+                font-size:30px;
+            }
+            .button33 h2{
+                padding-left:2vw;
+                font-size:30px;
+            }
+            .button44 h2{
+                padding-left:2vw;
+                font-size:30px;
+            }
+            .button55 h2{
+                padding-left:2vw;
+                font-size:30px;
+            }
+            .button66 h2{
+                padding-left:2vw;
+                font-size:30px;
+            }
+            .menu1{
+                padding:5px;
+                height:15vw;
+            }
+            .menu1:hover img{
+                box-shadow:0 0 2px 2px #DDDDDD;
+            }
+            .menu1:hover{
+                background-color: #EEEEEE;
+            }
+            .menu1 h2{
+                font-size:40px;
+                width:40vw;
+
+
+            }
+            .hh2:hover{
+                border-bottom:2px solid black;
+                animation-name:hello;
+            animation-duration:1s;
+            animation-fill-mode:forwards;
+            }
+
+            @keyframes hello {
+                from{
+                    width:40vw;
+                }
+                to{
+                    width:100vw;
+                }
+            }
+            .menu1:hover h2{
+                color:black;
+                border-bottom:2px solid black;
+                animation-name:hello;
+            animation-duration:1s;
+            animation-fill-mode:forwards;
+            }
+            .menu1 h2:hover{
+                background-color:lightgray;
+            }
+            .menu1 p{
+                font-size:20px;
+                color:gray;
+            }
+            .menu1 h4{
+
+                font-size:30px;
+                color:red;
+            }
+            .menu1 span{
+                font-size:15px;
+            }
+        .hey {
+            width: 100vw;
+            height: 45vw;
+            padding: 0;
+            margin: 0;
+        }
+
+        img {
+            height: 45vw;
+            width: auto;
+            margin: 0;
+            padding: 0;
+            float: left;
+        }
+
+        .intro {
+            display: inline-block;
+            height: 45vw;
+            width: 40vw;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .hyouka {
+            padding: 10px;
+            margin: 0;
+            border-bottom: 1px solid lightgray;
+
+        }
+
+        .hyouka h1 {
+            padding: 0.5vw;
+            margin: 0.25vw;
+            background-color: white;
+            box-shadow: 0 0 2px 1px white;
+            border-radius: 30px;
+            color: #3A1F00;
+            font-size: 40px;
+        }
+
+        .hyouka p {
+            display: flex;
+        }
+
+        .sho {
+            height: 16vw;
+            border: 1px solid gray;
+            font-size:20px;
+        }
+.sho span{
+    font-weight:600;
+}
+        .info {
+            background-color: #EEEEEE;
+            height: 20vw;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 15px;
+
+        }
+
+        .info li {
+            font-family: sans-serif;
+            display: block;
+            text-align: left;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .main {
+            width: 100vw;
+        }
+
+        .main h1 {
+            text-align: center;
+            font-size: 40px;
+            padding-top: 5vw;
+            margin-bottom:0;
+            margin-top:0;
+            padding-bottom: 5vw;
+            border-top:2px solid #3A1F00;
+            border-bottom: 1px solid #3A1F00;
+        }
+.buttons{
+    padding:0;
+            margin: 0;
+            border-bottom:3px solid #BC9A78;
+            height:5vw;
+            width:100vw;
+            background-color: #C6AC8F;
+
+}
+        .buttons button {
+            width: 16.54vw;
+            height: 5vw;
+            border-radius: 0;
+            background-color: white;
+            color: #3A1F00;
+            border: 1px solid #3A1F00;
+            padding:0;
+            margin: 0;
+            float:left;
+        }
+        .buttons button:hover{
+background-color:#C6AC8F;
+        }
+        .buttons button:active{
+            font-weight:600;
+            color:white;
+        }
+.buttons .but1{
+    background-color:#C6AC8F;
+    border:none;
+}
+       .head li{
+                 position:absolute;top:6vw;left:85vw;
+                  text-decoration:none;
+                   list-style-type:none;
+                   width:100px;
+                   color:white;
+                   font-weight:600;
+            height:30px;
+              border-radius:10px;
+              background-color:#5A3A1A;
+              text-align:center;
+            }
+            a{
+               text-decoration:none;
+                 color:white;
+                   font-weight:600;
+               
+            }
+            .l1{
+               text-decoration:none;
+              
+                transition:1.0s;
+            }
+            .l2{
+               
+                transition:1.0s;
+            }
+            .l3{
+              
+           
+                transition:1.0s;
+            }
+            .l4{
+                width:100px;
+                height:30px;
+                padding:0;
+                margin:0;
+            }
+            .l5{
+              transition:1s;
+            }
+            .l5:hover {
+                  background-color:#BC9A78;
+                  color:#5A3A1A;
+            }
+            
+            .l4:hover .l1{
+                transform:translate(0px,30px);
+            }
+              .l4:hover .l2{
+                transform:translate(0px,60px);
+               
+            }
+              .l4:hover .l3{
+                transform:translate(0px,90px);
+               
+            }
+            .l1:hover{
+               transition:0.2s;
+                   background-color:#BC9A78;
+                   color:#5A3A1A;
+            }
+               .l2:hover{
+               transition:0.2s;
+                   background-color:#BC9A78;
+                   color:#5A3A1A;
+            }
+               .l3:hover{
+               transition:0.2s;
+                   background-color:#BC9A78;
+                   color:#5A3A1A;
+            }
+                  .a1:hover{
+               transition:0.2s;
+                   background-color:#BC9A78;
+                   color:#5A3A1A;
+            }
+               .a2:hover{
+               transition:0.2s;
+                   background-color:#BC9A78;
+                   color:#5A3A1A;
+            }
+               .a3:hover{
+               transition:0.2s;
+                   background-color:#BC9A78;
+                   color:#5A3A1A;
+            }
+            .l1 a:active{
+             
+              color:white;
+            }
+              .l2 a:active{
+          
+              color:white;
+            }
+              .l3 a:active{
+          
+              color:white;
+            }
+            .cart{
+                background-color:#FFD700;
+                border:1px solid orange;
+                width:10vw;
+                padding:10px;
+                border-radius:10px;
+                font-size:20px;
+                color:black;
+                font-weight:600;
+                float:right;
+            }
+            .cart:hover{
+                background-color:yellow;
+                border:1px solid #FFD700;
+            }
+
+    </style>
+    <script>
+        function but1(){
+            document.getElementById("but1").style.backgroundColor = "#C6AC8F";
+            document.getElementById("but1").style.border = "none"; 
+            document.getElementById("but2").style.backgroundColor = "white";
+            document.getElementById("but2").style.borderStyle = "solid";
+            document.getElementById("but2").style.borderWidth = "1px";
+            document.getElementById("but2").style.borderColor = "#3A1F00";
+            document.getElementById("but3").style.backgroundColor = "white";
+            document.getElementById("but3").style.borderStyle = "solid";
+            document.getElementById("but3").style.borderWidth = "1px";
+            document.getElementById("but3").style.borderColor = "#3A1F00";
+            document.getElementById("but4").style.backgroundColor = "white";
+            document.getElementById("but4").style.borderStyle = "solid";
+            document.getElementById("but4").style.borderWidth = "1px";
+            document.getElementById("but4").style.borderColor = "#3A1F00";
+            document.getElementById("but5").style.backgroundColor = "white";
+            document.getElementById("but5").style.borderStyle = "solid";
+            document.getElementById("but5").style.borderWidth = "1px";
+            document.getElementById("but5").style.borderColor = "#3A1F00";
+            document.getElementById("but6").style.backgroundColor = "white";
+            document.getElementById("but6").style.borderStyle = "solid";
+            document.getElementById("but6").style.borderWidth = "1px";
+            document.getElementById("but6").style.borderColor = "#3A1F00";
+            document.getElementById("button11").style.opacity = "1";
+            document.getElementById("button11").style.display = "block";
+            document.getElementById("button22").style.opacity = "0";
+            document.getElementById("button22").style.display = "none";
+            document.getElementById("button33").style.opacity = "0";
+            document.getElementById("button33").style.display = "none";
+            document.getElementById("button44").style.opacity = "0";
+            document.getElementById("button44").style.display = "none";
+            document.getElementById("button55").style.opacity = "0";
+            document.getElementById("button55").style.display = "none";
+            document.getElementById("button66").style.opacity = "0";
+            document.getElementById("button66").style.display = "none";
+        }
+        function but2(){
+            document.getElementById("but2").style.backgroundColor = "#C6AC8F";
+            document.getElementById("but2").style.border = "none";
+            document.getElementById("but1").style.backgroundColor = "white";
+            document.getElementById("but1").style.borderStyle = "solid";
+            document.getElementById("but1").style.borderWidth = "1px";
+            document.getElementById("but1").style.borderColor = "#3A1F00";
+            document.getElementById("but3").style.backgroundColor = "white";
+            document.getElementById("but3").style.borderStyle = "solid";
+            document.getElementById("but3").style.borderWidth = "1px";
+            document.getElementById("but3").style.borderColor = "#3A1F00";
+            document.getElementById("but4").style.backgroundColor = "white";
+            document.getElementById("but4").style.borderStyle = "solid";
+            document.getElementById("but4").style.borderWidth = "1px";
+            document.getElementById("but4").style.borderColor = "#3A1F00";
+            document.getElementById("but5").style.backgroundColor = "white";
+            document.getElementById("but5").style.borderStyle = "solid";
+            document.getElementById("but5").style.borderWidth = "1px";
+            document.getElementById("but5").style.borderColor = "#3A1F00";
+            document.getElementById("but6").style.backgroundColor = "white";
+            document.getElementById("but6").style.borderStyle = "solid";
+            document.getElementById("but6").style.borderWidth = "1px";
+            document.getElementById("but6").style.borderColor = "#3A1F00";
+            document.getElementById("button11").style.opacity = "0";
+            document.getElementById("button11").style.display = "none";
+            document.getElementById("button22").style.opacity = "1";
+            document.getElementById("button22").style.display = "block";
+            document.getElementById("button33").style.opacity = "0";
+            document.getElementById("button33").style.display = "none";
+            document.getElementById("button44").style.opacity = "0";
+            document.getElementById("button44").style.display = "none";
+            document.getElementById("button55").style.opacity = "0";
+            document.getElementById("button55").style.display = "none";
+            document.getElementById("button66").style.opacity = "0";
+            document.getElementById("button66").style.display = "none";
+        }
+function but3(){
+    document.getElementById("but1").style.backgroundColor = "white";
+            document.getElementById("but1").style.borderStyle = "solid";
+            document.getElementById("but1").style.borderWidth = "1px";
+            document.getElementById("but1").style.borderColor = "#3A1F00";
+            document.getElementById("but2").style.backgroundColor = "white";
+            document.getElementById("but2").style.borderStyle = "solid";
+            document.getElementById("but2").style.borderWidth = "1px";
+            document.getElementById("but2").style.borderColor = "#3A1F00";
+            document.getElementById("but3").style.backgroundColor = "#C6AC8F";
+            document.getElementById("but3").style.border = "none";
+            document.getElementById("but4").style.backgroundColor = "white";
+            document.getElementById("but4").style.borderStyle = "solid";
+            document.getElementById("but4").style.borderWidth = "1px";
+            document.getElementById("but4").style.borderColor = "#3A1F00";
+            document.getElementById("but5").style.backgroundColor = "white";
+            document.getElementById("but5").style.borderStyle = "solid";
+            document.getElementById("but5").style.borderWidth = "1px";
+            document.getElementById("but5").style.borderColor = "#3A1F00";
+            document.getElementById("but6").style.backgroundColor = "white";
+            document.getElementById("but6").style.borderStyle = "solid";
+            document.getElementById("but6").style.borderWidth = "1px";
+            document.getElementById("but6").style.borderColor = "#3A1F00";
+            document.getElementById("button11").style.opacity = "0";
+            document.getElementById("button11").style.display = "none";
+            document.getElementById("button22").style.opacity = "0";
+            document.getElementById("button22").style.display = "none";
+            document.getElementById("button33").style.opacity = "1";
+            document.getElementById("button33").style.display = "block";
+            document.getElementById("button44").style.opacity = "0";
+            document.getElementById("button44").style.display = "none";
+            document.getElementById("button55").style.opacity = "0";
+            document.getElementById("button55").style.display = "none";
+            document.getElementById("button66").style.opacity = "0";
+            document.getElementById("button66").style.display = "none";
+}
+function but4(){
+    document.getElementById("but1").style.backgroundColor = "white";
+            document.getElementById("but1").style.borderStyle = "solid";
+            document.getElementById("but1").style.borderWidth = "1px";
+            document.getElementById("but1").style.borderColor = "#3A1F00";
+            document.getElementById("but2").style.backgroundColor = "white";
+            document.getElementById("but2").style.borderStyle = "solid";
+            document.getElementById("but2").style.borderWidth = "1px";
+            document.getElementById("but2").style.borderColor = "#3A1F00";
+            document.getElementById("but3").style.backgroundColor = "white";
+            document.getElementById("but3").style.borderStyle = "solid";
+            document.getElementById("but3").style.borderWidth = "1px";
+            document.getElementById("but3").style.borderColor = "#3A1F00";
+            document.getElementById("but4").style.backgroundColor = "#C6AC8F";
+            document.getElementById("but4").style.border = "none";
+            document.getElementById("but5").style.backgroundColor = "white";
+            document.getElementById("but5").style.borderStyle = "solid";
+            document.getElementById("but5").style.borderWidth = "1px";
+            document.getElementById("but5").style.borderColor = "#3A1F00";
+            document.getElementById("but6").style.backgroundColor = "white";
+            document.getElementById("but6").style.borderStyle = "solid";
+            document.getElementById("but6").style.borderWidth = "1px";
+            document.getElementById("but6").style.borderColor = "#3A1F00";
+            document.getElementById("button11").style.opacity = "0";
+            document.getElementById("button11").style.display = "none";
+            document.getElementById("button22").style.opacity = "0";
+            document.getElementById("button22").style.display = "none";
+            document.getElementById("button33").style.opacity = "0";
+            document.getElementById("button33").style.display = "none";
+            document.getElementById("button44").style.opacity = "1";
+            document.getElementById("button44").style.display = "block";
+            document.getElementById("button55").style.opacity = "0";
+            document.getElementById("button55").style.display = "none";
+            document.getElementById("button66").style.opacity = "0";
+            document.getElementById("button66").style.display = "none";
+}
+function but5(){
+    document.getElementById("but1").style.backgroundColor = "white";
+            document.getElementById("but1").style.borderStyle = "solid";
+            document.getElementById("but1").style.borderWidth = "1px";
+            document.getElementById("but1").style.borderColor = "#3A1F00";
+            document.getElementById("but2").style.backgroundColor = "white";
+            document.getElementById("but2").style.borderStyle = "solid";
+            document.getElementById("but2").style.borderWidth = "1px";
+            document.getElementById("but2").style.borderColor = "#3A1F00";
+            document.getElementById("but3").style.backgroundColor = "white";
+            document.getElementById("but3").style.borderStyle = "solid";
+            document.getElementById("but3").style.borderWidth = "1px";
+            document.getElementById("but3").style.borderColor = "#3A1F00";
+            document.getElementById("but4").style.backgroundColor = "white";
+            document.getElementById("but4").style.borderStyle = "solid";
+            document.getElementById("but4").style.borderWidth = "1px";
+            document.getElementById("but4").style.borderColor = "#3A1F00";
+    document.getElementById("but5").style.backgroundColor = "#C6AC8F";
+            document.getElementById("but5").style.border = "none";
+            document.getElementById("but6").style.backgroundColor = "white";
+            document.getElementById("but6").style.borderStyle = "solid";
+            document.getElementById("but6").style.borderWidth = "1px";
+            document.getElementById("but6").style.borderColor = "#3A1F00";
+            document.getElementById("button11").style.opacity = "0";
+            document.getElementById("button11").style.display = "none";
+            document.getElementById("button22").style.opacity = "0";
+            document.getElementById("button22").style.display = "none";
+            document.getElementById("button33").style.opacity = "0";
+            document.getElementById("button33").style.display = "none";
+            document.getElementById("button44").style.opacity = "0";
+            document.getElementById("button44").style.display = "none";
+            document.getElementById("button55").style.opacity = "1";
+            document.getElementById("button55").style.display = "block";
+            document.getElementById("button66").style.opacity = "0";
+            document.getElementById("button66").style.display = "none";
+}
+function but6(){
+    document.getElementById("but1").style.backgroundColor = "white";
+            document.getElementById("but1").style.borderStyle = "solid";
+            document.getElementById("but1").style.borderWidth = "1px";
+            document.getElementById("but1").style.borderColor = "#3A1F00";
+            document.getElementById("but2").style.backgroundColor = "white";
+            document.getElementById("but2").style.borderStyle = "solid";
+            document.getElementById("but2").style.borderWidth = "1px";
+            document.getElementById("but2").style.borderColor = "#3A1F00";
+            document.getElementById("but3").style.backgroundColor = "white";
+            document.getElementById("but3").style.borderStyle = "solid";
+            document.getElementById("but3").style.borderWidth = "1px";
+            document.getElementById("but3").style.borderColor = "#3A1F00";
+            document.getElementById("but4").style.backgroundColor = "white";
+            document.getElementById("but4").style.borderStyle = "solid";
+            document.getElementById("but4").style.borderWidth = "1px";
+            document.getElementById("but4").style.borderColor = "#3A1F00";
+            document.getElementById("but5").style.backgroundColor = "white";
+            document.getElementById("but5").style.borderStyle = "solid";
+            document.getElementById("but5").style.borderWidth = "1px";
+            document.getElementById("but5").style.borderColor = "#3A1F00";
+    document.getElementById("but6").style.backgroundColor = "#C6AC8F";
+            document.getElementById("but6").style.border = "none";
+            document.getElementById("button11").style.opacity = "0";
+            document.getElementById("button11").style.display = "none";
+            document.getElementById("button22").style.opacity = "0";
+            document.getElementById("button22").style.display = "none";
+            document.getElementById("button33").style.opacity = "0";
+            document.getElementById("button33").style.display = "none";
+            document.getElementById("button44").style.opacity = "0";
+            document.getElementById("button44").style.display = "none";
+            document.getElementById("button55").style.opacity = "0";
+            document.getElementById("button55").style.display = "none";
+            document.getElementById("button66").style.opacity = "1";
+            document.getElementById("button66").style.display = "block";
+}
+    </script>
+</body>
+
+</html>
