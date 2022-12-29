@@ -393,7 +393,13 @@ padding-top:1vw;
         });
 
 //取得時に全データ取得　始
-
+firstdata1 = '';
+        firstdata2 = '';
+        success1 =  '';
+        success2 =  '';
+        request1 = '';
+        request2 = '';
+        request3 = '';
         function firstsearch(){
           url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
@@ -407,12 +413,10 @@ var params={
 }
 fetch(url,params);
 console.log("firstsearch1 ok")
+success1 = "o";
 setTimeout(firstsearch2,2000);
         }
-        firstdata1 = '';
-        firstdata2 = '';
-        success1 =  '';
-        success2 =  '';
+
         function firstsearch2(){
           fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
             method:"GET",
@@ -429,8 +433,12 @@ success1 = "ok";
 console.log("firstsearch2 ok");
 console.log("firstsearch finish");
 console.log("firstmenusearch start>>");
+if(request1 == "next"){
+  console.log("shopsearchへ優先処理")
+  shopsearch(resJson);
+}else{
 firstmenu();
-
+}
           })
         .catch(error =>{
           num = 1;
@@ -444,7 +452,11 @@ $('#ss').clearQueue();
         })
         }
 function firstmenu(){
-  console.log("menusearch ok");
+    if(request2 == "nomal"){
+      console.log("menusearch 通常処理　受付");
+    return;
+  }
+  console.log("firstmenusearch ok");
   url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
 "branch":"menu"
@@ -457,10 +469,15 @@ var params={
 }
 fetch(url,params);
 console.log("firstmenusearch1 ok");
+success2 = "o";
 setTimeout(firstmenu2,2000);
 }
 function firstmenu2(){
-  console.log("menu2 ok");
+  if(request2 == "nomal"){
+    console.log("menusearch 通常処理　受付");
+    return;
+  }
+  console.log("firstmenu2 ok");
   fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
             method:"GET",
             moe:"cors"
@@ -476,6 +493,10 @@ firstdata2 = resJson;
 console.log("firstdata 1/2 finish");
 console.log("wait for instructions");
 success2 = "ok";
+if(request2 == "next"){
+  console.log("menusearch2へ優先処理  in menu2")
+  menusearch2(resJson);
+}
           })
         .catch(error =>{
           num = 1;  
@@ -489,17 +510,24 @@ $('#ss').clearQueue();
         })
 }
 //ロード時に全データ取得のコード　終
-
+shopname = '';
         function searching(){
           num = 100;
+          request3 = '';
           ani();
 document.getElementById("ss").innerHTML = "loading";
 document.getElementById("s").style.backgroundColor ="#C6AC8F"
           shopname = document.getElementById("search").value;
-          if(success1 == "ok"){
+            if(success1 == "ok"){
             console.log("data:"+firstdata1)
 shopsearch(firstdata1);
-          }else{
+return;
+          }
+          if(success1 == "o"){
+          console.log("途中からのリクエスト1");
+          request1 = "next";
+          return; //違う可能性大
+      }else{
           url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
 "branch":"shopdata"
@@ -525,6 +553,11 @@ function searching2(){
             }
           })
           .then(resJson =>{
+            if(request2 == "next"){
+              console.log("menusearch2への優先処理");
+              menusearch2(resJson);
+              
+            }
 shopsearch(resJson);
           })
         .catch(error =>{
@@ -557,7 +590,8 @@ for(a = -5; a<num; a+=6){
 document.getElementById("ss").innerHTML = "jumping";
 ttt = '';
 document.cookie = "branch=shop|";
-    setTimeout(jump,2000);
+    setTimeout(jump,1000);
+    return;
   }
 }
 if(typeof ttt == 'undefined'){
@@ -568,10 +602,19 @@ ani();
 $('#ss').clearQueue();
    $('#ss').stop();
    document.getElementById("s").style.backgroundColor ="#5A3A1A";*/
-if(success2 == "ok"){
+
+  if(success2 == "ok"){
 console.log("data2:"+firstdata2);
 menusearch2(firstdata2);
+return;
+}
+if(success2 == "o"){
+console.log("途中からのリクエスト2");
+request2 = "next";
+return;//間違えて可能性大
 }else{
+  console.log("menusearch  通常処理")
+  request2 = "nomal";
    menusearch();
 }
 }
@@ -648,7 +691,13 @@ $('#ss').clearQueue();
    alert("通信失敗2")
         })
 }
+
+
 function menusearch2(resJson2){
+  if(request3 == "end"){
+    console.log("end")
+    
+  }else{
 jsonnn = JSON.stringify(resJson2);
 console.log("JSON文字列↓");
 console.log(jsonnn);
@@ -720,7 +769,38 @@ $('#ss').clearQueue();
    document.getElementById("s").style.backgroundColor ="#5A3A1A";
 console.log("店舗・商品がありません");
 alert("店舗・商品がありません");
+/*if(request2 == "next"){
+  request3 = "end";
+  console.log("検索終了");
+  end();
+}*/
+if(success2 != "ok"){
+    request2 = '';
+    console.log("firstmenu  再トライ")
+    firstmenu();
+  }
+request3 = "end";
+  console.log("検索終了");
+  end();
 }
+  }
+}
+function end(){
+  console.log("検索 終了");
+const flag = true;
+ 
+ try {
+  
+     if (flag) {
+         throw new Error('終了します');
+     }
+     console.log('実行されないコード');
+  
+ } catch (e) {
+  
+     console.log(e.message);
+  
+ }
 }
         </script>
     </body>
