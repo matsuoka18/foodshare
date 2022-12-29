@@ -346,21 +346,21 @@ padding-top:1vw;
           a = 0;
           ipadress='';
           function start(){
-            fetch('https://ipinfo.io?callback')
+           /* fetch('https://ipinfo.io?callback')
   .then(res => res.json())
   .then(json => {
     ip = json.ip;
   if(ip == '60.134.235.1'){
     document.getElementById("alll").style.opacity = "1";
-    document.getElementById("alll2").style.display = "none";
+    document.getElementById("alll2").style.display = "none";*/
     pic();
     console.log("firstdata start>>");
     firstsearch();//ページ読み込みの際に全データを取得
-  }else{
+ /* }else{
     document.getElementById("alll2").style.opacity = "1";
     data = "<h1>ログインせい</h1><h2>パスワード</h2>";
     alll2.insertAdjacentHTML('afterbegin',data);
-  }
+  }*/
 });
           }
           logp = document.getElementById("logp");
