@@ -626,8 +626,12 @@ function jump(){
   num = 1;
           ani();
           document.getElementById("s").style.backgroundColor ="#5A3A1A";
+if(typeof ttt == 'undefined'){
+  location.href="商品表示.html";
+}else{
+  location.href="商品表示2.html";
+}
 
-location.href="商品表示.html";
 }
 function ani(){
   //alert(num);
