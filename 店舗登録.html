@@ -120,8 +120,9 @@ document.getElementById("all2").style.opacity = 1;
 document.getElementById("all2").style.display = "block";
 data = "<p>メールアドレスに本登録ページを送信しました</p>";
 all2.insertAdjacentHTML('beforeend',data);
-cookie = "key="+text;
-document.cookie = cookie;
+cookiee= "key="+text;
+  alert(cokiee);
+document.cookie = cookiee;
   alert(document.cookie);
 var templateParams = {
  mail : mailad,
