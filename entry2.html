@@ -162,12 +162,15 @@
             text = text.replace(/; /g,"\""+","+"\"");
             alert(text);
         text2 = "{"+"\""+text+"\""+"}";
+            alert(text);
         console.log(text2);
         text2 = JSON.parse(text2);
         console.log(text2);
+            alert(text);
         key = text2.key;
             key = decodeURI(key);
         console.log(key);
+            alert(key);
         data = "<h2>"+key+"様"+"</h2>";
         namee.insertAdjacentHTML("beforeend",data);
         }
