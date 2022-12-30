@@ -7,7 +7,7 @@
     <title>店舗本登録</title>
 </head>
 
-<body>
+<body onload="entry()">
     <div class="name2">
         <h1>店舗本登録</h1>
         <div class="name" onclick="location.href='index.html'">
@@ -155,7 +155,7 @@
     </style>
     <script>
         key = '';
-        window.onload = (event) => {
+        function entry(){
             text = document.cookie;
                         text = text.replace(/={/g,"\""+":"+"{");
             text = text.replace(/-; /g,","+"\"");
@@ -169,7 +169,7 @@
         console.log(key);
         data = "<h2>"+key+"様"+"</h2>";
         namee.insertAdjacentHTML("beforeend",data);
-        };
+        }
 
         to = '';
         city = '';
@@ -266,8 +266,8 @@ params = {
 }
 console.log(JSON.stringify(data));
 fetch(url,params)
+ location.href = "login.html";
 alert("登録完了");
-location.hrf = "login.html";
         }
         function fourth2(){
             document.getElementById("all2").style.opacity = "1";
