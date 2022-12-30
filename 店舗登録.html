@@ -122,6 +122,7 @@ data = "<p>メールアドレスに本登録ページを送信しました</p>";
 all2.insertAdjacentHTML('beforeend',data);
 cookie = "key="+text;
 document.cookie = cookie;
+  alert(document.cookie);
 var templateParams = {
  mail : mailad,
  shop : text
