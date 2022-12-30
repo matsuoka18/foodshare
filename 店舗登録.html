@@ -88,7 +88,7 @@ document.getElementById("check3").innerHTML = "変更する際はもう一度フ
    document.getElementById("che").style.visibility="visible";
 }
 function send(){
-  var text = document.getElementById("shopname").value;
+  text = document.getElementById("shopname").value;
   var pass = document.getElementById("password").value;
 var mailad = document.getElementById("mailad").value;
   var url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
@@ -120,6 +120,7 @@ document.getElementById("all2").style.opacity = 1;
 document.getElementById("all2").style.display = "block";
 data = "<p>メールアドレスに本登録ページを送信しました</p>";
 all2.insertAdjacentHTML('beforeend',data);
+  text = encodeURI(text);
 cookiee= "key="+text;
   alert(cokiee);
 document.cookie = cookiee;
