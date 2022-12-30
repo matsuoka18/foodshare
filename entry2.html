@@ -167,7 +167,9 @@
         text2 = JSON.parse(text2);
         console.log(text2);
             alert(text2);
-        key = text2.key;
+            text2 = text2.replace(/}-"}/g,"}"+"}");
+            alert(text2);
+      key = text2.key;
             key = decodeURI(key);
         console.log(key);
             alert(key);
