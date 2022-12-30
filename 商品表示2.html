@@ -37,31 +37,31 @@
             <div class="intro">
                 <div class="hyouka">
 
-                    <h1>マクドナルド</h1>
+                    <h1 id="shopname">マクドナルド</h1>
                     <div class="cart">カートに追加</div>
-                    <p>評価とか</p>
+                    <p id="evo">評価とか</p>
 
                 </div>
                 <div class="info">
                     <li class="time">営業時間
-                        <ul>12:00~13:00</ul>
+                        <ul id="time">12:00~13:00</ul>
                     </li>
                     <li>住所
-                        <ul>神奈川県鎌倉市手広4-28-14</ul>
+                        <ul id="adress">神奈川県鎌倉市手広4-28-14</ul>
                     </li>
                     <li>電話番号
-                        <ul>
+                        <ul id="phone">
                             0467-91-5460
                         </ul>
                     </li>
                     <li>ホームページとか
-                        <ul>
+                        <ul id="url">
                             https://matsuoka18.github.io/foodshare
                         </ul>
                     </li>
                 </div>
                 <div class="sho">
-                    <span>松尾家の子ども部屋。</span>
+                    <span id="introduce">松尾家の子ども部屋。</span>
                     <pre>
 紹介文とか
             </div>
@@ -295,27 +295,31 @@
         <table border="1"align="center">
         <tr>
       <td class="td1">店舗名</td>
-      <td>マクドナルド</td>
+      <td id="shopname2">マクドナルド</td>
        </tr>
        <tr>
         <td class="td1">お店の分類</td>
-        <td>ファストフード</td>
+        <td id="shopgenre">ファストフード</td>
        </tr>
        <tr>
         <td class="td1">住所</td>
-        <td>神奈川県鎌倉市手広4−28−14</td>
+        <td id="adress2">神奈川県鎌倉市手広4−28−14</td>
+       </tr>
+       <tr>
+        <td class="td1">郵便番号</td>
+        <td id="mailad2"></td>
        </tr>
        <tr>
         <td class="td1">アクセス</td>
-        <td>湘南深沢駅から徒歩15分</td>
+        <td id="access2">湘南深沢駅から徒歩15分</td>
        </tr>
        <tr>
         <td class="td1">営業時間</td>
-        <td>18：00〜20：00</td>
+        <td id="time2">18：00〜20：00</td>
        </tr>
        <tr>
         <td class="td1">電話番号</td>
-        <td>080-8859-5752</td>
+        <td id="phone2">080-8859-5752</td>
        </tr>
        <tr>
         <td class="td1">ホームページ</td></a>
@@ -333,451 +337,7 @@
         <p>copy right FoodShare</p>
 
     </div>
-    <style>
-        .bottom{
-            width:100vw;
-            height:10vw;
-            background-color:#3A1F00;
-            text-align:center;
-            color:white;
-            
-        }
-.bottom p{
-    padding-top:2vw;
-}
-.bottom li{
-    display:block;
-    list-style: none;
-    padding:5px;
-}
-.bottom a{
-    color:white;
 
-}
-.botton1{
-    position:relative;top:1vw;left:1vw;
-    width:25vw;
-    height:8vw;
-    background-color:#C6AC8F;
-    border-radius:10px;
-    z-index:100;
-    font-size:2vw;
-    font-weight:600;
-    color:#3A1F00;
-    display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.botton1 img{
-    padding:0;
-    margin-right:3vw;
-    margin-left:-2vw;
-    width:7vw;
-    height:auto;
-}
-.bottom2{
-    position:relative;
-    margin-top:-8vw;
-padding-top:1vw;
-}
-.shop1{
-    padding-bottom:5vw;
-}
-        .shop1 h2{
-            font-size:40px;
-            text-align:center;
-            border-top:2px solid #3A1F00;
-            border-bottom:2px solid #3A1F00;
-            padding-top: 5vw;
-            margin-bottom:0;
-            margin-top:0;
-            padding-bottom: 5vw;
-        }
-        .shop1 a{
-            color:#5A3A1A;
-            text-decoration:underline;
-        }
-      
-        .shop1 table{
-            margin-top:2vw;
-            width:50vw;
-            text-align:center;
-            border:1px solid white;
-            border-collapse:collapse;
-            
-        }
-        .shop1 td{
-            border-top:1px solid #5A3A1A;
-            border-bottom: 1px solid #5A3A1A;
-            font-size:20px;
-            padding:30px;
-            color:#3A1F00;
-        }
-        .shop1 .td1{
-            font-size:25px;
-            color:black;
-            font-weight:600;
-            background-color:#E9DBCC;
-           
-        }
-        .shop1 p {
-            margin-left:10px;
-            padding-left:10px;
-            border-left:10px solid red;
-            font-size:30px;
-            font-weight:600;
-        }
-                    .button11{
-                border:none;
-            }
-            .menu1 img{
-                width:auto;
-                height:15vw;
-               margin-right:10px;
-            }
-
-            .button11 h2{
-                margin-left:2vw;
-                border-left:10px solid red;
-                padding-left:1vw;
-                font-size:30px;
-            }
-            .button22 h2{
-                margin-left:2vw;
-                border-left:10px solid red;
-                padding-left:1vw;
-                font-size:30px;
-            }
-            .button22{
-                display:none;
-                opacity: 0;
-            }
-            .button33 h2{
-                margin-left:2vw;
-                border-left:10px solid red;
-                padding-left:1vw;
-                font-size:30px;
-            }
-            .button33{
-                display:none;
-                opacity: 0;
-            }
-            .button44 h2{
-                margin-left:2vw;
-                border-left:10px solid red;
-                padding-left:1vw;
-                font-size:30px;
-            }
-            .button44{
-                display:none;
-                opacity: 0;
-            }
-            .button55 h2{
-                margin-left:2vw;
-                border-left:10px solid red;
-                padding-left:1vw;
-                font-size:30px;
-            }
-            .button55{
-                display:none;
-                opacity: 0;
-            }
-            .button66 h2{
-                margin-left:2vw;
-                border-left:10px solid red;
-                padding-left:1vw;
-                font-size:30px;
-            }
-            .button66{
-                display:none;
-                opacity: 0;
-            }
-            .menu1{
-                padding:5px;
-                height:15vw;
-            }
-            .menu1:hover img{
-                box-shadow:0 0 2px 2px #DDDDDD;
-            }
-            .menu1:hover{
-                background-color: #EEEEEE;
-            }
-            .menu1 h2{
-                font-size:40px;
-                width:40vw;
-
-
-            }
-            .hh2:hover{
-                border-bottom:2px solid black;
-                animation-name:hello;
-            animation-duration:1s;
-            animation-fill-mode:forwards;
-            }
-
-            @keyframes hello {
-                from{
-                    width:40vw;
-                }
-                to{
-                    width:100vw;
-                }
-            }
-            .menu1:hover h2{
-                color:black;
-                border-bottom:2px solid black;
-                animation-name:hello;
-            animation-duration:1s;
-            animation-fill-mode:forwards;
-            }
-            .menu1 h2:hover{
-                background-color:lightgray;
-            }
-            .menu1 p{
-                font-size:20px;
-                color:gray;
-            }
-            .menu1 h4{
-
-                font-size:30px;
-                color:red;
-            }
-            .menu1 span{
-                font-size:15px;
-            }
-        .hey {
-            width: 100vw;
-            height: 45vw;
-            padding: 0;
-            margin: 0;
-        }
-
-        img {
-            height: 45vw;
-            width: auto;
-            margin: 0;
-            padding: 0;
-            float: left;
-        }
-
-        .intro {
-            display: inline-block;
-            height: 45vw;
-            width: 40vw;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
-
-        .hyouka {
-            padding: 10px;
-            margin: 0;
-            border-bottom: 1px solid lightgray;
-
-        }
-
-        .hyouka h1 {
-            padding: 0.5vw;
-            margin: 0.25vw;
-            background-color: white;
-            box-shadow: 0 0 2px 1px white;
-            border-radius: 30px;
-            color: #3A1F00;
-            font-size: 40px;
-        }
-
-        .hyouka p {
-            display: flex;
-        }
-
-        .sho {
-            height: 16vw;
-            border: 1px solid gray;
-            font-size:20px;
-        }
-.sho span{
-    font-weight:600;
-}
-        .info {
-            background-color: #EEEEEE;
-            height: 20vw;
-            margin: 5px;
-            padding: 10px;
-            border-radius: 15px;
-
-        }
-
-        .info li {
-            font-family: sans-serif;
-            display: block;
-            text-align: left;
-            font-weight: 500;
-            font-size: 20px;
-        }
-
-        .main {
-            width: 100vw;
-        }
-
-        .main h1 {
-            text-align: center;
-            font-size: 40px;
-            padding-top: 5vw;
-            margin-bottom:0;
-            margin-top:0;
-            padding-bottom: 5vw;
-            border-top:2px solid #3A1F00;
-            border-bottom: 1px solid #3A1F00;
-        }
-.buttons{
-    padding:0;
-            margin: 0;
-            border-bottom:3px solid #BC9A78;
-            height:5vw;
-            width:100vw;
-            background-color: #C6AC8F;
-
-}
-        .buttons button {
-            width: 16.54vw;
-            height: 5vw;
-            border-radius: 0;
-            background-color: white;
-            color: #3A1F00;
-            border: 1px solid #3A1F00;
-            padding:0;
-            margin: 0;
-            float:left;
-        }
-        .buttons button:hover{
-background-color:#C6AC8F;
-        }
-        .buttons button:active{
-            font-weight:600;
-            color:white;
-        }
-.buttons .but1{
-    background-color:#C6AC8F;
-    border:none;
-}
-       .head li{
-                 position:absolute;top:6vw;left:85vw;
-                  text-decoration:none;
-                   list-style-type:none;
-                   width:100px;
-                   color:white;
-                   font-weight:600;
-            height:30px;
-              border-radius:10px;
-              background-color:#5A3A1A;
-              text-align:center;
-            }
-            a{
-               text-decoration:none;
-                 color:white;
-                   font-weight:600;
-               
-            }
-            .l1{
-               text-decoration:none;
-              
-                transition:1.0s;
-            }
-            .l2{
-               
-                transition:1.0s;
-            }
-            .l3{
-              
-           
-                transition:1.0s;
-            }
-            .l4{
-                width:100px;
-                height:30px;
-                padding:0;
-                margin:0;
-            }
-            .l5{
-              transition:1s;
-            }
-            .l5:hover {
-                  background-color:#BC9A78;
-                  color:#5A3A1A;
-            }
-            
-            .l4:hover .l1{
-                transform:translate(0px,30px);
-            }
-              .l4:hover .l2{
-                transform:translate(0px,60px);
-               
-            }
-              .l4:hover .l3{
-                transform:translate(0px,90px);
-               
-            }
-            .l1:hover{
-               transition:0.2s;
-                   background-color:#BC9A78;
-                   color:#5A3A1A;
-            }
-               .l2:hover{
-               transition:0.2s;
-                   background-color:#BC9A78;
-                   color:#5A3A1A;
-            }
-               .l3:hover{
-               transition:0.2s;
-                   background-color:#BC9A78;
-                   color:#5A3A1A;
-            }
-                  .a1:hover{
-               transition:0.2s;
-                   background-color:#BC9A78;
-                   color:#5A3A1A;
-            }
-               .a2:hover{
-               transition:0.2s;
-                   background-color:#BC9A78;
-                   color:#5A3A1A;
-            }
-               .a3:hover{
-               transition:0.2s;
-                   background-color:#BC9A78;
-                   color:#5A3A1A;
-            }
-            .l1 a:active{
-             
-              color:white;
-            }
-              .l2 a:active{
-          
-              color:white;
-            }
-              .l3 a:active{
-          
-              color:white;
-            }
-            .cart{
-                background-color:#FFD700;
-                border:1px solid orange;
-                width:5vw;
-                padding:5px;
-                border-radius:10px;
-                font-size:15px;
-                color:black;
-                font-weight:500;
-                float:right;
-                margin-right:1vw;
-                box-shadow:0 2px 5px 1px #FFFFE0;
-            }
-            .cart:hover{
-                background-color:yellow;
-                border:1px solid #FFD700;
-            }
-
-    </style>
     <script>
         function but1() {
             document.getElementById("but1").style.backgroundColor = "#C6AC8F";
@@ -997,6 +557,75 @@ background-color:#C6AC8F;
         }
 
         function start(){
+            cd= document.cookie;
+           // cd = 'branch=menu|; menumemo={"shop1":[0,22,38],"shop7":[14,36,52],"shop13":[4,26,42],"shop19":[1,23,39],"shop25":[1,23,39],"shop31":[1,23,39],"shop37":[1,23,39],"shop43":[1,23,39],"shop49":[1,23,39],"shop55":[23,39],"shop61":[23,39],"shop67":[23,39],"shop73":[23,39],"shop79":[23,39],"last":[79]}-; loginID=%E5%85%AB%E7%99%BE%E5%B1%8B!; pass=%E3%82%84%E3%81%BE%E3%81%8D?; shopnumber=85#; searchname=hello^;searchnum=85$';
+console.log(cd);
+                num1 = cd.indexOf("searchnum=");
+                num2 = cd.indexOf("$");
+                num3 = cd.indexOf("searchname=");
+                num4 = cd.indexOf("^");
+                sn = cd.substring(num1+10,num2);
+                sn2 = decodeURI(cd.substring(num3+11,num4));
+                console.log(sn+":"+sn2);
+             document.getElementById("shopname").innerHTML = sn2;
+             document.getElementById("shopname2").innerHTML = sn2;  
+                sn = cd.substring(num1+10,num2);
+                sn2 = decodeURI(cd.substring(num3+11,num4));
+               console.log(sn+":"+sn2);
+            url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+var data = [{
+    "name4":"店舗商品取得",
+            "name5":sn,
+"branch":"menudata"
+}]
+var params={
+"method":"post",
+"mode":"no-cors",
+"Content-Type":"application/json",
+"body":JSON.stringify(data)
+}
+fetch(url,params);
+setTimeout(start1,2000);
+        }
+        function start1(){
+            url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+            fetch(url,{
+                method:"GET",
+                mode:"cors"
+            })
+            .then(response =>{
+                if(response.ok){
+                    return response.json()
+                }
+            })
+            .then(resJson =>{
+                console.log("データ取得完了");
+              data = resJson.data;
+              pre = data[0].pre;
+              city = data[0].city;
+              city2 = data[0].city2;
+              adress = data[0].adress;
+              mailad = data[0].mailnum;
+              phonead = data[0].phonenum;
+              intro = data[0].intro;
+              time = data[0].time;
+              adress = pre+city+city2+adress;
+              //document.getElementById("").innerHTML = ;
+              document.getElementById("adress").innerHTML = adress;
+              document.getElementById("time").innerHTML = time;
+              document.getElementById("phone").innerHTML = phonead;
+              document.getElementById("introduce").innerHTML =intro ;
+              document.getElementById("adress2").innerHTML = adress;
+              document.getElementById("time2").innerHTML = time;
+              document.getElementById("mailad2").innerHTML = mailad;
+              document.getElementById("phone2").innerHTML = phonead;
+            })
+            .catch(error =>{
+                alert("error");
+            })
+          
+        }
+        function start2(){
           url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
 "branch":"shopdata"
@@ -1018,7 +647,7 @@ setTimeout(firstsearch2,2000);
         function firstsearch2(){
           fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
             method:"GET",
-            moe:"cors"
+            mode:"cors"
           })
           .then(response =>{
             if(response.ok){
@@ -1522,6 +1151,455 @@ const flag = true;
  }
 }
     </script>
+        <style>
+            .bottom{
+                width:100vw;
+                height:10vw;
+                background-color:#3A1F00;
+                text-align:center;
+                color:white;
+                
+            }
+    .bottom p{
+        padding-top:2vw;
+    }
+    .bottom li{
+        display:block;
+        list-style: none;
+        padding:5px;
+    }
+    .bottom a{
+        color:white;
+    
+    }
+    .botton1{
+        position:relative;top:1vw;left:1vw;
+        width:25vw;
+        height:8vw;
+        background-color:#C6AC8F;
+        border-radius:10px;
+        z-index:100;
+        font-size:2vw;
+        font-weight:600;
+        color:#3A1F00;
+        display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .botton1 img{
+        padding:0;
+        margin-right:3vw;
+        margin-left:-2vw;
+        width:7vw;
+        height:auto;
+    }
+    .bottom2{
+        position:relative;
+        margin-top:-8vw;
+    padding-top:1vw;
+    }
+    .shop1{
+        padding-bottom:5vw;
+    }
+            .shop1 h2{
+                font-size:40px;
+                text-align:center;
+                border-top:2px solid #3A1F00;
+                border-bottom:2px solid #3A1F00;
+                padding-top: 5vw;
+                margin-bottom:0;
+                margin-top:0;
+                padding-bottom: 5vw;
+            }
+            .shop1 a{
+                color:#5A3A1A;
+                text-decoration:underline;
+            }
+          
+            .shop1 table{
+                margin-top:2vw;
+                width:50vw;
+                text-align:center;
+                border:1px solid white;
+                border-collapse:collapse;
+                
+            }
+            .shop1 td{
+                border-top:1px solid #5A3A1A;
+                border-bottom: 1px solid #5A3A1A;
+                font-size:20px;
+                padding:30px;
+                color:#3A1F00;
+            }
+            .shop1 .td1{
+                font-size:25px;
+                color:black;
+                font-weight:600;
+                background-color:#E9DBCC;
+               
+            }
+            .shop1 p {
+                margin-left:10px;
+                padding-left:10px;
+                border-left:10px solid red;
+                font-size:30px;
+                font-weight:600;
+            }
+                        .button11{
+                    border:none;
+                }
+                .menu1 img{
+                    width:auto;
+                    height:15vw;
+                   margin-right:10px;
+                }
+    
+                .button11 h2{
+                    margin-left:2vw;
+                    border-left:10px solid red;
+                    padding-left:1vw;
+                    font-size:30px;
+                }
+                .button22 h2{
+                    margin-left:2vw;
+                    border-left:10px solid red;
+                    padding-left:1vw;
+                    font-size:30px;
+                }
+                .button22{
+                    display:none;
+                    opacity: 0;
+                }
+                .button33 h2{
+                    margin-left:2vw;
+                    border-left:10px solid red;
+                    padding-left:1vw;
+                    font-size:30px;
+                }
+                .button33{
+                    display:none;
+                    opacity: 0;
+                }
+                .button44 h2{
+                    margin-left:2vw;
+                    border-left:10px solid red;
+                    padding-left:1vw;
+                    font-size:30px;
+                }
+                .button44{
+                    display:none;
+                    opacity: 0;
+                }
+                .button55 h2{
+                    margin-left:2vw;
+                    border-left:10px solid red;
+                    padding-left:1vw;
+                    font-size:30px;
+                }
+                .button55{
+                    display:none;
+                    opacity: 0;
+                }
+                .button66 h2{
+                    margin-left:2vw;
+                    border-left:10px solid red;
+                    padding-left:1vw;
+                    font-size:30px;
+                }
+                .button66{
+                    display:none;
+                    opacity: 0;
+                }
+                .menu1{
+                    padding:5px;
+                    height:15vw;
+                }
+                .menu1:hover img{
+                    box-shadow:0 0 2px 2px #DDDDDD;
+                }
+                .menu1:hover{
+                    background-color: #EEEEEE;
+                }
+                .menu1 h2{
+                    font-size:40px;
+                    width:40vw;
+    
+    
+                }
+                .hh2:hover{
+                    border-bottom:2px solid black;
+                    animation-name:hello;
+                animation-duration:1s;
+                animation-fill-mode:forwards;
+                }
+    
+                @keyframes hello {
+                    from{
+                        width:40vw;
+                    }
+                    to{
+                        width:100vw;
+                    }
+                }
+                .menu1:hover h2{
+                    color:black;
+                    border-bottom:2px solid black;
+                    animation-name:hello;
+                animation-duration:1s;
+                animation-fill-mode:forwards;
+                }
+                .menu1 h2:hover{
+                    background-color:lightgray;
+                }
+                .menu1 p{
+                    font-size:20px;
+                    color:gray;
+                }
+                .menu1 h4{
+    
+                    font-size:30px;
+                    color:red;
+                }
+                .menu1 span{
+                    font-size:15px;
+                }
+            .hey {
+                width: 100vw;
+                height: 45vw;
+                padding: 0;
+                margin: 0;
+            }
+    
+            img {
+                height: 45vw;
+                width: auto;
+                margin: 0;
+                padding: 0;
+                float: left;
+            }
+    
+            .intro {
+                display: inline-block;
+                height: 45vw;
+                width: 40vw;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+    
+            .hyouka {
+                padding: 10px;
+                margin: 0;
+                border-bottom: 1px solid lightgray;
+    
+            }
+    
+            .hyouka h1 {
+                padding: 0.5vw;
+                margin: 0.25vw;
+                background-color: white;
+                box-shadow: 0 0 2px 1px white;
+                border-radius: 30px;
+                color: #3A1F00;
+                font-size: 40px;
+            }
+    
+            .hyouka p {
+                display: flex;
+            }
+    
+            .sho {
+                width:40vw;
+                height: 15vw;
+                border: 1px solid gray;
+                font-size:20px;
+            }
+    .sho span{
+        width:40vw;
+        font-weight:600;
+        font-size:25px;
+        position:relative;top:0.5vw;
+    }
+            .info {
+                background-color: #EEEEEE;
+                height: 20vw;
+                margin: 5px;
+                padding: 10px;
+                border-radius: 15px;
+    
+            }
+    
+            .info li {
+                font-family: sans-serif;
+                display: block;
+                text-align: left;
+                font-weight: 500;
+                font-size: 20px;
+            }
+    
+            .main {
+                width: 100vw;
+            }
+    
+            .main h1 {
+                text-align: center;
+                font-size: 40px;
+                padding-top: 5vw;
+                margin-bottom:0;
+                margin-top:0;
+                padding-bottom: 5vw;
+                border-top:2px solid #3A1F00;
+                border-bottom: 1px solid #3A1F00;
+            }
+    .buttons{
+        padding:0;
+                margin: 0;
+                border-bottom:3px solid #BC9A78;
+                height:5vw;
+                width:100vw;
+                background-color: #C6AC8F;
+    
+    }
+            .buttons button {
+                width: 16.54vw;
+                height: 5vw;
+                border-radius: 0;
+                background-color: white;
+                color: #3A1F00;
+                border: 1px solid #3A1F00;
+                padding:0;
+                margin: 0;
+                float:left;
+            }
+            .buttons button:hover{
+    background-color:#C6AC8F;
+            }
+            .buttons button:active{
+                font-weight:600;
+                color:white;
+            }
+    .buttons .but1{
+        background-color:#C6AC8F;
+        border:none;
+    }
+           .head li{
+                     position:absolute;top:6vw;left:85vw;
+                      text-decoration:none;
+                       list-style-type:none;
+                       width:100px;
+                       color:white;
+                       font-weight:600;
+                height:30px;
+                  border-radius:10px;
+                  background-color:#5A3A1A;
+                  text-align:center;
+                }
+                a{
+                   text-decoration:none;
+                     color:white;
+                       font-weight:600;
+                   
+                }
+                .l1{
+                   text-decoration:none;
+                  
+                    transition:1.0s;
+                }
+                .l2{
+                   
+                    transition:1.0s;
+                }
+                .l3{
+                  
+               
+                    transition:1.0s;
+                }
+                .l4{
+                    width:100px;
+                    height:30px;
+                    padding:0;
+                    margin:0;
+                }
+                .l5{
+                  transition:1s;
+                }
+                .l5:hover {
+                      background-color:#BC9A78;
+                      color:#5A3A1A;
+                }
+                
+                .l4:hover .l1{
+                    transform:translate(0px,30px);
+                }
+                  .l4:hover .l2{
+                    transform:translate(0px,60px);
+                   
+                }
+                  .l4:hover .l3{
+                    transform:translate(0px,90px);
+                   
+                }
+                .l1:hover{
+                   transition:0.2s;
+                       background-color:#BC9A78;
+                       color:#5A3A1A;
+                }
+                   .l2:hover{
+                   transition:0.2s;
+                       background-color:#BC9A78;
+                       color:#5A3A1A;
+                }
+                   .l3:hover{
+                   transition:0.2s;
+                       background-color:#BC9A78;
+                       color:#5A3A1A;
+                }
+                      .a1:hover{
+                   transition:0.2s;
+                       background-color:#BC9A78;
+                       color:#5A3A1A;
+                }
+                   .a2:hover{
+                   transition:0.2s;
+                       background-color:#BC9A78;
+                       color:#5A3A1A;
+                }
+                   .a3:hover{
+                   transition:0.2s;
+                       background-color:#BC9A78;
+                       color:#5A3A1A;
+                }
+                .l1 a:active{
+                 
+                  color:white;
+                }
+                  .l2 a:active{
+              
+                  color:white;
+                }
+                  .l3 a:active{
+              
+                  color:white;
+                }
+                .cart{
+                    background-color:#FFD700;
+                    border:1px solid orange;
+                    width:5vw;
+                    padding:5px;
+                    border-radius:10px;
+                    font-size:15px;
+                    color:black;
+                    font-weight:500;
+                    float:right;
+                    margin-right:1vw;
+                    box-shadow:0 2px 5px 1px #FFFFE0;
+                }
+                .cart:hover{
+                    background-color:yellow;
+                    border:1px solid #FFD700;
+                }
+    
+        </style>
 </body>
 
 </html>
