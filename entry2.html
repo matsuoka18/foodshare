@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="home2.css">
     <title>店舗本登録</title>
 </head>
-
 <body onload="entry()">
     <div class="name2">
         <h1>店舗本登録</h1>
@@ -157,10 +155,12 @@
         key = '';
         function entry(){
             text = document.cookie;
+            alert(text);
                         text = text.replace(/={/g,"\""+":"+"{");
             text = text.replace(/-; /g,","+"\"");
             text = text.replace(/=/g,"\""+":"+"\"");
             text = text.replace(/; /g,"\""+","+"\"");
+            alert(text);
         text2 = "{"+"\""+text+"\""+"}";
         console.log(text2);
         text2 = JSON.parse(text2);
