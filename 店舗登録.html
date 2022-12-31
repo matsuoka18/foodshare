@@ -121,7 +121,7 @@ document.getElementById("all2").style.display = "block";
 data = "<p>メールアドレスに本登録ページを送信しました</p>";
 all2.insertAdjacentHTML('beforeend',data);
   text = encodeURI(text);
-cookiee= "key="+text;
+cookiee= "key="+text+"><";
   alert(cookiee);
 document.cookie = cookiee;
   alert(document.cookie);
