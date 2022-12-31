@@ -599,17 +599,27 @@ setTimeout(start1,2000);
                 }
             })
             .then(resJson =>{
-                console.log("データ取得完了");
+
               data = resJson.data;
+                console.log("データ："+data);
               pre = data[0].pre;
+                console.log(pre)
               city = data[0].city;
+                console.log(city)
               city2 = data[0].city2;
+                console.log(city2)
               adress = data[0].adress;
+                console.log(adress)
               mailad = data[0].mailnum;
-              phonead = data[0].phonenum;
+                console.log(mailad)
+                phonead = data[0].phonenum;
+                console.log(phonead)
               intro = data[0].intro;
+                console.log(intro)
               time = data[0].time;
+                console.log(time)
               adress = pre+city+city2+adress;
+                console.log(adress)
               //document.getElementById("").innerHTML = ;
               document.getElementById("adress").innerHTML = adress;
               document.getElementById("time").innerHTML = time;
@@ -619,9 +629,10 @@ setTimeout(start1,2000);
               document.getElementById("time2").innerHTML = time;
               document.getElementById("mailad2").innerHTML = mailad;
               document.getElementById("phone2").innerHTML = phonead;
+                                console.log("データ取得入力");
             })
             .catch(error =>{
-                alert("error");
+                alert("エラー");
             })
           
         }
