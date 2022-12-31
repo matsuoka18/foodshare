@@ -585,7 +585,7 @@ var params={
 "body":JSON.stringify(data)
 }
 fetch(url,params);
-setTimeout(start1,2000);
+setTimeout(start1,3000);
         }
         function start1(){
             url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
@@ -599,28 +599,36 @@ setTimeout(start1,2000);
                 }
             })
             .then(resJson =>{
-
-              data = resJson.data;
+jsondata = resJson;
+                console.log("データ取得");
+                start11();
+            })
+            .catch(error =>{
+                alert("エラー");
+            })
+          
+        }
+        function start11(){
+                      data = jsondata.data;
                 console.log("データ："+data);
               pre = data[0].pre;
-                console.log(pre)
+                console.log(pre);
               city = data[0].city;
-                console.log(city)
+                console.log(city);
               city2 = data[0].city2;
-                console.log(city2)
+                console.log(city2);
               adress = data[0].adress;
-                console.log(adress)
+                console.log(adress);
               mailad = data[0].mailnum;
-                console.log(mailad)
+                console.log(mailad);
                 phonead = data[0].phonenum;
-                console.log(phonead)
+                console.log(phonead);
               intro = data[0].intro;
-                console.log(intro)
+                console.log(intro);
               time = data[0].time;
-                console.log(time)
+                console.log(time);
               adress = pre+city+city2+adress;
-                console.log(adress)
-              //document.getElementById("").innerHTML = ;
+                console.log(adress);
               document.getElementById("adress").innerHTML = adress;
               document.getElementById("time").innerHTML = time;
               document.getElementById("phone").innerHTML = phonead;
@@ -630,11 +638,6 @@ setTimeout(start1,2000);
               document.getElementById("mailad2").innerHTML = mailad;
               document.getElementById("phone2").innerHTML = phonead;
                                 console.log("データ取得入力");
-            })
-            .catch(error =>{
-                alert("エラー");
-            })
-          
         }
         function start2(){
           url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
