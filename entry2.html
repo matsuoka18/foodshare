@@ -156,7 +156,7 @@
         function entry(){
             text = document.cookie;
             alert(text);
-                        text = text.replace(/={/g,"\""+":"+"{");
+              /*          text = text.replace(/={/g,"\""+":"+"{");
             text = text.replace(/-; /g,","+"\"");
             text = text.replace(/=/g,"\""+":"+"\"");
             text = text.replace(/; /g,"\""+","+"\"");
@@ -169,7 +169,10 @@
             alert(text2);
             text2 = text2.replace(/}-"}/g,"}"+"}");
             alert(text2);
-      key = text2.key;
+      key = text2.key;*/
+            text1 = text.indexOf("key=")+4;
+            text2 = text.indexOf("><");
+            key = text.substring(text1,text2);
             key = decodeURI(key);
         console.log(key);
             alert(key);
