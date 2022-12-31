@@ -638,6 +638,7 @@ jsondata = resJson;
               document.getElementById("mailad2").innerHTML = mailad;
               document.getElementById("phone2").innerHTML = phonead;
                                 console.log("データ取得入力");
+
         }
         function start2(){
           url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
@@ -985,8 +986,11 @@ function jump(){
   num = 1;
           ani();
           document.getElementById("s").style.backgroundColor ="#5A3A1A";
-
+if(typeof ttt == 'undefined'){
 location.href="商品表示.html";
+}else{
+}
+location.href="商品表示2.html";
 }
 function ani(){
   //alert(num);
