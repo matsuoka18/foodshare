@@ -827,3 +827,16 @@ console.log(e.message);
 
 }
 }
+cartnum = 0;
+function カート(){
+  if(typeof cartt == 'undefined'){
+    cookiedata1 = cart+cartnum+"=";
+    cookiedata2 = sn2+"@>";
+    cookiedata = cookiedata1+cookiedata2;
+    cartt = "finish";
+    document.getElementById("cart").style.backgroundColor = "orange";
+    document.getElementById("cart").style.innerHTML = "追加済み";
+  }else{
+alert("すでにカートに追加されています");
+  }
+}
