@@ -148,8 +148,9 @@ firstdata2 = resJson;
 console.log("firstdata 1/2 finish");
 console.log("wait for instructions");
 success2 = "ok";
-document.getElementById("s").style.backgroundColor ="#411C00";
+document.getElementById("s").style.backgroundColor ="#1E0000";
 document.getElementById("search").style.borderColor = "#411C00";
+document.getElementById("search").style.borderWeight = "2px";
 //document.getElementById("search").placeholder = "finish";
 if(request2 == "next"){
 console.log("menusearch2へ優先処理  in menu2")
