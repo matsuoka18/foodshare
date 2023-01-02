@@ -835,7 +835,8 @@ function カート(){
     cookiedata = cookiedata1+cookiedata2;
     cartt = "finish";
     document.getElementById("cart").style.backgroundColor = "orange";
-    document.getElementById("cart").style.innerHTML = "追加済み";
+    document.getElementById("cart").style.fontWeight = "600";
+    document.getElementById("cart").innerHTML = "追加済み";
   }else{
 alert("すでにカートに追加されています");
   }
