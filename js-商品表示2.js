@@ -231,6 +231,10 @@ console.log(cd);
         sn = cd.substring(num1+10,num2);
         sn2 = decodeURI(cd.substring(num3+11,num4));
        console.log(sn+":"+sn2);
+       setTimeout(startt,1000)
+       }
+       function startt(){
+       console.log("loading start");
     url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
 "name4":"店舗商品取得",
@@ -247,6 +251,7 @@ fetch(url,params);
 setTimeout(start1,3000);
 }
 function start1(){
+console.log("getting start");
     url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
     fetch(url,{
         method:"GET",
@@ -296,7 +301,7 @@ function start11(){
       document.getElementById("time2").innerHTML = time;
       document.getElementById("mailad2").innerHTML = mailad;
       document.getElementById("phone2").innerHTML = phonead;
-                        console.log("データ取得入力");
+                        console.log("データ取得入力完了");
 
 }
 function start2(){
