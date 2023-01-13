@@ -223,6 +223,14 @@ console.log(cd);
         num2 = cd.indexOf("$");
         num3 = cd.indexOf("searchname=");
         num4 = cd.indexOf("^");
+        num5 = cd.indexOf("cookienum=");
+        if(num5 == -1){
+        console.log("クッキーの乗ってねーよ")
+        }else{
+        num6 = cd.indexOf("@>");
+        cn = cd.substring(num5+10,num6);
+        console.log("cookienum:"+cn);
+        }
         sn = cd.substring(num1+10,num2);
         sn2 = decodeURI(cd.substring(num3+11,num4));
         console.log(sn+":"+sn2);
@@ -835,7 +843,7 @@ console.log(e.message);
 cartnum = 0;
 function カート(){
   if(typeof cartt == 'undefined'){
-    cookiedata1 = cart+cartnum+"=";
+    cookiedata1 = "shopcart"+"=";
     cookiedata2 = sn2+"@>";
     cookiedata = cookiedata1+cookiedata2;
     cartt = "finish";
@@ -844,5 +852,32 @@ function カート(){
     document.getElementById("cart").innerHTML = "追加済み";
   }else{
 alert("すでにカートに追加されています");
+//削除機能をつける
   }
 }
+
+function cart2(){
+menu = "hello";
+if(typeof cn == 'undefined'){
+cod1 = "cart"+cartnum+"="+menu;
+document.cookie = cod1;
+cartnum++;
+cn = cartnum;
+document.cookie = "cookienum=; max-age=0";
+cod2 = "cookienum="+cn;
+document.cookie = cod2;
+//menuの名前を取得→"cartnum"でcookieに載せる→cartnum++→cnにcartnumを代入→最後にcookienumに変更を
+}else{
+cartnum = cn;
+cod1 = "cart"+cartnum+"="+menu;
+document.cookie = cod1;
+cartnum++;
+cn = cartnum;
+document.cookie = "cookienum=; max-age=0";
+cod2 = "cookienum="+cn;
+document.cookie = cod2;
+//cnを取得→その値をcartnumで使用→cartnum++→繰り返し→最後にcookienumに変更を
+}
+//削除機能をつける　はじめての場合（上）は空白の配列を作って代入して後で問い合わせる　2回目（下）は配列がない場合は作ってcookieからデータを取得して代入、または直で代入（はじめは上で次から下になった場合）
+}
+//cookienumの削除手順 1.cookienum=; max-age=0;に設定する
