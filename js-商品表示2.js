@@ -227,7 +227,7 @@ console.log(cd);
         if(num5 == -1){
         console.log("クッキーの乗ってねーよ")
         }else{
-        num6 = cd.indexOf("@>");
+        num6 = cd.indexOf(">>?");
         cn = cd.substring(num5+10,num6);
         console.log("cookienum:"+cn);
         }
@@ -859,22 +859,22 @@ alert("すでにカートに追加されています");
 function cart2(){
 menu = "hello";
 if(typeof cn == 'undefined'){
-cod1 = "cart"+cartnum+"="+menu;
+cod1 = "cart"+cartnum+"="+menu+">"+cartnum;
 document.cookie = cod1;
 cartnum++;
 cn = cartnum;
 document.cookie = "cookienum=; max-age=0";
-cod2 = "cookienum="+cn;
+cod2 = "cookienum="+cn+">>?";
 document.cookie = cod2;
 //menuの名前を取得→"cartnum"でcookieに載せる→cartnum++→cnにcartnumを代入→最後にcookienumに変更を
 }else{
 cartnum = cn;
-cod1 = "cart"+cartnum+"="+menu;
+cod1 = "cart"+cartnum+"="+menu+">"+cartnum;
 document.cookie = cod1;
 cartnum++;
 cn = cartnum;
 document.cookie = "cookienum=; max-age=0";
-cod2 = "cookienum="+cn;
+cod2 = "cookienum="+cn+">>?";
 document.cookie = cod2;
 //cnを取得→その値をcartnumで使用→cartnum++→繰り返し→最後にcookienumに変更を
 }
