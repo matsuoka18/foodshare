@@ -23,6 +23,8 @@ function cart2(){
     for(var a = 0; a<cookienum; a++){
         text = "cart"+a+"=;"+"max-age=0";
 document.cookie = text;
+        text = "cookienum=; max-age=0";
+        document.cookie = text;
     }
 console.log("cookie削除完了")
 }
