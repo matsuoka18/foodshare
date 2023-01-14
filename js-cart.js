@@ -19,7 +19,7 @@ for(var a = 0; a<cookienum; a++){
 }
 console.log(data2);
 }
-function cart(){
+function cart2(){
     for(var a = 0; a<cookienum; a++){
         text = "cart"+a+"=;"+"max-age=0";
 document.cookie = text;
