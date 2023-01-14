@@ -465,3 +465,6 @@ console.log(e.message);
 
 }
 }
+function カート(){
+location.href="cart.html";
+}
