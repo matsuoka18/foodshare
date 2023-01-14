@@ -225,7 +225,7 @@ console.log(cd);
         num4 = cd.indexOf("^");
         num5 = cd.indexOf("cookienum=");
         if(num5 == -1){
-        console.log("クッキーの乗ってねーよ")
+        console.log("商品カートデータなし")
         }else{
         num6 = cd.indexOf(">>?");
         cn = cd.substring(num5+10,num6);
@@ -846,10 +846,12 @@ function カート(){
     cookiedata1 = "shopcart"+"=";
     cookiedata2 = sn2+"@>";
     cookiedata = cookiedata1+cookiedata2;
+    document.cookie = cookiedata;
     cartt = "finish";
     document.getElementById("cart").style.backgroundColor = "orange";
     document.getElementById("cart").style.fontWeight = "600";
     document.getElementById("cart").innerHTML = "追加済み";
+      console.log("cookie add");
   }else{
 alert("すでにカートに追加されています");
 //削除機能をつける
