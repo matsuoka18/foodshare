@@ -2,7 +2,7 @@ body{
     margin:0;
     font-family:monospace;
   }
-  
+
   .h1{
       padding-top:3vw;
   margin:0;
@@ -1323,12 +1323,12 @@ padding-bottom:5vw;
                 .button11{
             border:none;
         }
-        .menu1 img{
-            width:auto;
-            height:15vw;
-           margin-right:10px;
-        }
 
+.menupic{
+  width:auto;
+  height:15vw;
+ margin-right:10px;
+}
         .button11 h2{
             margin-left:2vw;
             border-left:10px solid red;
@@ -1398,8 +1398,38 @@ padding-bottom:5vw;
         .menu1 h2{
             font-size:40px;
             width:40vw;
+        }
+        .star{
+         position:relative;top:-0.5vw;
+          width:auto;
+          height:2vw;
+        background-color:white;
+        float:right;
+        }
+        .menu1:hover .star{
+          background-color:#EEEEEE;
+          box-shadow:0 0 0 0;
+        }
 
+        .review{
+          background-color:white;
+          width:10vw;
+          height:auto;
+          float:right;
+          position:relative;
+          z-index:100;
+          border-radius:10px;
+        }
 
+        .menu1:hover .review{
+          background-color:#EEEEEE;
+          box-shadow:0 0 0 0;
+        }
+        .menu1 .review:hover{
+          background-color:#DDDDDD;
+        }
+        .menu1 .review:active{
+           background-color:white;
         }
         .hh2:hover{
             border-bottom:2px solid black;
@@ -1438,6 +1468,7 @@ padding-bottom:5vw;
         .menu1 span{
             font-size:15px;
         }
+
     .hey {
         width: 100vw;
         height: 45vw;
@@ -1673,3 +1704,81 @@ border:none;
             background-color:yellow;
             border:1px solid #FFD700;
         }
+.alll{
+  display:none;
+}
+.r1{
+  position: relative;left:2.5vw;
+  width:95vw;
+  height: 15vw;
+background-color: #DEC8B1;
+border-radius: 40px;
+  display: flex;
+}
+.r11{
+
+  width:30vw;
+  height:15vw;
+  text-align:center;
+  margin:0;
+  background-color:#C6AC8F;
+  border-radius:40px;
+}
+.r11 p{
+  margin:0;
+}
+.rp1{
+  position:relative;top:3vw;
+  font-size:30px;
+}
+.rp2{
+  position:relative;top:4vw;
+  font-size:55px;
+  font-weight:600;
+}
+.r111{
+  font-size:30px;
+  padding-left:0.5vw;
+}
+.r111 p{
+  margin:0.5vw;
+}
+.r2{
+  position:relative;left:2.5vw;
+  width:95vw;
+  height:30vw;
+  background-color:;
+}
+.r2 h2{
+  text-align:center;
+  font-size:30px;
+  padding:2vw;
+}
+.r2 p{
+font-size:50px;
+margin:0;
+float: right;
+padding-right:2vw;
+color:#FFD700;
+}
+.text1{
+  position:relative;left:2.5vw;
+  width:90vw;
+  height:3vw;
+  font-size:20px;
+  margin-top:2vw;
+  margin-bottom:3vw;
+}
+.text2{
+  position:relative;left:2.5vw;
+  width:90vw;
+  height: 15vw;
+  font-size:20px;
+}
+.r2 button{
+  position: relative;left:2.5vw;top:1vw;
+  width:10vw;
+  height:3vw;
+  border-radius:20px;
+  margin:0;
+}

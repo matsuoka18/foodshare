@@ -883,3 +883,11 @@ document.cookie = cod2;
 //削除機能をつける　はじめての場合（上）は空白の配列を作って代入して後で問い合わせる　2回目（下）は配列がない場合は作ってcookieからデータを取得して代入、または直で代入（はじめは上で次から下になった場合）
 }
 //cookienumの削除手順 1.cookienum=; max-age=0;に設定する
+function review1(){
+document.getElementById("alll").style.display = "none";
+document.getElementById("alll").style.opacity = "0";
+}
+function back(){
+  document.getElementById("alll").style.display = "block";
+  document.getElementById("alll").style.opacity = "1";
+}
