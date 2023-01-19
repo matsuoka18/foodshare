@@ -37,7 +37,7 @@ body {
   
   .form {
     width: 85vw;
-  
+    padding:2.5vw;
     margin-left: 7vw;
     margin-top: 2.5vw;
     padding-bottom: 5vw;
@@ -176,17 +176,21 @@ body {
   }
   
   .che {
-    margin-top: 10vw;
-    background-color: #C6AC8F;
+    padding:2.5vw;
+    width: 85vw;
+    margin-left: 7vw;
+    margin-top: 2.5vw;
+    padding-bottom: 5vw;
     border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    background-color: #C6AC8F;
+    text-align: center;
   }
   
   .che h2 {
     width: 60vw;
     background-color: #3A1F00;
     color: white;
+    font-size:30px;
     border-radius: 5px;
     margin-left: -10px;
     padding-right: 20px;
@@ -195,7 +199,9 @@ body {
     padding-bottom: 20px;
     text-align: center;
   }
-  
+  .che p {
+    font-size:30px;
+  }
   .che2 {
     background-color: white;
     width: 60vw;
@@ -203,7 +209,7 @@ body {
     border-radius: 10px;
     padding-bottom: 5vw;
   }
-  
+
   .center {
     width: 85vw;
     padding-bottom: 30px;
