@@ -1704,7 +1704,9 @@ border:none;
             background-color:yellow;
             border:1px solid #FFD700;
         }
-
+.alll{
+  display:none;
+}
 .r1{
   position: relative;left:2.5vw;
   width:95vw;
@@ -1779,4 +1781,17 @@ color:#FFD700;
   height:3vw;
   border-radius:20px;
   margin:0;
+}
+.rb1{
+  position:relative;left:2.5vw;
+  font-size:30px;
+  border-left:10px solid;
+  padding-left:1vw;
+}
+.rb2{
+  float:right;
+  border:1px solid;
+  padding:0.5vw;
+  font-weight:600;
+  border-radius:10px;
 }
