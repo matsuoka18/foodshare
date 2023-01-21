@@ -6,10 +6,10 @@
     <title>hello</title>
     <link rel="stylesheet" href="css-商品表示2.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+
 </head>
 
-<body >
+<body>
     <div class="alll" id="alll">
         <div class="section1">
             <div class="head">
@@ -38,7 +38,7 @@
                 <div class="hyouka">
 
                     <h1 id="shopname">マクドナルド</h1>
-                    <div id="cart"class="cart" onclick="カート()">カートに追加</div>
+                    <div id="cart" class="cart" onclick="カート()">カートに追加</div>
                     <p id="evo">評価とか</p>
 
                 </div>
@@ -359,7 +359,7 @@
     </div>
 </div>
     <div class="alll2">
-        <div class="back" id="back"onclick="back()">戻る</div>
+        <div class="back" id="back"onclick="back()">×戻る</div>
         <div class="menu1">
             <img src="a.jpeg" class="menupic">
             <h2>ビックマック</h2>
@@ -385,14 +385,42 @@
             </div>
         </div>
     </div>
-    <h2 class="rb1">レビュー</h2>
-    <div class="rb2" onclick="reviewb()">レビューを書く↓</div>
-    <div class="r2">
-        <h2>レビューを書く</h2>
-        <p><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></p>
+    <div class="rb22">    
+    <div class="rb1">レビュー</div>
+    <div class="rb2" id="a"onclick="reviewb()">レビューを書く↓</div>
+
+</div>
+    <div class="r2" id="r2">
+        <h2 >レビューを書く</h2>
+        <p><span id="s1" onclick="ss1()">★</span><span id="s2" onclick="ss2()">★</span><span id="s3" onclick="ss3()">★</span><span id="s4" onclick="ss4()">★</span><span id="s5" onclick="ss5()">★</span></p>
         <input type="text" id="text1" class="text1"value=""placeholder="見出しを入力">
         <textarea id="text2" class="text2" cols="60"rols="10" wrap="hard"placeholder="本文を入力"></textarea>
-        <button>送信</button>
+        <button onclick="rsend()">送信</button>
+    </div>
+    
+    <div class="r3">
+        <img src="star2.PNG" class="star">
+        <div class="r33">やはりマックだね</div>
+
+        <div class="r333">マクドナルドの定番商品であるからにはとてもおいしいいですな</div>
+    </div>
+    <div class="r32">
+        <img src="star2.PNG" class="star">
+        <div class="r33">やはりマックだね</div>
+
+        <div class="r333">マクドナルドの定番商品であるからにはとてもおいしいいですな</div>
+    </div>
+    <div class="r3">
+        <img src="star2.PNG" class="star">
+        <div class="r33">やはりマックだね</div>
+
+        <div class="r333">マクドナルドの定番商品であるからにはとてもおいしいいですな</div>
+    </div>
+    <div class="r32">
+        <img src="star2.PNG" class="star">
+        <div class="r33">やはりマックだね</div>
+
+        <div class="r333">マクドナルドの定番商品であるからにはとてもおいしいいですな</div>
     </div>
         <script src="js-商品表示2.js"></script>
 </body>

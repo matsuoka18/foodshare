@@ -891,3 +891,112 @@ function back(){
   document.getElementById("alll").style.display = "block";
   document.getElementById("alll").style.opacity = "1";
 }
+n = 0;
+function reviewb(){
+  if(n == 0){
+  document.getElementById("r2").style.display = "block";
+  document.getElementById("a").innerHTML = "☓閉じる"
+  n++;
+}else if(n == 1){
+  document.getElementById("r2").style.display = "none";
+  document.getElementById("a").innerHTML = "レビューを書く↓"
+  n =0;
+}
+}
+n = 0;
+rn = 0;
+function ss1(){
+  rn = 1;
+  if(n == 0){
+  document.getElementById("s1").style.color = "#FFD700"
+  n++;
+  }else if(n ==1){
+    n = 0;
+
+    document.getElementById("s2").style.color = "gray"
+    document.getElementById("s3").style.color = "gray"
+    document.getElementById("s4").style.color = "gray"
+    document.getElementById("s5").style.color = "gray"
+  }
+}
+n = 0;
+function ss2(){
+  rn = 2;
+  if(n == 0){
+    document.getElementById("s1").style.color = "#FFD700"
+  document.getElementById("s2").style.color = "#FFD700"
+  n++;
+  }else if(n ==1){
+    document.getElementById("s2").style.color = "gray"
+    document.getElementById("s3").style.color = "gray"
+    document.getElementById("s4").style.color = "gray"
+    document.getElementById("s5").style.color = "gray"
+    n = 0;
+}
+}
+n = 0;
+function ss3(){
+  rn = 3;
+  if(n == 0){
+    document.getElementById("s1").style.color = "#FFD700"
+    document.getElementById("s2").style.color = "#FFD700"
+  document.getElementById("s3").style.color = "#FFD700"
+  n++;
+  }else if(n ==1){
+    n = 0;
+    document.getElementById("s3").style.color = "gray"
+    document.getElementById("s4").style.color = "gray"
+    document.getElementById("s5").style.color = "gray"
+  }
+}
+n = 0;
+function ss4(){
+  rn = 4;
+  if(n == 0){
+    document.getElementById("s1").style.color = "#FFD700"
+    document.getElementById("s2").style.color = "#FFD700"
+    document.getElementById("s3").style.color = "#FFD700"
+  document.getElementById("s4").style.color = "#FFD700"
+  n++;
+  }else if(n ==1){
+    n = 0;
+    document.getElementById("s4").style.color = "gray"
+    document.getElementById("s5").style.color = "gray"
+  }
+}
+n = 0;
+function ss5(){
+  rn = 5;
+  if(n == 0){
+    document.getElementById("s1").style.color = "#FFD700"
+    document.getElementById("s2").style.color = "#FFD700"
+    document.getElementById("s3").style.color = "#FFD700"
+  document.getElementById("s4").style.color = "#FFD700"
+  document.getElementById("s5").style.color = "#FFD700"
+  n++;
+  }else if(n ==1){
+    n = 0;
+    document.getElementById("s5").style.color = "gray"
+  }
+}
+function rsend(){
+text1 = document.getElementById("text1").value;
+text2 = document.getElementById("text2").value;
+url = "";
+data = [{
+  "text1":text1,
+  "text2":text2,
+  "text3":rn
+}]
+params = {
+  "method":"post",
+  "mode":"no-cors",
+  "Content-Type":"application/json",
+  "body":JSON.stringify(data)
+}
+fetch(url,params);
+console.log("レビュー送信完了")
+console.log("内容："+text1+"："+text2+"/"+rn)
+document.getElementById("text1").value = "";
+document.getElementById("text2").value = "";
+}
