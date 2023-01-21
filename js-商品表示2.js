@@ -886,10 +886,12 @@ document.cookie = cod2;
 function review1(){
 document.getElementById("alll").style.display = "none";
 document.getElementById("alll").style.opacity = "0";
+document.getElementById("alll2").style.display = "block";
 }
 function back(){
   document.getElementById("alll").style.display = "block";
   document.getElementById("alll").style.opacity = "1";
+    document.getElementById("alll2").style.display = "none";
 }
 n = 0;
 function reviewb(){
