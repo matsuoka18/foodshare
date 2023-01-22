@@ -33,6 +33,10 @@ function but1() {
     document.getElementById("button55").style.display = "none";
     document.getElementById("button66").style.opacity = "0";
     document.getElementById("button66").style.display = "none";
+    document.getElementById("hey").style.display = "block";
+    document.getElementById("hey2").style.display = "block";
+    document.getElementById("hey3").style.display = "block";
+    document.getElementById("allshow").style.display = "none";
 }
 function but2() {
     document.getElementById("but2").style.backgroundColor = "#C6AC8F";
@@ -69,6 +73,10 @@ function but2() {
     document.getElementById("button55").style.display = "none";
     document.getElementById("button66").style.opacity = "0";
     document.getElementById("button66").style.display = "none";
+    document.getElementById("hey").style.display = "block";
+    document.getElementById("hey2").style.display = "block";
+    document.getElementById("hey3").style.display = "block";
+    document.getElementById("allshow").style.display = "none";
 }
 function but3() {
     document.getElementById("but1").style.backgroundColor = "white";
@@ -105,6 +113,10 @@ function but3() {
     document.getElementById("button55").style.display = "none";
     document.getElementById("button66").style.opacity = "0";
     document.getElementById("button66").style.display = "none";
+    document.getElementById("hey").style.display = "block";
+    document.getElementById("hey2").style.display = "block";
+    document.getElementById("hey3").style.display = "block";
+    document.getElementById("allshow").style.display = "none";
 }
 function but4() {
     document.getElementById("but1").style.backgroundColor = "white";
@@ -141,6 +153,12 @@ function but4() {
     document.getElementById("button55").style.display = "none";
     document.getElementById("button66").style.opacity = "0";
     document.getElementById("button66").style.display = "none";
+        //一覧用
+        document.getElementById("hey").style.display = "none";
+        document.getElementById("hey2").style.display = "none";
+        document.getElementById("hey3").style.display = "none";
+        document.getElementById("allshow").style.display = "block";
+        
 }
 function but5() {
     document.getElementById("but1").style.backgroundColor = "white";
@@ -177,6 +195,10 @@ function but5() {
     document.getElementById("button55").style.display = "block";
     document.getElementById("button66").style.opacity = "0";
     document.getElementById("button66").style.display = "none";
+    document.getElementById("hey").style.display = "block";
+    document.getElementById("hey2").style.display = "block";
+    document.getElementById("hey3").style.display = "block";
+    document.getElementById("allshow").style.display = "none";
 }
 function but6() {
     document.getElementById("but1").style.backgroundColor = "white";
@@ -213,6 +235,10 @@ function but6() {
     document.getElementById("button55").style.display = "none";
     document.getElementById("button66").style.opacity = "1";
     document.getElementById("button66").style.display = "block";
+    document.getElementById("hey").style.display = "block";
+    document.getElementById("hey2").style.display = "block";
+    document.getElementById("hey3").style.display = "block";
+    document.getElementById("allshow").style.display = "none";
 }
 
 function start(){
@@ -310,7 +336,56 @@ function start11(){
       document.getElementById("mailad2").innerHTML = mailad;
       document.getElementById("phone2").innerHTML = phonead;
                         console.log("データ取得入力完了");
-
+                        getmenu();
+}
+function getmenu(){
+  console.log("メニューデータ取得開始→");
+  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  data = [{
+    "name5":sn,
+    "branch":"changedata"
+  }]
+  params = {
+    "method":"post",
+    "mode":"no-cors",
+    "Content-Type":"application/json",
+    "body":JSON.stringify(data)
+  }
+  fetch(url,params)
+  console.log("メニューデータリクエスト→")
+  setTimeout(getmenu2,2000)
+}
+mjson = '';
+function getmenu2(){
+  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  fetch(url,{
+    "method":"GET",
+    "mode":"cors"
+  })
+  .then(response =>{
+    if(response.ok){
+      return response.json()
+    }
+  })
+  .then(resJson =>{
+ mjson = resJson;
+ console.log("メニューデータ取得完了");
+ getmenu3();
+  })
+  .catch(error =>{
+    console.log("通信エラー");
+    alert("通信エラー");
+  })
+}
+function menu3(){
+  last = mjson.changedata[0].last;
+  for(var a=0; a<last; a++){
+    mname = mjson.changedata[0].name[a];
+    mfee = mjson.changedata[0].fee[a];
+    mexpress = mjson.changedata[0].express[a];
+    data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review1()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"review2"+"\""+"onclick="+"\""+"fevo()"+"\""+"></div><h4>"+mfee+"<span>"+"\""+"円"+"\""+"</span></h4></div>";
+    allshow.insertAdjacentHTML("beforeend",data);
+  }
 }
 function start2(){
   url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";

@@ -2033,3 +2033,6 @@ text-align: center;
   flex-direction: column;
   float:right;
 }
+.allshow{
+  display:none;
+}
