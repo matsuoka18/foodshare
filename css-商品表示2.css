@@ -1505,6 +1505,8 @@ img {
   position: relative;
   z-index: 100;
   border-radius: 10px;
+  display:block;
+  padding-bottom:5px;
 }
 
 .menu1:hover .review {
@@ -1519,7 +1521,30 @@ img {
 .menu1 .review:active {
   background-color: white;
 }
+.review2 {
+  background-color: white;
+  width: 10vw;
+  height: auto;
+  float: right;
+  position: relative;
+  z-index: 100;
+  border-radius: 10px;
+  display:block;
 
+}
+
+.menu1:hover .review2 {
+  background-color: #EEEEEE;
+  box-shadow: 0 0 0 0;
+}
+
+.menu1 .review2:hover {
+  background-color: #DDDDDD;
+}
+
+.menu1 .review2:active {
+  background-color: white;
+}
 .hh2:hover {
   border-bottom: 2px solid black;
   animation-name: hello;
@@ -2002,4 +2027,9 @@ text-align: center;
 }
 .alll2{
   display:none;
+}
+.imgs{
+  display: flex;
+  flex-direction: column;
+  float:right;
 }

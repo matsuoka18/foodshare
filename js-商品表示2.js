@@ -891,7 +891,7 @@ document.getElementById("alll2").style.display = "block";
 function back(){
   document.getElementById("alll").style.display = "block";
   document.getElementById("alll").style.opacity = "1";
-    document.getElementById("alll2").style.display = "none";
+  document.getElementById("alll2").style.display = "none";
 }
 n = 0;
 function reviewb(){
@@ -921,63 +921,63 @@ function ss1(){
     document.getElementById("s5").style.color = "gray"
   }
 }
-n = 0;
+nn1 = 0;
 function ss2(){
   rn = 2;
-  if(n == 0){
+  if(nn1 == 0){
     document.getElementById("s1").style.color = "#FFD700"
   document.getElementById("s2").style.color = "#FFD700"
-  n++;
-  }else if(n ==1){
+  nn1++;
+  }else if(nn1 ==1){
     document.getElementById("s2").style.color = "gray"
     document.getElementById("s3").style.color = "gray"
     document.getElementById("s4").style.color = "gray"
     document.getElementById("s5").style.color = "gray"
-    n = 0;
+    nn1 = 0;
 }
 }
-n = 0;
+nn2 = 0;
 function ss3(){
   rn = 3;
-  if(n == 0){
+  if(nn2 == 0){
     document.getElementById("s1").style.color = "#FFD700"
     document.getElementById("s2").style.color = "#FFD700"
   document.getElementById("s3").style.color = "#FFD700"
-  n++;
-  }else if(n ==1){
-    n = 0;
+  nn2++;
+  }else if(nn2 ==1){
+    nn2 = 0;
     document.getElementById("s3").style.color = "gray"
     document.getElementById("s4").style.color = "gray"
     document.getElementById("s5").style.color = "gray"
   }
 }
-n = 0;
+nn3 = 0;
 function ss4(){
   rn = 4;
-  if(n == 0){
+  if(nn3 == 0){
     document.getElementById("s1").style.color = "#FFD700"
     document.getElementById("s2").style.color = "#FFD700"
     document.getElementById("s3").style.color = "#FFD700"
   document.getElementById("s4").style.color = "#FFD700"
-  n++;
-  }else if(n ==1){
-    n = 0;
+  nn3++;
+  }else if(nn3 ==1){
+    nn3 = 0;
     document.getElementById("s4").style.color = "gray"
     document.getElementById("s5").style.color = "gray"
   }
 }
-n = 0;
+nn4 = 0;
 function ss5(){
   rn = 5;
-  if(n == 0){
+  if(nn4 == 0){
     document.getElementById("s1").style.color = "#FFD700"
     document.getElementById("s2").style.color = "#FFD700"
     document.getElementById("s3").style.color = "#FFD700"
   document.getElementById("s4").style.color = "#FFD700"
   document.getElementById("s5").style.color = "#FFD700"
-  n++;
-  }else if(n ==1){
-    n = 0;
+  nn4++;
+  }else if(nn4 ==1){
+    nn4 = 0;
     document.getElementById("s5").style.color = "gray"
   }
 }
@@ -1001,4 +1001,53 @@ console.log("レビュー送信完了")
 console.log("内容："+text1+"："+text2+"/"+rn)
 document.getElementById("text1").value = "";
 document.getElementById("text2").value = "";
+}
+n1 = 0;
+function fevo(){
+if(n1 == 0){
+  document.getElementById("review2").style.backgroundColor = "pink";
+  n1++;
+}else if(n1 == 1){
+  document.getElementById("review2").style.backgroundColor = "";
+  n1 = 0;
+}
+}
+n2 = 0;
+function fevo2(){
+if(n2 == 0){
+  document.getElementById("review3").style.backgroundColor = "pink";
+  n2++;
+}else if(n2 == 1){
+  document.getElementById("review3").style.backgroundColor = "";
+  n2 = 0;
+}
+}
+n3 = 0;
+function fevo3(){
+if(n3 == 0){
+  document.getElementById("review4").style.backgroundColor = "pink";
+  n3++;
+}else if(n3 == 1){
+  document.getElementById("review4").style.backgroundColor = "";
+  n3 = 0;
+}
+}
+n4 = 0;
+function fevo4(){
+if(n4 == 0){
+  document.getElementById("review5").style.backgroundColor = "pink";
+}else if(n4 == 1){
+  document.getElementById("review5").style.backgroundColor = "";
+  n4 = 0;
+}
+}
+n5 = 0;
+function fevo5(){
+if(n5 == 0){
+  document.getElementById("review6").style.backgroundColor = "pink";
+  n5++;
+}else if(n5 == 1){
+  document.getElementById("review6").style.backgroundColor = "";
+  n5 = 0;
+}
 }
