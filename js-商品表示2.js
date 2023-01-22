@@ -242,7 +242,7 @@ function but6() {
 }
 
 function start(){
-   /* cd= document.cookie;
+    cd= document.cookie;
    // cd = 'branch=menu|; menumemo={"shop1":[0,22,38],"shop7":[14,36,52],"shop13":[4,26,42],"shop19":[1,23,39],"shop25":[1,23,39],"shop31":[1,23,39],"shop37":[1,23,39],"shop43":[1,23,39],"shop49":[1,23,39],"shop55":[23,39],"shop61":[23,39],"shop67":[23,39],"shop73":[23,39],"shop79":[23,39],"last":[79]}-; loginID=%E5%85%AB%E7%99%BE%E5%B1%8B!; pass=%E3%82%84%E3%81%BE%E3%81%8D?; shopnumber=85#; searchname=hello^;searchnum=85$';
 console.log(cd);
         num1 = cd.indexOf("searchnum=");
@@ -265,8 +265,6 @@ console.log(cd);
         sn = cd.substring(num1+10,num2);
         sn2 = decodeURI(cd.substring(num3+11,num4));
        console.log(sn+":"+sn2);
-       */
-      sn =1;
        setTimeout(startt,1000)
        }
        function startt(){
