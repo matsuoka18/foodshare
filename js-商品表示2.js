@@ -242,7 +242,7 @@ function but6() {
 }
 
 function start(){
-    cd= document.cookie;
+    /*cd= document.cookie;
    // cd = 'branch=menu|; menumemo={"shop1":[0,22,38],"shop7":[14,36,52],"shop13":[4,26,42],"shop19":[1,23,39],"shop25":[1,23,39],"shop31":[1,23,39],"shop37":[1,23,39],"shop43":[1,23,39],"shop49":[1,23,39],"shop55":[23,39],"shop61":[23,39],"shop67":[23,39],"shop73":[23,39],"shop79":[23,39],"last":[79]}-; loginID=%E5%85%AB%E7%99%BE%E5%B1%8B!; pass=%E3%82%84%E3%81%BE%E3%81%8D?; shopnumber=85#; searchname=hello^;searchnum=85$';
 console.log(cd);
         num1 = cd.indexOf("searchnum=");
@@ -263,7 +263,9 @@ console.log(cd);
      document.getElementById("shopname").innerHTML = sn2;
      document.getElementById("shopname2").innerHTML = sn2;  
         sn = cd.substring(num1+10,num2);
-        sn2 = decodeURI(cd.substring(num3+11,num4));
+        sn2 = decodeURI(cd.substring(num3+11,num4));*/
+        sn = 1;
+        sn2 = "hhh";
        console.log(sn+":"+sn2);
        setTimeout(startt,1000)
        }
@@ -377,16 +379,74 @@ function getmenu2(){
     alert("通信エラー");
   })
 }
+lastn = 0;
 function getmenu3(){
   json = mjson.changedata[0]
   last = json.last;
   console.log(last);
-  for(var a=0; a<last; a++){
+  lastn = lastn +10;
+  if(lastn > last){
+    lastn = last;
+  }
+  for(var a=0; a<lastn; a++){
     mname = mjson.changedata[0].name[a];
     mfee = mjson.changedata[0].fee[a];
     mexpress = mjson.changedata[0].express[a];
-    data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review1()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"review2"+"\""+"onclick="+"\""+"fevo()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
-    allshow.insertAdjacentHTML("beforeend",data);
+    data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"review2"+"\""+"onclick="+"\""+"fevo"+a+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+    allshow2.insertAdjacentHTML("beforeend",data);
+  }
+  number = parseInt(last/10)+1;
+  console.log("number:"+number);
+  for(var a=1; a<number; a++){
+    data = "<div class="+"\""+"wp1"+"\""+">"+a+"</div>";
+    wp.insertAdjacentHTML("beforeend",data)
+  }
+}
+function plus(){
+  last2 = lastn;
+  lastn3 = 0;
+  lastn = lastn+10;
+  element = document.getElementById("allshow2");
+  element.remove();
+  data = "<div class="+"\""+"allshow2"+"\""+" id="+"\""+"allshow2"+"\""+"></div>";
+  allshow.insertAdjacentHTML("afterbegin",data);
+  if(lastn >= last){
+    lastn = last;
+    alert("最後です");
+  }
+  for(var a = last2; a<lastn; a++){
+ lastn3++;
+ mname = mjson.changedata[0].name[a];
+    mfee = mjson.changedata[0].fee[a];
+    mexpress = mjson.changedata[0].express[a];
+    data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"review2"+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+    allshow2.insertAdjacentHTML("beforeend",data);
+  }
+}
+function mina(){
+  last2 = lastn-20;
+  lastn3 = 0;
+  lastn = lastn-10;
+  element = document.getElementById("allshow2");
+  element.remove();
+  data = "<div class="+"\""+"allshow2"+"\""+" id="+"\""+"allshow2"+"\""+"></div>"
+  allshow.insertAdjacentHTML("beforeend",data)
+  if(last2 <= 0){
+    last2 = 0;
+    alert("一番はじめです")
+    if(lastn < last){
+     lastn = last;
+    }else{
+      lastn = 10;
+    }
+  }
+  for(var a = last2; a<lastn; a++){
+ lastn3++;
+ mname = mjson.changedata[0].name[a];
+    mfee = mjson.changedata[0].fee[a];
+    mexpress = mjson.changedata[0].express[a];
+    data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"review2"+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+    allshow2.insertAdjacentHTML("beforeend",data);
   }
 }
 function start2(){
