@@ -261,12 +261,14 @@ console.log(cd);
         if(num7 == -1){
         console.log("favoritenumなし→作成");
         favoritenuml = 0;
-        data = "favoritenuml=0";
+        data = "favoritenuml=0>>!";
         document.cookie = data;
+        console.log("favoritenuml:"+favoritenuml);
         }else{
         num8 = cd.indexOf(">>!");
-        favoritenuml = cd.substring(num7,num8);
-        console.log("favoritenuml:"+favoritenuml)
+        favoritenuml = cd.substring(num7+13,num8);
+        favoritenuml = parse(favoritenuml);
+        console.log("favoritenuml:"+favoritenuml);
         }
         sn = cd.substring(num1+10,num2);
         sn2 = decodeURI(cd.substring(num3+11,num4));
@@ -275,8 +277,9 @@ console.log(cd);
      document.getElementById("shopname2").innerHTML = sn2;  
         sn = cd.substring(num1+10,num2);
         sn2 = decodeURI(cd.substring(num3+11,num4));
+        sn = 1;
+        sn2 = "hhh";
        console.log(sn+":"+sn2);
-         getmenu();
        setTimeout(startt,1000)
        }
        function startt(){
@@ -348,7 +351,7 @@ function start11(){
       document.getElementById("mailad2").innerHTML = mailad;
       document.getElementById("phone2").innerHTML = phonead;
                         console.log("データ取得入力完了");
-                   
+                        getmenu();
 }
 function getmenu(){
   console.log("メニューデータ取得開始→");
@@ -1213,8 +1216,8 @@ if(n1 == 0){
   document.getElementById("favorite0").style.backgroundColor = "pink";
   n1++;
   datanum  = pagecount*10-10+0;
-  favoritenuml = parseInt(favoritenuml)+1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  favoritenuml+=1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
   data = "favoritenuml="+favoritenuml;
@@ -1230,8 +1233,8 @@ if(n2 == 0){
   document.getElementById("favorite1").style.backgroundColor = "pink";
   n2++;
   datanum  = pagecount*10-10+0;
-  favoritenuml = parseInt(favoritenuml)+1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  favoritenuml+=1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
   data = "favoritenuml="+favoritenuml;
@@ -1247,8 +1250,8 @@ function fevo2(){
     document.getElementById("favorite2").style.backgroundColor = "pink";
     n3++;
     datanum  = pagecount*10-10+0;
-  favoritenuml = parseInt(favoritenuml)+1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  favoritenuml+=1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
   data = "favoritenuml="+favoritenuml;
@@ -1264,8 +1267,8 @@ function fevo2(){
     document.getElementById("favorite3").style.backgroundColor = "pink";
     n4++;
     datanum  = pagecount*10-10+0;
-  favoritenuml = parseInt(favoritenuml)+1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  favoritenuml+=1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
   data = "favoritenuml="+favoritenuml;
@@ -1281,8 +1284,8 @@ if(n5 == 0){
   document.getElementById("favorite4").style.backgroundColor = "pink";
   n5++;
   datanum  = pagecount*10-10+0;
-  favoritenuml = parseInt(favoritenuml)+1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  favoritenuml+=1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
   data = "favoritenuml="+favoritenuml;
@@ -1298,8 +1301,8 @@ if(n6 == 0){
   document.getElementById("favorite5").style.backgroundColor = "pink";
   n6++;
   datanum  = pagecount*10-10+0;
-  favoritenuml = parseInt(favoritenuml)+1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  favoritenuml+=1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
   data = "favoritenuml="+favoritenuml;
@@ -1315,8 +1318,8 @@ function fevo6(){
     document.getElementById("favorite6").style.backgroundColor = "pink";
     n7++;
     datanum  = pagecount*10-10+0;
-  favoritenuml = parseInt(favoritenuml)+1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  favoritenuml+=1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
   data = "favoritenuml="+favoritenuml;
@@ -1332,8 +1335,8 @@ function fevo6(){
     document.getElementById("favorite7").style.backgroundColor = "pink";
     n8++;
     datanum  = pagecount*10-10+0;
-  favoritenuml = parseInt(favoritenuml)+1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  favoritenuml+=1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
   data = "favoritenuml="+favoritenuml;
@@ -1349,8 +1352,8 @@ if(n9 == 0){
   document.getElementById("favorite8").style.backgroundColor = "pink";
   n9++;
   datanum  = pagecount*10-10+0;
-  favoritenuml = parseInt(favoritenuml)+1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  favoritenuml+=1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
   data = "favoritenuml="+favoritenuml;
@@ -1366,8 +1369,8 @@ if(n10 == 0){
   document.getElementById("favorite9").style.backgroundColor = "pink";
   n10++;
   datanum  = pagecount*10-10+0;
-  favoritenuml = parseInt(favoritenuml)+1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  favoritenuml+=1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
   data = "favoritenuml="+favoritenuml;
