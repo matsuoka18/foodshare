@@ -267,7 +267,7 @@ console.log(cd);
         }else{
         num8 = cd.indexOf(">>!");
         favoritenuml = cd.substring(num7+13,num8);
-        favoritenuml = parse(favoritenuml);
+        favoritenuml = parseInt(favoritenuml);
         console.log("favoritenuml:"+favoritenuml);
         }
         sn = cd.substring(num1+10,num2);
