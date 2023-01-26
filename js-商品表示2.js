@@ -275,9 +275,8 @@ console.log(cd);
      document.getElementById("shopname2").innerHTML = sn2;  
         sn = cd.substring(num1+10,num2);
         sn2 = decodeURI(cd.substring(num3+11,num4));
-        sn = 1;
-        sn2 = "hhh";
        console.log(sn+":"+sn2);
+         getmenu();
        setTimeout(startt,1000)
        }
        function startt(){
@@ -349,7 +348,7 @@ function start11(){
       document.getElementById("mailad2").innerHTML = mailad;
       document.getElementById("phone2").innerHTML = phonead;
                         console.log("データ取得入力完了");
-                        getmenu();
+                   
 }
 function getmenu(){
   console.log("メニューデータ取得開始→");
