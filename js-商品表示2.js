@@ -242,7 +242,7 @@ function but6() {
 }
 
 function start(){
-    /*cd= document.cookie;
+    cd= document.cookie;
    // cd = 'branch=menu|; menumemo={"shop1":[0,22,38],"shop7":[14,36,52],"shop13":[4,26,42],"shop19":[1,23,39],"shop25":[1,23,39],"shop31":[1,23,39],"shop37":[1,23,39],"shop43":[1,23,39],"shop49":[1,23,39],"shop55":[23,39],"shop61":[23,39],"shop67":[23,39],"shop73":[23,39],"shop79":[23,39],"last":[79]}-; loginID=%E5%85%AB%E7%99%BE%E5%B1%8B!; pass=%E3%82%84%E3%81%BE%E3%81%8D?; shopnumber=85#; searchname=hello^;searchnum=85$';
 console.log(cd);
         num1 = cd.indexOf("searchnum=");
@@ -250,6 +250,7 @@ console.log(cd);
         num3 = cd.indexOf("searchname=");
         num4 = cd.indexOf("^");
         num5 = cd.indexOf("cookienum=");
+        num7 = cd.indexOf("favoritenuml=");
         if(num5 == -1){
         console.log("商品カートデータなし")
         }else{
@@ -257,13 +258,23 @@ console.log(cd);
         cn = cd.substring(num5+10,num6);
         console.log("cookienum:"+cn);
         }
+        if(num7 == -1){
+        console.log("favoritenumなし→作成");
+        favoritenuml = 0;
+        data = "favoritenuml=0";
+        document.cookie = data;
+        }else{
+        num8 = cd.indexOf(">>!");
+        favoritenuml = cd.substring(num7,num8);
+        console.log("favoritenuml:"+favoritenuml)
+        }
         sn = cd.substring(num1+10,num2);
         sn2 = decodeURI(cd.substring(num3+11,num4));
         console.log(sn+":"+sn2);
      document.getElementById("shopname").innerHTML = sn2;
      document.getElementById("shopname2").innerHTML = sn2;  
         sn = cd.substring(num1+10,num2);
-        sn2 = decodeURI(cd.substring(num3+11,num4));*/
+        sn2 = decodeURI(cd.substring(num3+11,num4));
         sn = 1;
         sn2 = "hhh";
        console.log(sn+":"+sn2);
@@ -301,7 +312,7 @@ console.log("getting start");
     .then(resJson =>{
 jsondata = resJson;
         console.log("データ取得");
-        start11();
+        setTimeout(start11,1000);
     })
     .catch(error =>{
         alert("エラー");
@@ -380,6 +391,7 @@ function getmenu2(){
   })
 }
 lastn = 0;
+pagecount = 1;
 function getmenu3(){
   json = mjson.changedata[0]
   last = json.last;
@@ -392,17 +404,40 @@ function getmenu3(){
     mname = mjson.changedata[0].name[a];
     mfee = mjson.changedata[0].fee[a];
     mexpress = mjson.changedata[0].express[a];
-    data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"review2"+"\""+"onclick="+"\""+"fevo"+a+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+    data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+a+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+a+"\""+"onclick="+"\""+"fevo"+a+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
     allshow2.insertAdjacentHTML("beforeend",data);
   }
   number = parseInt(last/10)+1;
   console.log("number:"+number);
-  for(var a=1; a<number; a++){
-    data = "<div class="+"\""+"wp1"+"\""+">"+a+"</div>";
+  for(var a=1; a<=number; a++){
+    data = "<div class="+"\""+"wp1"+"\""+"id="+"\""+"wp"+a+"\""+">"+a+"</div>";
     wp.insertAdjacentHTML("beforeend",data)
   }
+  document.getElementById("wp1").style.backgroundColor = "#3A1F00";
 }
+messagep = '';
 function plus(){
+  //毎回cookieを呼び出してお気に入りが消えないように[商品番号をcookieに]
+  n1=0;
+  n2=0;
+  n3=0;
+  n4=0;
+  n5=0;
+  n6=0;
+  n7=0;
+  n8=0;
+  n9=0;
+  n10=0;
+  if(messagep == "end"){
+    alert("最後のページです");
+    return;
+  }
+  messagep='';
+  var text = "wp"+pagecount;
+  document.getElementById(text).style.backgroundColor = "#C6AC8F";
+  pagecount+=1;
+  var text = "wp"+pagecount;
+  document.getElementById(text).style.backgroundColor = "#3A1F00";
   last2 = lastn;
   lastn3 = 0;
   lastn = lastn+10;
@@ -412,41 +447,75 @@ function plus(){
   allshow.insertAdjacentHTML("afterbegin",data);
   if(lastn >= last){
     lastn = last;
-    alert("最後です");
-  }
-  for(var a = last2; a<lastn; a++){
- lastn3++;
- mname = mjson.changedata[0].name[a];
-    mfee = mjson.changedata[0].fee[a];
-    mexpress = mjson.changedata[0].express[a];
-    data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"review2"+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
-    allshow2.insertAdjacentHTML("beforeend",data);
-  }
+}
+for(var a = last2; a<lastn; a++){
+  lastn3++;
+  mname = mjson.changedata[0].name[a];
+     mfee = mjson.changedata[0].fee[a];
+     mexpress = mjson.changedata[0].express[a];
+     data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+lastn3+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+lastn3+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+     allshow2.insertAdjacentHTML("beforeend",data);
+   }
+   if(lastn >= last){
+     lastn = last2;
+     messagep = "end";
+   }
 }
 function mina(){
+  //毎回cookieを呼び出してお気に入りが消えないように[商品番号をcookieに]
+  n1=0;
+  n2=0;
+  n3=0;
+  n4=0;
+  n5=0;
+  n6=0;
+  n7=0;
+  n8=0;
+  n9=0;
+  n10=0;
+  if(pagecount < 1){
+    pagecount =1;
+  }
+  if(messagep == "first"){
+    alert("最初のページです");
+    return;
+  }
+  if(messagep == "end"){
+    last2 = lastn-10;
+  }else{
   last2 = lastn-20;
-  lastn3 = 0;
   lastn = lastn-10;
+  }
+  messagep = '';
+  var text = "wp"+pagecount;
+  document.getElementById(text).style.backgroundColor = "#C6AC8F";
+  pagecount-=1;
+  var text = "wp"+pagecount;
+  document.getElementById(text).style.backgroundColor = "#3A1F00";
+  lastn3 = 0;
   element = document.getElementById("allshow2");
   element.remove();
   data = "<div class="+"\""+"allshow2"+"\""+" id="+"\""+"allshow2"+"\""+"></div>"
-  allshow.insertAdjacentHTML("beforeend",data)
+  allshow.insertAdjacentHTML("afterbegin",data)
   if(last2 <= 0){
     last2 = 0;
-    alert("一番はじめです")
-    if(lastn < last){
+    if(lastn >= last){
      lastn = last;
     }else{
       lastn = 10;
     }
+    messagep = "first";
   }
   for(var a = last2; a<lastn; a++){
  lastn3++;
  mname = mjson.changedata[0].name[a];
     mfee = mjson.changedata[0].fee[a];
     mexpress = mjson.changedata[0].express[a];
-    data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"review2"+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+    data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+lastn3+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+lastn3+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
     allshow2.insertAdjacentHTML("beforeend",data);
+  }
+  if(messagep == "first"){
+    lastn = last2;
   }
 }
 function start2(){
@@ -1140,51 +1209,175 @@ document.getElementById("text1").value = "";
 document.getElementById("text2").value = "";
 }
 n1 = 0;
-function fevo(){
+function fevo0(){
 if(n1 == 0){
-  document.getElementById("review2").style.backgroundColor = "pink";
+  document.getElementById("favorite0").style.backgroundColor = "pink";
   n1++;
+  datanum  = pagecount*10-10+0;
+  favoritenuml = parseInt(favoritenuml)+1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  document.cookie = data;
+  document.cookie = "favoritenuml=; max-age=0";
+  data = "favoritenuml="+favoritenuml;
+  document.cookie = data;
 }else if(n1 == 1){
-  document.getElementById("review2").style.backgroundColor = "";
+  document.getElementById("favorite0").style.backgroundColor = "";
   n1 = 0;
 }
 }
 n2 = 0;
-function fevo2(){
+function fevo1(){
 if(n2 == 0){
-  document.getElementById("review3").style.backgroundColor = "pink";
+  document.getElementById("favorite1").style.backgroundColor = "pink";
   n2++;
+  datanum  = pagecount*10-10+0;
+  favoritenuml = parseInt(favoritenuml)+1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  document.cookie = data;
+  document.cookie = "favoritenuml=; max-age=0";
+  data = "favoritenuml="+favoritenuml;
+  document.cookie = data;
 }else if(n2 == 1){
-  document.getElementById("review3").style.backgroundColor = "";
+  document.getElementById("favorite1").style.backgroundColor = "";
   n2 = 0;
 }
 }
-n3 = 0;
-function fevo3(){
-if(n3 == 0){
-  document.getElementById("review4").style.backgroundColor = "pink";
-  n3++;
-}else if(n3 == 1){
-  document.getElementById("review4").style.backgroundColor = "";
-  n3 = 0;
-}
-}
-n4 = 0;
-function fevo4(){
-if(n4 == 0){
-  document.getElementById("review5").style.backgroundColor = "pink";
-}else if(n4 == 1){
-  document.getElementById("review5").style.backgroundColor = "";
+n3= 0;
+function fevo2(){
+  if(n3 == 0){
+    document.getElementById("favorite2").style.backgroundColor = "pink";
+    n3++;
+    datanum  = pagecount*10-10+0;
+  favoritenuml = parseInt(favoritenuml)+1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  document.cookie = data;
+  document.cookie = "favoritenuml=; max-age=0";
+  data = "favoritenuml="+favoritenuml;
+  document.cookie = data;
+  }else if(n3 == 1){
+    document.getElementById("favorite2").style.backgroundColor = "";
+    n3 = 0;
+  }
+  }
   n4 = 0;
-}
-}
-n5 = 0;
-function fevo5(){
+  function fevo3(){
+  if(n4 == 0){
+    document.getElementById("favorite3").style.backgroundColor = "pink";
+    n4++;
+    datanum  = pagecount*10-10+0;
+  favoritenuml = parseInt(favoritenuml)+1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  document.cookie = data;
+  document.cookie = "favoritenuml=; max-age=0";
+  data = "favoritenuml="+favoritenuml;
+  document.cookie = data;
+  }else if(n4 == 1){
+    document.getElementById("favorite3").style.backgroundColor = "";
+    n4 = 0;
+  }
+  }
+  n5 = 0;
+function fevo4(){
 if(n5 == 0){
-  document.getElementById("review6").style.backgroundColor = "pink";
+  document.getElementById("favorite4").style.backgroundColor = "pink";
   n5++;
+  datanum  = pagecount*10-10+0;
+  favoritenuml = parseInt(favoritenuml)+1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  document.cookie = data;
+  document.cookie = "favoritenuml=; max-age=0";
+  data = "favoritenuml="+favoritenuml;
+  document.cookie = data;
 }else if(n5 == 1){
-  document.getElementById("review6").style.backgroundColor = "";
+  document.getElementById("favorite4").style.backgroundColor = "";
   n5 = 0;
 }
+}
+n6 = 0;
+function fevo5(){
+if(n6 == 0){
+  document.getElementById("favorite5").style.backgroundColor = "pink";
+  n6++;
+  datanum  = pagecount*10-10+0;
+  favoritenuml = parseInt(favoritenuml)+1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  document.cookie = data;
+  document.cookie = "favoritenuml=; max-age=0";
+  data = "favoritenuml="+favoritenuml;
+  document.cookie = data;
+}else if(n6 == 1){
+  document.getElementById("favorite5").style.backgroundColor = "";
+  n6 = 0;
+}
+}
+n7 = 0;
+function fevo6(){
+  if(n7 == 0){
+    document.getElementById("favorite6").style.backgroundColor = "pink";
+    n7++;
+    datanum  = pagecount*10-10+0;
+  favoritenuml = parseInt(favoritenuml)+1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  document.cookie = data;
+  document.cookie = "favoritenuml=; max-age=0";
+  data = "favoritenuml="+favoritenuml;
+  document.cookie = data;
+  }else if(n7 == 1){
+    document.getElementById("favorite6").style.backgroundColor = "";
+    n7 = 0;
+  }
+  }
+  n8 = 0;
+  function fevo7(){
+  if(n8 == 0){
+    document.getElementById("favorite7").style.backgroundColor = "pink";
+    n8++;
+    datanum  = pagecount*10-10+0;
+  favoritenuml = parseInt(favoritenuml)+1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  document.cookie = data;
+  document.cookie = "favoritenuml=; max-age=0";
+  data = "favoritenuml="+favoritenuml;
+  document.cookie = data;
+  }else if(n8 == 1){
+    document.getElementById("favorite7").style.backgroundColor = "";
+    n8 = 0;
+  }
+  }
+  n9 = 0;
+function fevo8(){
+if(n9 == 0){
+  document.getElementById("favorite8").style.backgroundColor = "pink";
+  n9++;
+  datanum  = pagecount*10-10+0;
+  favoritenuml = parseInt(favoritenuml)+1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  document.cookie = data;
+  document.cookie = "favoritenuml=; max-age=0";
+  data = "favoritenuml="+favoritenuml;
+  document.cookie = data;
+}else if(n9 == 1){
+  document.getElementById("favorite8").style.backgroundColor = "";
+  n9 = 0;
+}
+}
+n10 = 0;
+function fevo9(){
+if(n10 == 0){
+  document.getElementById("favorite9").style.backgroundColor = "pink";
+  n10++;
+  datanum  = pagecount*10-10+0;
+  favoritenuml = parseInt(favoritenuml)+1;
+  data = "favoriten"+favoritenuml+"="+datanum+">>$";
+  document.cookie = data;
+  document.cookie = "favoritenuml=; max-age=0";
+  data = "favoritenuml="+favoritenuml;
+  document.cookie = data;
+}else if(n10 == 1){
+  document.getElementById("favorite9").style.backgroundColor = "";
+  n10 = 0;
+}
+}
+function go(){
+  location.href="index.html";
 }
