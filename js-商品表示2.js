@@ -267,8 +267,11 @@ console.log(cd);
         }else{
         num8 = cd.indexOf(">>!");
         favoritenuml = cd.substring(num7+13,num8);
-        favoritenuml = parseInt(favoritenuml);
+        favoritenuml = parse(favoritenuml);
         console.log("favoritenuml:"+favoritenuml);
+        }
+        if(favoritenuml > 0){
+          favocheck();
         }
         sn = cd.substring(num1+10,num2);
         sn2 = decodeURI(cd.substring(num3+11,num4));
@@ -416,6 +419,13 @@ function getmenu3(){
     wp.insertAdjacentHTML("beforeend",data)
   }
   document.getElementById("wp1").style.backgroundColor = "#3A1F00";
+for(var a =0; a<favoritenuml; a++){
+number = numlist[a];
+if(number < 10){
+  text = "favorite"+number;
+  document.getElementById(text).style.backgroundColor = "pink";
+}
+}
 }
 messagep = '';
 function plus(){
@@ -434,6 +444,7 @@ function plus(){
     alert("最後のページです");
     return;
   }
+
   messagep='';
   var text = "wp"+pagecount;
   document.getElementById(text).style.backgroundColor = "#C6AC8F";
@@ -458,10 +469,18 @@ for(var a = last2; a<lastn; a++){
      data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+lastn3+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+lastn3+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
      allshow2.insertAdjacentHTML("beforeend",data);
    }
+   for(var a =0; a<favoritenuml; a++){
+    number = numlist[a];
+    if(last2 < number < lastn){
+      text = "favorite"+number;
+      document.getElementById(text).style.backgroundColor = "pink";
+    }
+    }
    if(lastn >= last){
      lastn = last2;
      messagep = "end";
    }
+
 }
 function mina(){
   //毎回cookieを呼び出してお気に入りが消えないように[商品番号をcookieに]
@@ -516,6 +535,13 @@ function mina(){
     data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+lastn3+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+lastn3+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
     allshow2.insertAdjacentHTML("beforeend",data);
   }
+  for(var a =0; a<favoritenuml; a++){
+    number = numlist[a];
+    if(last2 < number < lastn){
+      text = "favorite"+number;
+      document.getElementById(text).style.backgroundColor = "pink";
+    }
+    }
   if(messagep == "first"){
     lastn = last2;
   }
@@ -1217,14 +1243,20 @@ if(n1 == 0){
   n1++;
   datanum  = pagecount*10-10+0;
   favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>*";
+  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml;
+  data = "favoritenuml="+favoritenuml+">>!";
   document.cookie = data;
 }else if(n1 == 1){
   document.getElementById("favorite0").style.backgroundColor = "";
   n1 = 0;
+  //削除機能重大欠陥あり　対処必須
+  data = "favoriten"+favoritenuml+"=; max-age=0";
+  document.cookie = data;
+  document.cookie = "favoritenuml=; max-age=0";
+  data = "favoritenuml="+favoritenuml+">>!";
+  favoritenuml-=1;
 }
 }
 n2 = 0;
@@ -1232,12 +1264,12 @@ function fevo1(){
 if(n2 == 0){
   document.getElementById("favorite1").style.backgroundColor = "pink";
   n2++;
-  datanum  = pagecount*10-10+0;
+  datanum  = pagecount*10-10+1;
   favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>*";
+  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml;
+  data = "favoritenuml="+favoritenuml+">>!";
   document.cookie = data;
 }else if(n2 == 1){
   document.getElementById("favorite1").style.backgroundColor = "";
@@ -1249,12 +1281,12 @@ function fevo2(){
   if(n3 == 0){
     document.getElementById("favorite2").style.backgroundColor = "pink";
     n3++;
-    datanum  = pagecount*10-10+0;
+    datanum  = pagecount*10-10+2;
   favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>*";
+  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml;
+  data = "favoritenuml="+favoritenuml+">>!";
   document.cookie = data;
   }else if(n3 == 1){
     document.getElementById("favorite2").style.backgroundColor = "";
@@ -1266,12 +1298,12 @@ function fevo2(){
   if(n4 == 0){
     document.getElementById("favorite3").style.backgroundColor = "pink";
     n4++;
-    datanum  = pagecount*10-10+0;
+    datanum  = pagecount*10-10+3;
   favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>*";
+  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml;
+  data = "favoritenuml="+favoritenuml+">>!";
   document.cookie = data;
   }else if(n4 == 1){
     document.getElementById("favorite3").style.backgroundColor = "";
@@ -1283,12 +1315,12 @@ function fevo4(){
 if(n5 == 0){
   document.getElementById("favorite4").style.backgroundColor = "pink";
   n5++;
-  datanum  = pagecount*10-10+0;
+  datanum  = pagecount*10-10+4;
   favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>*";
+  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml;
+  data = "favoritenuml="+favoritenuml+">>!";
   document.cookie = data;
 }else if(n5 == 1){
   document.getElementById("favorite4").style.backgroundColor = "";
@@ -1300,12 +1332,12 @@ function fevo5(){
 if(n6 == 0){
   document.getElementById("favorite5").style.backgroundColor = "pink";
   n6++;
-  datanum  = pagecount*10-10+0;
+  datanum  = pagecount*10-10+5;
   favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>*";
+  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml;
+  data = "favoritenuml="+favoritenuml+">>!";
   document.cookie = data;
 }else if(n6 == 1){
   document.getElementById("favorite5").style.backgroundColor = "";
@@ -1317,12 +1349,12 @@ function fevo6(){
   if(n7 == 0){
     document.getElementById("favorite6").style.backgroundColor = "pink";
     n7++;
-    datanum  = pagecount*10-10+0;
+    datanum  = pagecount*10-10+6;
   favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>*";
+  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml;
+  data = "favoritenuml="+favoritenuml+">>!";
   document.cookie = data;
   }else if(n7 == 1){
     document.getElementById("favorite6").style.backgroundColor = "";
@@ -1334,12 +1366,12 @@ function fevo6(){
   if(n8 == 0){
     document.getElementById("favorite7").style.backgroundColor = "pink";
     n8++;
-    datanum  = pagecount*10-10+0;
+    datanum  = pagecount*10-10+7;
   favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>*";
+  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml;
+  data = "favoritenuml="+favoritenuml+">>!";
   document.cookie = data;
   }else if(n8 == 1){
     document.getElementById("favorite7").style.backgroundColor = "";
@@ -1351,12 +1383,12 @@ function fevo8(){
 if(n9 == 0){
   document.getElementById("favorite8").style.backgroundColor = "pink";
   n9++;
-  datanum  = pagecount*10-10+0;
+  datanum  = pagecount*10-10+8;
   favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>*";
+  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml;
+  data = "favoritenuml="+favoritenuml+">>!";
   document.cookie = data;
 }else if(n9 == 1){
   document.getElementById("favorite8").style.backgroundColor = "";
@@ -1368,12 +1400,12 @@ function fevo9(){
 if(n10 == 0){
   document.getElementById("favorite9").style.backgroundColor = "pink";
   n10++;
-  datanum  = pagecount*10-10+0;
+  datanum  = pagecount*10-10+9;
   favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+">>*";
+  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml;
+  data = "favoritenuml="+favoritenuml+">>!";
   document.cookie = data;
 }else if(n10 == 1){
   document.getElementById("favorite9").style.backgroundColor = "";
@@ -1382,4 +1414,21 @@ if(n10 == 0){
 }
 function go(){
   location.href="index.html";
+}
+function favocheck(){
+  numlist = [];
+  for(var a=0; a<favoritenuml; a++){
+    ctext = "favoriten"+a+"=";
+    ctext2 = ">>*";
+    ctext3 = "<<*";
+    c1 = cd.indexOf(ctext);
+    c2 = cd.indexOf(ctext2);
+    c3 = cd.indexOf(ctext3);
+    checknum = cd.substring(c3.ctext3.length,c2);
+    if(checknum == sn){
+      text = cd.substring(c1+ctext.length,c3);
+      numlist.push(text);
+    }
+  }
+  console.log("numlist："+numlist);
 }
