@@ -1250,6 +1250,13 @@ if(n1 == 0){
   document.getElementById("favorite0").style.backgroundColor = "";
   n1 = 0;
   //削除機能重大欠陥あり　対処必須
+//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
+//次にforを使って番号1と一致するときの番号を割り出す。
+//最後に一致した番号を用いてCookieからの削除を行う
+//空いてしまった番号をつめる処理を行う
+//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
+//上記の処理をforを用いて実行
+
   data = "favoriten"+favoritenuml+"=; max-age=0";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
