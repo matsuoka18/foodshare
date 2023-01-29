@@ -1422,7 +1422,7 @@ function favocheck(){
     c1 = cd.indexOf(ctext);
     c2 = cd.indexOf(ctext2);
     c3 = cd.indexOf(ctext3);
-    checknum = cd.substring(c3.ctext3.length,c2);
+    checknum = cd.substring(c3+ctext3.length,c2);
     if(checknum == sn){
       text = cd.substring(c1+ctext.length,c3);
       numlist.push(text);
