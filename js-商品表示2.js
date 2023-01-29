@@ -280,8 +280,6 @@ console.log(cd);
      document.getElementById("shopname2").innerHTML = sn2;  
         sn = cd.substring(num1+10,num2);
         sn2 = decodeURI(cd.substring(num3+11,num4));
-        sn = 1;
-        sn2 = "hhh";
        console.log(sn+":"+sn2);
        setTimeout(startt,1000)
        }
