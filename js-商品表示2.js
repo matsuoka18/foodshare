@@ -1260,7 +1260,7 @@ if(n1 == 0){
   d3 = cd.indexOf("<<*")+3;//3が間違ってるかも
   data2 = data.substring(d3,);
   if(data2 == sn){
-  data3 = data.substring(,d3);
+  data3 = data.substring(0,d3);
   console.log("no.2:"+data3);
   if(data3 == datanum2){
   console.log("find");
