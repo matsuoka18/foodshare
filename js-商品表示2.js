@@ -1248,7 +1248,7 @@ document.getElementById("favorite0").style.backgroundColor = "";
 n1 = 0;
   datanum  = pagecount*10-10+0;
 datanum2 = datanum+0;
-for(var a=0; a<favoritenuml; a++){
+for(var a=1; a<favoritenuml; a++){
 d1 = "favoriten"+a+"=";
 d1 = cd.indexOf(d1)
 console.log("d1:"+d1);
@@ -1273,7 +1273,10 @@ data4 = a;
 //次にforを使って番号1と一致するときの番号を割り出す。
 //最後に一致した番号を用いてCookieからの削除を行う
 //空いてしまった番号をつめる処理を行う ここまで完了　　1/30
-
+if(typeof data4 == "undefined"){
+  console.log("error");
+  return;
+  }
 data = "favoriten"+data4+"=; max-age=0";
 document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
