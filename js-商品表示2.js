@@ -1249,7 +1249,9 @@ n1 = 0;
 datanum2 = datanum+0;
 for(var a=0; a<favoritenuml; a++){
 d1 = "favoriten"+a+"=";
-d1 = cd.indexOf(d1)+d1.length;
+d1 = cd.indexOf(d1)
+console.log("d1:"+d1);
+d1 = d1+d1.length;
 console.log("d1:"+d1);
 d2 = cd.indexOf(">>*",d1);
 data = cd.substring(d1,d2);
