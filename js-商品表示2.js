@@ -1249,19 +1249,49 @@ if(n1 == 0){
 }else if(n1 == 1){
   document.getElementById("favorite0").style.backgroundColor = "";
   n1 = 0;
+    datanum  = pagecount*10-10+0;
+  datanum2 = datanum+0;
+  for(var a=0; a<favoritenuml; a++){
+  d1 = "favoriten"+a+"=";
+  d1 = cd.indexOf(d1)+d1.length;
+  d2 = cd.indexOf(">>*");
+  data = cd.substring(d1,d2);
+    console.log("DATA:"+data);
+  d3 = cd.indexOf("<<*")+3;//3が間違ってるかも
+  data2 = data.substring(d3,);
+  if(data2 == sn){
+  data3 = data.substring(,d3);
+  console.log("no.2:"+data3);
+  if(data3 == datanum2){
+  console.log("find");
+  data4 = a;
+  }
+  }
+  }
   //削除機能重大欠陥あり　対処必須
 //番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
 //次にforを使って番号1と一致するときの番号を割り出す。
 //最後に一致した番号を用いてCookieからの削除を行う
-//空いてしまった番号をつめる処理を行う
-//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
-//上記の処理をforを用いて実行
+//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
 
-  data = "favoriten"+favoritenuml+"=; max-age=0";
+  data = "favoriten"+data4+"=; max-age=0";
   document.cookie = data;
   document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml+">>!";
+  //空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
+//上記の処理をforを用いて実行 ここも完了.   1/30
+  for(var a=data4+1; a<favoritenuml; a++){
+  data = "favoriten"+a+"=";
+  data2 = ">>*";
+  data1 = cd.indexOf(data);
+  data2 = cd.indexOf(data2,data1);// maybe faild
+  data3 = cd.substring(data1,data2); 
+  console.log("data:"+data3);
+  pdata = "favoriten"+a-1+"="+data3;
+  document.cookie = pdata;
+  console.log("修正"+a+"完了");
+  }
   favoritenuml-=1;
+  console.log("修正完了");
 }
 }
 n2 = 0;
