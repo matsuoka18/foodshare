@@ -1285,10 +1285,10 @@ document.cookie = "favoritenuml=; max-age=0";
 for(var a=data4+1; a<favoritenuml; a++){
 data = "favoriten"+a+"=";
 data2 = ">>*";
-data1 = cd.indexOf(data);
-data2 = cd.indexOf(data2,data1);// maybe faild
+data1 = cd.indexOf(data)+data.length;
+data2 = cd.indexOf(data2,data1);
 data3 = cd.substring(data1,data2); 
-console.log("data:"+data3);
+console.log("data3:"+data3);
 pdata = "favoriten"+a-1+"="+data3;
 document.cookie = pdata;
 console.log("修正"+a+"完了");
