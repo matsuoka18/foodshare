@@ -1,294 +1,294 @@
 function but1() {
-    document.getElementById("but1").style.backgroundColor = "#C6AC8F";
-    document.getElementById("but1").style.border = "none";
-    document.getElementById("but2").style.backgroundColor = "white";
-    document.getElementById("but2").style.borderStyle = "solid";
-    document.getElementById("but2").style.borderWidth = "1px";
-    document.getElementById("but2").style.borderColor = "#3A1F00";
-    document.getElementById("but3").style.backgroundColor = "white";
-    document.getElementById("but3").style.borderStyle = "solid";
-    document.getElementById("but3").style.borderWidth = "1px";
-    document.getElementById("but3").style.borderColor = "#3A1F00";
-    document.getElementById("but4").style.backgroundColor = "white";
-    document.getElementById("but4").style.borderStyle = "solid";
-    document.getElementById("but4").style.borderWidth = "1px";
-    document.getElementById("but4").style.borderColor = "#3A1F00";
-    document.getElementById("but5").style.backgroundColor = "white";
-    document.getElementById("but5").style.borderStyle = "solid";
-    document.getElementById("but5").style.borderWidth = "1px";
-    document.getElementById("but5").style.borderColor = "#3A1F00";
-    document.getElementById("but6").style.backgroundColor = "white";
-    document.getElementById("but6").style.borderStyle = "solid";
-    document.getElementById("but6").style.borderWidth = "1px";
-    document.getElementById("but6").style.borderColor = "#3A1F00";
-    document.getElementById("button11").style.opacity = "1";
-    document.getElementById("button11").style.display = "block";
-    document.getElementById("button22").style.opacity = "0";
-    document.getElementById("button22").style.display = "none";
-    document.getElementById("button33").style.opacity = "0";
-    document.getElementById("button33").style.display = "none";
-    document.getElementById("button44").style.opacity = "0";
-    document.getElementById("button44").style.display = "none";
-    document.getElementById("button55").style.opacity = "0";
-    document.getElementById("button55").style.display = "none";
-    document.getElementById("button66").style.opacity = "0";
-    document.getElementById("button66").style.display = "none";
-    document.getElementById("hey").style.display = "block";
-    document.getElementById("hey2").style.display = "block";
-    document.getElementById("hey3").style.display = "block";
-    document.getElementById("allshow").style.display = "none";
+  document.getElementById("but1").style.backgroundColor = "#C6AC8F";
+  document.getElementById("but1").style.border = "none";
+  document.getElementById("but2").style.backgroundColor = "white";
+  document.getElementById("but2").style.borderStyle = "solid";
+  document.getElementById("but2").style.borderWidth = "1px";
+  document.getElementById("but2").style.borderColor = "#3A1F00";
+  document.getElementById("but3").style.backgroundColor = "white";
+  document.getElementById("but3").style.borderStyle = "solid";
+  document.getElementById("but3").style.borderWidth = "1px";
+  document.getElementById("but3").style.borderColor = "#3A1F00";
+  document.getElementById("but4").style.backgroundColor = "white";
+  document.getElementById("but4").style.borderStyle = "solid";
+  document.getElementById("but4").style.borderWidth = "1px";
+  document.getElementById("but4").style.borderColor = "#3A1F00";
+  document.getElementById("but5").style.backgroundColor = "white";
+  document.getElementById("but5").style.borderStyle = "solid";
+  document.getElementById("but5").style.borderWidth = "1px";
+  document.getElementById("but5").style.borderColor = "#3A1F00";
+  document.getElementById("but6").style.backgroundColor = "white";
+  document.getElementById("but6").style.borderStyle = "solid";
+  document.getElementById("but6").style.borderWidth = "1px";
+  document.getElementById("but6").style.borderColor = "#3A1F00";
+  document.getElementById("button11").style.opacity = "1";
+  document.getElementById("button11").style.display = "block";
+  document.getElementById("button22").style.opacity = "0";
+  document.getElementById("button22").style.display = "none";
+  document.getElementById("button33").style.opacity = "0";
+  document.getElementById("button33").style.display = "none";
+  document.getElementById("button44").style.opacity = "0";
+  document.getElementById("button44").style.display = "none";
+  document.getElementById("button55").style.opacity = "0";
+  document.getElementById("button55").style.display = "none";
+  document.getElementById("button66").style.opacity = "0";
+  document.getElementById("button66").style.display = "none";
+  document.getElementById("hey").style.display = "block";
+  document.getElementById("hey2").style.display = "block";
+  document.getElementById("hey3").style.display = "block";
+  document.getElementById("allshow").style.display = "none";
 }
 function but2() {
-    document.getElementById("but2").style.backgroundColor = "#C6AC8F";
-    document.getElementById("but2").style.border = "none";
-    document.getElementById("but1").style.backgroundColor = "white";
-    document.getElementById("but1").style.borderStyle = "solid";
-    document.getElementById("but1").style.borderWidth = "1px";
-    document.getElementById("but1").style.borderColor = "#3A1F00";
-    document.getElementById("but3").style.backgroundColor = "white";
-    document.getElementById("but3").style.borderStyle = "solid";
-    document.getElementById("but3").style.borderWidth = "1px";
-    document.getElementById("but3").style.borderColor = "#3A1F00";
-    document.getElementById("but4").style.backgroundColor = "white";
-    document.getElementById("but4").style.borderStyle = "solid";
-    document.getElementById("but4").style.borderWidth = "1px";
-    document.getElementById("but4").style.borderColor = "#3A1F00";
-    document.getElementById("but5").style.backgroundColor = "white";
-    document.getElementById("but5").style.borderStyle = "solid";
-    document.getElementById("but5").style.borderWidth = "1px";
-    document.getElementById("but5").style.borderColor = "#3A1F00";
-    document.getElementById("but6").style.backgroundColor = "white";
-    document.getElementById("but6").style.borderStyle = "solid";
-    document.getElementById("but6").style.borderWidth = "1px";
-    document.getElementById("but6").style.borderColor = "#3A1F00";
-    document.getElementById("button11").style.opacity = "0";
-    document.getElementById("button11").style.display = "none";
-    document.getElementById("button22").style.opacity = "1";
-    document.getElementById("button22").style.display = "block";
-    document.getElementById("button33").style.opacity = "0";
-    document.getElementById("button33").style.display = "none";
-    document.getElementById("button44").style.opacity = "0";
-    document.getElementById("button44").style.display = "none";
-    document.getElementById("button55").style.opacity = "0";
-    document.getElementById("button55").style.display = "none";
-    document.getElementById("button66").style.opacity = "0";
-    document.getElementById("button66").style.display = "none";
-    document.getElementById("hey").style.display = "block";
-    document.getElementById("hey2").style.display = "block";
-    document.getElementById("hey3").style.display = "block";
-    document.getElementById("allshow").style.display = "none";
+  document.getElementById("but2").style.backgroundColor = "#C6AC8F";
+  document.getElementById("but2").style.border = "none";
+  document.getElementById("but1").style.backgroundColor = "white";
+  document.getElementById("but1").style.borderStyle = "solid";
+  document.getElementById("but1").style.borderWidth = "1px";
+  document.getElementById("but1").style.borderColor = "#3A1F00";
+  document.getElementById("but3").style.backgroundColor = "white";
+  document.getElementById("but3").style.borderStyle = "solid";
+  document.getElementById("but3").style.borderWidth = "1px";
+  document.getElementById("but3").style.borderColor = "#3A1F00";
+  document.getElementById("but4").style.backgroundColor = "white";
+  document.getElementById("but4").style.borderStyle = "solid";
+  document.getElementById("but4").style.borderWidth = "1px";
+  document.getElementById("but4").style.borderColor = "#3A1F00";
+  document.getElementById("but5").style.backgroundColor = "white";
+  document.getElementById("but5").style.borderStyle = "solid";
+  document.getElementById("but5").style.borderWidth = "1px";
+  document.getElementById("but5").style.borderColor = "#3A1F00";
+  document.getElementById("but6").style.backgroundColor = "white";
+  document.getElementById("but6").style.borderStyle = "solid";
+  document.getElementById("but6").style.borderWidth = "1px";
+  document.getElementById("but6").style.borderColor = "#3A1F00";
+  document.getElementById("button11").style.opacity = "0";
+  document.getElementById("button11").style.display = "none";
+  document.getElementById("button22").style.opacity = "1";
+  document.getElementById("button22").style.display = "block";
+  document.getElementById("button33").style.opacity = "0";
+  document.getElementById("button33").style.display = "none";
+  document.getElementById("button44").style.opacity = "0";
+  document.getElementById("button44").style.display = "none";
+  document.getElementById("button55").style.opacity = "0";
+  document.getElementById("button55").style.display = "none";
+  document.getElementById("button66").style.opacity = "0";
+  document.getElementById("button66").style.display = "none";
+  document.getElementById("hey").style.display = "block";
+  document.getElementById("hey2").style.display = "block";
+  document.getElementById("hey3").style.display = "block";
+  document.getElementById("allshow").style.display = "none";
 }
 function but3() {
-    document.getElementById("but1").style.backgroundColor = "white";
-    document.getElementById("but1").style.borderStyle = "solid";
-    document.getElementById("but1").style.borderWidth = "1px";
-    document.getElementById("but1").style.borderColor = "#3A1F00";
-    document.getElementById("but2").style.backgroundColor = "white";
-    document.getElementById("but2").style.borderStyle = "solid";
-    document.getElementById("but2").style.borderWidth = "1px";
-    document.getElementById("but2").style.borderColor = "#3A1F00";
-    document.getElementById("but3").style.backgroundColor = "#C6AC8F";
-    document.getElementById("but3").style.border = "none";
-    document.getElementById("but4").style.backgroundColor = "white";
-    document.getElementById("but4").style.borderStyle = "solid";
-    document.getElementById("but4").style.borderWidth = "1px";
-    document.getElementById("but4").style.borderColor = "#3A1F00";
-    document.getElementById("but5").style.backgroundColor = "white";
-    document.getElementById("but5").style.borderStyle = "solid";
-    document.getElementById("but5").style.borderWidth = "1px";
-    document.getElementById("but5").style.borderColor = "#3A1F00";
-    document.getElementById("but6").style.backgroundColor = "white";
-    document.getElementById("but6").style.borderStyle = "solid";
-    document.getElementById("but6").style.borderWidth = "1px";
-    document.getElementById("but6").style.borderColor = "#3A1F00";
-    document.getElementById("button11").style.opacity = "0";
-    document.getElementById("button11").style.display = "none";
-    document.getElementById("button22").style.opacity = "0";
-    document.getElementById("button22").style.display = "none";
-    document.getElementById("button33").style.opacity = "1";
-    document.getElementById("button33").style.display = "block";
-    document.getElementById("button44").style.opacity = "0";
-    document.getElementById("button44").style.display = "none";
-    document.getElementById("button55").style.opacity = "0";
-    document.getElementById("button55").style.display = "none";
-    document.getElementById("button66").style.opacity = "0";
-    document.getElementById("button66").style.display = "none";
-    document.getElementById("hey").style.display = "block";
-    document.getElementById("hey2").style.display = "block";
-    document.getElementById("hey3").style.display = "block";
-    document.getElementById("allshow").style.display = "none";
+  document.getElementById("but1").style.backgroundColor = "white";
+  document.getElementById("but1").style.borderStyle = "solid";
+  document.getElementById("but1").style.borderWidth = "1px";
+  document.getElementById("but1").style.borderColor = "#3A1F00";
+  document.getElementById("but2").style.backgroundColor = "white";
+  document.getElementById("but2").style.borderStyle = "solid";
+  document.getElementById("but2").style.borderWidth = "1px";
+  document.getElementById("but2").style.borderColor = "#3A1F00";
+  document.getElementById("but3").style.backgroundColor = "#C6AC8F";
+  document.getElementById("but3").style.border = "none";
+  document.getElementById("but4").style.backgroundColor = "white";
+  document.getElementById("but4").style.borderStyle = "solid";
+  document.getElementById("but4").style.borderWidth = "1px";
+  document.getElementById("but4").style.borderColor = "#3A1F00";
+  document.getElementById("but5").style.backgroundColor = "white";
+  document.getElementById("but5").style.borderStyle = "solid";
+  document.getElementById("but5").style.borderWidth = "1px";
+  document.getElementById("but5").style.borderColor = "#3A1F00";
+  document.getElementById("but6").style.backgroundColor = "white";
+  document.getElementById("but6").style.borderStyle = "solid";
+  document.getElementById("but6").style.borderWidth = "1px";
+  document.getElementById("but6").style.borderColor = "#3A1F00";
+  document.getElementById("button11").style.opacity = "0";
+  document.getElementById("button11").style.display = "none";
+  document.getElementById("button22").style.opacity = "0";
+  document.getElementById("button22").style.display = "none";
+  document.getElementById("button33").style.opacity = "1";
+  document.getElementById("button33").style.display = "block";
+  document.getElementById("button44").style.opacity = "0";
+  document.getElementById("button44").style.display = "none";
+  document.getElementById("button55").style.opacity = "0";
+  document.getElementById("button55").style.display = "none";
+  document.getElementById("button66").style.opacity = "0";
+  document.getElementById("button66").style.display = "none";
+  document.getElementById("hey").style.display = "block";
+  document.getElementById("hey2").style.display = "block";
+  document.getElementById("hey3").style.display = "block";
+  document.getElementById("allshow").style.display = "none";
 }
 function but4() {
-    document.getElementById("but1").style.backgroundColor = "white";
-    document.getElementById("but1").style.borderStyle = "solid";
-    document.getElementById("but1").style.borderWidth = "1px";
-    document.getElementById("but1").style.borderColor = "#3A1F00";
-    document.getElementById("but2").style.backgroundColor = "white";
-    document.getElementById("but2").style.borderStyle = "solid";
-    document.getElementById("but2").style.borderWidth = "1px";
-    document.getElementById("but2").style.borderColor = "#3A1F00";
-    document.getElementById("but3").style.backgroundColor = "white";
-    document.getElementById("but3").style.borderStyle = "solid";
-    document.getElementById("but3").style.borderWidth = "1px";
-    document.getElementById("but3").style.borderColor = "#3A1F00";
-    document.getElementById("but4").style.backgroundColor = "#C6AC8F";
-    document.getElementById("but4").style.border = "none";
-    document.getElementById("but5").style.backgroundColor = "white";
-    document.getElementById("but5").style.borderStyle = "solid";
-    document.getElementById("but5").style.borderWidth = "1px";
-    document.getElementById("but5").style.borderColor = "#3A1F00";
-    document.getElementById("but6").style.backgroundColor = "white";
-    document.getElementById("but6").style.borderStyle = "solid";
-    document.getElementById("but6").style.borderWidth = "1px";
-    document.getElementById("but6").style.borderColor = "#3A1F00";
-    document.getElementById("button11").style.opacity = "0";
-    document.getElementById("button11").style.display = "none";
-    document.getElementById("button22").style.opacity = "0";
-    document.getElementById("button22").style.display = "none";
-    document.getElementById("button33").style.opacity = "0";
-    document.getElementById("button33").style.display = "none";
-    document.getElementById("button44").style.opacity = "1";
-    document.getElementById("button44").style.display = "block";
-    document.getElementById("button55").style.opacity = "0";
-    document.getElementById("button55").style.display = "none";
-    document.getElementById("button66").style.opacity = "0";
-    document.getElementById("button66").style.display = "none";
-        //一覧用
-        document.getElementById("hey").style.display = "none";
-        document.getElementById("hey2").style.display = "none";
-        document.getElementById("hey3").style.display = "none";
-        document.getElementById("allshow").style.display = "block";
-        
+  document.getElementById("but1").style.backgroundColor = "white";
+  document.getElementById("but1").style.borderStyle = "solid";
+  document.getElementById("but1").style.borderWidth = "1px";
+  document.getElementById("but1").style.borderColor = "#3A1F00";
+  document.getElementById("but2").style.backgroundColor = "white";
+  document.getElementById("but2").style.borderStyle = "solid";
+  document.getElementById("but2").style.borderWidth = "1px";
+  document.getElementById("but2").style.borderColor = "#3A1F00";
+  document.getElementById("but3").style.backgroundColor = "white";
+  document.getElementById("but3").style.borderStyle = "solid";
+  document.getElementById("but3").style.borderWidth = "1px";
+  document.getElementById("but3").style.borderColor = "#3A1F00";
+  document.getElementById("but4").style.backgroundColor = "#C6AC8F";
+  document.getElementById("but4").style.border = "none";
+  document.getElementById("but5").style.backgroundColor = "white";
+  document.getElementById("but5").style.borderStyle = "solid";
+  document.getElementById("but5").style.borderWidth = "1px";
+  document.getElementById("but5").style.borderColor = "#3A1F00";
+  document.getElementById("but6").style.backgroundColor = "white";
+  document.getElementById("but6").style.borderStyle = "solid";
+  document.getElementById("but6").style.borderWidth = "1px";
+  document.getElementById("but6").style.borderColor = "#3A1F00";
+  document.getElementById("button11").style.opacity = "0";
+  document.getElementById("button11").style.display = "none";
+  document.getElementById("button22").style.opacity = "0";
+  document.getElementById("button22").style.display = "none";
+  document.getElementById("button33").style.opacity = "0";
+  document.getElementById("button33").style.display = "none";
+  document.getElementById("button44").style.opacity = "1";
+  document.getElementById("button44").style.display = "block";
+  document.getElementById("button55").style.opacity = "0";
+  document.getElementById("button55").style.display = "none";
+  document.getElementById("button66").style.opacity = "0";
+  document.getElementById("button66").style.display = "none";
+      //一覧用
+      document.getElementById("hey").style.display = "none";
+      document.getElementById("hey2").style.display = "none";
+      document.getElementById("hey3").style.display = "none";
+      document.getElementById("allshow").style.display = "block";
+      
 }
 function but5() {
-    document.getElementById("but1").style.backgroundColor = "white";
-    document.getElementById("but1").style.borderStyle = "solid";
-    document.getElementById("but1").style.borderWidth = "1px";
-    document.getElementById("but1").style.borderColor = "#3A1F00";
-    document.getElementById("but2").style.backgroundColor = "white";
-    document.getElementById("but2").style.borderStyle = "solid";
-    document.getElementById("but2").style.borderWidth = "1px";
-    document.getElementById("but2").style.borderColor = "#3A1F00";
-    document.getElementById("but3").style.backgroundColor = "white";
-    document.getElementById("but3").style.borderStyle = "solid";
-    document.getElementById("but3").style.borderWidth = "1px";
-    document.getElementById("but3").style.borderColor = "#3A1F00";
-    document.getElementById("but4").style.backgroundColor = "white";
-    document.getElementById("but4").style.borderStyle = "solid";
-    document.getElementById("but4").style.borderWidth = "1px";
-    document.getElementById("but4").style.borderColor = "#3A1F00";
-    document.getElementById("but5").style.backgroundColor = "#C6AC8F";
-    document.getElementById("but5").style.border = "none";
-    document.getElementById("but6").style.backgroundColor = "white";
-    document.getElementById("but6").style.borderStyle = "solid";
-    document.getElementById("but6").style.borderWidth = "1px";
-    document.getElementById("but6").style.borderColor = "#3A1F00";
-    document.getElementById("button11").style.opacity = "0";
-    document.getElementById("button11").style.display = "none";
-    document.getElementById("button22").style.opacity = "0";
-    document.getElementById("button22").style.display = "none";
-    document.getElementById("button33").style.opacity = "0";
-    document.getElementById("button33").style.display = "none";
-    document.getElementById("button44").style.opacity = "0";
-    document.getElementById("button44").style.display = "none";
-    document.getElementById("button55").style.opacity = "1";
-    document.getElementById("button55").style.display = "block";
-    document.getElementById("button66").style.opacity = "0";
-    document.getElementById("button66").style.display = "none";
-    document.getElementById("hey").style.display = "block";
-    document.getElementById("hey2").style.display = "block";
-    document.getElementById("hey3").style.display = "block";
-    document.getElementById("allshow").style.display = "none";
+  document.getElementById("but1").style.backgroundColor = "white";
+  document.getElementById("but1").style.borderStyle = "solid";
+  document.getElementById("but1").style.borderWidth = "1px";
+  document.getElementById("but1").style.borderColor = "#3A1F00";
+  document.getElementById("but2").style.backgroundColor = "white";
+  document.getElementById("but2").style.borderStyle = "solid";
+  document.getElementById("but2").style.borderWidth = "1px";
+  document.getElementById("but2").style.borderColor = "#3A1F00";
+  document.getElementById("but3").style.backgroundColor = "white";
+  document.getElementById("but3").style.borderStyle = "solid";
+  document.getElementById("but3").style.borderWidth = "1px";
+  document.getElementById("but3").style.borderColor = "#3A1F00";
+  document.getElementById("but4").style.backgroundColor = "white";
+  document.getElementById("but4").style.borderStyle = "solid";
+  document.getElementById("but4").style.borderWidth = "1px";
+  document.getElementById("but4").style.borderColor = "#3A1F00";
+  document.getElementById("but5").style.backgroundColor = "#C6AC8F";
+  document.getElementById("but5").style.border = "none";
+  document.getElementById("but6").style.backgroundColor = "white";
+  document.getElementById("but6").style.borderStyle = "solid";
+  document.getElementById("but6").style.borderWidth = "1px";
+  document.getElementById("but6").style.borderColor = "#3A1F00";
+  document.getElementById("button11").style.opacity = "0";
+  document.getElementById("button11").style.display = "none";
+  document.getElementById("button22").style.opacity = "0";
+  document.getElementById("button22").style.display = "none";
+  document.getElementById("button33").style.opacity = "0";
+  document.getElementById("button33").style.display = "none";
+  document.getElementById("button44").style.opacity = "0";
+  document.getElementById("button44").style.display = "none";
+  document.getElementById("button55").style.opacity = "1";
+  document.getElementById("button55").style.display = "block";
+  document.getElementById("button66").style.opacity = "0";
+  document.getElementById("button66").style.display = "none";
+  document.getElementById("hey").style.display = "block";
+  document.getElementById("hey2").style.display = "block";
+  document.getElementById("hey3").style.display = "block";
+  document.getElementById("allshow").style.display = "none";
 }
 function but6() {
-    document.getElementById("but1").style.backgroundColor = "white";
-    document.getElementById("but1").style.borderStyle = "solid";
-    document.getElementById("but1").style.borderWidth = "1px";
-    document.getElementById("but1").style.borderColor = "#3A1F00";
-    document.getElementById("but2").style.backgroundColor = "white";
-    document.getElementById("but2").style.borderStyle = "solid";
-    document.getElementById("but2").style.borderWidth = "1px";
-    document.getElementById("but2").style.borderColor = "#3A1F00";
-    document.getElementById("but3").style.backgroundColor = "white";
-    document.getElementById("but3").style.borderStyle = "solid";
-    document.getElementById("but3").style.borderWidth = "1px";
-    document.getElementById("but3").style.borderColor = "#3A1F00";
-    document.getElementById("but4").style.backgroundColor = "white";
-    document.getElementById("but4").style.borderStyle = "solid";
-    document.getElementById("but4").style.borderWidth = "1px";
-    document.getElementById("but4").style.borderColor = "#3A1F00";
-    document.getElementById("but5").style.backgroundColor = "white";
-    document.getElementById("but5").style.borderStyle = "solid";
-    document.getElementById("but5").style.borderWidth = "1px";
-    document.getElementById("but5").style.borderColor = "#3A1F00";
-    document.getElementById("but6").style.backgroundColor = "#C6AC8F";
-    document.getElementById("but6").style.border = "none";
-    document.getElementById("button11").style.opacity = "0";
-    document.getElementById("button11").style.display = "none";
-    document.getElementById("button22").style.opacity = "0";
-    document.getElementById("button22").style.display = "none";
-    document.getElementById("button33").style.opacity = "0";
-    document.getElementById("button33").style.display = "none";
-    document.getElementById("button44").style.opacity = "0";
-    document.getElementById("button44").style.display = "none";
-    document.getElementById("button55").style.opacity = "0";
-    document.getElementById("button55").style.display = "none";
-    document.getElementById("button66").style.opacity = "1";
-    document.getElementById("button66").style.display = "block";
-    document.getElementById("hey").style.display = "block";
-    document.getElementById("hey2").style.display = "block";
-    document.getElementById("hey3").style.display = "block";
-    document.getElementById("allshow").style.display = "none";
+  document.getElementById("but1").style.backgroundColor = "white";
+  document.getElementById("but1").style.borderStyle = "solid";
+  document.getElementById("but1").style.borderWidth = "1px";
+  document.getElementById("but1").style.borderColor = "#3A1F00";
+  document.getElementById("but2").style.backgroundColor = "white";
+  document.getElementById("but2").style.borderStyle = "solid";
+  document.getElementById("but2").style.borderWidth = "1px";
+  document.getElementById("but2").style.borderColor = "#3A1F00";
+  document.getElementById("but3").style.backgroundColor = "white";
+  document.getElementById("but3").style.borderStyle = "solid";
+  document.getElementById("but3").style.borderWidth = "1px";
+  document.getElementById("but3").style.borderColor = "#3A1F00";
+  document.getElementById("but4").style.backgroundColor = "white";
+  document.getElementById("but4").style.borderStyle = "solid";
+  document.getElementById("but4").style.borderWidth = "1px";
+  document.getElementById("but4").style.borderColor = "#3A1F00";
+  document.getElementById("but5").style.backgroundColor = "white";
+  document.getElementById("but5").style.borderStyle = "solid";
+  document.getElementById("but5").style.borderWidth = "1px";
+  document.getElementById("but5").style.borderColor = "#3A1F00";
+  document.getElementById("but6").style.backgroundColor = "#C6AC8F";
+  document.getElementById("but6").style.border = "none";
+  document.getElementById("button11").style.opacity = "0";
+  document.getElementById("button11").style.display = "none";
+  document.getElementById("button22").style.opacity = "0";
+  document.getElementById("button22").style.display = "none";
+  document.getElementById("button33").style.opacity = "0";
+  document.getElementById("button33").style.display = "none";
+  document.getElementById("button44").style.opacity = "0";
+  document.getElementById("button44").style.display = "none";
+  document.getElementById("button55").style.opacity = "0";
+  document.getElementById("button55").style.display = "none";
+  document.getElementById("button66").style.opacity = "1";
+  document.getElementById("button66").style.display = "block";
+  document.getElementById("hey").style.display = "block";
+  document.getElementById("hey2").style.display = "block";
+  document.getElementById("hey3").style.display = "block";
+  document.getElementById("allshow").style.display = "none";
 }
 sn='';
 function start(){
-    cd= document.cookie;
-   // cd = 'branch=menu|; menumemo={"shop1":[0,22,38],"shop7":[14,36,52],"shop13":[4,26,42],"shop19":[1,23,39],"shop25":[1,23,39],"shop31":[1,23,39],"shop37":[1,23,39],"shop43":[1,23,39],"shop49":[1,23,39],"shop55":[23,39],"shop61":[23,39],"shop67":[23,39],"shop73":[23,39],"shop79":[23,39],"last":[79]}-; loginID=%E5%85%AB%E7%99%BE%E5%B1%8B!; pass=%E3%82%84%E3%81%BE%E3%81%8D?; shopnumber=85#; searchname=hello^;searchnum=85$';
+  cd= document.cookie;
+ // cd = 'branch=menu|; menumemo={"shop1":[0,22,38],"shop7":[14,36,52],"shop13":[4,26,42],"shop19":[1,23,39],"shop25":[1,23,39],"shop31":[1,23,39],"shop37":[1,23,39],"shop43":[1,23,39],"shop49":[1,23,39],"shop55":[23,39],"shop61":[23,39],"shop67":[23,39],"shop73":[23,39],"shop79":[23,39],"last":[79]}-; loginID=%E5%85%AB%E7%99%BE%E5%B1%8B!; pass=%E3%82%84%E3%81%BE%E3%81%8D?; shopnumber=85#; searchname=hello^;searchnum=85$';
 console.log(cd);
-        num1 = cd.indexOf("searchnum=");
-        num2 = cd.indexOf("$");
-        num3 = cd.indexOf("searchname=");
-        num4 = cd.indexOf("^");
-        num5 = cd.indexOf("cookienum=");
-        num7 = cd.indexOf("favoritenuml=");
-        if(num5 == -1){
-        console.log("商品カートデータなし")
-        }else{
-        num6 = cd.indexOf(">>?");
-        cn = cd.substring(num5+10,num6);
-        console.log("cookienum:"+cn);
-        }
-        if(num7 == -1){
-        console.log("favoritenumなし→作成");
-        favoritenuml = 0;
-        data = "favoritenuml=0>>!";
-        document.cookie = data;
-        console.log("favoritenuml:"+favoritenuml);
-        }else{
-        num8 = cd.indexOf(">>!");
-        favoritenuml = cd.substring(num7+13,num8);
-        favoritenuml = parseInt(favoritenuml);
-        console.log("favoritenuml:"+favoritenuml);
-        }
-        if(favoritenuml > 0){
-          favocheck();
-        }
-        sn = cd.substring(num1+10,num2);
-        sn2 = decodeURI(cd.substring(num3+11,num4));
-        console.log(sn+":"+sn2);
-     document.getElementById("shopname").innerHTML = sn2;
-     document.getElementById("shopname2").innerHTML = sn2;  
-        sn = cd.substring(num1+10,num2);
-        sn2 = decodeURI(cd.substring(num3+11,num4));
-       console.log(sn+":"+sn2);
-       setTimeout(startt,1000)
-       }
-       function startt(){
-       console.log("loading start");
-    url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+      num1 = cd.indexOf("searchnum=");
+      num2 = cd.indexOf("$");
+      num3 = cd.indexOf("searchname=");
+      num4 = cd.indexOf("^");
+      num5 = cd.indexOf("cookienum=");
+      num7 = cd.indexOf("favoritenuml=");
+      if(num5 == -1){
+      console.log("商品カートデータなし")
+      }else{
+      num6 = cd.indexOf(">>?");
+      cn = cd.substring(num5+10,num6);
+      console.log("cookienum:"+cn);
+      }
+      if(num7 == -1){
+      console.log("favoritenumなし→作成");
+      favoritenuml = 0;
+      data = "favoritenuml=0>>!";
+      document.cookie = data;
+      console.log("favoritenuml:"+favoritenuml);
+      }else{
+      num8 = cd.indexOf(">>!");
+      favoritenuml = cd.substring(num7+13,num8);
+      favoritenuml = parseInt(favoritenuml);
+      console.log("favoritenuml:"+favoritenuml);
+      }
+      if(favoritenuml > 0){
+        favocheck();
+      }
+      sn = cd.substring(num1+10,num2);
+      sn2 = decodeURI(cd.substring(num3+11,num4));
+      console.log(sn+":"+sn2);
+   document.getElementById("shopname").innerHTML = sn2;
+   document.getElementById("shopname2").innerHTML = sn2;  
+      sn = cd.substring(num1+10,num2);
+      sn2 = decodeURI(cd.substring(num3+11,num4));
+     console.log(sn+":"+sn2);
+     setTimeout(startt,1000)
+     }
+     function startt(){
+     console.log("loading start");
+  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
 "name4":"店舗商品取得",
-    "name5":sn,
+  "name5":sn,
 "branch":"menudata"
 }]
 var params={
@@ -302,250 +302,250 @@ setTimeout(start1,3000);
 }
 function start1(){
 console.log("getting start");
-    url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
-    fetch(url,{
-        method:"GET",
-        mode:"cors"
-    })
-    .then(response =>{
-        if(response.ok){
-            return response.json()
-        }
-    })
-    .then(resJson =>{
+  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  fetch(url,{
+      method:"GET",
+      mode:"cors"
+  })
+  .then(response =>{
+      if(response.ok){
+          return response.json()
+      }
+  })
+  .then(resJson =>{
 jsondata = resJson;
-        console.log("データ取得");
-        setTimeout(start11,1000);
-    })
-    .catch(error =>{
-        alert("エラー");
-    })
-  
+      console.log("データ取得");
+      setTimeout(start11,1000);
+  })
+  .catch(error =>{
+      alert("エラー");
+  })
+
 }
 function start11(){
-              data = jsondata.data;
-        console.log("データ："+data);
-      pre = data[0].pre;
-        console.log(pre);
-      city = data[0].city;
-        console.log(city);
-      city2 = data[0].city2;
-        console.log(city2);
-      adress = data[0].adress;
-        console.log(adress);
-      mailad = data[0].mailnum;
-        console.log(mailad);
-        phonead = data[0].phonenum;
-        console.log(phonead);
-      intro = data[0].intro;
-        console.log(intro);
-      time = data[0].time;
-        console.log(time);
-      adress = pre+city+city2+adress;
-        console.log(adress);
-      document.getElementById("adress").innerHTML = adress;
-      document.getElementById("time").innerHTML = time;
-      document.getElementById("phone").innerHTML = phonead;
-      document.getElementById("introduce").innerHTML =intro ;
-      document.getElementById("adress2").innerHTML = adress;
-      document.getElementById("time2").innerHTML = time;
-      document.getElementById("mailad2").innerHTML = mailad;
-      document.getElementById("phone2").innerHTML = phonead;
-                        console.log("データ取得入力完了");
-                        getmenu();
+            data = jsondata.data;
+      console.log("データ："+data);
+    pre = data[0].pre;
+      console.log(pre);
+    city = data[0].city;
+      console.log(city);
+    city2 = data[0].city2;
+      console.log(city2);
+    adress = data[0].adress;
+      console.log(adress);
+    mailad = data[0].mailnum;
+      console.log(mailad);
+      phonead = data[0].phonenum;
+      console.log(phonead);
+    intro = data[0].intro;
+      console.log(intro);
+    time = data[0].time;
+      console.log(time);
+    adress = pre+city+city2+adress;
+      console.log(adress);
+    document.getElementById("adress").innerHTML = adress;
+    document.getElementById("time").innerHTML = time;
+    document.getElementById("phone").innerHTML = phonead;
+    document.getElementById("introduce").innerHTML =intro ;
+    document.getElementById("adress2").innerHTML = adress;
+    document.getElementById("time2").innerHTML = time;
+    document.getElementById("mailad2").innerHTML = mailad;
+    document.getElementById("phone2").innerHTML = phonead;
+                      console.log("データ取得入力完了");
+                      getmenu();
 }
 function getmenu(){
-  console.log("メニューデータ取得開始→");
-  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
-  data = [{
-    "name5":sn,
-    "branch":"changedata"
-  }]
-  params = {
-    "method":"post",
-    "mode":"no-cors",
-    "Content-Type":"application/json",
-    "body":JSON.stringify(data)
-  }
-  fetch(url,params)
-  console.log("メニューデータリクエスト→")
-  setTimeout(getmenu2,2000)
+console.log("メニューデータ取得開始→");
+url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+data = [{
+  "name5":sn,
+  "branch":"changedata"
+}]
+params = {
+  "method":"post",
+  "mode":"no-cors",
+  "Content-Type":"application/json",
+  "body":JSON.stringify(data)
+}
+fetch(url,params)
+console.log("メニューデータリクエスト→")
+setTimeout(getmenu2,2000)
 }
 mjson = '';
 function getmenu2(){
-  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
-  fetch(url,{
-    "method":"GET",
-    "mode":"cors"
-  })
-  .then(response =>{
-    if(response.ok){
-      return response.json()
-    }
-  })
-  .then(resJson =>{
- mjson = resJson;
- console.log("メニューデータ取得完了");
- getmenu3();
-  })
-  .catch(error =>{
-    console.log("通信エラー");
-    alert("通信エラー");
-  })
+url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+fetch(url,{
+  "method":"GET",
+  "mode":"cors"
+})
+.then(response =>{
+  if(response.ok){
+    return response.json()
+  }
+})
+.then(resJson =>{
+mjson = resJson;
+console.log("メニューデータ取得完了");
+getmenu3();
+})
+.catch(error =>{
+  console.log("通信エラー");
+  alert("通信エラー");
+})
 }
 lastn = 0;
 pagecount = 1;
 function getmenu3(){
-  json = mjson.changedata[0]
-  last = json.last;
-  console.log(last);
-  lastn = lastn +10;
-  if(lastn > last){
-    lastn = last;
-  }
-  for(var a=0; a<lastn; a++){
-    mname = mjson.changedata[0].name[a];
-    mfee = mjson.changedata[0].fee[a];
-    mexpress = mjson.changedata[0].express[a];
-    data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+a+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+a+"\""+"onclick="+"\""+"fevo"+a+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
-    allshow2.insertAdjacentHTML("beforeend",data);
-  }
-  number = parseInt(last/10)+1;
-  console.log("number:"+number);
-  for(var a=1; a<=number; a++){
-    data = "<div class="+"\""+"wp1"+"\""+"id="+"\""+"wp"+a+"\""+">"+a+"</div>";
-    wp.insertAdjacentHTML("beforeend",data)
-  }
-  document.getElementById("wp1").style.backgroundColor = "#3A1F00";
+json = mjson.changedata[0]
+last = json.last;
+console.log(last);
+lastn = lastn +10;
+if(lastn > last){
+  lastn = last;
+}
+for(var a=0; a<lastn; a++){
+  mname = mjson.changedata[0].name[a];
+  mfee = mjson.changedata[0].fee[a];
+  mexpress = mjson.changedata[0].express[a];
+  data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+a+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+a+"\""+"onclick="+"\""+"fevo"+a+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+  allshow2.insertAdjacentHTML("beforeend",data);
+}
+number = parseInt(last/10)+1;
+console.log("number:"+number);
+for(var a=1; a<=number; a++){
+  data = "<div class="+"\""+"wp1"+"\""+"id="+"\""+"wp"+a+"\""+">"+a+"</div>";
+  wp.insertAdjacentHTML("beforeend",data)
+}
+document.getElementById("wp1").style.backgroundColor = "#3A1F00";
 for(var a =0; a<favoritenuml; a++){
 number = numlist[a];
 if(number < 10){
-  text = "favorite"+number;
-  document.getElementById(text).style.backgroundColor = "pink";
+text = "favorite"+number;
+document.getElementById(text).style.backgroundColor = "pink";
 }
 }
 }
 messagep = '';
 function plus(){
-  //毎回cookieを呼び出してお気に入りが消えないように[商品番号をcookieに]
-  n1=0;
-  n2=0;
-  n3=0;
-  n4=0;
-  n5=0;
-  n6=0;
-  n7=0;
-  n8=0;
-  n9=0;
-  n10=0;
-  if(messagep == "end"){
-    alert("最後のページです");
-    return;
-  }
+//毎回cookieを呼び出してお気に入りが消えないように[商品番号をcookieに]
+n1=0;
+n2=0;
+n3=0;
+n4=0;
+n5=0;
+n6=0;
+n7=0;
+n8=0;
+n9=0;
+n10=0;
+if(messagep == "end"){
+  alert("最後のページです");
+  return;
+}
 
-  messagep='';
-  var text = "wp"+pagecount;
-  document.getElementById(text).style.backgroundColor = "#C6AC8F";
-  pagecount+=1;
-  var text = "wp"+pagecount;
-  document.getElementById(text).style.backgroundColor = "#3A1F00";
-  last2 = lastn;
-  lastn3 = 0;
-  lastn = lastn+10;
-  element = document.getElementById("allshow2");
-  element.remove();
-  data = "<div class="+"\""+"allshow2"+"\""+" id="+"\""+"allshow2"+"\""+"></div>";
-  allshow.insertAdjacentHTML("afterbegin",data);
-  if(lastn >= last){
-    lastn = last;
+messagep='';
+var text = "wp"+pagecount;
+document.getElementById(text).style.backgroundColor = "#C6AC8F";
+pagecount+=1;
+var text = "wp"+pagecount;
+document.getElementById(text).style.backgroundColor = "#3A1F00";
+last2 = lastn;
+lastn3 = 0;
+lastn = lastn+10;
+element = document.getElementById("allshow2");
+element.remove();
+data = "<div class="+"\""+"allshow2"+"\""+" id="+"\""+"allshow2"+"\""+"></div>";
+allshow.insertAdjacentHTML("afterbegin",data);
+if(lastn >= last){
+  lastn = last;
 }
 for(var a = last2; a<lastn; a++){
-  lastn3++;
-  mname = mjson.changedata[0].name[a];
-     mfee = mjson.changedata[0].fee[a];
-     mexpress = mjson.changedata[0].express[a];
-     data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+lastn3+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+lastn3+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
-     allshow2.insertAdjacentHTML("beforeend",data);
-   }
-   for(var a =0; a<favoritenuml; a++){
-    number = numlist[a];
-    if(last2 < number < lastn){
-      text = "favorite"+number;
-      document.getElementById(text).style.backgroundColor = "pink";
-    }
-    }
-   if(lastn >= last){
-     lastn = last2;
-     messagep = "end";
-   }
+lastn3++;
+mname = mjson.changedata[0].name[a];
+   mfee = mjson.changedata[0].fee[a];
+   mexpress = mjson.changedata[0].express[a];
+   data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+lastn3+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+lastn3+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+   allshow2.insertAdjacentHTML("beforeend",data);
+ }
+ for(var a =0; a<favoritenuml; a++){
+  number = numlist[a];
+  if(last2 < number < lastn){
+    text = "favorite"+number;
+    document.getElementById(text).style.backgroundColor = "pink";
+  }
+  }
+ if(lastn >= last){
+   lastn = last2;
+   messagep = "end";
+ }
 
 }
 function mina(){
-  //毎回cookieを呼び出してお気に入りが消えないように[商品番号をcookieに]
-  n1=0;
-  n2=0;
-  n3=0;
-  n4=0;
-  n5=0;
-  n6=0;
-  n7=0;
-  n8=0;
-  n9=0;
-  n10=0;
-  if(pagecount < 1){
-    pagecount =1;
-  }
-  if(messagep == "first"){
-    alert("最初のページです");
-    return;
-  }
-  if(messagep == "end"){
-    last2 = lastn-10;
+//毎回cookieを呼び出してお気に入りが消えないように[商品番号をcookieに]
+n1=0;
+n2=0;
+n3=0;
+n4=0;
+n5=0;
+n6=0;
+n7=0;
+n8=0;
+n9=0;
+n10=0;
+if(pagecount < 1){
+  pagecount =1;
+}
+if(messagep == "first"){
+  alert("最初のページです");
+  return;
+}
+if(messagep == "end"){
+  last2 = lastn-10;
+}else{
+last2 = lastn-20;
+lastn = lastn-10;
+}
+messagep = '';
+var text = "wp"+pagecount;
+document.getElementById(text).style.backgroundColor = "#C6AC8F";
+pagecount-=1;
+var text = "wp"+pagecount;
+document.getElementById(text).style.backgroundColor = "#3A1F00";
+lastn3 = 0;
+element = document.getElementById("allshow2");
+element.remove();
+data = "<div class="+"\""+"allshow2"+"\""+" id="+"\""+"allshow2"+"\""+"></div>"
+allshow.insertAdjacentHTML("afterbegin",data)
+if(last2 <= 0){
+  last2 = 0;
+  if(lastn >= last){
+   lastn = last;
   }else{
-  last2 = lastn-20;
-  lastn = lastn-10;
+    lastn = 10;
   }
-  messagep = '';
-  var text = "wp"+pagecount;
-  document.getElementById(text).style.backgroundColor = "#C6AC8F";
-  pagecount-=1;
-  var text = "wp"+pagecount;
-  document.getElementById(text).style.backgroundColor = "#3A1F00";
-  lastn3 = 0;
-  element = document.getElementById("allshow2");
-  element.remove();
-  data = "<div class="+"\""+"allshow2"+"\""+" id="+"\""+"allshow2"+"\""+"></div>"
-  allshow.insertAdjacentHTML("afterbegin",data)
-  if(last2 <= 0){
-    last2 = 0;
-    if(lastn >= last){
-     lastn = last;
-    }else{
-      lastn = 10;
-    }
-    messagep = "first";
+  messagep = "first";
+}
+for(var a = last2; a<lastn; a++){
+lastn3++;
+mname = mjson.changedata[0].name[a];
+  mfee = mjson.changedata[0].fee[a];
+  mexpress = mjson.changedata[0].express[a];
+  data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+lastn3+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+lastn3+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+  allshow2.insertAdjacentHTML("beforeend",data);
+}
+for(var a =0; a<favoritenuml; a++){
+  number = numlist[a];
+  if(last2 < number < lastn){
+    text = "favorite"+number;
+    document.getElementById(text).style.backgroundColor = "pink";
   }
-  for(var a = last2; a<lastn; a++){
- lastn3++;
- mname = mjson.changedata[0].name[a];
-    mfee = mjson.changedata[0].fee[a];
-    mexpress = mjson.changedata[0].express[a];
-    data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+lastn3+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+lastn3+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
-    allshow2.insertAdjacentHTML("beforeend",data);
   }
-  for(var a =0; a<favoritenuml; a++){
-    number = numlist[a];
-    if(last2 < number < lastn){
-      text = "favorite"+number;
-      document.getElementById(text).style.backgroundColor = "pink";
-    }
-    }
-  if(messagep == "first"){
-    lastn = last2;
-  }
+if(messagep == "first"){
+  lastn = last2;
+}
 }
 function start2(){
-  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
 "branch":"shopdata"
 }]
@@ -564,16 +564,16 @@ firstdata2 = '';
 success1 =  '';
 success2 =  '';
 function firstsearch2(){
-  fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
-    method:"GET",
-    mode:"cors"
-  })
-  .then(response =>{
-    if(response.ok){
-      return response.json()
-    }
-  })
-  .then(resJson =>{
+fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
+  method:"GET",
+  mode:"cors"
+})
+.then(response =>{
+  if(response.ok){
+    return response.json()
+  }
+})
+.then(resJson =>{
 firstdata1 = resJson;
 success1 = "ok";
 console.log("firstsearch2 ok");
@@ -581,9 +581,9 @@ console.log("firstsearch finish");
 console.log("firstmenusearch start>>");
 firstmenu();
 
-  })
+})
 .catch(error =>{
-  num = 1;
+num = 1;
 ani();
 $('#ss').clearQueue();
 $('#ss').stop();
@@ -612,23 +612,23 @@ setTimeout(firstmenu2,2000);
 function firstmenu2(){
 console.log("menu2 ok");
 fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
-    method:"GET",
-    moe:"cors"
-  })
-  .then(response =>{
-    if(response.ok){
-      return response.json()
-    }
-  })
-  .then(resJson =>{
-    console.log("firstmenusearch2 ok");
+  method:"GET",
+  moe:"cors"
+})
+.then(response =>{
+  if(response.ok){
+    return response.json()
+  }
+})
+.then(resJson =>{
+  console.log("firstmenusearch2 ok");
 firstdata2 = resJson;
 console.log("firstdata 1/2 finish");
 console.log("wait for instructions");
 success2 = "ok";
-  })
+})
 .catch(error =>{
-  num = 1;  
+num = 1;  
 ani();
 $('#ss').clearQueue();
 $('#ss').stop();
@@ -639,19 +639,19 @@ alert("通信失敗2")
 })
 }
 
-  function pic(){
-    if(a == 0){
-      a = 1;
-    document.getElementById("img").src="food.jpeg";
+function pic(){
+  if(a == 0){
+    a = 1;
+  document.getElementById("img").src="food.jpeg";
+  setTimeout(pic,5000);
+  }else{
+    a = 0;
+    document.getElementById("img").src="IMG_0064.JPG";
     setTimeout(pic,5000);
-    }else{
-      a = 0;
-      document.getElementById("img").src="IMG_0064.JPG";
-      setTimeout(pic,5000);
-  }
+}
 }
 function shop(){
-  location.href="登録ページ.html";
+location.href="登録ページ.html";
 }
 document.getElementById("search").addEventListener('keyup',event =>{
 if(event.keyCode == 13){
@@ -668,7 +668,7 @@ request1 = '';
 request2 = '';
 request3 = '';
 function firstsearch(){
-  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
 "branch":"shopdata"
 }]
@@ -685,16 +685,16 @@ setTimeout(firstsearch2,2000);
 }
 
 function firstsearch2(){
-  fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
-    method:"GET",
-    moe:"cors"
-  })
-  .then(response =>{
-    if(response.ok){
-      return response.json()
-    }
-  })
-  .then(resJson =>{
+fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
+  method:"GET",
+  moe:"cors"
+})
+.then(response =>{
+  if(response.ok){
+    return response.json()
+  }
+})
+.then(resJson =>{
 firstdata1 = resJson;
 success1 = "ok";
 console.log("firstsearch2 ok");
@@ -706,9 +706,9 @@ shopsearch(resJson);
 }else{
 firstmenu();
 }
-  })
+})
 .catch(error =>{
-  num = 1;
+num = 1;
 ani();
 $('#ss').clearQueue();
 $('#ss').stop();
@@ -746,16 +746,16 @@ return;
 }
 console.log("firstmenu2 ok");
 fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
-    method:"GET",
-    moe:"cors"
-  })
-  .then(response =>{
-    if(response.ok){
-      return response.json()
-    }
-  })
-  .then(resJson =>{
-    console.log("firstmenusearch2 ok");
+  method:"GET",
+  moe:"cors"
+})
+.then(response =>{
+  if(response.ok){
+    return response.json()
+  }
+})
+.then(resJson =>{
+  console.log("firstmenusearch2 ok");
 firstdata2 = resJson;
 console.log("firstdata 1/2 finish");
 console.log("wait for instructions");
@@ -764,9 +764,9 @@ if(request2 == "next"){
 console.log("menusearch2へ優先処理  in menu2")
 menusearch2(resJson);
 }
-  })
+})
 .catch(error =>{
-  num = 1;  
+num = 1;  
 ani();
 $('#ss').clearQueue();
 $('#ss').stop();
@@ -779,23 +779,23 @@ alert("通信失敗2")
 //ロード時に全データ取得のコード　終
 shopname = '';
 function searching(){
-  num = 100;
-  request3 = '';
-  ani();
+num = 100;
+request3 = '';
+ani();
 document.getElementById("ss").innerHTML = "loading";
 document.getElementById("s").style.backgroundColor ="#C6AC8F"
-  shopname = document.getElementById("search").value;
-    if(success1 == "ok"){
-    console.log("data:"+firstdata1)
+shopname = document.getElementById("search").value;
+  if(success1 == "ok"){
+  console.log("data:"+firstdata1)
 shopsearch(firstdata1);
 return;
-  }
-  if(success1 == "o"){
-  console.log("途中からのリクエスト1");
-  request1 = "next";
-  return; //違う可能性大
+}
+if(success1 == "o"){
+console.log("途中からのリクエスト1");
+request1 = "next";
+return; //違う可能性大
 }else{
-  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
 "branch":"shopdata"
 }]
@@ -810,25 +810,25 @@ setTimeout(searching2,3000);
 }
 }
 function searching2(){
-  fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
-    method:"GET",
-    moe:"cors"
-  })
-  .then(response =>{
-    if(response.ok){
-      return response.json()
-    }
-  })
-  .then(resJson =>{
-    if(request2 == "next"){
-      console.log("menusearch2への優先処理");
-      menusearch2(resJson);
-      
-    }
+fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
+  method:"GET",
+  moe:"cors"
+})
+.then(response =>{
+  if(response.ok){
+    return response.json()
+  }
+})
+.then(resJson =>{
+  if(request2 == "next"){
+    console.log("menusearch2への優先処理");
+    menusearch2(resJson);
+    
+  }
 shopsearch(resJson);
-  })
+})
 .catch(error =>{
-  num = 1;
+num = 1;
 ani();
 $('#ss').clearQueue();
 $('#ss').stop();
@@ -840,7 +840,7 @@ alert("通信失敗1")
 }
 
 function shopsearch(resJson){
-  json = JSON.stringify(resJson);
+json = JSON.stringify(resJson);
 json = JSON.parse(json);
 a = "n1";
 json = json.shopdata[0];
@@ -888,8 +888,8 @@ menusearch();
 }
 function jump(){
 num = 1;
-  ani();
-  document.getElementById("s").style.backgroundColor ="#5A3A1A";
+ani();
+document.getElementById("s").style.backgroundColor ="#5A3A1A";
 if(typeof ttt == 'undefined'){
 location.href="商品表示.html";
 }else{
@@ -938,20 +938,20 @@ setTimeout(menu2,3000);
 function menu2(){
 console.log("menu2 ok");
 fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
-    method:"GET",
-    moe:"cors"
-  })
-  .then(response =>{
-    if(response.ok){
-      return response.json()
-    }
-  })
-  .then(resJson =>{
-    console.log("menusearch2 ok");
+  method:"GET",
+  moe:"cors"
+})
+.then(response =>{
+  if(response.ok){
+    return response.json()
+  }
+})
+.then(resJson =>{
+  console.log("menusearch2 ok");
 menusearch2(resJson);
-  })
+})
 .catch(error =>{
-  num = 1;  
+num = 1;  
 ani();
 $('#ss').clearQueue();
 $('#ss').stop();
@@ -1062,7 +1062,7 @@ const flag = true;
 try {
 
 if (flag) {
- throw new Error('終了します');
+throw new Error('終了します');
 }
 console.log('実行されないコード');
 
@@ -1074,20 +1074,20 @@ console.log(e.message);
 }
 cartnum = 0;
 function カート(){
-  if(typeof cartt == 'undefined'){
-    cookiedata1 = "shopcart"+"=";
-    cookiedata2 = sn2+"@>";
-    cookiedata = cookiedata1+cookiedata2;
-    document.cookie = cookiedata;
-    cartt = "finish";
-    document.getElementById("cart").style.backgroundColor = "orange";
-    document.getElementById("cart").style.fontWeight = "600";
-    document.getElementById("cart").innerHTML = "追加済み";
-      console.log("cookie add");
-  }else{
+if(typeof cartt == 'undefined'){
+  cookiedata1 = "shopcart"+"=";
+  cookiedata2 = sn2+"@>";
+  cookiedata = cookiedata1+cookiedata2;
+  document.cookie = cookiedata;
+  cartt = "finish";
+  document.getElementById("cart").style.backgroundColor = "orange";
+  document.getElementById("cart").style.fontWeight = "600";
+  document.getElementById("cart").innerHTML = "追加済み";
+    console.log("cookie add");
+}else{
 alert("すでにカートに追加されています");
 //削除機能をつける
-  }
+}
 }
 
 function cart2(){
@@ -1115,118 +1115,114 @@ document.cookie = cod2;
 //削除機能をつける　はじめての場合（上）は空白の配列を作って代入して後で問い合わせる　2回目（下）は配列がない場合は作ってcookieからデータを取得して代入、または直で代入（はじめは上で次から下になった場合）
 }
 //cookienumの削除手順 1.cookienum=; max-age=0;に設定する
-function review1(){
-document.getElementById("alll").style.display = "none";
-document.getElementById("alll").style.opacity = "0";
-document.getElementById("alll2").style.display = "block";
-}
+
 function back(){
-  document.getElementById("alll").style.display = "block";
-  document.getElementById("alll").style.opacity = "1";
-  document.getElementById("alll2").style.display = "none";
+document.getElementById("alll").style.display = "block";
+document.getElementById("alll").style.opacity = "1";
+document.getElementById("alll2").style.display = "none";
 }
 n = 0;
 function reviewb(){
-  if(n == 0){
-  document.getElementById("r2").style.display = "block";
-  document.getElementById("a").innerHTML = "☓閉じる"
-  n++;
+if(n == 0){
+document.getElementById("r2").style.display = "block";
+document.getElementById("a").innerHTML = "☓閉じる"
+n++;
 }else if(n == 1){
-  document.getElementById("r2").style.display = "none";
-  document.getElementById("a").innerHTML = "レビューを書く↓"
-  n =0;
+document.getElementById("r2").style.display = "none";
+document.getElementById("a").innerHTML = "レビューを書く↓"
+n =0;
 }
 }
 n = 0;
 rn = 0;
 function ss1(){
-  rn = 1;
-  if(n == 0){
-  document.getElementById("s1").style.color = "#FFD700"
-  n++;
-  }else if(n ==1){
-    n = 0;
+rn = 1;
+if(n == 0){
+document.getElementById("s1").style.color = "#FFD700"
+n++;
+}else if(n ==1){
+  n = 0;
 
-    document.getElementById("s2").style.color = "gray"
-    document.getElementById("s3").style.color = "gray"
-    document.getElementById("s4").style.color = "gray"
-    document.getElementById("s5").style.color = "gray"
-  }
+  document.getElementById("s2").style.color = "gray"
+  document.getElementById("s3").style.color = "gray"
+  document.getElementById("s4").style.color = "gray"
+  document.getElementById("s5").style.color = "gray"
+}
 }
 nn1 = 0;
 function ss2(){
-  rn = 2;
-  if(nn1 == 0){
-    document.getElementById("s1").style.color = "#FFD700"
-  document.getElementById("s2").style.color = "#FFD700"
-  nn1++;
-  }else if(nn1 ==1){
-    document.getElementById("s2").style.color = "gray"
-    document.getElementById("s3").style.color = "gray"
-    document.getElementById("s4").style.color = "gray"
-    document.getElementById("s5").style.color = "gray"
-    nn1 = 0;
+rn = 2;
+if(nn1 == 0){
+  document.getElementById("s1").style.color = "#FFD700"
+document.getElementById("s2").style.color = "#FFD700"
+nn1++;
+}else if(nn1 ==1){
+  document.getElementById("s2").style.color = "gray"
+  document.getElementById("s3").style.color = "gray"
+  document.getElementById("s4").style.color = "gray"
+  document.getElementById("s5").style.color = "gray"
+  nn1 = 0;
 }
 }
 nn2 = 0;
 function ss3(){
-  rn = 3;
-  if(nn2 == 0){
-    document.getElementById("s1").style.color = "#FFD700"
-    document.getElementById("s2").style.color = "#FFD700"
-  document.getElementById("s3").style.color = "#FFD700"
-  nn2++;
-  }else if(nn2 ==1){
-    nn2 = 0;
-    document.getElementById("s3").style.color = "gray"
-    document.getElementById("s4").style.color = "gray"
-    document.getElementById("s5").style.color = "gray"
-  }
+rn = 3;
+if(nn2 == 0){
+  document.getElementById("s1").style.color = "#FFD700"
+  document.getElementById("s2").style.color = "#FFD700"
+document.getElementById("s3").style.color = "#FFD700"
+nn2++;
+}else if(nn2 ==1){
+  nn2 = 0;
+  document.getElementById("s3").style.color = "gray"
+  document.getElementById("s4").style.color = "gray"
+  document.getElementById("s5").style.color = "gray"
+}
 }
 nn3 = 0;
 function ss4(){
-  rn = 4;
-  if(nn3 == 0){
-    document.getElementById("s1").style.color = "#FFD700"
-    document.getElementById("s2").style.color = "#FFD700"
-    document.getElementById("s3").style.color = "#FFD700"
-  document.getElementById("s4").style.color = "#FFD700"
-  nn3++;
-  }else if(nn3 ==1){
-    nn3 = 0;
-    document.getElementById("s4").style.color = "gray"
-    document.getElementById("s5").style.color = "gray"
-  }
+rn = 4;
+if(nn3 == 0){
+  document.getElementById("s1").style.color = "#FFD700"
+  document.getElementById("s2").style.color = "#FFD700"
+  document.getElementById("s3").style.color = "#FFD700"
+document.getElementById("s4").style.color = "#FFD700"
+nn3++;
+}else if(nn3 ==1){
+  nn3 = 0;
+  document.getElementById("s4").style.color = "gray"
+  document.getElementById("s5").style.color = "gray"
+}
 }
 nn4 = 0;
 function ss5(){
-  rn = 5;
-  if(nn4 == 0){
-    document.getElementById("s1").style.color = "#FFD700"
-    document.getElementById("s2").style.color = "#FFD700"
-    document.getElementById("s3").style.color = "#FFD700"
-  document.getElementById("s4").style.color = "#FFD700"
-  document.getElementById("s5").style.color = "#FFD700"
-  nn4++;
-  }else if(nn4 ==1){
-    nn4 = 0;
-    document.getElementById("s5").style.color = "gray"
-  }
+rn = 5;
+if(nn4 == 0){
+  document.getElementById("s1").style.color = "#FFD700"
+  document.getElementById("s2").style.color = "#FFD700"
+  document.getElementById("s3").style.color = "#FFD700"
+document.getElementById("s4").style.color = "#FFD700"
+document.getElementById("s5").style.color = "#FFD700"
+nn4++;
+}else if(nn4 ==1){
+  nn4 = 0;
+  document.getElementById("s5").style.color = "gray"
+}
 }
 function rsend(){
 text1 = document.getElementById("text1").value;
 text2 = document.getElementById("text2").value;
 url = "";
 data = [{
-  "text1":text1,
-  "text2":text2,
-  "text3":rn
+"text1":text1,
+"text2":text2,
+"text3":rn
 }]
 params = {
-  "method":"post",
-  "mode":"no-cors",
-  "Content-Type":"application/json",
-  "body":JSON.stringify(data)
+"method":"post",
+"mode":"no-cors",
+"Content-Type":"application/json",
+"body":JSON.stringify(data)
 }
 fetch(url,params);
 console.log("レビュー送信完了")
@@ -1237,234 +1233,240 @@ document.getElementById("text2").value = "";
 n1 = 0;
 function fevo0(){
 if(n1 == 0){
-  document.getElementById("favorite0").style.backgroundColor = "pink";
-  n1++;
-  datanum  = pagecount*10-10+0;
-  favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-  document.cookie = data;
-  document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml+">>!";
-  document.cookie = data;
+document.getElementById("favorite0").style.backgroundColor = "pink";
+n1++;
+datanum  = pagecount*10-10+0;
+favoritenuml+=1;
+data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+data = "favoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 }else if(n1 == 1){
-  document.getElementById("favorite0").style.backgroundColor = "";
-  n1 = 0;
-    datanum  = pagecount*10-10+0;
-  datanum2 = datanum+0;
-  for(var a=0; a<favoritenuml; a++){
-  d1 = "favoriten"+a+"=";
-  d1 = cd.indexOf(d1)+d1.length;
-  d2 = cd.indexOf(">>*");
-  data = cd.substring(d1,d2);
-    console.log("DATA:"+data);
-  d3 = cd.indexOf("<<*")+3;//3が間違ってるかも
-  data2 = data.substring(d3,);
-  if(data2 == sn){
-  data3 = data.substring(0,d3);
-  console.log("no.2:"+data3);
-  if(data3 == datanum2){
-  console.log("find");
-  data4 = a;
-  }
-  }
-  }
-  //削除機能重大欠陥あり　対処必須
+document.getElementById("favorite0").style.backgroundColor = "";
+n1 = 0;
+  datanum  = pagecount*10-10+0;
+datanum2 = datanum+0;
+for(var a=0; a<favoritenuml; a++){
+d1 = "favoriten"+a+"=";
+d1 = cd.indexOf(d1)+d1.length;
+console.log("d1:"+d1);
+d2 = cd.indexOf(">>*",d1);
+data = cd.substring(d1,d2);
+  console.log("DATA:"+data);
+d3 = cd.indexOf("<<*")+3;//3が間違ってるかも
+data2 = data.substring(d3,);
+if(data2 == sn){
+data3 = data.substring(0,d3);
+console.log("no.2:"+data3);
+if(data3 == datanum2){
+console.log("find");
+data4 = a;
+}
+}
+}
+//削除機能重大欠陥あり　対処必須
 //番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
 //次にforを使って番号1と一致するときの番号を割り出す。
 //最後に一致した番号を用いてCookieからの削除を行う
 //空いてしまった番号をつめる処理を行う ここまで完了　　1/30
 
-  data = "favoriten"+data4+"=; max-age=0";
-  document.cookie = data;
-  document.cookie = "favoritenuml=; max-age=0";
-  //空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
+data = "favoriten"+data4+"=; max-age=0";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
 //上記の処理をforを用いて実行 ここも完了.   1/30
-  for(var a=data4+1; a<favoritenuml; a++){
-  data = "favoriten"+a+"=";
-  data2 = ">>*";
-  data1 = cd.indexOf(data);
-  data2 = cd.indexOf(data2,data1);// maybe faild
-  data3 = cd.substring(data1,data2); 
-  console.log("data:"+data3);
-  pdata = "favoriten"+a-1+"="+data3;
-  document.cookie = pdata;
-  console.log("修正"+a+"完了");
-  }
-  favoritenuml-=1;
-  console.log("修正完了");
+for(var a=data4+1; a<favoritenuml; a++){
+data = "favoriten"+a+"=";
+data2 = ">>*";
+data1 = cd.indexOf(data);
+data2 = cd.indexOf(data2,data1);// maybe faild
+data3 = cd.substring(data1,data2); 
+console.log("data:"+data3);
+pdata = "favoriten"+a-1+"="+data3;
+document.cookie = pdata;
+console.log("修正"+a+"完了");
+}
+favoritenuml-=1;
+console.log("修正完了");
 }
 }
 n2 = 0;
 function fevo1(){
 if(n2 == 0){
-  document.getElementById("favorite1").style.backgroundColor = "pink";
-  n2++;
-  datanum  = pagecount*10-10+1;
-  favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-  document.cookie = data;
-  document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml+">>!";
-  document.cookie = data;
+document.getElementById("favorite1").style.backgroundColor = "pink";
+n2++;
+datanum  = pagecount*10-10+1;
+favoritenuml+=1;
+data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+data = "favoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 }else if(n2 == 1){
-  document.getElementById("favorite1").style.backgroundColor = "";
-  n2 = 0;
+document.getElementById("favorite1").style.backgroundColor = "";
+n2 = 0;
 }
 }
 n3= 0;
 function fevo2(){
-  if(n3 == 0){
-    document.getElementById("favorite2").style.backgroundColor = "pink";
-    n3++;
-    datanum  = pagecount*10-10+2;
-  favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-  document.cookie = data;
-  document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml+">>!";
-  document.cookie = data;
-  }else if(n3 == 1){
-    document.getElementById("favorite2").style.backgroundColor = "";
-    n3 = 0;
-  }
-  }
+if(n3 == 0){
+  document.getElementById("favorite2").style.backgroundColor = "pink";
+  n3++;
+  datanum  = pagecount*10-10+2;
+favoritenuml+=1;
+data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+data = "favoritenuml="+favoritenuml+">>!";
+document.cookie = data;
+}else if(n3 == 1){
+  document.getElementById("favorite2").style.backgroundColor = "";
+  n3 = 0;
+}
+}
+n4 = 0;
+function fevo3(){
+if(n4 == 0){
+  document.getElementById("favorite3").style.backgroundColor = "pink";
+  n4++;
+  datanum  = pagecount*10-10+3;
+favoritenuml+=1;
+data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+data = "favoritenuml="+favoritenuml+">>!";
+document.cookie = data;
+}else if(n4 == 1){
+  document.getElementById("favorite3").style.backgroundColor = "";
   n4 = 0;
-  function fevo3(){
-  if(n4 == 0){
-    document.getElementById("favorite3").style.backgroundColor = "pink";
-    n4++;
-    datanum  = pagecount*10-10+3;
-  favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-  document.cookie = data;
-  document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml+">>!";
-  document.cookie = data;
-  }else if(n4 == 1){
-    document.getElementById("favorite3").style.backgroundColor = "";
-    n4 = 0;
-  }
-  }
-  n5 = 0;
+}
+}
+n5 = 0;
 function fevo4(){
 if(n5 == 0){
-  document.getElementById("favorite4").style.backgroundColor = "pink";
-  n5++;
-  datanum  = pagecount*10-10+4;
-  favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-  document.cookie = data;
-  document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml+">>!";
-  document.cookie = data;
+document.getElementById("favorite4").style.backgroundColor = "pink";
+n5++;
+datanum  = pagecount*10-10+4;
+favoritenuml+=1;
+data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+data = "favoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 }else if(n5 == 1){
-  document.getElementById("favorite4").style.backgroundColor = "";
-  n5 = 0;
+document.getElementById("favorite4").style.backgroundColor = "";
+n5 = 0;
 }
 }
 n6 = 0;
 function fevo5(){
 if(n6 == 0){
-  document.getElementById("favorite5").style.backgroundColor = "pink";
-  n6++;
-  datanum  = pagecount*10-10+5;
-  favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-  document.cookie = data;
-  document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml+">>!";
-  document.cookie = data;
+document.getElementById("favorite5").style.backgroundColor = "pink";
+n6++;
+datanum  = pagecount*10-10+5;
+favoritenuml+=1;
+data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+data = "favoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 }else if(n6 == 1){
-  document.getElementById("favorite5").style.backgroundColor = "";
-  n6 = 0;
+document.getElementById("favorite5").style.backgroundColor = "";
+n6 = 0;
 }
 }
 n7 = 0;
 function fevo6(){
-  if(n7 == 0){
-    document.getElementById("favorite6").style.backgroundColor = "pink";
-    n7++;
-    datanum  = pagecount*10-10+6;
-  favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-  document.cookie = data;
-  document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml+">>!";
-  document.cookie = data;
-  }else if(n7 == 1){
-    document.getElementById("favorite6").style.backgroundColor = "";
-    n7 = 0;
-  }
-  }
+if(n7 == 0){
+  document.getElementById("favorite6").style.backgroundColor = "pink";
+  n7++;
+  datanum  = pagecount*10-10+6;
+favoritenuml+=1;
+data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+data = "favoritenuml="+favoritenuml+">>!";
+document.cookie = data;
+}else if(n7 == 1){
+  document.getElementById("favorite6").style.backgroundColor = "";
+  n7 = 0;
+}
+}
+n8 = 0;
+function fevo7(){
+if(n8 == 0){
+  document.getElementById("favorite7").style.backgroundColor = "pink";
+  n8++;
+  datanum  = pagecount*10-10+7;
+favoritenuml+=1;
+data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+data = "favoritenuml="+favoritenuml+">>!";
+document.cookie = data;
+}else if(n8 == 1){
+  document.getElementById("favorite7").style.backgroundColor = "";
   n8 = 0;
-  function fevo7(){
-  if(n8 == 0){
-    document.getElementById("favorite7").style.backgroundColor = "pink";
-    n8++;
-    datanum  = pagecount*10-10+7;
-  favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-  document.cookie = data;
-  document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml+">>!";
-  document.cookie = data;
-  }else if(n8 == 1){
-    document.getElementById("favorite7").style.backgroundColor = "";
-    n8 = 0;
-  }
-  }
-  n9 = 0;
+}
+}
+n9 = 0;
 function fevo8(){
 if(n9 == 0){
-  document.getElementById("favorite8").style.backgroundColor = "pink";
-  n9++;
-  datanum  = pagecount*10-10+8;
-  favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-  document.cookie = data;
-  document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml+">>!";
-  document.cookie = data;
+document.getElementById("favorite8").style.backgroundColor = "pink";
+n9++;
+datanum  = pagecount*10-10+8;
+favoritenuml+=1;
+data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+data = "favoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 }else if(n9 == 1){
-  document.getElementById("favorite8").style.backgroundColor = "";
-  n9 = 0;
+document.getElementById("favorite8").style.backgroundColor = "";
+n9 = 0;
 }
 }
 n10 = 0;
 function fevo9(){
 if(n10 == 0){
-  document.getElementById("favorite9").style.backgroundColor = "pink";
-  n10++;
-  datanum  = pagecount*10-10+9;
-  favoritenuml+=1;
-  data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-  document.cookie = data;
-  document.cookie = "favoritenuml=; max-age=0";
-  data = "favoritenuml="+favoritenuml+">>!";
-  document.cookie = data;
+document.getElementById("favorite9").style.backgroundColor = "pink";
+n10++;
+datanum  = pagecount*10-10+9;
+favoritenuml+=1;
+data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+data = "favoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 }else if(n10 == 1){
-  document.getElementById("favorite9").style.backgroundColor = "";
-  n10 = 0;
+document.getElementById("favorite9").style.backgroundColor = "";
+n10 = 0;
 }
 }
 function go(){
-  location.href="index.html";
+location.href="index.html";
 }
 numlist='';
 function favocheck(){
-  numlist = [];
-  for(var a=0; a<favoritenuml; a++){
-    ctext = "favoriten"+a+"=";
-    ctext2 = ">>*";
-    ctext3 = "<<*";
-    c1 = cd.indexOf(ctext);
-    c2 = cd.indexOf(ctext2);
-    c3 = cd.indexOf(ctext3);
-    checknum = cd.substring(c3+ctext3.length,c2);
-    if(checknum == sn){
-      text = cd.substring(c1+ctext.length,c3);
-      numlist.push(text);
-    }
+numlist = [];
+for(var a=0; a<favoritenuml; a++){
+  ctext = "favoriten"+a+"=";
+  ctext2 = ">>*";
+  ctext3 = "<<*";
+  c1 = cd.indexOf(ctext);
+  c2 = cd.indexOf(ctext2);
+  c3 = cd.indexOf(ctext3);
+  checknum = cd.substring(c3+ctext3.length,c2);
+  if(checknum == sn){
+    text = cd.substring(c1+ctext.length,c3);
+    numlist.push(text);
   }
-  console.log("numlist："+numlist);
 }
+console.log("numlist："+numlist);
+}
+function review0(){
+  document.getElementById("alll").style.display = "none";
+  document.getElementById("alll").style.opacity = "0";
+  document.getElementById("alll2").style.display = "block";
+  }
