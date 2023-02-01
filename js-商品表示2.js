@@ -1262,7 +1262,7 @@ console.log("d4:"+d4);
 data2 = data.substring(d3,d4);
 console.log("data2："+data2);
 if(data2 == sn){
-data3 = data.substring(0,d3);
+data3 = data.substring(0,d3-3);
 console.log("no.2:"+data3);
 if(data3 == datanum2){
 console.log("find");
