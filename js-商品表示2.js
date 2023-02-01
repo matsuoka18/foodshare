@@ -1284,18 +1284,19 @@ document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
 //空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
 //上記の処理をforを用いて実行 ここも完了.   1/30
-for(var a=data4+1; a<favoritenuml; a++){
+for(var a=data4+1; a<=favoritenuml; a++){
 data = "favoriten"+a+"=";
 data2 = ">>*";
 data1 = cd.indexOf(data);
-data2 = cd.indexOf(data2,data1);// maybe faild
+data2 = cd.indexOf(data2,data1);
 data3 = cd.substring(data1,data2); 
-console.log("data:"+data3);
+console.log("dataa:"+data3);
 pdata = "favoriten"+a-1+"="+data3;
 document.cookie = pdata;
 console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
+data = "fovoritenuml="+favoritenuml+">>!";
 console.log("修正完了");
 }
 }
@@ -1312,8 +1313,62 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n2 == 1){
-document.getElementById("favorite1").style.backgroundColor = "";
-n2 = 0;
+document.getElementById("favorite0").style.backgroundColor = "";
+n1 = 0;
+cd = document.cookie;
+  datanum  = pagecount*10-10+1;
+datanum2 = datanum;
+for(var a=1; a<=favoritenuml; a++){
+d1 = "favoriten"+a+"=";
+d1 = cd.indexOf(d1)+d1.length;
+console.log("d1:"+d1);
+d2 = cd.indexOf(">>*",d1);
+data = cd.substring(d1,d2);
+  console.log("DATA:"+data);
+d3 = data.indexOf("<<*")+3; //3が間違ってるかも
+console.log("d3:"+d3);
+d4 = d3+data.length-3;
+console.log("d4:"+d4);
+data2 = data.substring(d3,d4);
+console.log("data2："+data2);
+if(data2 == sn){
+data3 = data.substring(0,d3-3);
+console.log("no.2:"+data3);
+if(data3 == datanum2){
+console.log("find");
+data4 = a;
+}
+}
+}
+//削除機能重大欠陥あり　対処必須
+//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
+//次にforを使って番号1と一致するときの番号を割り出す。
+//最後に一致した番号を用いてCookieからの削除を行う
+//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
+if(typeof data4== 'undefined'){
+  console.log("I can't find data4");
+  return;
+}
+data = "favoriten"+data4+"=; max-age=0";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
+//上記の処理をforを用いて実行 ここも完了.   1/30
+for(var a=data4+1; a<=favoritenuml; a++){
+data = "favoriten"+a+"=";
+data2 = ">>*";
+data1 = cd.indexOf(data);
+data2 = cd.indexOf(data2,data1);
+data3 = cd.substring(data1,data2); 
+console.log("dataa:"+data3);
+pdata = "favoriten"+a-1+"="+data3;
+document.cookie = pdata;
+console.log("修正"+a+"完了");
+}
+favoritenuml-=1;
+data = "fovoritenuml="+favoritenuml+">>!";
+console.log("修正完了");
+}
 }
 }
 n3= 0;
@@ -1329,8 +1384,62 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n3 == 1){
-  document.getElementById("favorite2").style.backgroundColor = "";
-  n3 = 0;
+  document.getElementById("favorite0").style.backgroundColor = "";
+n1 = 0;
+cd = document.cookie;
+  datanum  = pagecount*10-10+2;
+datanum2 = datanum;
+for(var a=1; a<=favoritenuml; a++){
+d1 = "favoriten"+a+"=";
+d1 = cd.indexOf(d1)+d1.length;
+console.log("d1:"+d1);
+d2 = cd.indexOf(">>*",d1);
+data = cd.substring(d1,d2);
+  console.log("DATA:"+data);
+d3 = data.indexOf("<<*")+3; //3が間違ってるかも
+console.log("d3:"+d3);
+d4 = d3+data.length-3;
+console.log("d4:"+d4);
+data2 = data.substring(d3,d4);
+console.log("data2："+data2);
+if(data2 == sn){
+data3 = data.substring(0,d3-3);
+console.log("no.2:"+data3);
+if(data3 == datanum2){
+console.log("find");
+data4 = a;
+}
+}
+}
+//削除機能重大欠陥あり　対処必須
+//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
+//次にforを使って番号1と一致するときの番号を割り出す。
+//最後に一致した番号を用いてCookieからの削除を行う
+//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
+if(typeof data4== 'undefined'){
+  console.log("I can't find data4");
+  return;
+}
+data = "favoriten"+data4+"=; max-age=0";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
+//上記の処理をforを用いて実行 ここも完了.   1/30
+for(var a=data4+1; a<=favoritenuml; a++){
+data = "favoriten"+a+"=";
+data2 = ">>*";
+data1 = cd.indexOf(data);
+data2 = cd.indexOf(data2,data1);
+data3 = cd.substring(data1,data2); 
+console.log("dataa:"+data3);
+pdata = "favoriten"+a-1+"="+data3;
+document.cookie = pdata;
+console.log("修正"+a+"完了");
+}
+favoritenuml-=1;
+data = "fovoritenuml="+favoritenuml+">>!";
+console.log("修正完了");
+}
 }
 }
 n4 = 0;
@@ -1346,8 +1455,62 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n4 == 1){
-  document.getElementById("favorite3").style.backgroundColor = "";
-  n4 = 0;
+  document.getElementById("favorite0").style.backgroundColor = "";
+n1 = 0;
+cd = document.cookie;
+  datanum  = pagecount*10-10+3;
+datanum2 = datanum;
+for(var a=1; a<=favoritenuml; a++){
+d1 = "favoriten"+a+"=";
+d1 = cd.indexOf(d1)+d1.length;
+console.log("d1:"+d1);
+d2 = cd.indexOf(">>*",d1);
+data = cd.substring(d1,d2);
+  console.log("DATA:"+data);
+d3 = data.indexOf("<<*")+3; //3が間違ってるかも
+console.log("d3:"+d3);
+d4 = d3+data.length-3;
+console.log("d4:"+d4);
+data2 = data.substring(d3,d4);
+console.log("data2："+data2);
+if(data2 == sn){
+data3 = data.substring(0,d3-3);
+console.log("no.2:"+data3);
+if(data3 == datanum2){
+console.log("find");
+data4 = a;
+}
+}
+}
+//削除機能重大欠陥あり　対処必須
+//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
+//次にforを使って番号1と一致するときの番号を割り出す。
+//最後に一致した番号を用いてCookieからの削除を行う
+//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
+if(typeof data4== 'undefined'){
+  console.log("I can't find data4");
+  return;
+}
+data = "favoriten"+data4+"=; max-age=0";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
+//上記の処理をforを用いて実行 ここも完了.   1/30
+for(var a=data4+1; a<=favoritenuml; a++){
+data = "favoriten"+a+"=";
+data2 = ">>*";
+data1 = cd.indexOf(data);
+data2 = cd.indexOf(data2,data1);
+data3 = cd.substring(data1,data2); 
+console.log("dataa:"+data3);
+pdata = "favoriten"+a-1+"="+data3;
+document.cookie = pdata;
+console.log("修正"+a+"完了");
+}
+favoritenuml-=1;
+data = "fovoritenuml="+favoritenuml+">>!";
+console.log("修正完了");
+}
 }
 }
 n5 = 0;
@@ -1363,8 +1526,62 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n5 == 1){
-document.getElementById("favorite4").style.backgroundColor = "";
-n5 = 0;
+document.getElementById("favorite0").style.backgroundColor = "";
+n1 = 0;
+cd = document.cookie;
+  datanum  = pagecount*10-10+4;
+datanum2 = datanum;
+for(var a=1; a<=favoritenuml; a++){
+d1 = "favoriten"+a+"=";
+d1 = cd.indexOf(d1)+d1.length;
+console.log("d1:"+d1);
+d2 = cd.indexOf(">>*",d1);
+data = cd.substring(d1,d2);
+  console.log("DATA:"+data);
+d3 = data.indexOf("<<*")+3; //3が間違ってるかも
+console.log("d3:"+d3);
+d4 = d3+data.length-3;
+console.log("d4:"+d4);
+data2 = data.substring(d3,d4);
+console.log("data2："+data2);
+if(data2 == sn){
+data3 = data.substring(0,d3-3);
+console.log("no.2:"+data3);
+if(data3 == datanum2){
+console.log("find");
+data4 = a;
+}
+}
+}
+//削除機能重大欠陥あり　対処必須
+//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
+//次にforを使って番号1と一致するときの番号を割り出す。
+//最後に一致した番号を用いてCookieからの削除を行う
+//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
+if(typeof data4== 'undefined'){
+  console.log("I can't find data4");
+  return;
+}
+data = "favoriten"+data4+"=; max-age=0";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
+//上記の処理をforを用いて実行 ここも完了.   1/30
+for(var a=data4+1; a<=favoritenuml; a++){
+data = "favoriten"+a+"=";
+data2 = ">>*";
+data1 = cd.indexOf(data);
+data2 = cd.indexOf(data2,data1);
+data3 = cd.substring(data1,data2); 
+console.log("dataa:"+data3);
+pdata = "favoriten"+a-1+"="+data3;
+document.cookie = pdata;
+console.log("修正"+a+"完了");
+}
+favoritenuml-=1;
+data = "fovoritenuml="+favoritenuml+">>!";
+console.log("修正完了");
+}
 }
 }
 n6 = 0;
@@ -1380,8 +1597,62 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n6 == 1){
-document.getElementById("favorite5").style.backgroundColor = "";
-n6 = 0;
+document.getElementById("favorite0").style.backgroundColor = "";
+n1 = 0;
+cd = document.cookie;
+  datanum  = pagecount*10-10+5;
+datanum2 = datanum;
+for(var a=1; a<=favoritenuml; a++){
+d1 = "favoriten"+a+"=";
+d1 = cd.indexOf(d1)+d1.length;
+console.log("d1:"+d1);
+d2 = cd.indexOf(">>*",d1);
+data = cd.substring(d1,d2);
+  console.log("DATA:"+data);
+d3 = data.indexOf("<<*")+3; //3が間違ってるかも
+console.log("d3:"+d3);
+d4 = d3+data.length-3;
+console.log("d4:"+d4);
+data2 = data.substring(d3,d4);
+console.log("data2："+data2);
+if(data2 == sn){
+data3 = data.substring(0,d3-3);
+console.log("no.2:"+data3);
+if(data3 == datanum2){
+console.log("find");
+data4 = a;
+}
+}
+}
+//削除機能重大欠陥あり　対処必須
+//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
+//次にforを使って番号1と一致するときの番号を割り出す。
+//最後に一致した番号を用いてCookieからの削除を行う
+//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
+if(typeof data4== 'undefined'){
+  console.log("I can't find data4");
+  return;
+}
+data = "favoriten"+data4+"=; max-age=0";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
+//上記の処理をforを用いて実行 ここも完了.   1/30
+for(var a=data4+1; a<=favoritenuml; a++){
+data = "favoriten"+a+"=";
+data2 = ">>*";
+data1 = cd.indexOf(data);
+data2 = cd.indexOf(data2,data1);
+data3 = cd.substring(data1,data2); 
+console.log("dataa:"+data3);
+pdata = "favoriten"+a-1+"="+data3;
+document.cookie = pdata;
+console.log("修正"+a+"完了");
+}
+favoritenuml-=1;
+data = "fovoritenuml="+favoritenuml+">>!";
+console.log("修正完了");
+}
 }
 }
 n7 = 0;
@@ -1397,8 +1668,62 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n7 == 1){
-  document.getElementById("favorite6").style.backgroundColor = "";
-  n7 = 0;
+  document.getElementById("favorite0").style.backgroundColor = "";
+n1 = 0;
+cd = document.cookie;
+  datanum  = pagecount*10-10+6;
+datanum2 = datanum;
+for(var a=1; a<=favoritenuml; a++){
+d1 = "favoriten"+a+"=";
+d1 = cd.indexOf(d1)+d1.length;
+console.log("d1:"+d1);
+d2 = cd.indexOf(">>*",d1);
+data = cd.substring(d1,d2);
+  console.log("DATA:"+data);
+d3 = data.indexOf("<<*")+3; //3が間違ってるかも
+console.log("d3:"+d3);
+d4 = d3+data.length-3;
+console.log("d4:"+d4);
+data2 = data.substring(d3,d4);
+console.log("data2："+data2);
+if(data2 == sn){
+data3 = data.substring(0,d3-3);
+console.log("no.2:"+data3);
+if(data3 == datanum2){
+console.log("find");
+data4 = a;
+}
+}
+}
+//削除機能重大欠陥あり　対処必須
+//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
+//次にforを使って番号1と一致するときの番号を割り出す。
+//最後に一致した番号を用いてCookieからの削除を行う
+//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
+if(typeof data4== 'undefined'){
+  console.log("I can't find data4");
+  return;
+}
+data = "favoriten"+data4+"=; max-age=0";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
+//上記の処理をforを用いて実行 ここも完了.   1/30
+for(var a=data4+1; a<=favoritenuml; a++){
+data = "favoriten"+a+"=";
+data2 = ">>*";
+data1 = cd.indexOf(data);
+data2 = cd.indexOf(data2,data1);
+data3 = cd.substring(data1,data2); 
+console.log("dataa:"+data3);
+pdata = "favoriten"+a-1+"="+data3;
+document.cookie = pdata;
+console.log("修正"+a+"完了");
+}
+favoritenuml-=1;
+data = "fovoritenuml="+favoritenuml+">>!";
+console.log("修正完了");
+}
 }
 }
 n8 = 0;
@@ -1414,8 +1739,62 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n8 == 1){
-  document.getElementById("favorite7").style.backgroundColor = "";
-  n8 = 0;
+  document.getElementById("favorite0").style.backgroundColor = "";
+n1 = 0;
+cd = document.cookie;
+  datanum  = pagecount*10-10+7;
+datanum2 = datanum;
+for(var a=1; a<=favoritenuml; a++){
+d1 = "favoriten"+a+"=";
+d1 = cd.indexOf(d1)+d1.length;
+console.log("d1:"+d1);
+d2 = cd.indexOf(">>*",d1);
+data = cd.substring(d1,d2);
+  console.log("DATA:"+data);
+d3 = data.indexOf("<<*")+3; //3が間違ってるかも
+console.log("d3:"+d3);
+d4 = d3+data.length-3;
+console.log("d4:"+d4);
+data2 = data.substring(d3,d4);
+console.log("data2："+data2);
+if(data2 == sn){
+data3 = data.substring(0,d3-3);
+console.log("no.2:"+data3);
+if(data3 == datanum2){
+console.log("find");
+data4 = a;
+}
+}
+}
+//削除機能重大欠陥あり　対処必須
+//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
+//次にforを使って番号1と一致するときの番号を割り出す。
+//最後に一致した番号を用いてCookieからの削除を行う
+//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
+if(typeof data4== 'undefined'){
+  console.log("I can't find data4");
+  return;
+}
+data = "favoriten"+data4+"=; max-age=0";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
+//上記の処理をforを用いて実行 ここも完了.   1/30
+for(var a=data4+1; a<=favoritenuml; a++){
+data = "favoriten"+a+"=";
+data2 = ">>*";
+data1 = cd.indexOf(data);
+data2 = cd.indexOf(data2,data1);
+data3 = cd.substring(data1,data2); 
+console.log("dataa:"+data3);
+pdata = "favoriten"+a-1+"="+data3;
+document.cookie = pdata;
+console.log("修正"+a+"完了");
+}
+favoritenuml-=1;
+data = "fovoritenuml="+favoritenuml+">>!";
+console.log("修正完了");
+}
 }
 }
 n9 = 0;
@@ -1431,8 +1810,62 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n9 == 1){
-document.getElementById("favorite8").style.backgroundColor = "";
-n9 = 0;
+document.getElementById("favorite0").style.backgroundColor = "";
+n1 = 0;
+cd = document.cookie;
+  datanum  = pagecount*10-10+8;
+datanum2 = datanum;
+for(var a=1; a<=favoritenuml; a++){
+d1 = "favoriten"+a+"=";
+d1 = cd.indexOf(d1)+d1.length;
+console.log("d1:"+d1);
+d2 = cd.indexOf(">>*",d1);
+data = cd.substring(d1,d2);
+  console.log("DATA:"+data);
+d3 = data.indexOf("<<*")+3; //3が間違ってるかも
+console.log("d3:"+d3);
+d4 = d3+data.length-3;
+console.log("d4:"+d4);
+data2 = data.substring(d3,d4);
+console.log("data2："+data2);
+if(data2 == sn){
+data3 = data.substring(0,d3-3);
+console.log("no.2:"+data3);
+if(data3 == datanum2){
+console.log("find");
+data4 = a;
+}
+}
+}
+//削除機能重大欠陥あり　対処必須
+//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
+//次にforを使って番号1と一致するときの番号を割り出す。
+//最後に一致した番号を用いてCookieからの削除を行う
+//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
+if(typeof data4== 'undefined'){
+  console.log("I can't find data4");
+  return;
+}
+data = "favoriten"+data4+"=; max-age=0";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
+//上記の処理をforを用いて実行 ここも完了.   1/30
+for(var a=data4+1; a<=favoritenuml; a++){
+data = "favoriten"+a+"=";
+data2 = ">>*";
+data1 = cd.indexOf(data);
+data2 = cd.indexOf(data2,data1);
+data3 = cd.substring(data1,data2); 
+console.log("dataa:"+data3);
+pdata = "favoriten"+a-1+"="+data3;
+document.cookie = pdata;
+console.log("修正"+a+"完了");
+}
+favoritenuml-=1;
+data = "fovoritenuml="+favoritenuml+">>!";
+console.log("修正完了");
+}
 }
 }
 n10 = 0;
@@ -1448,8 +1881,62 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n10 == 1){
-document.getElementById("favorite9").style.backgroundColor = "";
-n10 = 0;
+document.getElementById("favorite0").style.backgroundColor = "";
+n1 = 0;
+cd = document.cookie;
+  datanum  = pagecount*10-10+9
+datanum2 = datanum;
+for(var a=1; a<=favoritenuml; a++){
+d1 = "favoriten"+a+"=";
+d1 = cd.indexOf(d1)+d1.length;
+console.log("d1:"+d1);
+d2 = cd.indexOf(">>*",d1);
+data = cd.substring(d1,d2);
+  console.log("DATA:"+data);
+d3 = data.indexOf("<<*")+3; //3が間違ってるかも
+console.log("d3:"+d3);
+d4 = d3+data.length-3;
+console.log("d4:"+d4);
+data2 = data.substring(d3,d4);
+console.log("data2："+data2);
+if(data2 == sn){
+data3 = data.substring(0,d3-3);
+console.log("no.2:"+data3);
+if(data3 == datanum2){
+console.log("find");
+data4 = a;
+}
+}
+}
+//削除機能重大欠陥あり　対処必須
+//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
+//次にforを使って番号1と一致するときの番号を割り出す。
+//最後に一致した番号を用いてCookieからの削除を行う
+//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
+if(typeof data4== 'undefined'){
+  console.log("I can't find data4");
+  return;
+}
+data = "favoriten"+data4+"=; max-age=0";
+document.cookie = data;
+document.cookie = "favoritenuml=; max-age=0";
+//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
+//上記の処理をforを用いて実行 ここも完了.   1/30
+for(var a=data4+1; a<=favoritenuml; a++){
+data = "favoriten"+a+"=";
+data2 = ">>*";
+data1 = cd.indexOf(data);
+data2 = cd.indexOf(data2,data1);
+data3 = cd.substring(data1,data2); 
+console.log("dataa:"+data3);
+pdata = "favoriten"+a-1+"="+data3;
+document.cookie = pdata;
+console.log("修正"+a+"完了");
+}
+favoritenuml-=1;
+data = "fovoritenuml="+favoritenuml+">>!";
+console.log("修正完了");
+}
 }
 }
 function go(){
