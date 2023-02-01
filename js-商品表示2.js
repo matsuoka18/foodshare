@@ -1296,7 +1296,8 @@ document.cookie = pdata;
 console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
-data = "fovoritenuml="+favoritenuml+">>!";
+data = "favoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 console.log("修正完了");
 }
 }
