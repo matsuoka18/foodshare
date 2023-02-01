@@ -1314,7 +1314,7 @@ data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n2 == 1){
 document.getElementById("favorite0").style.backgroundColor = "";
-n1 = 0;
+n2 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+1;
 datanum2 = datanum;
@@ -1385,7 +1385,7 @@ data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n3 == 1){
   document.getElementById("favorite0").style.backgroundColor = "";
-n1 = 0;
+n3 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+2;
 datanum2 = datanum;
@@ -1456,7 +1456,7 @@ data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n4 == 1){
   document.getElementById("favorite0").style.backgroundColor = "";
-n1 = 0;
+n4 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+3;
 datanum2 = datanum;
@@ -1527,7 +1527,7 @@ data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n5 == 1){
 document.getElementById("favorite0").style.backgroundColor = "";
-n1 = 0;
+n5 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+4;
 datanum2 = datanum;
@@ -1598,7 +1598,7 @@ data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n6 == 1){
 document.getElementById("favorite0").style.backgroundColor = "";
-n1 = 0;
+n6 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+5;
 datanum2 = datanum;
@@ -1669,7 +1669,7 @@ data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n7 == 1){
   document.getElementById("favorite0").style.backgroundColor = "";
-n1 = 0;
+n7 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+6;
 datanum2 = datanum;
@@ -1740,7 +1740,7 @@ data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n8 == 1){
   document.getElementById("favorite0").style.backgroundColor = "";
-n1 = 0;
+n8 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+7;
 datanum2 = datanum;
@@ -1811,7 +1811,7 @@ data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n9 == 1){
 document.getElementById("favorite0").style.backgroundColor = "";
-n1 = 0;
+n9 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+8;
 datanum2 = datanum;
@@ -1882,7 +1882,7 @@ data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n10 == 1){
 document.getElementById("favorite0").style.backgroundColor = "";
-n1 = 0;
+n10 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+9
 datanum2 = datanum;
