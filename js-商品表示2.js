@@ -241,7 +241,6 @@ function but6() {
   document.getElementById("allshow").style.display = "none";
 }
 sn='';
-cd='';
 function start(){
   cd= document.cookie;
  // cd = 'branch=menu|; menumemo={"shop1":[0,22,38],"shop7":[14,36,52],"shop13":[4,26,42],"shop19":[1,23,39],"shop25":[1,23,39],"shop31":[1,23,39],"shop37":[1,23,39],"shop43":[1,23,39],"shop49":[1,23,39],"shop55":[23,39],"shop61":[23,39],"shop67":[23,39],"shop73":[23,39],"shop79":[23,39],"last":[79]}-; loginID=%E5%85%AB%E7%99%BE%E5%B1%8B!; pass=%E3%82%84%E3%81%BE%E3%81%8D?; shopnumber=85#; searchname=hello^;searchnum=85$';
@@ -1246,19 +1245,22 @@ document.cookie = data;
 }else if(n1 == 1){
 document.getElementById("favorite0").style.backgroundColor = "";
 n1 = 0;
+cd = document.cookie;
   datanum  = pagecount*10-10+0;
-datanum2 = datanum+0;
+datanum2 = datanum;
 for(var a=1; a<favoritenuml; a++){
 d1 = "favoriten"+a+"=";
-d1 = cd.indexOf(d1)
-console.log("d1:"+d1);
-d1 = d1+d1.length;
+d1 = cd.indexOf(d1)+d1.length;
 console.log("d1:"+d1);
 d2 = cd.indexOf(">>*",d1);
 data = cd.substring(d1,d2);
   console.log("DATA:"+data);
-d3 = cd.indexOf("<<*")+3;//3が間違ってるかも
-data2 = data.substring(d3,);
+d3 = cd.indexOf("<<*")+3; //3が間違ってるかも
+console.log("d3:"+d3);
+d4 = d3+data.length-3;
+console.log("d4:"+d4);
+data2 = data.substring(d3,d4);
+console.log("data2："+data2);
 if(data2 == sn){
 data3 = data.substring(0,d3);
 console.log("no.2:"+data3);
@@ -1273,10 +1275,10 @@ data4 = a;
 //次にforを使って番号1と一致するときの番号を割り出す。
 //最後に一致した番号を用いてCookieからの削除を行う
 //空いてしまった番号をつめる処理を行う ここまで完了　　1/30
-if(typeof data4 == "undefined"){
-  console.log("error");
+if(typeof data4== 'undefined'){
+  console.log("I can't find data4");
   return;
-  }
+}
 data = "favoriten"+data4+"=; max-age=0";
 document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
@@ -1285,10 +1287,10 @@ document.cookie = "favoritenuml=; max-age=0";
 for(var a=data4+1; a<favoritenuml; a++){
 data = "favoriten"+a+"=";
 data2 = ">>*";
-data1 = cd.indexOf(data)+data.length;
-data2 = cd.indexOf(data2,data1);
+data1 = cd.indexOf(data);
+data2 = cd.indexOf(data2,data1);// maybe faild
 data3 = cd.substring(data1,data2); 
-console.log("data3:"+data3);
+console.log("data:"+data3);
 pdata = "favoriten"+a-1+"="+data3;
 document.cookie = pdata;
 console.log("修正"+a+"完了");
