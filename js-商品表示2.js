@@ -1248,7 +1248,7 @@ n1 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+0;
 datanum2 = datanum;
-for(var a=1; a<favoritenuml; a++){
+for(var a=1; a<=favoritenuml; a++){
 d1 = "favoriten"+a+"=";
 d1 = cd.indexOf(d1)+d1.length;
 console.log("d1:"+d1);
