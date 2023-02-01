@@ -1255,7 +1255,7 @@ console.log("d1:"+d1);
 d2 = cd.indexOf(">>*",d1);
 data = cd.substring(d1,d2);
   console.log("DATA:"+data);
-d3 = data.indexOf("<<*"); //3が間違ってるかも
+d3 = data.indexOf("<<*")+3; //3が間違ってるかも
 console.log("d3:"+d3);
 d4 = d3+data.length-3;
 console.log("d4:"+d4);
