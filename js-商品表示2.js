@@ -1372,7 +1372,6 @@ data = "fovoritenuml="+favoritenuml+">>!";
 console.log("修正完了");
 }
 }
-}
 n3= 0;
 function fevo2(){
 if(n3 == 0){
@@ -1441,7 +1440,6 @@ console.log("修正"+a+"完了");
 favoritenuml-=1;
 data = "fovoritenuml="+favoritenuml+">>!";
 console.log("修正完了");
-}
 }
 }
 n4 = 0;
@@ -1514,7 +1512,6 @@ data = "fovoritenuml="+favoritenuml+">>!";
 console.log("修正完了");
 }
 }
-}
 n5 = 0;
 function fevo4(){
 if(n5 == 0){
@@ -1583,7 +1580,6 @@ console.log("修正"+a+"完了");
 favoritenuml-=1;
 data = "fovoritenuml="+favoritenuml+">>!";
 console.log("修正完了");
-}
 }
 }
 n6 = 0;
@@ -1656,7 +1652,6 @@ data = "fovoritenuml="+favoritenuml+">>!";
 console.log("修正完了");
 }
 }
-}
 n7 = 0;
 function fevo6(){
 if(n7 == 0){
@@ -1725,7 +1720,6 @@ console.log("修正"+a+"完了");
 favoritenuml-=1;
 data = "fovoritenuml="+favoritenuml+">>!";
 console.log("修正完了");
-}
 }
 }
 n8 = 0;
@@ -1798,7 +1792,6 @@ data = "fovoritenuml="+favoritenuml+">>!";
 console.log("修正完了");
 }
 }
-}
 n9 = 0;
 function fevo8(){
 if(n9 == 0){
@@ -1869,7 +1862,6 @@ data = "fovoritenuml="+favoritenuml+">>!";
 console.log("修正完了");
 }
 }
-}
 n10 = 0;
 function fevo9(){
 if(n10 == 0){
@@ -1938,7 +1930,6 @@ console.log("修正"+a+"完了");
 favoritenuml-=1;
 data = "fovoritenuml="+favoritenuml+">>!";
 console.log("修正完了");
-}
 }
 }
 function go(){
