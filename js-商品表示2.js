@@ -1315,7 +1315,7 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n2 == 1){
-document.getElementById("favorite0").style.backgroundColor = "";
+document.getElementById("favorite1").style.backgroundColor = "";
 n2 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+1;
@@ -1369,6 +1369,7 @@ console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
 data = "fovoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 console.log("修正完了");
 }
 }
@@ -1385,7 +1386,7 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n3 == 1){
-  document.getElementById("favorite0").style.backgroundColor = "";
+  document.getElementById("favorite2").style.backgroundColor = "";
 n3 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+2;
@@ -1439,6 +1440,7 @@ console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
 data = "fovoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 console.log("修正完了");
 }
 }
@@ -1455,7 +1457,7 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n4 == 1){
-  document.getElementById("favorite0").style.backgroundColor = "";
+  document.getElementById("favorite3").style.backgroundColor = "";
 n4 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+3;
@@ -1509,6 +1511,7 @@ console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
 data = "fovoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 console.log("修正完了");
 }
 }
@@ -1525,7 +1528,7 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n5 == 1){
-document.getElementById("favorite0").style.backgroundColor = "";
+document.getElementById("favorite4").style.backgroundColor = "";
 n5 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+4;
@@ -1579,6 +1582,7 @@ console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
 data = "fovoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 console.log("修正完了");
 }
 }
@@ -1595,7 +1599,7 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n6 == 1){
-document.getElementById("favorite0").style.backgroundColor = "";
+document.getElementById("favorite5").style.backgroundColor = "";
 n6 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+5;
@@ -1649,6 +1653,7 @@ console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
 data = "fovoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 console.log("修正完了");
 }
 }
@@ -1665,7 +1670,7 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n7 == 1){
-  document.getElementById("favorite0").style.backgroundColor = "";
+  document.getElementById("favorite6").style.backgroundColor = "";
 n7 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+6;
@@ -1719,6 +1724,7 @@ console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
 data = "fovoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 console.log("修正完了");
 }
 }
@@ -1735,7 +1741,7 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n8 == 1){
-  document.getElementById("favorite0").style.backgroundColor = "";
+  document.getElementById("favorite7").style.backgroundColor = "";
 n8 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+7;
@@ -1789,6 +1795,7 @@ console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
 data = "fovoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 console.log("修正完了");
 }
 }
@@ -1805,7 +1812,7 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n9 == 1){
-document.getElementById("favorite0").style.backgroundColor = "";
+document.getElementById("favorite8").style.backgroundColor = "";
 n9 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+8;
@@ -1859,6 +1866,7 @@ console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
 data = "fovoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 console.log("修正完了");
 }
 }
@@ -1875,7 +1883,7 @@ document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 }else if(n10 == 1){
-document.getElementById("favorite0").style.backgroundColor = "";
+document.getElementById("favorite9").style.backgroundColor = "";
 n10 = 0;
 cd = document.cookie;
   datanum  = pagecount*10-10+9
@@ -1929,6 +1937,7 @@ console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
 data = "fovoritenuml="+favoritenuml+">>!";
+document.cookie = data;
 console.log("修正完了");
 }
 }
@@ -1937,6 +1946,7 @@ location.href="index.html";
 }
 numlist='';
 function favocheck(){
+  console.log("favocheckstart");
 numlist = [];
 for(var a=0; a<favoritenuml; a++){
   ctext = "favoriten"+a+"=";
@@ -1946,6 +1956,7 @@ for(var a=0; a<favoritenuml; a++){
   c2 = cd.indexOf(ctext2);
   c3 = cd.indexOf(ctext3);
   checknum = cd.substring(c3+ctext3.length,c2);
+  console.log("checknum:"+checknum);
   if(checknum == sn){
     text = cd.substring(c1+ctext.length,c3);
     numlist.push(text);
@@ -1957,4 +1968,139 @@ function review0(){
   document.getElementById("alll").style.display = "none";
   document.getElementById("alll").style.opacity = "0";
   document.getElementById("alll2").style.display = "block";
+  //changedata[0].name fee express (mjson)
+  var num = pagecount*10-10+0;
+  var name =  mjson.changedata[0].name[num];
+  var fee = mjson.chnagedata[0].fee[num];
+  var express = mjson.changedata[0].express[num];
+  //このあと完成形では写真画像と　★の画像
+  document.getElementById("h4").innerHTML = name;
+  document.getElementById("p").innerHTML = express;
+  document.getElementById("h4").innerHTML = fee;
   }
+  function review1(){
+    document.getElementById("alll").style.display = "none";
+    document.getElementById("alll").style.opacity = "0";
+    document.getElementById("alll2").style.display = "block";
+    //changedata[0].name fee express (mjson)
+    var num = pagecount*10-10+1;
+    var name =  mjson.changedata[0].name[num];
+    var fee = mjson.chnagedata[0].fee[num];
+    var express = mjson.changedata[0].express[num];
+    //このあと完成形では写真画像と　★の画像
+    document.getElementById("h4").innerHTML = name;
+    document.getElementById("p").innerHTML = express;
+    document.getElementById("h4").innerHTML = fee;
+    }
+    function review2(){
+      document.getElementById("alll").style.display = "none";
+      document.getElementById("alll").style.opacity = "0";
+      document.getElementById("alll2").style.display = "block";
+      //changedata[0].name fee express (mjson)
+      var num = pagecount*10-10+2;
+      var name =  mjson.changedata[0].name[num];
+      var fee = mjson.chnagedata[0].fee[num];
+      var express = mjson.changedata[0].express[num];
+      //このあと完成形では写真画像と　★の画像
+      document.getElementById("h4").innerHTML = name;
+      document.getElementById("p").innerHTML = express;
+      document.getElementById("h4").innerHTML = fee;
+      }
+      function review3(){
+        document.getElementById("alll").style.display = "none";
+        document.getElementById("alll").style.opacity = "0";
+        document.getElementById("alll2").style.display = "block";
+        //changedata[0].name fee express (mjson)
+        var num = pagecount*10-10+3;
+        var name =  mjson.changedata[0].name[num];
+        var fee = mjson.chnagedata[0].fee[num];
+        var express = mjson.changedata[0].express[num];
+        //このあと完成形では写真画像と　★の画像
+        document.getElementById("h4").innerHTML = name;
+        document.getElementById("p").innerHTML = express;
+        document.getElementById("h4").innerHTML = fee;
+        }
+        function review4(){
+          document.getElementById("alll").style.display = "none";
+          document.getElementById("alll").style.opacity = "0";
+          document.getElementById("alll2").style.display = "block";
+          //changedata[0].name fee express (mjson)
+          var num = pagecount*10-10+4;
+          var name =  mjson.changedata[0].name[num];
+          var fee = mjson.chnagedata[0].fee[num];
+          var express = mjson.changedata[0].express[num];
+          //このあと完成形では写真画像と　★の画像
+          document.getElementById("h4").innerHTML = name;
+          document.getElementById("p").innerHTML = express;
+          document.getElementById("h4").innerHTML = fee;
+          }
+          function review5(){
+            document.getElementById("alll").style.display = "none";
+            document.getElementById("alll").style.opacity = "0";
+            document.getElementById("alll2").style.display = "block";
+            //changedata[0].name fee express (mjson)
+            var num = pagecount*10-10+5;
+            var name =  mjson.changedata[0].name[num];
+            var fee = mjson.chnagedata[0].fee[num];
+            var express = mjson.changedata[0].express[num];
+            //このあと完成形では写真画像と　★の画像
+            document.getElementById("h4").innerHTML = name;
+            document.getElementById("p").innerHTML = express;
+            document.getElementById("h4").innerHTML = fee;
+            }
+            function review6(){
+              document.getElementById("alll").style.display = "none";
+              document.getElementById("alll").style.opacity = "0";
+              document.getElementById("alll2").style.display = "block";
+              //changedata[0].name fee express (mjson)
+              var num = pagecount*10-10+6;
+              var name =  mjson.changedata[0].name[num];
+              var fee = mjson.chnagedata[0].fee[num];
+              var express = mjson.changedata[0].express[num];
+              //このあと完成形では写真画像と　★の画像
+              document.getElementById("h4").innerHTML = name;
+              document.getElementById("p").innerHTML = express;
+              document.getElementById("h4").innerHTML = fee;
+              }
+              function review7(){
+                document.getElementById("alll").style.display = "none";
+                document.getElementById("alll").style.opacity = "0";
+                document.getElementById("alll2").style.display = "block";
+                //changedata[0].name fee express (mjson)
+                var num = pagecount*10-10+7;
+                var name =  mjson.changedata[0].name[num];
+                var fee = mjson.chnagedata[0].fee[num];
+                var express = mjson.changedata[0].express[num];
+                //このあと完成形では写真画像と　★の画像
+                document.getElementById("h4").innerHTML = name;
+                document.getElementById("p").innerHTML = express;
+                document.getElementById("h4").innerHTML = fee;
+                }
+                function review8(){
+                  document.getElementById("alll").style.display = "none";
+                  document.getElementById("alll").style.opacity = "0";
+                  document.getElementById("alll2").style.display = "block";
+                  //changedata[0].name fee express (mjson)
+                  var num = pagecount*10-10+8;
+                  var name =  mjson.changedata[0].name[num];
+                  var fee = mjson.chnagedata[0].fee[num];
+                  var express = mjson.changedata[0].express[num];
+                  //このあと完成形では写真画像と　★の画像
+                  document.getElementById("h4").innerHTML = name;
+                  document.getElementById("p").innerHTML = express;
+                  document.getElementById("h4").innerHTML = fee;
+                  }
+                  function review9(){
+                    document.getElementById("alll").style.display = "none";
+                    document.getElementById("alll").style.opacity = "0";
+                    document.getElementById("alll2").style.display = "block";
+                    //changedata[0].name fee express (mjson)
+                    var num = pagecount*10-10+9;
+                    var name =  mjson.changedata[0].name[num];
+                    var fee = mjson.chnagedata[0].fee[num];
+                    var express = mjson.changedata[0].express[num];
+                    //このあと完成形では写真画像と　★の画像 とレビュー
+                    document.getElementById("h4").innerHTML = name;
+                    document.getElementById("p").innerHTML = express;
+                    document.getElementById("h4").innerHTML = fee;
+                    }
