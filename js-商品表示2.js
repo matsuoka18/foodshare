@@ -1368,7 +1368,7 @@ document.cookie = pdata;
 console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
-data = "fovoritenuml="+favoritenuml+">>!";
+data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 console.log("修正完了");
 }
@@ -1439,7 +1439,7 @@ document.cookie = pdata;
 console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
-data = "fovoritenuml="+favoritenuml+">>!";
+data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 console.log("修正完了");
 }
@@ -1510,7 +1510,7 @@ document.cookie = pdata;
 console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
-data = "fovoritenuml="+favoritenuml+">>!";
+data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 console.log("修正完了");
 }
@@ -1581,7 +1581,7 @@ document.cookie = pdata;
 console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
-data = "fovoritenuml="+favoritenuml+">>!";
+data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 console.log("修正完了");
 }
@@ -1652,7 +1652,7 @@ document.cookie = pdata;
 console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
-data = "fovoritenuml="+favoritenuml+">>!";
+data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 console.log("修正完了");
 }
@@ -1723,7 +1723,7 @@ document.cookie = pdata;
 console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
-data = "fovoritenuml="+favoritenuml+">>!";
+data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 console.log("修正完了");
 }
@@ -1794,7 +1794,7 @@ document.cookie = pdata;
 console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
-data = "fovoritenuml="+favoritenuml+">>!";
+data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 console.log("修正完了");
 }
@@ -1865,7 +1865,7 @@ document.cookie = pdata;
 console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
-data = "fovoritenuml="+favoritenuml+">>!";
+data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 console.log("修正完了");
 }
@@ -1936,7 +1936,7 @@ document.cookie = pdata;
 console.log("修正"+a+"完了");
 }
 favoritenuml-=1;
-data = "fovoritenuml="+favoritenuml+">>!";
+data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
 console.log("修正完了");
 }
@@ -1971,7 +1971,7 @@ function review0(){
   //changedata[0].name fee express (mjson)
   var num = pagecount*10-10+0;
   var name =  mjson.changedata[0].name[num];
-  var fee = mjson.chnagedata[0].fee[num];
+  var fee = mjson.changedata[0].fee[num];
   var express = mjson.changedata[0].express[num];
   //このあと完成形では写真画像と　★の画像
   document.getElementById("h4").innerHTML = name;
@@ -1985,7 +1985,7 @@ function review0(){
     //changedata[0].name fee express (mjson)
     var num = pagecount*10-10+1;
     var name =  mjson.changedata[0].name[num];
-    var fee = mjson.chnagedata[0].fee[num];
+    var fee = mjson.changedata[0].fee[num];
     var express = mjson.changedata[0].express[num];
     //このあと完成形では写真画像と　★の画像
     document.getElementById("h4").innerHTML = name;
@@ -1999,7 +1999,7 @@ function review0(){
       //changedata[0].name fee express (mjson)
       var num = pagecount*10-10+2;
       var name =  mjson.changedata[0].name[num];
-      var fee = mjson.chnagedata[0].fee[num];
+      var fee = mjson.changedata[0].fee[num];
       var express = mjson.changedata[0].express[num];
       //このあと完成形では写真画像と　★の画像
       document.getElementById("h4").innerHTML = name;
@@ -2013,7 +2013,7 @@ function review0(){
         //changedata[0].name fee express (mjson)
         var num = pagecount*10-10+3;
         var name =  mjson.changedata[0].name[num];
-        var fee = mjson.chnagedata[0].fee[num];
+        var fee = mjson.changedata[0].fee[num];
         var express = mjson.changedata[0].express[num];
         //このあと完成形では写真画像と　★の画像
         document.getElementById("h4").innerHTML = name;
@@ -2027,7 +2027,7 @@ function review0(){
           //changedata[0].name fee express (mjson)
           var num = pagecount*10-10+4;
           var name =  mjson.changedata[0].name[num];
-          var fee = mjson.chnagedata[0].fee[num];
+          var fee = mjson.changedata[0].fee[num];
           var express = mjson.changedata[0].express[num];
           //このあと完成形では写真画像と　★の画像
           document.getElementById("h4").innerHTML = name;
@@ -2041,7 +2041,7 @@ function review0(){
             //changedata[0].name fee express (mjson)
             var num = pagecount*10-10+5;
             var name =  mjson.changedata[0].name[num];
-            var fee = mjson.chnagedata[0].fee[num];
+            var fee = mjson.changedata[0].fee[num];
             var express = mjson.changedata[0].express[num];
             //このあと完成形では写真画像と　★の画像
             document.getElementById("h4").innerHTML = name;
@@ -2055,7 +2055,7 @@ function review0(){
               //changedata[0].name fee express (mjson)
               var num = pagecount*10-10+6;
               var name =  mjson.changedata[0].name[num];
-              var fee = mjson.chnagedata[0].fee[num];
+              var fee = mjson.changedata[0].fee[num];
               var express = mjson.changedata[0].express[num];
               //このあと完成形では写真画像と　★の画像
               document.getElementById("h4").innerHTML = name;
@@ -2069,7 +2069,7 @@ function review0(){
                 //changedata[0].name fee express (mjson)
                 var num = pagecount*10-10+7;
                 var name =  mjson.changedata[0].name[num];
-                var fee = mjson.chnagedata[0].fee[num];
+                var fee = mjson.changedata[0].fee[num];
                 var express = mjson.changedata[0].express[num];
                 //このあと完成形では写真画像と　★の画像
                 document.getElementById("h4").innerHTML = name;
@@ -2083,7 +2083,7 @@ function review0(){
                   //changedata[0].name fee express (mjson)
                   var num = pagecount*10-10+8;
                   var name =  mjson.changedata[0].name[num];
-                  var fee = mjson.chnagedata[0].fee[num];
+                  var fee = mjson.changedata[0].fee[num];
                   var express = mjson.changedata[0].express[num];
                   //このあと完成形では写真画像と　★の画像
                   document.getElementById("h4").innerHTML = name;
@@ -2097,7 +2097,7 @@ function review0(){
                     //changedata[0].name fee express (mjson)
                     var num = pagecount*10-10+9;
                     var name =  mjson.changedata[0].name[num];
-                    var fee = mjson.chnagedata[0].fee[num];
+                    var fee = mjson.changedata[0].fee[num];
                     var express = mjson.changedata[0].express[num];
                     //このあと完成形では写真画像と　★の画像 とレビュー
                     document.getElementById("h4").innerHTML = name;
