@@ -269,6 +269,9 @@ console.log(cd);
       num8 = cd.indexOf(">>!");
       favoritenuml = cd.substring(num7+13,num8);
       favoritenuml = parseInt(favoritenuml);
+      if(favoritenuml == "NaN"){
+        console.log("favoritenuml ERROR");
+      }
       console.log("favoritenuml:"+favoritenuml);
       }
       if(favoritenuml > 0){
@@ -1974,7 +1977,7 @@ function review0(){
   var fee = mjson.changedata[0].fee[num];
   var express = mjson.changedata[0].express[num];
   //このあと完成形では写真画像と　★の画像
-  document.getElementById("h4").innerHTML = name;
+  document.getElementById("h2").innerHTML = name;
   document.getElementById("p").innerHTML = express;
   document.getElementById("h4").innerHTML = fee;
   }
@@ -1988,7 +1991,7 @@ function review0(){
     var fee = mjson.changedata[0].fee[num];
     var express = mjson.changedata[0].express[num];
     //このあと完成形では写真画像と　★の画像
-    document.getElementById("h4").innerHTML = name;
+    document.getElementById("h2").innerHTML = name;
     document.getElementById("p").innerHTML = express;
     document.getElementById("h4").innerHTML = fee;
     }
@@ -2002,7 +2005,7 @@ function review0(){
       var fee = mjson.changedata[0].fee[num];
       var express = mjson.changedata[0].express[num];
       //このあと完成形では写真画像と　★の画像
-      document.getElementById("h4").innerHTML = name;
+      document.getElementById("h2").innerHTML = name;
       document.getElementById("p").innerHTML = express;
       document.getElementById("h4").innerHTML = fee;
       }
@@ -2016,7 +2019,7 @@ function review0(){
         var fee = mjson.changedata[0].fee[num];
         var express = mjson.changedata[0].express[num];
         //このあと完成形では写真画像と　★の画像
-        document.getElementById("h4").innerHTML = name;
+        document.getElementById("h2").innerHTML = name;
         document.getElementById("p").innerHTML = express;
         document.getElementById("h4").innerHTML = fee;
         }
@@ -2030,7 +2033,7 @@ function review0(){
           var fee = mjson.changedata[0].fee[num];
           var express = mjson.changedata[0].express[num];
           //このあと完成形では写真画像と　★の画像
-          document.getElementById("h4").innerHTML = name;
+          document.getElementById("h2").innerHTML = name;
           document.getElementById("p").innerHTML = express;
           document.getElementById("h4").innerHTML = fee;
           }
@@ -2044,7 +2047,7 @@ function review0(){
             var fee = mjson.changedata[0].fee[num];
             var express = mjson.changedata[0].express[num];
             //このあと完成形では写真画像と　★の画像
-            document.getElementById("h4").innerHTML = name;
+            document.getElementById("h2").innerHTML = name;
             document.getElementById("p").innerHTML = express;
             document.getElementById("h4").innerHTML = fee;
             }
@@ -2058,7 +2061,7 @@ function review0(){
               var fee = mjson.changedata[0].fee[num];
               var express = mjson.changedata[0].express[num];
               //このあと完成形では写真画像と　★の画像
-              document.getElementById("h4").innerHTML = name;
+              document.getElementById("h2").innerHTML = name;
               document.getElementById("p").innerHTML = express;
               document.getElementById("h4").innerHTML = fee;
               }
@@ -2072,7 +2075,7 @@ function review0(){
                 var fee = mjson.changedata[0].fee[num];
                 var express = mjson.changedata[0].express[num];
                 //このあと完成形では写真画像と　★の画像
-                document.getElementById("h4").innerHTML = name;
+                document.getElementById("h2").innerHTML = name;
                 document.getElementById("p").innerHTML = express;
                 document.getElementById("h4").innerHTML = fee;
                 }
@@ -2086,7 +2089,7 @@ function review0(){
                   var fee = mjson.changedata[0].fee[num];
                   var express = mjson.changedata[0].express[num];
                   //このあと完成形では写真画像と　★の画像
-                  document.getElementById("h4").innerHTML = name;
+                  document.getElementById("h2").innerHTML = name;
                   document.getElementById("p").innerHTML = express;
                   document.getElementById("h4").innerHTML = fee;
                   }
@@ -2100,7 +2103,7 @@ function review0(){
                     var fee = mjson.changedata[0].fee[num];
                     var express = mjson.changedata[0].express[num];
                     //このあと完成形では写真画像と　★の画像 とレビュー
-                    document.getElementById("h4").innerHTML = name;
+                    document.getElementById("h2").innerHTML = name;
                     document.getElementById("p").innerHTML = express;
                     document.getElementById("h4").innerHTML = fee;
                     }
