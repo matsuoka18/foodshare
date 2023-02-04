@@ -614,7 +614,7 @@ function firstmenu2(){
 console.log("menu2 ok");
 fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
   method:"GET",
-  moe:"cors"
+  mode:"cors"
 })
 .then(response =>{
   if(response.ok){
