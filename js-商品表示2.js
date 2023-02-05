@@ -1123,7 +1123,7 @@ document.cookie = cod2;
 function back(){
 document.getElementById("alll").style.display = "block";
 document.getElementById("alll").style.opacity = "1";
-document.getElementById("alll2").style.display = "none";
+document.getElementById("alll2").style.display = "none"; //
 }
 n = 0;
 function reviewb(){
@@ -1288,16 +1288,28 @@ document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
 //空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
 //上記の処理をforを用いて実行 ここも完了.   1/30
+if(favoritenuml == 1){
+  console.log("修正完了...");
+  favoritenuml = 0;
+  document.cookie = "favoritenuml=0>>!";
+  return;
+}
 for(var a=data4+1; a<=favoritenuml; a++){
 data = "favoriten"+a+"=";
 data2 = ">>*";
-data1 = cd.indexOf(data);
-data2 = cd.indexOf(data2,data1);
+data1 = cd.indexOf(data)+data.length;
+data2 = cd.indexOf(data2,data1)+data2.length;
 data3 = cd.substring(data1,data2); 
-console.log("dataa:"+data3);
-pdata = "favoriten"+a-1+"="+data3;
+console.log("修正前データ:"+data3);
+ddata = "favoriten"+a+"=; max-age=0";
+document.cookie = ddata;
+console.log("修正前データ削除完了");
+a = parseInt(a);
+a2 = a-1;
+pdata = "favoriten"+a2+"="+data3;
+console.log("pdata:"+pdata);
 document.cookie = pdata;
-console.log("修正"+a+"完了");
+console.log("修正"+a+"完了→"+a2);
 }
 favoritenuml-=1;
 data = "favoritenuml="+favoritenuml+">>!";
@@ -1359,16 +1371,28 @@ document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
 //空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
 //上記の処理をforを用いて実行 ここも完了.   1/30
+if(favoritenuml == 1){
+  console.log("修正完了...");
+  favoritenuml = 0;
+  document.cookie = "favoritenuml=0>>!";
+  return;
+}
 for(var a=data4+1; a<=favoritenuml; a++){
 data = "favoriten"+a+"=";
 data2 = ">>*";
-data1 = cd.indexOf(data);
-data2 = cd.indexOf(data2,data1);
+data1 = cd.indexOf(data)+data.length;
+data2 = cd.indexOf(data2,data1)+data2.length;
 data3 = cd.substring(data1,data2); 
-console.log("dataa:"+data3);
-pdata = "favoriten"+a-1+"="+data3;
+console.log("修正前データ:"+data3);
+ddata = "favoriten"+a+"=; max-age=0";
+document.cookie = ddata;
+console.log("修正前データ削除完了");
+a = parseInt(a);
+a2 = a-1;
+pdata = "favoriten"+a2+"="+data3;
+console.log("pdata:"+pdata);
 document.cookie = pdata;
-console.log("修正"+a+"完了");
+console.log("修正"+a+"完了→"+a2);
 }
 favoritenuml-=1;
 data = "favoritenuml="+favoritenuml+">>!";
@@ -1430,16 +1454,28 @@ document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
 //空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
 //上記の処理をforを用いて実行 ここも完了.   1/30
+if(favoritenuml == 1){
+  console.log("修正完了...");
+  favoritenuml = 0;
+  document.cookie = "favoritenuml=0>>!";
+  return;
+}
 for(var a=data4+1; a<=favoritenuml; a++){
 data = "favoriten"+a+"=";
 data2 = ">>*";
-data1 = cd.indexOf(data);
-data2 = cd.indexOf(data2,data1);
+data1 = cd.indexOf(data)+data.length;
+data2 = cd.indexOf(data2,data1)+data2.length;
 data3 = cd.substring(data1,data2); 
-console.log("dataa:"+data3);
-pdata = "favoriten"+a-1+"="+data3;
+console.log("修正前データ:"+data3);
+ddata = "favoriten"+a+"=; max-age=0";
+document.cookie = ddata;
+console.log("修正前データ削除完了");
+a = parseInt(a);
+a2 = a-1;
+pdata = "favoriten"+a2+"="+data3;
+console.log("pdata:"+pdata);
 document.cookie = pdata;
-console.log("修正"+a+"完了");
+console.log("修正"+a+"完了→"+a2);
 }
 favoritenuml-=1;
 data = "favoritenuml="+favoritenuml+">>!";
@@ -1501,16 +1537,28 @@ document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
 //空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
 //上記の処理をforを用いて実行 ここも完了.   1/30
+if(favoritenuml == 1){
+  console.log("修正完了...");
+  favoritenuml = 0;
+  document.cookie = "favoritenuml=0>>!";
+  return;
+}
 for(var a=data4+1; a<=favoritenuml; a++){
 data = "favoriten"+a+"=";
 data2 = ">>*";
-data1 = cd.indexOf(data);
-data2 = cd.indexOf(data2,data1);
+data1 = cd.indexOf(data)+data.length;
+data2 = cd.indexOf(data2,data1)+data2.length;
 data3 = cd.substring(data1,data2); 
-console.log("dataa:"+data3);
-pdata = "favoriten"+a-1+"="+data3;
+console.log("修正前データ:"+data3);
+ddata = "favoriten"+a+"=; max-age=0";
+document.cookie = ddata;
+console.log("修正前データ削除完了");
+a = parseInt(a);
+a2 = a-1;
+pdata = "favoriten"+a2+"="+data3;
+console.log("pdata:"+pdata);
 document.cookie = pdata;
-console.log("修正"+a+"完了");
+console.log("修正"+a+"完了→"+a2);
 }
 favoritenuml-=1;
 data = "favoritenuml="+favoritenuml+">>!";
@@ -1572,16 +1620,28 @@ document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
 //空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
 //上記の処理をforを用いて実行 ここも完了.   1/30
+if(favoritenuml == 1){
+  console.log("修正完了...");
+  favoritenuml = 0;
+  document.cookie = "favoritenuml=0>>!";
+  return;
+}
 for(var a=data4+1; a<=favoritenuml; a++){
 data = "favoriten"+a+"=";
 data2 = ">>*";
-data1 = cd.indexOf(data);
-data2 = cd.indexOf(data2,data1);
+data1 = cd.indexOf(data)+data.length;
+data2 = cd.indexOf(data2,data1)+data2.length;
 data3 = cd.substring(data1,data2); 
-console.log("dataa:"+data3);
-pdata = "favoriten"+a-1+"="+data3;
+console.log("修正前データ:"+data3);
+ddata = "favoriten"+a+"=; max-age=0";
+document.cookie = ddata;
+console.log("修正前データ削除完了");
+a = parseInt(a);
+a2 = a-1;
+pdata = "favoriten"+a2+"="+data3;
+console.log("pdata:"+pdata);
 document.cookie = pdata;
-console.log("修正"+a+"完了");
+console.log("修正"+a+"完了→"+a2);
 }
 favoritenuml-=1;
 data = "favoritenuml="+favoritenuml+">>!";
@@ -1643,16 +1703,28 @@ document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
 //空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
 //上記の処理をforを用いて実行 ここも完了.   1/30
+if(favoritenuml == 1){
+  console.log("修正完了...");
+  favoritenuml = 0;
+  document.cookie = "favoritenuml=0>>!";
+  return;
+}
 for(var a=data4+1; a<=favoritenuml; a++){
 data = "favoriten"+a+"=";
 data2 = ">>*";
-data1 = cd.indexOf(data);
-data2 = cd.indexOf(data2,data1);
+data1 = cd.indexOf(data)+data.length;
+data2 = cd.indexOf(data2,data1)+data2.length;
 data3 = cd.substring(data1,data2); 
-console.log("dataa:"+data3);
-pdata = "favoriten"+a-1+"="+data3;
+console.log("修正前データ:"+data3);
+ddata = "favoriten"+a+"=; max-age=0";
+document.cookie = ddata;
+console.log("修正前データ削除完了");
+a = parseInt(a);
+a2 = a-1;
+pdata = "favoriten"+a2+"="+data3;
+console.log("pdata:"+pdata);
 document.cookie = pdata;
-console.log("修正"+a+"完了");
+console.log("修正"+a+"完了→"+a2);
 }
 favoritenuml-=1;
 data = "favoritenuml="+favoritenuml+">>!";
@@ -1714,16 +1786,28 @@ document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
 //空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
 //上記の処理をforを用いて実行 ここも完了.   1/30
+if(favoritenuml == 1){
+  console.log("修正完了...");
+  favoritenuml = 0;
+  document.cookie = "favoritenuml=0>>!";
+  return;
+}
 for(var a=data4+1; a<=favoritenuml; a++){
 data = "favoriten"+a+"=";
 data2 = ">>*";
-data1 = cd.indexOf(data);
-data2 = cd.indexOf(data2,data1);
+data1 = cd.indexOf(data)+data.length;
+data2 = cd.indexOf(data2,data1)+data2.length;
 data3 = cd.substring(data1,data2); 
-console.log("dataa:"+data3);
-pdata = "favoriten"+a-1+"="+data3;
+console.log("修正前データ:"+data3);
+ddata = "favoriten"+a+"=; max-age=0";
+document.cookie = ddata;
+console.log("修正前データ削除完了");
+a = parseInt(a);
+a2 = a-1;
+pdata = "favoriten"+a2+"="+data3;
+console.log("pdata:"+pdata);
 document.cookie = pdata;
-console.log("修正"+a+"完了");
+console.log("修正"+a+"完了→"+a2);
 }
 favoritenuml-=1;
 data = "favoritenuml="+favoritenuml+">>!";
@@ -1785,16 +1869,28 @@ document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
 //空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
 //上記の処理をforを用いて実行 ここも完了.   1/30
+if(favoritenuml == 1){
+  console.log("修正完了...");
+  favoritenuml = 0;
+  document.cookie = "favoritenuml=0>>!";
+  return;
+}
 for(var a=data4+1; a<=favoritenuml; a++){
 data = "favoriten"+a+"=";
 data2 = ">>*";
-data1 = cd.indexOf(data);
-data2 = cd.indexOf(data2,data1);
+data1 = cd.indexOf(data)+data.length;
+data2 = cd.indexOf(data2,data1)+data2.length;
 data3 = cd.substring(data1,data2); 
-console.log("dataa:"+data3);
-pdata = "favoriten"+a-1+"="+data3;
+console.log("修正前データ:"+data3);
+ddata = "favoriten"+a+"=; max-age=0";
+document.cookie = ddata;
+console.log("修正前データ削除完了");
+a = parseInt(a);
+a2 = a-1;
+pdata = "favoriten"+a2+"="+data3;
+console.log("pdata:"+pdata);
 document.cookie = pdata;
-console.log("修正"+a+"完了");
+console.log("修正"+a+"完了→"+a2);
 }
 favoritenuml-=1;
 data = "favoritenuml="+favoritenuml+">>!";
@@ -1856,16 +1952,28 @@ document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
 //空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
 //上記の処理をforを用いて実行 ここも完了.   1/30
+if(favoritenuml == 1){
+  console.log("修正完了...");
+  favoritenuml = 0;
+  document.cookie = "favoritenuml=0>>!";
+  return;
+}
 for(var a=data4+1; a<=favoritenuml; a++){
 data = "favoriten"+a+"=";
 data2 = ">>*";
-data1 = cd.indexOf(data);
-data2 = cd.indexOf(data2,data1);
+data1 = cd.indexOf(data)+data.length;
+data2 = cd.indexOf(data2,data1)+data2.length;
 data3 = cd.substring(data1,data2); 
-console.log("dataa:"+data3);
-pdata = "favoriten"+a-1+"="+data3;
+console.log("修正前データ:"+data3);
+ddata = "favoriten"+a+"=; max-age=0";
+document.cookie = ddata;
+console.log("修正前データ削除完了");
+a = parseInt(a);
+a2 = a-1;
+pdata = "favoriten"+a2+"="+data3;
+console.log("pdata:"+pdata);
 document.cookie = pdata;
-console.log("修正"+a+"完了");
+console.log("修正"+a+"完了→"+a2);
 }
 favoritenuml-=1;
 data = "favoritenuml="+favoritenuml+">>!";
@@ -1927,16 +2035,28 @@ document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
 //空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
 //上記の処理をforを用いて実行 ここも完了.   1/30
+if(favoritenuml == 1){
+  console.log("修正完了...");
+  favoritenuml = 0;
+  document.cookie = "favoritenuml=0>>!";
+  return;
+}
 for(var a=data4+1; a<=favoritenuml; a++){
 data = "favoriten"+a+"=";
 data2 = ">>*";
-data1 = cd.indexOf(data);
-data2 = cd.indexOf(data2,data1);
+data1 = cd.indexOf(data)+data.length;
+data2 = cd.indexOf(data2,data1)+data2.length;
 data3 = cd.substring(data1,data2); 
-console.log("dataa:"+data3);
-pdata = "favoriten"+a-1+"="+data3;
+console.log("修正前データ:"+data3);
+ddata = "favoriten"+a+"=; max-age=0";
+document.cookie = ddata;
+console.log("修正前データ削除完了");
+a = parseInt(a);
+a2 = a-1;
+pdata = "favoriten"+a2+"="+data3;
+console.log("pdata:"+pdata);
 document.cookie = pdata;
-console.log("修正"+a+"完了");
+console.log("修正"+a+"完了→"+a2);
 }
 favoritenuml-=1;
 data = "favoritenuml="+favoritenuml+">>!";
@@ -1944,6 +2064,8 @@ document.cookie = data;
 console.log("修正完了");
 }
 }
+
+
 function go(){
 location.href="index.html";
 }
