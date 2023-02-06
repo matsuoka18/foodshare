@@ -1,3 +1,4 @@
+
 function but1() {
   document.getElementById("but1").style.backgroundColor = "#C6AC8F";
   document.getElementById("but1").style.border = "none";
@@ -241,9 +242,10 @@ function but6() {
   document.getElementById("allshow").style.display = "none";
 }
 sn='';
+sn2 ='';
 cd="";
 function start(){
-  cd= document.cookie;
+ /* cd= document.cookie;
  // cd = 'branch=menu|; menumemo={"shop1":[0,22,38],"shop7":[14,36,52],"shop13":[4,26,42],"shop19":[1,23,39],"shop25":[1,23,39],"shop31":[1,23,39],"shop37":[1,23,39],"shop43":[1,23,39],"shop49":[1,23,39],"shop55":[23,39],"shop61":[23,39],"shop67":[23,39],"shop73":[23,39],"shop79":[23,39],"last":[79]}-; loginID=%E5%85%AB%E7%99%BE%E5%B1%8B!; pass=%E3%82%84%E3%81%BE%E3%81%8D?; shopnumber=85#; searchname=hello^;searchnum=85$';
 console.log(cd);
       num1 = cd.indexOf("searchnum=");
@@ -274,17 +276,16 @@ console.log(cd);
       }
       console.log("favoritenuml:"+favoritenuml);
       }
-      if(favoritenuml > 0){
-        favocheck();
-      }
+
       sn = cd.substring(num1+10,num2);
       sn2 = decodeURI(cd.substring(num3+11,num4));
-      console.log(sn+":"+sn2);
    document.getElementById("shopname").innerHTML = sn2;
    document.getElementById("shopname2").innerHTML = sn2;  
       sn = cd.substring(num1+10,num2);
-      sn2 = decodeURI(cd.substring(num3+11,num4));
-     console.log(sn+":"+sn2);
+      sn2 = decodeURI(cd.substring(num3+11,num4));*/
+            sn = 1;
+      sn2 ="hhh";
+      console.log(sn+":"+sn2);
      setTimeout(startt,1000)
      }
      function startt(){
@@ -428,6 +429,10 @@ text = "favorite"+number;
 document.getElementById(text).style.backgroundColor = "pink";
 }
 }
+if(favoritenuml > 0){
+  console.log("favocheck");
+  favocheck();
+}
 }
 messagep = '';
 function plus(){
@@ -482,7 +487,16 @@ mname = mjson.changedata[0].name[a];
    lastn = last2;
    messagep = "end";
  }
-
+ for(var a = 0; a<numlist2; a++){
+  var num = numlist[a];
+  if(last2 < num < lastn){
+    num2 = pagecount*10-10;
+    num = num-num2;
+    console.log("num"+num);
+    var text = "favorite"+num;
+    document.getElementById(text).style.backgroundColor = "pink";
+  }
+}
 }
 function mina(){
 //毎回cookieを呼び出してお気に入りが消えないように[商品番号をcookieに]
@@ -546,6 +560,16 @@ for(var a =0; a<favoritenuml; a++){
   }
 if(messagep == "first"){
   lastn = last2;
+}
+for(var a = 0; a<numlist2; a++){
+  var num = numlist[a];
+  if(last2 < num < lastn){
+    num2 = pagecount*10-10;
+    num = num-num2;
+    console.log("num"+num);
+    var text = "favorite"+num;
+    document.getElementById(text).style.backgroundColor = "pink";
+  }
 }
 }
 function start2(){
@@ -1214,13 +1238,18 @@ nn4++;
 }
 }
 function rsend(){
+ json =  [{"total":2.6,"rn":[2,0,2,0,1],"review1":["a","hello","hello","hello","hello","hello","hello"],"review2":["b","Hello World","Hello World","Hello World","Hello World","Hello World","Hello World"]}]
 text1 = document.getElementById("text1").value;
 text2 = document.getElementById("text2").value;
-url = "";
+url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 data = [{
-"text1":text1,
-"text2":text2,
-"text3":rn
+"review":text1,
+"review2":text2,
+"reviewnum":rn,
+"reviewname":reviewname,
+"rename":sn2,
+"renamenum":sn,
+"branch":"review"
 }]
 params = {
 "method":"post",
@@ -1234,6 +1263,103 @@ console.log("内容："+text1+"："+text2+"/"+rn)
 document.getElementById("text1").value = "";
 document.getElementById("text2").value = "";
 }
+
+function getreview(){
+  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  data = [{
+    "branch":"getreview",
+    "rename":sn2,
+    "renamenum":sn,
+    "reviewname":reviewname
+  }]
+  params = {
+    "method":"post",
+    "mode":"no-cors",
+    "Content-Type":"application/json",
+    "body":JSON.stringify(data)
+  }
+  fetch(url,params);
+  console.log("getreview request>>");
+  setTimeout(getreview2,2000);
+}
+function getreview2(){
+  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  fetch(url,{
+    "method":"GET",
+    "mode":"cors",
+  })
+  .then(response =>{
+    if(response.ok){
+      return response.json()
+    }
+  })
+  .then(resJson =>{
+    json = JSON.stringify(resJson);
+    json = JSON.parse(json);
+    console.log(json);
+    getreview3();
+  })
+  .catch(error =>{
+    alert("通信エラー");
+    console.log("通信エラー");
+   })
+}
+
+function getreview3(){
+  if(json[0].message == "ERROR"){
+    alert("レビューがまだありません");
+    alll3.insertAdjacentHTML("beforeend","<h4>レビューはまだありません</h4>");
+  }
+  total = json[0].total;
+document.getElementById("sogo").innerHTML = json[0].total;
+document.getElementById("rnum1").innerHTML = json[0].rn[0];
+document.getElementById("rnum2").innerHTML = json[0].rn[1];
+document.getElementById("rnum3").innerHTML = json[0].rn[2];
+document.getElementById("rnum4").innerHTML = json[0].rn[3];
+document.getElementById("rnum5").innerHTML = json[0].rn[4];
+length = json[0].review1.length;
+//星はstar2に
+if(length > 10){
+ last = 9;
+}else{
+  last = length;
+  document.getElementById("ppp").innerHTML = last+"件表示";
+  final= '';
+}
+for(var a=0; a<last; a+=2){
+  total2 = json[0].review3[a];
+  total22 = json[0].review3[a+1]
+  review1 = json[0].review1[a];
+  review11 = json[0].review1[a+1];
+  review2 = json[0].review2[a];
+  review22 = json[0].review2[a+1];
+data =  "<div class="+"\""+"r3"+"\""+"><img src="+"\""+"star"+total2+".PNG"+"\"" +"id="+"\""+"rstar"+"\""+"class="+"\""+"star"+"\""+"><div class="+"\""+"r33"+"\""+" id="+"\""+"r33"+"\""+">"+review1+"</div><div class="+"\""+"r333"+"\""+" id="+"\""+"r333"+"\""+">"+review2+"</div></div><div class="+"\""+"r32"+"\""+"><img src="+"\""+"star"+total22+".PNG"+"\""+" id="+"\""+"rstar"+"\""+" class="+"\""+"star"+"\""+"><div class="+"\""+"r33"+"\""+" id="+"\""+"r33"+"\""+">"+review11+"</div><div class="+"\""+"r333"+"\""+" id="+"\""+"r333"+"\""+">"+review22+"</div></div>";
+alll3.insertAdjacentHTML("beforeend",data);
+}
+}
+function rallshow(){
+if(typeof final == 'undefined'){
+  console.log("length:"+length)
+}else{
+  alert("すべて表示しました");
+  return;
+}
+document.getElementById("ppp").innerHTML = "全表示";
+for(var a = 10; a<length; a+=2){
+  total2 = json[0].review3[a];
+  total22 = json[0].review3[a+1]
+  review1 = json[0].review1[a];
+  review11 = json[0].review1[a+1];
+  review2 = json[0].review2[a];
+  review22 = json[0].review2[a+1];
+data =  "<div class="+"\""+"r3"+"\""+"><img src="+"\""+"star"+total2+".PNG"+"\"" +"id="+"\""+"rstar"+"\""+"class="+"\""+"star"+"\""+"><div class="+"\""+"r33"+"\""+" id="+"\""+"r33"+"\""+">"+review1+"</div><div class="+"\""+"r333"+"\""+" id="+"\""+"r333"+"\""+">"+review2+"</div></div><div class="+"\""+"r32"+"\""+"><img src="+"\""+"star"+total22+".PNG"+"\""+" id="+"\""+"rstar"+"\""+" class="+"\""+"star"+"\""+"><div class="+"\""+"r33"+"\""+" id="+"\""+"r33"+"\""+">"+review11+"<div><div class="+"\""+"r333"+"\""+" id="+"\""+"r333"+"\""+">"+review22+"</div></div>";
+alll3.insertAdjacentHTML("beforeend",data);
+}
+final='';
+}
+
+
+ 
 n1 = 0;
 function fevo0(){
 if(n1 == 0){
@@ -1328,7 +1454,7 @@ data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
 document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
+document.cookie = data;var name
 }else if(n2 == 1){
 document.getElementById("favorite1").style.backgroundColor = "";
 n2 = 0;
@@ -2042,10 +2168,7 @@ if(favoritenuml == 1){
   return;
 }
 for(var a=data4+1; a<=favoritenuml; a++){
-data = "favoriten"+a+"=";
-data2 = ">>*";
-data1 = cd.indexOf(data)+data.length;
-data2 = cd.indexOf(data2,data1)+data2.length;
+data = "favoriten"+a+"=";var name
 data3 = cd.substring(data1,data2); 
 console.log("修正前データ:"+data3);
 ddata = "favoriten"+a+"=; max-age=0";
@@ -2058,10 +2181,7 @@ console.log("pdata:"+pdata);
 document.cookie = pdata;
 console.log("修正"+a+"完了→"+a2);
 }
-favoritenuml-=1;
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-console.log("修正完了");
+favoritenuml-=1;var name
 }
 }
 
@@ -2070,16 +2190,17 @@ function go(){
 location.href="index.html";
 }
 numlist='';
+numlist2 = '';
 function favocheck(){
   console.log("favocheckstart");
 numlist = [];
 for(var a=0; a<favoritenuml; a++){
   ctext = "favoriten"+a+"=";
-  ctext2 = ">>*";
   ctext3 = "<<*";
+  ctext2 = ">>*";
   c1 = cd.indexOf(ctext);
-  c2 = cd.indexOf(ctext2);
-  c3 = cd.indexOf(ctext3);
+  c3 = cd.indexOf(ctext3,c1);
+  c2 = cd.indexOf(ctext2,c1);
   checknum = cd.substring(c3+ctext3.length,c2);
   console.log("checknum:"+checknum);
   if(checknum == sn){
@@ -2087,21 +2208,53 @@ for(var a=0; a<favoritenuml; a++){
     numlist.push(text);
   }
 }
-console.log("numlist："+numlist);
+console.log("numlist："+numlist);var name
+numlist2 = numlist.length;
+for(var a = 0; a<numlist2; a++){
+  var num = numlist[a];
+  if(num <10){
+    var text = "favorite"+num;
+    document.getElementById(text).style.backgroundColor = "pink";
+    if(num == 0){
+      n1 = 1;
+    }else if(num ==1){
+      n2 = 1;
+    }else if(num == 2){
+      n3 = 1;
+    }else if(num == 3){
+      n4 = 1;
+    }else if(num == 4){
+      n5 = 1;
+    }else if(num == 5){
+      n6 = 1;
+    }else if(num == 6){
+      n7 = 1;
+    }else if(num == 7){
+      n8 = 1;
+    }else if(num == 8){
+      n9 = 1;
+    }else if(num == 9){
+      n10 = 1;
+    }
+  }
 }
+
+}
+reviewnme = '';
 function review0(){
   document.getElementById("alll").style.display = "none";
   document.getElementById("alll").style.opacity = "0";
   document.getElementById("alll2").style.display = "block";
   //changedata[0].name fee express (mjson)
   var num = pagecount*10-10+0;
-  var name =  mjson.changedata[0].name[num];
+  reviewname =  mjson.changedata[0].name[num];
   var fee = mjson.changedata[0].fee[num];
   var express = mjson.changedata[0].express[num];
   //このあと完成形では写真画像と　★の画像
-  document.getElementById("h2").innerHTML = name;
+  document.getElementById("h2").innerHTML = reviewname;
   document.getElementById("p").innerHTML = express;
   document.getElementById("h4").innerHTML = fee;
+  getreview();
   }
   function review1(){
     document.getElementById("alll").style.display = "none";
@@ -2109,13 +2262,14 @@ function review0(){
     document.getElementById("alll2").style.display = "block";
     //changedata[0].name fee express (mjson)
     var num = pagecount*10-10+1;
-    var name =  mjson.changedata[0].name[num];
+    reviewname =  mjson.changedata[0].name[num];
     var fee = mjson.changedata[0].fee[num];
     var express = mjson.changedata[0].express[num];
     //このあと完成形では写真画像と　★の画像
-    document.getElementById("h2").innerHTML = name;
+    document.getElementById("h2").innerHTML = reviewname;
     document.getElementById("p").innerHTML = express;
     document.getElementById("h4").innerHTML = fee;
+    getreview();
     }
     function review2(){
       document.getElementById("alll").style.display = "none";
@@ -2123,13 +2277,14 @@ function review0(){
       document.getElementById("alll2").style.display = "block";
       //changedata[0].name fee express (mjson)
       var num = pagecount*10-10+2;
-      var name =  mjson.changedata[0].name[num];
+      reviewname =  mjson.changedata[0].name[num];
       var fee = mjson.changedata[0].fee[num];
       var express = mjson.changedata[0].express[num];
       //このあと完成形では写真画像と　★の画像
-      document.getElementById("h2").innerHTML = name;
+      document.getElementById("h2").innerHTML = reviewname;
       document.getElementById("p").innerHTML = express;
       document.getElementById("h4").innerHTML = fee;
+      getreview();
       }
       function review3(){
         document.getElementById("alll").style.display = "none";
@@ -2137,13 +2292,14 @@ function review0(){
         document.getElementById("alll2").style.display = "block";
         //changedata[0].name fee express (mjson)
         var num = pagecount*10-10+3;
-        var name =  mjson.changedata[0].name[num];
+        reviewname =  mjson.changedata[0].name[num];
         var fee = mjson.changedata[0].fee[num];
         var express = mjson.changedata[0].express[num];
         //このあと完成形では写真画像と　★の画像
-        document.getElementById("h2").innerHTML = name;
+        document.getElementById("h2").innerHTML = reviewname;
         document.getElementById("p").innerHTML = express;
         document.getElementById("h4").innerHTML = fee;
+        getreview();
         }
         function review4(){
           document.getElementById("alll").style.display = "none";
@@ -2151,13 +2307,14 @@ function review0(){
           document.getElementById("alll2").style.display = "block";
           //changedata[0].name fee express (mjson)
           var num = pagecount*10-10+4;
-          var name =  mjson.changedata[0].name[num];
+          reviewname =  mjson.changedata[0].name[num];
           var fee = mjson.changedata[0].fee[num];
           var express = mjson.changedata[0].express[num];
           //このあと完成形では写真画像と　★の画像
-          document.getElementById("h2").innerHTML = name;
+          document.getElementById("h2").innerHTML = reviewname;
           document.getElementById("p").innerHTML = express;
           document.getElementById("h4").innerHTML = fee;
+          getreview();
           }
           function review5(){
             document.getElementById("alll").style.display = "none";
@@ -2165,13 +2322,14 @@ function review0(){
             document.getElementById("alll2").style.display = "block";
             //changedata[0].name fee express (mjson)
             var num = pagecount*10-10+5;
-            var name =  mjson.changedata[0].name[num];
+            reviewname =  mjson.changedata[0].name[num];
             var fee = mjson.changedata[0].fee[num];
             var express = mjson.changedata[0].express[num];
             //このあと完成形では写真画像と　★の画像
-            document.getElementById("h2").innerHTML = name;
+            document.getElementById("h2").innerHTML = reviewname;
             document.getElementById("p").innerHTML = express;
             document.getElementById("h4").innerHTML = fee;
+            getreview();
             }
             function review6(){
               document.getElementById("alll").style.display = "none";
@@ -2179,13 +2337,14 @@ function review0(){
               document.getElementById("alll2").style.display = "block";
               //changedata[0].name fee express (mjson)
               var num = pagecount*10-10+6;
-              var name =  mjson.changedata[0].name[num];
+              reviewname =  mjson.changedata[0].name[num];
               var fee = mjson.changedata[0].fee[num];
               var express = mjson.changedata[0].express[num];
               //このあと完成形では写真画像と　★の画像
-              document.getElementById("h2").innerHTML = name;
+              document.getElementById("h2").innerHTML = reviewname;
               document.getElementById("p").innerHTML = express;
               document.getElementById("h4").innerHTML = fee;
+              getreview();
               }
               function review7(){
                 document.getElementById("alll").style.display = "none";
@@ -2193,13 +2352,14 @@ function review0(){
                 document.getElementById("alll2").style.display = "block";
                 //changedata[0].name fee express (mjson)
                 var num = pagecount*10-10+7;
-                var name =  mjson.changedata[0].name[num];
+                reviewname =  mjson.changedata[0].name[num];
                 var fee = mjson.changedata[0].fee[num];
                 var express = mjson.changedata[0].express[num];
                 //このあと完成形では写真画像と　★の画像
-                document.getElementById("h2").innerHTML = name;
+                document.getElementById("h2").innerHTML = reviewname;
                 document.getElementById("p").innerHTML = express;
                 document.getElementById("h4").innerHTML = fee;
+                getreview();
                 }
                 function review8(){
                   document.getElementById("alll").style.display = "none";
@@ -2207,13 +2367,14 @@ function review0(){
                   document.getElementById("alll2").style.display = "block";
                   //changedata[0].name fee express (mjson)
                   var num = pagecount*10-10+8;
-                  var name =  mjson.changedata[0].name[num];
+                  reviewname =  mjson.changedata[0].name[num];
                   var fee = mjson.changedata[0].fee[num];
                   var express = mjson.changedata[0].express[num];
                   //このあと完成形では写真画像と　★の画像
-                  document.getElementById("h2").innerHTML = name;
+                  document.getElementById("h2").innerHTML = reviewname;
                   document.getElementById("p").innerHTML = express;
                   document.getElementById("h4").innerHTML = fee;
+                  getreview();
                   }
                   function review9(){
                     document.getElementById("alll").style.display = "none";
@@ -2221,11 +2382,12 @@ function review0(){
                     document.getElementById("alll2").style.display = "block";
                     //changedata[0].name fee express (mjson)
                     var num = pagecount*10-10+9;
-                    var name =  mjson.changedata[0].name[num];
+                    reviewname =  mjson.changedata[0].name[num];
                     var fee = mjson.changedata[0].fee[num];
                     var express = mjson.changedata[0].express[num];
                     //このあと完成形では写真画像と　★の画像 とレビュー
-                    document.getElementById("h2").innerHTML = name;
+                    document.getElementById("h2").innerHTML = reviewname;
                     document.getElementById("p").innerHTML = express;
                     document.getElementById("h4").innerHTML = fee;
+                    getreview();
                     }

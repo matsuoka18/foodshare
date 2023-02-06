@@ -2095,3 +2095,20 @@ display:flex;
   margin-left:0.5vw;
 margin-right:0.5vw;
 }
+.ppp{
+  position:relative;left:2.5vw;
+}
+.allp{
+  position:relative;left:2.5vw;
+  height:1.5vw;
+  width:10vw;
+  border:1px solid;
+  border-radius:10px;
+  text-align:center;
+  font-size:0.75vw;
+  font-weight:600;
+  padding-top:0.375vw;
+}
+.allp:hover{
+  background-color: #DDDDDD;
+}
