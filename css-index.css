@@ -158,8 +158,8 @@ body {
   border-top: 2px solid;
   border-color: #5A3A1A;
   width: 100vw;
-  height: 10vw;
-  padding-top: 2vw;
+  height: 8vw;
+  padding-top: 6vw;
   background-color: white;
   box-shadow: 0 5px 10px 5px #BC9A78;
 }
@@ -252,11 +252,14 @@ body {
 }
 
 .news2 {
+  width:100vw;
+  padding-top:5vw;
   font-size: 60px;
   font-weight: 600;
   text-align: center;
   color: #5A3A1A;
-}
+  }
+  
 .news3{
   width:80vw;
   height:40vw;
@@ -265,12 +268,14 @@ body {
   z-index:100;
 }
 .news {
+  margin-top:5vw;
   border-radius:5vw;
   margin-left: 10vw;
   background-color: white;
   width: 80vw;
   height: 40vw;
   z-index:100;
+  box-shadow: 0 0 15px 5px #D3B799;
 }
 .newss {
   border-radius:5vw;
@@ -291,20 +296,24 @@ body {
 .place {
   width: 100vw;
   border-top: 1px solid;
-  height: 40vw;
+
 }
 
 .place2 {
   width: 100vw;
-  height: 10vw;
+  height: 6vw;
   background-color: #3A1F00;
-  padding-top: 2vw;
+  padding-top: 4vw;
   font-size: 40px;
   font-weight: 600;
   color: white;
   text-align: center;
+  box-shadow:  0 0 10px 2px #BC9A78;
 }
-
+.place3{
+  margin-top:5vw;
+  margin-bottom:5vw;
+}
 .p1 {
   font-size: 20px;
   font-weight: 600;
