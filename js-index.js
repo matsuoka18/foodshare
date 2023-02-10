@@ -831,3 +831,7 @@ console.log(e.message);
 function カート(){
 location.href="cart.html";
 }
+function c11(){
+  a = document.getElementById("news").style;
+  
+}

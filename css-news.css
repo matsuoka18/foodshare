@@ -1,0 +1,45 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+.topber{
+    position:relative;
+    width:100vw;
+    margin-bottom:2vw;
+    position: fixed;
+    top:0;
+    box-shadow: 0 0 5px 1px lightgray;
+    background-color:white ;
+}
+.topber p{
+    display: inline-block;
+    margin:0;
+    vertical-align: bottom; 
+    padding:5vw;
+}
+.topber p:nth-child(1){
+    font-size:3vw;
+    font-weight:600;
+}
+.topber p:nth-child(2){
+    position:absolute;
+    right: 0;
+    bottom:0;
+}
+.body{
+    padding-top:15vw;
+    background-color: white;
+}
+.body p{
+    margin:0;
+    width:100vw;
+    padding-top:2vw;
+    padding-bottom:2vw;
+    padding-left:5vw;
+    font-size: 20px;
+}
+.body p:hover{
+    background-color: whitesmoke;
+    box-shadow: 0 0 5px 1px lightgray;
+}

@@ -246,7 +246,7 @@ body {
 
 .foot {
   width: 100vw;
-  height: 50vw;
+  height: 60vw;
   background-color: #BC9A78;
   border-top: 2px solid;
 }
@@ -257,15 +257,30 @@ body {
   text-align: center;
   color: #5A3A1A;
 }
-
+.news3{
+  width:80vw;
+  height:40vw;
+  border-radius:5vw;
+  border:none;
+  z-index:100;
+}
 .news {
-  border: 1px solid;
+  border-radius:5vw;
   margin-left: 10vw;
   background-color: white;
   width: 80vw;
-  height: 30vw;
+  height: 40vw;
+  z-index:100;
 }
-
+.newss {
+  border-radius:5vw;
+  margin-left: 10vw;
+  background-color: gray;
+  width: 80vw;
+  height: 40vw;
+  margin-top:-40vw;
+  z-index:0;
+}
 .news p {
   font-size: 20px;
   color: grey;

@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <title>フードロスなくそう</title>
   <link rel="stylesheet" href="css-index.css">
-  
+  <link href="style_map.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
   </head>
 <body onload="start()">
   
@@ -82,91 +83,304 @@
         </div>
 </div>
 </div>
-<!--ifreamでべつファイルを表示で-->
 <div class="foot">
   <p class="news2">お知らせ</p>
-  <div class="news">
-    <p>サイト解説のお知らせ</p>
+  <div class="news" id="news">
+<iframe src="news.html" class="news3"></iframe>
+    <!--p>サイト解説のお知らせ</p>
     <p>684213523</p>
     <p>654674</p>
     <p>677604</p>
     <p>7654745</p>
     <p>683214</p>
     <p>677604</p>
-    <p>7654745</p>
+    <p>7654745</p-->
 </div>
+<div class="newss" id="newss"></div>
 </div>
 <div class="place">
   <div class="place2">エリア検索</div>
-  <div class="p2">
-  <p class="p1">北海道地方</p>
-  <p>北海道</p>
-  </div>
-  <div class="p2">
-  <p class="p1">東北地方</p>
-  <p>青森県</p>
-  <p>岩手県</p>
-  <p>宮城県</p>
-  <p>秋田県</p>
-  <p>山形県</p>
-  <p>福島県</p>
-</div>
-  <div class="p2">
-  <p class="p1">関東地方</p>
-  <p>茨城県</p>
-  <p>栃木県</p>
-  <p>群馬県</p>
-  <p>埼玉県</p>
-  <p>千葉県</p>
-  <p>東京都</p>
-  <p>神奈川県</p>
-</div>
-  <div class="p2">
-  <p class="p1">中部地方</p>
-  <p>新潟県</p>
-  <p>富山県</p>
-  <p>石川県</p>
-  <p>福井県</p>
-  <p>山梨県</p>
-  <p>長野県</p>
-  <p>岐阜県</p>
-  <p>静岡県</p>
-  <p>愛知県</p>
-</div>
-  <div class="p2">
-  <p class="p1">近畿地方</p>
-<p>三重県</p>
-<p>滋賀県</p>
-<p>京都府</p>
-<p>大阪府</p>
-<p>兵庫県</p>
-<p>奈良県 </p> 
-<p>和歌山県</p>
-</div>
-<div class="p2">
-<p class="p1">中国・四国地方</p>
-<p>鳥取県</p>
-<p>島根県</p>
-<p>岡山県</p>
-<p>広島県</p>
-<p>山口県</p>
-<p>徳島県</p>
-<p>香川県</p>
-<p>愛媛県</p>
-<p>高知県 </p>
-</div>
-<div class="p2">
-<p class="p1">九州地方</p>
-<p>福岡県</p>
-<p>佐賀県</p>
-<p>長崎県</p>
-<p>熊本県</p>
-<p>大分県</p>
-<p>宮崎県</p>
-<p>鹿児島</p>
-<p>沖縄県</p>                                              
-</div>
-</div>
+  <div id="japan-map" class="clearfix">
+
+    <div id="hokkaido-touhoku" class="clearfix">
+      <p class="area-title">北海道・東北</p>
+      <div class="area">
+        <a href="#">
+              <div id="hokkaido">
+                <p>北海道</p>
+                </div>
+        </a>
+        <a href="#">
+          <div id="aomori">
+            <p>青森</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="akita">
+            <p>秋田</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="iwate">
+            <p>岩手</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="yamagata">
+            <p>山形</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="miyagi">
+            <p>宮城</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="fukushima">
+            <p>福島</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div id="kantou">
+      <p class="area-title">関東</p>
+      <div class="area">
+        <a href="#">
+          <div id="gunma">
+            <p>群馬</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="tochigi">
+            <p>栃木</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="ibaraki">
+            <p>茨城</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="saitama">
+            <p>埼玉</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="chiba">
+            <p>千葉</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="tokyo">
+            <p>東京</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="kanagawa">
+            <p>神奈川</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div id="tyubu" class="clearfix">
+      <p class="area-title">中部</p>
+      <div class="area">
+        <a href="#">
+          <div id="nigata">
+            <p>新潟</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="toyama">
+            <p>富山</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="ishikawa">
+            <p>石川</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="fukui">
+            <p>福井</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="nagano">
+            <p>長野</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="gifu">
+            <p>岐阜</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="yamanashi">
+            <p>山梨</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="aichi">
+            <p>愛知</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="shizuoka">
+            <p>静岡</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div id="kinki" class="clearfix">
+      <p class="area-title">近畿</p>
+      <div class="area">
+        <a href="#">
+          <div id="kyoto">
+            <p>京都</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="shiga">
+            <p>滋賀</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="osaka">
+            <p>大阪</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="nara">
+            <p>奈良</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="mie">
+            <p>三重</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="wakayama">
+            <p>和歌山</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="hyougo">
+            <p>兵庫</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div id="tyugoku" class="clearfix">
+      <p class="area-title">中国</p>
+      <div class="area">
+        <a href="#">
+          <div id="tottori">
+            <p>鳥取</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="okayama">
+            <p>岡山</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="shimane">
+            <p>島根</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="hiroshima">
+            <p>広島</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="yamaguchi">
+            <p>山口</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div id="shikoku" class="clearfix">
+      <p class="area-title">四国</p>
+      <div class="area">
+        <a href="#">
+          <div id="kagawa">
+            <p>香川</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="ehime">
+            <p>愛媛</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="tokushima">
+            <p>徳島</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="kouchi">
+            <p>高知</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div id="kyusyu" class="clearfix">
+      <p class="area-title">九州・沖縄</p>
+      <div class="area">
+        <a href="#">
+          <div id="fukuoka">
+            <p>福岡</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="saga">
+            <p>佐賀</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="nagasaki">
+            <p>長崎</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="oita">
+            <p>大分</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="kumamoto">
+            <p>熊本</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="miyazaki">
+            <p>宮崎</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="kagoshima">
+            <p>鹿児島</p>
+          </div>
+        </a>
+        <a href="#">
+          <div id="okinawa">
+            <p>沖縄</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    </div> <!-- japan-map -->
+    
 </div>
 <div class="bottom" >
   <div class="botton1"><img src="foodshare2.PNG">FoodShare</div>
