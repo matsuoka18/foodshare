@@ -695,7 +695,7 @@ body {
   }
   
   .top button:active {
-    
+
     color: #5A3A1A;
   }
   
@@ -833,21 +833,3 @@ body {
     font-weight: 600;
     border-radius: 10px;
   }
-  .form {
-    opacity: 1;
-}
-
-.formm {
-    opacity: 0;
-}
-
-.all2 {
-    opacity: 0;
-}
-
-.all3 {
-    opacity: 0;
-}
-h2{
-    margin-left:10px;
-}

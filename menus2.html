@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>hello</title>
+    <link rel="stylesheet" href="css-menus2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body onload="start()">
+    <div class="alll" id="alll">
+        <div class="section1">
+            <div class="head">
+                <div class="p">
+                    <p onclick="カート2()">カート</p>
+                    <ul class="l4">
+                        <li class="l1"><a class="a1" href="menued.html">店舗側ページ</a></li>
+                        <li class="l2"><a class="a2" href="entry.html">店舗登録</a></li>
+                        <li class="l3"><a class="a3" href="login.html">ログイン</a></li>
+                        <li class="l5">店舗情報</li>
+                    </ul>
+
+                </div>
+                <div class="searchform">
+                    <input type="text" class="search" id="search" placeholder="shopname or menu" value="">
+                    <button id="s" onclick="searching()"><span id="ss">search</span></button>
+                    <p class="genre">ジャンルを一覧</p>
+                </div>
+
+            </div>
+            <h1 class="h1" onclick="go()">foodshare</h1>
+        </div>
+
+        <div class="hey" id="hey">
+            <img src="test.jpg">
+            <div class="intro">
+                <div class="hyouka">
+
+                    <h1 id="shopname">マクドナルド</h1>
+                    <div id="cart" class="cart" onclick="カート()">カートに追加</div>
+                    <p id="evo">評価とか</p>
+
+                </div>
+                <div class="info">
+                    <li class="time">営業時間
+                        <ul id="time">12:00~13:00</ul>
+                    </li>
+                    <li>住所
+                        <ul id="adress">神奈川県鎌倉市手広4-28-14</ul>
+                    </li>
+                    <li>電話番号
+                        <ul id="phone">
+                            0467-91-5460
+                        </ul>
+                    </li>
+                    <li>ホームページとか
+                        <ul id="url">
+                            https://matsuoka18.github.io/foodshare
+                        </ul>
+                    </li>
+                </div>
+                <div class="sho">
+                    <span id="introduce">松尾家の子ども部屋。</span>
+                    <pre>
+紹介文とか
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <h1>メニュー</h1>
+        <div class="buttons"id="buttons">
+            <button class="but1" id="but1" onclick="but1()">トップ</button>
+            <button class="but2" id="but2" onclick="but2()">期間限定</button>
+            <button class="but3" id="but3" onclick="but3()">人気</button>
+            <button class="but4"id="but4" onclick="but4()">一覧</button>
+            <button class="but5"id="but5" onclick="but5()">残りわずか</button>
+            <button class="but6" id="but6" onclick="but6()">廃棄寸前</button>
+        </div>
+
+    </div>
+    <div class="hey2" id="hey2">
+    <div class="button11"id="button11">
+        <h2 id="h2b">おすすめメニュー</h2>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2 class="time1  hh2"id="menuh2">ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <div class="imgs">
+            <img src="レビュー.PNG" class="review" onclick="alert()">
+            <img src="お気に入り.PNG" class="review2" id="review2"onclick="fevo()">
+            </div>
+            <h4>2,700<span>円</span></h4>
+        </div>
+
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <div class="imgs">
+                <img src="レビュー.PNG" class="review" onclick="review1()">
+                <img src="お気に入り.PNG" class="review2" id="review3"onclick="fevo2()">
+                </div>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <div class="imgs">
+                <img src="レビュー.PNG" class="review" onclick="review1()">
+                <img src="お気に入り.PNG" class="review2" id="review4"onclick="fevo3()">
+                </div>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+                        <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <div class="imgs">
+                <img src="レビュー.PNG" class="review" onclick="review1()">
+                <img src="お気に入り.PNG" class="review2" id="review5"onclick="fevo4()">
+                </div>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <div class="imgs">
+                <img src="レビュー.PNG" class="review" onclick="review1()">
+                <img src="お気に入り.PNG" class="review2" id="review6"onclick="fevo5()">
+                </div>
+            <h4>2,700<span>円</span></h4>
+        </div>
+    </div>
+    <div class="button22"id="button22">
+        <h2 id="h2b">期間限定</h2>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2 class="time1  hh2"id="menuh2">期間限定</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+    </div>
+    <div class="button33"id="button33">
+        <h2 id="h2b">人気</h2>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2 class="time1  hh2"id="menuh2">人気</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+    </div>
+
+
+    <div class="button44"id="button44">
+        <h2 id="h2b">一覧</h2>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2 class="time1  hh2"id="menuh2">一覧</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+    </div>
+
+
+
+
+        <div class="button55"id="button55">
+        <h2 id="h2b">残りわずか</h2>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2 class="time1  hh2"id="menuh2">残りわずか</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg"  class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+    </div>
+    <div class="button66"id="button66">
+        <h2 id="h2b">廃棄寸前</h2>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic" >
+            <h2 class="time1  hh2"id="menuh2">廃棄寸前</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+                        <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+        <div class="menu1">
+            <img src="a.jpeg" class="menupic">
+            <h2>ビックマック</h2>
+            <img src="star2.PNG" class="star">
+            <p>マクドナルドの定番商品と言ったらこれ！</p>
+            <h4>2,700<span>円</span></h4>
+        </div>
+    </div>
+</div>
+
+    <div class="allshow" id="allshow">
+        <div class="allshow2" id="allshow2"></div>
+        <div class="mp">
+            <div class="mina10" id="mina10" onclick="mina()">前の10個</div>
+        <div class="wp" id="wp">
+            
+        </div>
+        <div class="plus10" id="puls10" onclick="plus()">次の10個</div>
+    </div>
+    </div>
+
+    <div class="shop1" id="hey3">
+        <h2>店舗情報</h2>
+        <p>店舗について</p>
+        <table border="1"align="center">
+        <tr>
+      <td class="td1">店舗名</td>
+      <td id="shopname2">マクドナルド</td>
+       </tr>
+       <tr>
+        <td class="td1">お店の分類</td>
+        <td id="shopgenre">ファストフード</td>
+       </tr>
+       <tr>
+        <td class="td1">住所</td>
+        <td id="adress2">神奈川県鎌倉市手広4−28−14</td>
+       </tr>
+       <tr>
+        <td class="td1">郵便番号</td>
+        <td id="mailad2"></td>
+       </tr>
+       <tr>
+        <td class="td1">アクセス</td>
+        <td id="access2">湘南深沢駅から徒歩15分</td>
+       </tr>
+       <tr>
+        <td class="td1">営業時間</td>
+        <td id="time2">18：00〜20：00</td>
+       </tr>
+       <tr>
+        <td class="td1">電話番号</td>
+        <td id="phone2">080-8859-5752</td>
+       </tr>
+       <tr>
+        <td class="td1">ホームページ</td></a>
+        <td><a href="https://matsuoka18.github.io/foodshare">https://matsuoka18.github.io/foodshare</a></td>
+       </tr>
+        </table>
+    </div>
+    <div class="bottom" >
+        <div class="botton1"><img src="foodshare2.PNG">FoodShare</div>
+        <div class="bottom2">
+        <li>トップページ</li>
+        <li>店舗登録</li>
+        <li>ログイン</li>
+        </div>
+        <p>copy right FoodShare</p>
+
+    </div>
+</div>
+    <div class="alll2" id="alll2">
+        <div class="back" id="back"onclick="back()">×戻る</div>
+        <div class="menu1">
+            <img src="a.jpeg" id="menupic"class="menupic">
+            <h2 id="h2">ビックマック</h2>
+            <img src="star2.PNG" id="star"class="star">
+            <p id="p">マクドナルドの定番商品と言ったらこれ！</p>
+            <h4 id="h4">2,700<span>円</span></h4>
+        </div>
+        <div class="r1">
+            <div class="r11">
+                <p class="rp1">
+                    総合評価
+                </p>
+                <p class="rp2" id="sogo">
+                    4.5
+                </p>
+            </div>
+            <div class="r111">
+                <p>★5：<span id="rnum5">0件</span></p>
+                <p>★4：<span id="rnum4">0件</span></p>
+                <p>★3：<span id="rnum3">0件</span></p>
+                <p>★2：<span id="rnum2">0件</span></p>
+                <p>★1：<span id="rnum1">0件</span></p>
+            </div>
+        </div>
+
+    <div class="rb22">    
+
+    <div class="rb1">レビュー</div>
+
+    <div class="rb2" id="a"onclick="reviewb()">レビューを書く↓</div>
+ 
+</div>
+    <div class="r2" id="r2">
+        
+        <h2 >レビューを書く</h2>
+        <p><span id="s1" onclick="ss1()">★</span><span id="s2" onclick="ss2()">★</span><span id="s3" onclick="ss3()">★</span><span id="s4" onclick="ss4()">★</span><span id="s5" onclick="ss5()">★</span></p>
+        <input type="text" id="text1" class="text1"value=""placeholder="見出しを入力">
+        <textarea id="text2" class="text2" cols="60"rols="10" wrap="hard"placeholder="本文を入力"></textarea>
+        <button onclick="rsend()">送信</button>
+    </div>
+    <p class="ppp" id="ppp">１０件表示</p>
+    <div class="allp" onclick="rallshow()">すべてのレビューを見る</div>
+   <div id="alll3">
+    
+</div>
+<div class="allp" onclick="rallshow()">すべてのレビューを見る</div>
+</div>
+<div id="scriptwrite"></div>
+        <script src="js-menus2.js"></script>
+</body>
+
+</html>

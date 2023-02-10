@@ -37,7 +37,7 @@ body {
   
   .form {
     width: 85vw;
-  
+    padding:2.5vw;
     margin-left: 7vw;
     margin-top: 2.5vw;
     padding-bottom: 5vw;
@@ -176,17 +176,21 @@ body {
   }
   
   .che {
-    margin-top: 10vw;
-    background-color: #C6AC8F;
+    padding:2.5vw;
+    width: 85vw;
+    margin-left: 7vw;
+    margin-top: 2.5vw;
+    padding-bottom: 5vw;
     border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    background-color: #C6AC8F;
+    text-align: center;
   }
   
   .che h2 {
     width: 60vw;
     background-color: #3A1F00;
     color: white;
+    font-size:30px;
     border-radius: 5px;
     margin-left: -10px;
     padding-right: 20px;
@@ -195,7 +199,9 @@ body {
     padding-bottom: 20px;
     text-align: center;
   }
-  
+  .che p {
+    font-size:30px;
+  }
   .che2 {
     background-color: white;
     width: 60vw;
@@ -203,7 +209,7 @@ body {
     border-radius: 10px;
     padding-bottom: 5vw;
   }
-  
+
   .center {
     width: 85vw;
     padding-bottom: 30px;
@@ -816,7 +822,15 @@ body {
     height: 8vw;
     background-color: #C6AC8F;
   }
-  
+  .all2{
+    width:100vw;  
+    text-align:center;
+    font-size:50px;
+    font-weight:500;
+    background-color:white;
+   opacity: 0;
+   display: none;
+   }
   .all2 select {
     margin-top: 10px;
     font-weight: 600;
@@ -833,21 +847,3 @@ body {
     font-weight: 600;
     border-radius: 10px;
   }
-  .form {
-    opacity: 1;
-}
-
-.formm {
-    opacity: 0;
-}
-
-.all2 {
-    opacity: 0;
-}
-
-.all3 {
-    opacity: 0;
-}
-h2{
-    margin-left:10px;
-}

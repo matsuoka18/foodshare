@@ -402,7 +402,7 @@ setTimeout(pic,5000)
 }
 
 function shop(){
-location.href="登録ページ.html";
+location.href="entry.html";
 }
 document.getElementById("search").addEventListener('keyup',event =>{
 if(event.keyCode == 13){
@@ -646,9 +646,9 @@ num = 1;
 ani();
 document.getElementById("s").style.backgroundColor ="#5A3A1A";
 if(typeof ttt == 'undefined'){
-location.href="商品表示.html";
+location.href="menus.html";
 }else{
-location.href="商品表示2.html";
+location.href="menus2.html";
 }
 
 }

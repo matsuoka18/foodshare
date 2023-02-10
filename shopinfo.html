@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>店舗情報編集</title>
+        <link rel="stylesheet" href="css-shopinfo.css">
+        
+    </head>
+    <body onload="start()">
+        <div class="name2">
+            <h1>店舗情報編集</h1>
+      <div class="name" onclick="location.href='index.html'">
+      <p>foodshare</p>
+      </div>
+      </div>
+      <div class="div2">
+        <!--この変更は編集追加で行える-->
+        <h1 class="cs1">店舗・商品の編集を行う</h1>
+        <div class="shopchange" id="shopchange0">
+          <p class="now1" id="nowname">12345</p>
+          <input type="text" id="shopchange" placeholder="店舗名を入力"value="">
+        <p id="shopchange2"></p>
+        <button class="商品button"onclick="shop123()">店舗の変更をする</button>
+        </div>
+        </div>
+        <div class="div2">
+            <!--この変更は編集追加で行える-->
+            <h1 class="cs1">店舗のパスワードを変更する</h1>
+            <div class="shopchange" id="shopchange0">
+                <p class="now1" id="nowpass">123456</p>
+              <input type="text" id="passchange" placeholder="パスワードを入力"value="">
+            <p id="shopchange2"></p>
+            <button class="商品button"onclick="pass()">パスワードを変更</button>
+            </div>
+            </div>
+            <script src="js-shopinfo.js"></script>
+    </body>
+</html>

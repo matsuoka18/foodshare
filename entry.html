@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>登録</title>
+  <link rel="stylesheet" href="css-entry.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <script type="text/javascript">
+    (function(){
+       emailjs.init("WIptzQo9RsrV7VK_G");
+    })();
+ </script>
+  </head>
+  <body>
+    <div class="name2">
+      <h1>店舗登録</h1>
+<div class="name" onclick="location.href='index.html'">
+<p>foodshare</p>
+</div>
+</div>
+<div class="all2"id="all2"></div>
+<div id="all"class="all">
+<div class="form">
+   <div class="form2">
+     <p>登録する店舗名を入力してください</p>
+      <input type="text" id="shopname" placeholder="店舗名を入力" value="">
+      </div>
+      <div class="form2">
+        <p>メールアドレスを入力してください</p>
+        <input type="text" id="mailad" value="" placeholder="メールアドレスを入力">
+      </div>
+      <div class="form3">
+      <p>パスワード</p>
+      <span id="passw"></span>
+      <input type="text" class="password"id="password" value="" placeholder="8文字以上で入力してください">
+      <h2>もう一度入力してください</h2>
+      <input type="text" class="password"id="password" value="" placeholder="パスワードを再入力">
+    </div>
+      <button onclick="check()">確認</button>
+      </div>
+      
+      <div id="che"class="che">
+        <div class="che2">
+      <h2>登録内容の確認</h2>
+      <p id="check1"></p>
+<p id="check4"></p>
+      <p id="check2"></p>
+      <p id="check3"></p>
+      </div>
+      <button id="send"class="商品button"onclick="send()">登録する</button>
+      </div>
+      </div>
+      
+      <!--style>
+.all2{
+   width:100vw;  
+   text-align:center;
+   font-size:50px;
+   font-weight:500;
+   background-color:white;
+  opacity: 0;
+  display: none;
+  }
+      </style-->
+      <script src="js-entry.js"></script>
+    </body>
+</html>

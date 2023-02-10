@@ -95,7 +95,7 @@ if(password == inputpassword){
   document.cookie = loginID;
   document.cookie = pass;
   document.cookie = shopnumber;
-  location.href="店舗側.html";
+  location.href="shoped.html";
 }else{
   alert("パスワードが間違っています")
 }

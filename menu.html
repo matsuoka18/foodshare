@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>商品編集ページ</title>
+  <link rel="stylesheet" href="css-menu.css">
+  
+</head>
+
+<body onload="getdata()">
+  <div class="name2">
+    <h1>商品編集</h1>
+    <div class="name" onclick="location.href='index.html'">
+      <p>foodshare</p>
+    </div>
+
+    <p id="loda">dsf</p>
+    <div class="div1">
+      <p class="div1p">商品追加</p>
+      <div class="all1" id="all1">
+        <!--nh1 np1~3 np11~33-->
+        <div class="n2" id="n1">
+          <input type="text" class="nh1" id="nh1" value="" placeholder="店舗名を入力"></input>
+
+          <div class="nn2">
+            <input type="text" class="np1" id="np1" value="" placeholder="商品名を入力"></input>
+            <input type="text" class="np1" id="np11" value="" placeholder="値段を入力"></input>
+          </div>
+
+          <input type="text" class="np3" id="np111" value="" placeholder="商品説明を入力"></input>
+          <input type="file" id="example" multiple>
+          <p>商品のジャンルを選ぶ</p>
+          <form name="example2">
+            <select id="jann" name="example3">
+              <option value="ジャンルを選んでください">ジャンルを選んでください</option>
+              <option value="飯類">飯類</option>
+              <option value="麺類">麺類</option>
+              <option value="スイーツ">スイーツ</option>
+            </select>
+          </form>
+        </div>
+        <div class="n1" id="n1">
+
+          <h1 id="nh11">お店</h1>
+          <div class="nn1">
+            <p class="npp1" id="np1_1"></p>
+            <p class="npp2" id="np2_2"></p>
+          </div>
+          <div class="pic" id="pic"></div>
+          <p class="npp3" id="np3_3"></p>
+          <p class="npp4" id="np4_4"></p>
+          <p>完成型</p>
+        </div>
+      </div>
+
+      <button class="商品button" id="商品button" onclick="send()">追加する</button>
+      <div class="guid" id="guid"></div>
+    </div>
+    <div class="new" id="new">
+      <div id="preview"></div>
+      <div id="preview2"></div>
+      <p id="text1"></p>
+      <p id="text2"></p>
+      <p id="text3"></p>
+
+
+
+      <div class="div3">
+        <h1>商品の情報を変更する</h1>
+
+        <form name="fo">
+          <select class="fm1" id="name" name="name2">
+            <option>変更する商品を選ぶ</option>
+            <option id="na1" value=""></option>
+            <option id="na2" value=""></option>
+            <option id="na3" value=""></option>
+            <option id="na4" value=""></option>
+            <option id="na5" value=""></option>
+            <option id="na6" value=""></option>
+            <option id="na7" value=""></option>
+            <option id="na8" value=""></option>
+            <option id="na9" value=""></option>
+            <option id="na10" value=""></option>
+          </select>
+        </form>
+        <div class="bt">
+          <button class="bt1" onclick="i32()">前の１０個を見る</button>
+          <button class="bt1" onclick="i3()">次の１０個を見る</button>
+          <!--id="ii3"-->
+        </div>
+        <div class="all1" id="all1">
+          <!--nh1 np1~3 np11~33-->
+          <div class="n2" id="n1">
+            <input type="text" class="nh1" id="change1" value="店舗名を入力">
+
+            <div class="nn2">
+              <input type="text" class="np1" id="change2" value="">
+              <input type="text" class="np1" id="change3" value="値段を入力"></input>
+            </div>
+
+            <input type="text" class="np3" id="change4" value="商品説明を入力"></input>
+            <input type="file" id="change5" multiple>
+            <p>商品のジャンルを選ぶ</p>
+            <form name="fo2">
+              <select id="change6" name="example">
+                <option id="change6.2" value="">ジャンルを選んでください</option>
+                <option value="飯類">飯類</option>
+                <option value="麺類">麺類</option>
+                <option value="スイーツ">スイーツ</option>
+              </select>
+            </form>
+          </div>
+          <div class="n1" id="n1">
+            <h1 class="nh1" id="chanchan1">店舗名</h1>
+
+            <div class="nn1">
+              <p class="np1" id="chanchan2">a</p>
+              <p class="np2" id="chanchan3"></p>
+            </div>
+            <div class="pic" id="pic"></div>
+            <p class="np3" id="chanchan4"></p>
+            <p class="np4" id="chanchan5"></p>
+            <p>完成型</p>
+          </div>
+        </div>
+        <button class="change12" id="change12" onclick="change12()">変更</button>
+      </div>
+      <div class="div4">
+        <h1>商品の削除をする</h1>
+        <form name="fo3">
+          <select class="fm1" id="name3" value="">
+            <option>削除する商品を選ぶ</option>
+            <option id="na11" value=""></option>
+            <option id="na22" value=""></option>
+            <option id="na33" value=""></option>
+            <option id="na44" value=""></option>
+            <option id="na55" value=""></option>
+            <option id="na66" value=""></option>
+            <option id="na77" value=""></option>
+            <option id="na88" value=""></option>
+            <option id="na99" value=""></option>
+            <option id="na1010" value=""></option>
+          </select>
+        </form>
+
+        <button class="bt3" onclick="i32()">前の１０個を見る</button>
+        <button class="bt3" onclick="i3()">次の１０個を見る</button>
+        <!--id="ii3"-->
+        <button class="bt2" id="bt2" onclick="kill()">削除</button>
+      </div>
+    </div>
+
+    <script src="a.js"></script>
+    <script src="js-menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+body{
+    margin:0;
+   padding:0;
+    font-family:monospace;
+}
+.name{
+    margin:0;
+    padding:0;
+    width:15vw;
+    height:15vw;
+    background-color:#3A1F00;
+  }
+.name p {
+    margin:0;
+   color:white;
+   font-size:30px;
+   font-weight:600;
+   text-align:center;
+   padding-top:5vw;
+}
+.name2{
+    width:100vw;
+    height:10vw;
+    border-bottom:2px solid;
+    border-color:#5A3A1A;
+  }
+  .name2 h1{
+    float:right;
+    margin-right:40vw;
+    margin-top:3vw;
+    color:#5A3A1A;
+  }
+  .div2{
+    background-color:#C6AC8F;
+    width:92vw;
+    margin-left:5vw;
+    border-radius:10px;
+  }
+  .div2 h1{
+   position:relative;left:7vw;
+  }
+  button{
+    background-color: #3A1F00;
+    width:15vw;
+    height:5vw;
+    color:white;
+    font-size:20px;
+    border:none;
+    border-radius:100px;
+    margin-top:5vw;
+  }
+  .商品button:hover{
+    border:3px solid;
+    border-color:white;
+    }
+    .商品button:active{
+    background-color:#C6AC8F;
+    }
+  .shopchange{
+    width:90vw;
+  margin-left:32vw;
+  padding-bottom:20px;
+  }
+  
+  .shopchange input{
+    width:30vw;
+    height:5vw;
+    border:none;
+    margin-top:1vw;
+    font-size:25px;
+  }
+  .shopchange button{
+    margin-top:0;
+    margin-left:7vw;
+  }
+  .cs1{
+    color:#5A3A1A;
+    margin-left:27vw;
+    padding-top:2vw;
+  }
+  .now1{
+    font-size:25px;
+    font-weight:600;
+    color:black;
+  }
+  .name:hover{
+    background-color:#BC9A78;
+
+  }
+  .name p:hover{
+           color:#5A3A1A;
+  }
