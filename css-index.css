@@ -4,9 +4,11 @@ body {
 }
 
 .h1 {
-  padding-top: 3vw;
+  padding-top: 4vw;
   margin: 0;
   color: white;
+  font-size:30px;
+  font-weight:600;
   background-color: #3A1F00;
   width: 15vw;
   height: 13vw;
@@ -155,19 +157,17 @@ body {
 }
 
 .pop {
-  border-top: 2px solid;
-  border-color: #5A3A1A;
   width: 100vw;
   height: 8vw;
   padding-top: 6vw;
-  background-color: white;
-  box-shadow: 0 5px 10px 5px #BC9A78;
+  background-color: #3A1F00;
+  box-shadow: 0 0 15px 5px #BC9A78;
 }
 
 .popp {
   text-align: center;
-  color: #5A3A1A;
-  font-size: 40px;
+  color: white;
+  font-size: 60px;
   font-weight: 600;
   
 }
@@ -182,6 +182,7 @@ body {
 
 .ntop {
   display: flex;
+  height:5vw;
 }
 
 .shopname {
@@ -211,8 +212,8 @@ body {
   margin-top: 10vw;
   padding: 2vw;
   float: left;
-  box-shadow: 0 0 15px 1px #78512B;
-  border-radius: 30px;
+  box-shadow: 0 0 15px 1px #C6AC8F;
+  border-radius: 60px;
   z-index: 1;
   background-color: white;
 
@@ -241,23 +242,24 @@ body {
 .no2 {
   height: 140vw;
   background-color: white;
-  background-color: #D3B799;
+  
 }
 
 .foot {
   width: 100vw;
-  height: 60vw;
-  background-color: #BC9A78;
-  border-top: 2px solid;
+  padding-bottom:5vw;
 }
 
 .news2 {
   width:100vw;
-  padding-top:5vw;
+  height:8vw;
+  padding-top:6vw;
   font-size: 60px;
   font-weight: 600;
   text-align: center;
-  color: #5A3A1A;
+  color: white;
+  background-color: #3A1F00;
+    box-shadow:  0 0 10px 2px #BC9A78;
   }
   
 .news3{
@@ -275,12 +277,12 @@ body {
   width: 80vw;
   height: 40vw;
   z-index:100;
-  box-shadow: 0 0 15px 5px #D3B799;
+  box-shadow: 0 0 15px 5px lightgray;
 }
 .newss {
   border-radius:5vw;
   margin-left: 10vw;
-  background-color: gray;
+  background-color: white;
   width: 80vw;
   height: 40vw;
   margin-top:-40vw;
@@ -301,10 +303,10 @@ body {
 
 .place2 {
   width: 100vw;
-  height: 6vw;
+  height: 8vw;
   background-color: #3A1F00;
-  padding-top: 4vw;
-  font-size: 40px;
+  padding-top: 6vw;
+  font-size: 60px;
   font-weight: 600;
   color: white;
   text-align: center;
@@ -512,4 +514,19 @@ body {
 .picq img {
   height: 240px;
   width: auto;
+}
+.genre2{
+width:100vw;
+height:80vw;
+}
+.genre3{
+  width:100vw;
+  height:8vw;
+  padding-top:6vw;
+  background-color: #3A1F00;
+  color:white;
+  font-size:60px;
+  font-weight:600;
+  text-align:center;
+    box-shadow:  0 0 10px 2px #BC9A78;
 }
