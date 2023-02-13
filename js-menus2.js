@@ -242,6 +242,7 @@ function but6() {
   document.getElementById("allshow").style.display = "none";
 }
 sn='';
+cn='';
 sn2 ='';
 cd="";
 function start(){
@@ -260,6 +261,8 @@ console.log(cd);
       num6 = cd.indexOf(">>?");
       cn = cd.substring(num5+10,num6);
       console.log("cookienum:"+cn);
+      cmessage = 'find';
+      cookiecheck();
       }
       if(num7 == -1){
       console.log("favoritenumなし→作成");
@@ -1100,22 +1103,52 @@ console.log(e.message);
 }
 cartnum = 0;
 function カート(){
-if(typeof cartt == 'undefined'){
-  cookiedata1 = "shopcart"+"=";
-  cookiedata2 = sn2+"@>";
-  cookiedata = cookiedata1+cookiedata2;
-  document.cookie = cookiedata;
-  cartt = "finish";
-  document.getElementById("cart").style.backgroundColor = "orange";
-  document.getElementById("cart").style.fontWeight = "600";
-  document.getElementById("cart").innerHTML = "追加済み";
-    console.log("cookie add");
-}else{
-alert("すでにカートに追加されています");
-//削除機能をつける
+  if(typeof cartt == 'undefined'){
+    if(cmessage == 'find'){
+      document.cookie = "cookienum=; max-age=0";
+      cn+=1;
+      data1 = "cookienum="+cn+">>?";
+      document.cookie = data1;
+      console.log("cookienum:"+cn);
+      }else{
+        cn = 1;
+        data1 = "cookienum="+cn+">>?";
+      document.cookie = data1;
+      console.log("cookienum:"+cn);
+      }
+    cookiedata1 = "shopcart"+cn+"=";
+    cookiedata2 = sn2+"@>";
+    cookiedata = cookiedata1+cookiedata2;
+    document.cookie = cookiedata;
+    cartt = "finish";
+    document.getElementById("cart").style.backgroundColor = "orange";
+    document.getElementById("cart").style.fontWeight = "600";
+    document.getElementById("cart").innerHTML = "追加済み";
+      console.log("cookie add");
+  }else{
+  alert("すでにカートに追加されています");
+  //削除機能をつける
+  }
+}
+
+function cookiecheck(){
+  for(var a = 1; 1<cn; a++){
+    d1 = "shopcart"+a+"=";
+    d2 = "@>";
+    d11 = cd.indexOf(d1)+d1.length;
+    d22 = cd.indexOf(d2,d11);
+    cnl = cd.substring(d11,d22);
+    console.log("cnl:"+cnl);
+  if(cnl == sn){
+    document.getElementById("cart").style.backgroundColor = "orange";
+    document.getElementById("cart").style.fontWeight = "600";
+    document.getElementById("cart").innerHTML = "追加済み";
+    console.log("一致");
+  }
 }
 }
 
+//↓いらないかもしれん
 function cart2(){
 menu = "hello";
 if(typeof cn == 'undefined'){
