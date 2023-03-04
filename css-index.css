@@ -152,32 +152,31 @@ body {
   .img4 {
     width: 100vw;
     height: 60vw;
+    margin-top:2vw;
     margin-bottom: 5vw;
     background-color: white;
   }
   .no2 {
-    height: 130vw;
     width:90vw;
-    margin-left:5vw;
-    margin-bottom:10vw;
+    
     background-color: white;
-    background-color: #BC9A78;
     border-radius:60px;
   }
   
   .pop {
     width: 100vw;
     height: 8vw;
+    text-align: center;
     padding-top: 6vw;
-
+   
   }
   
   .popp {
     width:90vw;
-    margin-left:0vw;
+    margin-left:5vw;
     text-align: center;
-    color: black;
-    font-size: 60px;
+    color: #3A1F00;
+    font-size: 5vw;
     font-weight: 600;
     
   }
@@ -222,7 +221,7 @@ body {
     margin-top: 10vw;
     padding: 2vw;
     float: left;
-    border-radius: 100px;
+    border-radius: 50px;
     z-index: 1;
     background-color: white;
   
@@ -251,6 +250,7 @@ body {
 
   .foot {
     width: 100vw;
+    margin-top:10vw;
     padding-bottom:5vw;
   }
   
@@ -647,4 +647,120 @@ body {
               .l3 a:active{
           
               color:white;
+            }
+            .f{
+              width:95vw;
+              height:40vw;
+              margin-top:5vw;
+              margin-bottom: 5vw;;
+              margin-left:2.5vw;
+              padding:0;
+              position: relative;
+              border-bottom:20px solid #C6AC8F;
+            }
+            .f1{
+              position:absolute;
+              top:50%;
+              width:25vw;
+              font-size:3vw;
+              font-weight:600;
+              margin-top:-6vw;
+              padding-left:1vw;
+              border-bottom:2vw solid #C6AC8F;
+             z-index:0;
+            }
+
+            .f .fi{
+              position: relative;
+              width:70vw;
+              border-radius:100px;
+              display: flex;
+              overflow-x: scroll;
+              float: right;
+
+              z-index:100;
+            }
+            .f .fi img{
+              width:60vw;
+              height: auto;
+              margin:10px;
+              border-radius:100px;
+              flex-shrink: 0;
+              box-shadow: 0 0 10px 1px gray;
+            }
+            .f .fi::-webkit-scrollbar{
+              height:1vw;
+            }
+            .f .fi::-webkit-scrollbar-track{
+              border-radius: 10px;
+              background: #3A1F00;
+            }
+            .f .fi::-webkit-scrollbar-thumb{
+              border-radius:10px;
+              background: #C6AC8F;
+              box-shadow: 0 0 5px 1px #C6AC8F;
+            }
+            .ff{
+              width:95vw;
+              height:40vw;
+              margin-top:10vw;
+              margin-left:2.5vw;
+              position: relative;
+            }
+
+            .f2{
+              position:absolute;
+              top:50%;
+              left:70vw;
+              width:25vw;
+              font-size:3vw;
+              font-weight:600;
+              margin-top:-6vw;
+              padding-right:1vw;
+              border-bottom:2vw solid #C6AC8F;
+              text-align: right;
+              float: right;
+              z-index:0;
+            }
+
+            .ff .fi{
+              position: relative;
+              width:70vw;
+              
+              border-radius:100px;
+              display: flex;
+              overflow-x: scroll;
+              float: left;
+              z-index:100;
+              background-color: white;
+            }
+            .fi img{
+              width:60vw;
+              height: auto;
+              margin:10px;
+              border-radius:100px;
+              flex-shrink: 0;
+              box-shadow: 0 0 10px 1px gray;
+            }
+            .fi::-webkit-scrollbar{
+              height:1vw;
+            }
+            .fi::-webkit-scrollbar-track{
+              border-radius: 10px;
+              background: #3A1F00;
+            }
+            .fi::-webkit-scrollbar-thumb{
+              border-radius:10px;
+              background: #C6AC8F;
+              box-shadow: 0 0 5px 1px #C6AC8F;
+            }
+            .halfl{
+              position:absolute;
+              top:-10%;
+              width:50vw;
+              height:45vw;
+              margin-left:-5vw;
+              
+              background-color: #C6AC8F;
+              z-index:50;
             }
