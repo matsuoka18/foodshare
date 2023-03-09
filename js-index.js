@@ -966,19 +966,18 @@ function newsd1p4(){
   document.getElementById(text).style.fontWeight = 400;
   document.getElementById(text).style.borderColor = "black"
 }
-text = "すべて見る>"
+text2 = "すべて見る>"
 aaa =0;
 function newsd1s(){
   aaa+=1;
   console.log(a);
   if(aaa < 5){
-  text = text+">";
-  document.getElementById("newsd1s").innerHTML = text;
+  text2 = text2+">";
+  document.getElementById("newsd1s").innerHTML = text2;
   setTimeout(newsd1s,250);
+  }else{
+    location.href="news.html"
   }
 
-  else if(aaa == 10){
-    return;
-  }
  }
 
