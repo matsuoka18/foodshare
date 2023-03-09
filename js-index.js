@@ -835,3 +835,150 @@ function c11(){
   a = document.getElementById("news").style;
   
 }
+function newsd1p1(){
+  num = 1;
+  for(var a = 1; a<=4; a++){
+    if(a == num){
+      text = "newsd1p"+a;
+      document.getElementById(text).style.backgroundColor = "black";
+      document.getElementById(text).style.color = "white";
+      document.getElementById(text).style.borderColor = "white";
+      document.getElementById(text).style.paddingTop = "3vw";
+      document.getElementById(text).style.margin = 0;
+      document.getElementById(text).style.fontWeight = 600;
+      document.getElementById(text).style.fontSize = "1.5vw";
+      document.getElementById(text).style.width = "50vw";
+    }else{
+    text = "newsd1p"+a;
+    document.getElementById(text).style.width = "20vw";
+    document.getElementById(text).style.fontSize = "1vw";
+    document.getElementById(text).style.marginTop = "3vw";
+    document.getElementById(text).style.paddingTop = 0;
+    document.getElementById(text).style.backgroundColor = "white";
+    document.getElementById(text).style.color = "black"
+    document.getElementById(text).style.fontWeight = 400;
+    document.getElementById(text).style.borderColor = "black"
+    }
+  }
+}
+function newsd1p2(){
+  num = 2;
+  for(var a = 1; a<=4; a++){
+    if(a == num){
+      text = "newsd1p"+a;
+      document.getElementById(text).style.backgroundColor = "black";
+      document.getElementById(text).style.color = "white";
+      document.getElementById(text).style.borderColor = "white";
+      document.getElementById(text).style.paddingTop = "3vw";
+      document.getElementById(text).style.margin = 0;
+      document.getElementById(text).style.fontWeight = 600;
+      document.getElementById(text).style.fontSize = "1.5vw";
+      document.getElementById(text).style.width = "50vw";
+    }else{
+    text = "newsd1p"+a;
+    document.getElementById(text).style.width = "20vw";
+    document.getElementById(text).style.fontSize = "1vw";
+    document.getElementById(text).style.marginTop = "3vw";
+    document.getElementById(text).style.paddingTop = 0;
+    document.getElementById(text).style.backgroundColor = "white";
+    document.getElementById(text).style.color = "black"
+    document.getElementById(text).style.fontWeight = 400;
+    document.getElementById(text).style.borderColor = "black"
+    }
+  }
+  text = "newsd1p"+1;
+  document.getElementById(text).style.width = "20vw";
+  document.getElementById(text).style.fontSize = "1vw";
+  document.getElementById(text).style.marginTop = "5vw";
+  document.getElementById(text).style.paddingTop = "3vw";
+  document.getElementById(text).style.backgroundColor = "white";
+  document.getElementById(text).style.color = "black"
+  document.getElementById(text).style.fontWeight = 400;
+  document.getElementById(text).style.borderColor = "black"
+}
+function newsd1p3(){
+  num = 3;
+  for(var a = 1; a<=4; a++){
+    if(a == num){
+      text = "newsd1p"+a;
+      document.getElementById(text).style.backgroundColor = "black";
+      document.getElementById(text).style.color = "white";
+      document.getElementById(text).style.borderColor = "white";
+      document.getElementById(text).style.paddingTop = "3vw";
+      document.getElementById(text).style.margin = 0;
+      document.getElementById(text).style.fontWeight = 600;
+      document.getElementById(text).style.fontSize = "1.5vw";
+      document.getElementById(text).style.width = "50vw";
+    }else{
+    text = "newsd1p"+a;
+    document.getElementById(text).style.width = "20vw";
+    document.getElementById(text).style.fontSize = "1vw";
+    document.getElementById(text).style.marginTop = "3vw";
+    document.getElementById(text).style.paddingTop = 0;
+    document.getElementById(text).style.backgroundColor = "white";
+    document.getElementById(text).style.color = "black"
+    document.getElementById(text).style.fontWeight = 400;
+    document.getElementById(text).style.borderColor = "black"
+    }
+  }
+  text = "newsd1p"+1;
+  document.getElementById(text).style.width = "20vw";
+  document.getElementById(text).style.fontSize = "1vw";
+  document.getElementById(text).style.marginTop = "3vw";
+  document.getElementById(text).style.paddingTop = "3vw";
+  document.getElementById(text).style.backgroundColor = "white";
+  document.getElementById(text).style.color = "black"
+  document.getElementById(text).style.fontWeight = 400;
+  document.getElementById(text).style.borderColor = "black"
+}
+function newsd1p4(){
+  num = 4;
+  for(var a = 1; a<=4; a++){
+    if(a == num){
+      text = "newsd1p"+a;
+      document.getElementById(text).style.backgroundColor = "black";
+      document.getElementById(text).style.color = "white";
+      document.getElementById(text).style.borderColor = "white";
+      document.getElementById(text).style.paddingTop = "3vw";
+      document.getElementById(text).style.margin = 0;
+      document.getElementById(text).style.fontWeight = 600;
+      document.getElementById(text).style.fontSize = "1.5vw";
+      document.getElementById(text).style.width = "50vw";
+    }else{
+    text = "newsd1p"+a;
+    document.getElementById(text).style.width = "20vw";
+    document.getElementById(text).style.fontSize = "1vw";
+    document.getElementById(text).style.marginTop = "3vw";
+    document.getElementById(text).style.paddingTop = 0;
+    document.getElementById(text).style.backgroundColor = "white";
+    document.getElementById(text).style.color = "black"
+    document.getElementById(text).style.fontWeight = 400;
+    document.getElementById(text).style.borderColor = "black"
+    }
+  }
+  text = "newsd1p"+1;
+  document.getElementById(text).style.width = "20vw";
+  document.getElementById(text).style.fontSize = "1vw";
+  document.getElementById(text).style.marginTop = "3vw";
+  document.getElementById(text).style.paddingTop = "3vw";
+  document.getElementById(text).style.backgroundColor = "white";
+  document.getElementById(text).style.color = "black"
+  document.getElementById(text).style.fontWeight = 400;
+  document.getElementById(text).style.borderColor = "black"
+}
+text = "すべて見る>"
+aaa =0;
+function newsd1s(){
+  aaa+=1;
+  console.log(a);
+  if(aaa < 5){
+  text = text+">";
+  document.getElementById("newsd1s").innerHTML = text;
+  setTimeout(newsd1s,250);
+  }
+
+  else if(aaa == 10){
+    return;
+  }
+ }
+

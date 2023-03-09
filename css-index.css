@@ -255,28 +255,24 @@ body {
   }
   
   .news2 {
-    width:100vw;
-    height:8vw;
-    padding-top:6vw;
-    font-size: 60px;
-    font-weight: 600;
-    text-align: center;
-    color: white;
-    background-color: #3A1F00;
-      box-shadow:  0 0 10px 2px #BC9A78;
-    }
+font-size:5vw;
+font-weight:600;
+text-align:center;
+color:#3A1F00;
+margin-bottom:10vw;
+  }
     
   .news3{
     width:80vw;
     height:40vw;
-    border-radius:5vw;
+    border-radius:2vw;
     border:none;
     z-index:100;
   }
   .news {
     margin-top:5vw;
     border-radius:5vw;
-    margin-left: 10vw;
+    
     background-color: white;
     width: 80vw;
     height: 40vw;
@@ -301,13 +297,14 @@ body {
   
   .place {
     width: 100vw;
-    border-top: 1px solid;
+    
   
   }
   
   .place2 {
     width: 100vw;
     height: 8vw;
+    margin-top:5vw;
     background-color: #3A1F00;
     padding-top: 6vw;
     font-size: 60px;
@@ -657,6 +654,7 @@ body {
               padding:0;
               position: relative;
               border-bottom:20px solid #C6AC8F;
+              
             }
             .f1{
               position:absolute;
@@ -700,6 +698,8 @@ body {
               background: #C6AC8F;
               box-shadow: 0 0 5px 1px #C6AC8F;
             }
+
+
             .ff{
               width:95vw;
               height:40vw;
@@ -754,13 +754,174 @@ body {
               background: #C6AC8F;
               box-shadow: 0 0 5px 1px #C6AC8F;
             }
-            .halfl{
+            .ffmore{
+              position: absolute;
+              top:100%;
+              right: 0%;
+              width:15vw;
+              height:3vw;
+              background-color:#C6AC8F; 
+              margin-top: -10vw;
+              border:5px solid white;
+              outline:2px solid #C6AC8F; 
+
+
+              text-align:center;
+              color:white;
+              padding-top:1.5vw;
+              font-size:1vw;
+            }
+            .ffmore:hover{
+              background-color:#BC9A78; 
+              border:5px solid white;
+              outline:2px solid #C6AC8F; 
+            }
+            .ffmore:active{
+              background-color: #78512B;
+            }
+            .fff{
+              width:95vw;
+              height:40vw;
+              margin-top:10vw;
+              margin-left:2.5vw;
+              position: relative;
+            }
+            .f3{
               position:absolute;
-              top:-10%;
+              top:25%;
+              left:70vw;
+              width:25vw;
+              font-size:3vw;
+              font-weight:600;
+              margin-top:-6vw;
+              padding-right:1vw;
+              border-bottom:2vw solid #C6AC8F;
+              text-align: right;
+              float: right;
+              z-index:0;
+            }
+            .fff img{
+              width:70vw;
+              height:auto;
+              border-radius:100px;
+            }
+            .fffmore{
+              position: absolute;
+              top:50%;
+              right: 0%;
+              width:15vw;
+              height:3vw;
+              background-color:#C6AC8F; 
+              border:5px solid white;
+              outline:2px solid #C6AC8F; 
+
+
+              text-align:center;
+              color:white;
+              padding-top:1.5vw;
+              font-size:1vw;
+            }
+            .fffmore:hover{
+              background-color:#BC9A78; 
+              border:5px solid white;
+              outline:2px solid #C6AC8F; 
+            }
+            .fffmore:active{
+              background-color: #78512B;
+            }
+            .newsp{
+              margin-left:2vw;
+              margin-bottom:5vw;
+              padding-left:2vw;
+              font-size: 3vw;
+              font-weight:600;
+              border-bottom:2vw solid #C6AC8F;
+            }
+            .newsd1{
+              position: relative;
+              margin-left:4vw;
+              width:20vw;
+              height:20vw;
+              z-index:0;
+            }
+            .newsd1 p{
+              width:20vw;
+              font-size:1vw;
+              margin-top:3vw;
+              padding-left:20px;
+              padding-bottom:10px;
+              border-bottom:2px solid black;
+            }
+            .newsd1 div{
+              margin-top:2vw;
+              font-weight: 600;
+              font-size:1vw;
+              color:#3A1F00;
+            }
+            .newsd1 span{
+              font-size:0.75vw;
+              margin-left:2vw;
+            }
+            .newsd1 p:nth-child(1){
+              background-color:black;
+              color:white;
+              border-color:white;
+              padding-top:3vw;
+              margin:0;
+              font-weight:600;
+              font-size:1.5vw;
               width:50vw;
-              height:45vw;
-              margin-left:-5vw;
+            }
+            .newsd2{
+              position: relative;
+              left:-5vw;
+              width:60vw;
+              height:20vw;
+              float:right;
+              margin-top:-20vw;
               
-              background-color: #C6AC8F;
-              z-index:50;
+              font-size:1vw;
+              background-color: white;
+              border-left:2px solid;
+              border-bottom:2px solid;
+              z-index:200;
+            }
+            .newsd2 pre{
+              height:20vw;
+              overflow-y: scroll;
+            }
+            .newsd2 pre::-webkit-scrollbar{
+              width:1vw;
+            }
+            .newsd2 pre::-webkit-scrollbar-track{
+            background:white;
+            
+            }
+            .newsd2 pre::-webkit-scrollbar-thumb{
+              background:black;
+              
+            }
+            
+
+            .newsd1 p:nth-child(1):active{
+              background-color:white;
+              color:black;
+            }
+            .newsd1 p:nth-child(2):active{
+              background-color:white;
+              color:black;
+            }
+            .newsd1 p:nth-child(3):active{
+              background-color:white;
+              color:black;
+            }
+            .newsd1 p:nth-child(4):active{
+              background-color:white;
+              color:black;
+            }
+            .newsd1 div:hover{
+              color:#BC9A78;
+            }
+            .newsd1 div:active{
+              color:#3A1F00;
             }
