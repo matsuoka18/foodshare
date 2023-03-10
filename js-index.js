@@ -860,7 +860,46 @@ function newsd1p1(){
     document.getElementById(text).style.borderColor = "black"
     }
   }
+  //入力忘れないように
+  url="";
+  data = [{
+    "branch":"getnews"
+    }]
+  params = {
+    "method":"post",
+    "mode":"no-cors",
+    "Content-Type":"application/json",
+    "body":JSON.stringify(data)
+    }
+  fetch(url,params)
+  console.log("newsd1p1 1");
+  setTimeout(mewsd1p11,2000);
 }
+newsjson = "";
+function newsd1p11(){
+  console.log("newsd1p1 11 start");
+  url ="";
+  fetch(url,{
+    "method":"GET",
+    "mode":"cors"
+    })
+    .then(response => {
+      if(response.ok){
+        return response.json()
+        }
+      })
+
+    .then(resJson => {
+      newsjson = resJson;
+      console.log("newsd1p1 11 finish");
+      setTimeout(wrnews,1000);
+    })
+    .catch(error => {
+    alert("Error");
+    console.log("newsのエラー");
+    })
+  }
+  
 function newsd1p2(){
   num = 2;
   for(var a = 1; a<=4; a++){
@@ -981,3 +1020,10 @@ function newsd1s(){
 
  }
 
+
+function wrnews(){
+ data = JSON.parae(newsjson);
+data = data.news[0];
+data = decodeURI(data);
+// 3.10
+}
