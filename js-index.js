@@ -835,8 +835,10 @@ function c11(){
   a = document.getElementById("news").style;
   
 }
+wrnumber = "";
 function newsd1p1(){
   num = 1;
+  wrnumber =1;
   for(var a = 1; a<=4; a++){
     if(a == num){
       text = "newsd1p"+a;
@@ -859,9 +861,12 @@ function newsd1p1(){
     document.getElementById(text).style.fontWeight = 400;
     document.getElementById(text).style.borderColor = "black"
     }
-  }
+  
   //入力忘れないように
-  url="";
+if(typeOf newsjson == "undefined"){
+  
+  //この場合 待ち時間が生じるからその処理を
+  url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   data = [{
     "branch":"getnews"
     }]
@@ -874,11 +879,14 @@ function newsd1p1(){
   fetch(url,params)
   console.log("newsd1p1 1");
   setTimeout(mewsd1p11,2000);
+}else{
+  console.log("newsd1p1 skip");
+  wrnews();
 }
 newsjson = "";
 function newsd1p11(){
   console.log("newsd1p1 11 start");
-  url ="";
+  url ="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   fetch(url,{
     "method":"GET",
     "mode":"cors"
@@ -899,9 +907,10 @@ function newsd1p11(){
     console.log("newsのエラー");
     })
   }
-  
+  }
 function newsd1p2(){
   num = 2;
+  wrnumber = 2;
   for(var a = 1; a<=4; a++){
     if(a == num){
       text = "newsd1p"+a;
@@ -934,9 +943,52 @@ function newsd1p2(){
   document.getElementById(text).style.color = "black"
   document.getElementById(text).style.fontWeight = 400;
   document.getElementById(text).style.borderColor = "black"
+ 
+   if(typeOf newsjson == "undefined"){
+  url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  data = [{
+    "branch":"getnews"
+    }]
+  params = {
+    "method":"post",
+    "mode":"no-cors",
+    "Content-Type":"application/json",
+    "body":JSON.stringify(data)
+    }
+  fetch(url,params)
+  console.log("newsd1p1 1");
+  setTimeout(mewsd1p22,2000);
+}else{
+  console.log("newsd1p2 skip");
+  wrnews();
+}
+newsjson = "";
+function newsd1p22(){
+  console.log("newsd1p2 22 start");
+  url ="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  fetch(url,{
+    "method":"GET",
+    "mode":"cors"
+    })
+    .then(response => {
+      if(response.ok){
+        return response.json()
+        }
+      })
+
+    .then(resJson => {
+      newsjson = resJson;
+      console.log("newsd1p2 22 finish");
+      setTimeout(wrnews,1000);
+    })
+    .catch(error => {
+    alert("Error");
+    console.log("newsのエラー");
+    })
 }
 function newsd1p3(){
   num = 3;
+  wrnumber =3;
   for(var a = 1; a<=4; a++){
     if(a == num){
       text = "newsd1p"+a;
@@ -969,9 +1021,52 @@ function newsd1p3(){
   document.getElementById(text).style.color = "black"
   document.getElementById(text).style.fontWeight = 400;
   document.getElementById(text).style.borderColor = "black"
+  
+  if(typeOf newsjson == "undefined"){
+  url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  data = [{
+    "branch":"getnews"
+    }]
+  params = {
+    "method":"post",
+    "mode":"no-cors",
+    "Content-Type":"application/json",
+    "body":JSON.stringify(data)
+    }
+  fetch(url,params)
+  console.log("newsd1p1 1");
+  setTimeout(mewsd1p33,2000);
+}else{
+  console.log("newsd1p3 skip");
+  wrnews();
+}
+newsjson = "";
+function newsd1p33(){
+  console.log("newsd1p3 33 start");
+  url ="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  fetch(url,{
+    "method":"GET",
+    "mode":"cors"
+    })
+    .then(response => {
+      if(response.ok){
+        return response.json()
+        }
+      })
+
+    .then(resJson => {
+      newsjson = resJson;
+      console.log("newsd1p3 33 finish");
+      setTimeout(wrnews,1000);
+    })
+    .catch(error => {
+    alert("Error");
+    console.log("newsのエラー");
+    })
 }
 function newsd1p4(){
   num = 4;
+  wrnunber = 4;
   for(var a = 1; a<=4; a++){
     if(a == num){
       text = "newsd1p"+a;
@@ -1003,7 +1098,49 @@ function newsd1p4(){
   document.getElementById(text).style.backgroundColor = "white";
   document.getElementById(text).style.color = "black"
   document.getElementById(text).style.fontWeight = 400;
-  document.getElementById(text).style.borderColor = "black"
+  document.getElementById(text).style.borderColor = "black";
+  
+  if(typeOf newsjson == "undefined"){
+  url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  data = [{
+    "branch":"getnews"
+    }]
+  params = {
+    "method":"post",
+    "mode":"no-cors",
+    "Content-Type":"application/json",
+    "body":JSON.stringify(data)
+    }
+  fetch(url,params)
+  console.log("newsd1p4 4");
+  setTimeout(mewsd1p44,2000);
+}else{
+  console.log("newsd1p4 skip");
+  wrnews();
+}
+newsjson = "";
+function newsd1p44(){
+  console.log("newsd1p4 44 start");
+  url ="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  fetch(url,{
+    "method":"GET",
+    "mode":"cors"
+    })
+    .then(response => {
+      if(response.ok){
+        return response.json()
+        }
+      })
+
+    .then(resJson => {
+      newsjson = resJson;
+      console.log("newsd1p4 44 finish");
+      setTimeout(wrnews,1000);
+    })
+    .catch(error => {
+    alert("Error");
+    console.log("newsのエラー");
+    })
 }
 text2 = "すべて見る>"
 aaa =0;
@@ -1023,7 +1160,9 @@ function newsd1s(){
 
 function wrnews(){
  data = JSON.parae(newsjson);
-data = data.news[0];
+data = data.news[wrnumber];
 data = decodeURI(data);
 // 3.10
+//newsd2pre
+document.getElementById("newsd2pre").innerHTML = data;
 }
