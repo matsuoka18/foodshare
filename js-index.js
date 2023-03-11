@@ -861,9 +861,9 @@ function newsd1p1(){
     document.getElementById(text).style.fontWeight = 400;
     document.getElementById(text).style.borderColor = "black"
     }
-  
+  }
   //入力忘れないように
-if(typeOf newsjson == "undefined"){
+if(typeof newsjson == "undefined"){
   
   //この場合 待ち時間が生じるからその処理を
   url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
@@ -883,6 +883,7 @@ if(typeOf newsjson == "undefined"){
   console.log("newsd1p1 skip");
   wrnews();
 }
+  }
 newsjson = "";
 function newsd1p11(){
   console.log("newsd1p1 11 start");
@@ -907,7 +908,7 @@ function newsd1p11(){
     console.log("newsのエラー");
     })
   }
-  }
+  
 function newsd1p2(){
   num = 2;
   wrnumber = 2;
@@ -944,7 +945,7 @@ function newsd1p2(){
   document.getElementById(text).style.fontWeight = 400;
   document.getElementById(text).style.borderColor = "black"
  
-   if(typeOf newsjson == "undefined"){
+   if(typeof newsjson == "undefined"){
   url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   data = [{
     "branch":"getnews"
@@ -961,6 +962,7 @@ function newsd1p2(){
 }else{
   console.log("newsd1p2 skip");
   wrnews();
+}
 }
 newsjson = "";
 function newsd1p22(){
@@ -1022,7 +1024,7 @@ function newsd1p3(){
   document.getElementById(text).style.fontWeight = 400;
   document.getElementById(text).style.borderColor = "black"
   
-  if(typeOf newsjson == "undefined"){
+  if(typeof newsjson == "undefined"){
   url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   data = [{
     "branch":"getnews"
@@ -1039,6 +1041,7 @@ function newsd1p3(){
 }else{
   console.log("newsd1p3 skip");
   wrnews();
+}
 }
 newsjson = "";
 function newsd1p33(){
@@ -1100,7 +1103,7 @@ function newsd1p4(){
   document.getElementById(text).style.fontWeight = 400;
   document.getElementById(text).style.borderColor = "black";
   
-  if(typeOf newsjson == "undefined"){
+  if(typeof newsjson == "undefined"){
   url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   data = [{
     "branch":"getnews"
@@ -1117,6 +1120,7 @@ function newsd1p4(){
 }else{
   console.log("newsd1p4 skip");
   wrnews();
+}
 }
 newsjson = "";
 function newsd1p44(){
