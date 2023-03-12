@@ -1,5 +1,6 @@
 a = 0;
 ipadress='';
+resJson = '';
 function start(){
  /* fetch('https://ipinfo.io?callback')
 .then(res => res.json())
@@ -10,7 +11,8 @@ document.getElementById("alll").style.opacity = "1";
 document.getElementById("alll2").style.display = "none";
 pic();
 console.log("firstdata start>>");
-firstsearch();//ページ読み込みの際に全データを取得
+firstsearch();//ページ読み込みのに全データを取得
+///setTimeout(newsd1p1,1000);
 /* }else{
 document.getElementById("alll2").style.opacity = "1";
 data = "<h1>ログインせい</h1><h2>パスワード</h2>";
@@ -432,6 +434,7 @@ var params={
 fetch(url,params);
 console.log("firstsearch1 ok")
 success1 = "o";
+
 setTimeout(firstsearch2,2000);
 }
 
@@ -515,6 +518,8 @@ document.getElementById("s").style.backgroundColor ="#1E0000";
 document.getElementById("search").style.borderColor = "#411C00";
 document.getElementById("search").style.borderWeight = "2px";
 //document.getElementById("search").placeholder = "finish";
+//お知らせの処理開始
+newsd1p1();
 if(request2 == "next"){
 console.log("menusearch2へ優先処理  in menu2")
 menusearch2(resJson);
@@ -836,9 +841,10 @@ function c11(){
   
 }
 wrnumber = "";
+newsjson = 0;
 function newsd1p1(){
   num = 1;
-  wrnumber =1;
+  wrnumber =0;
   for(var a = 1; a<=4; a++){
     if(a == num){
       text = "newsd1p"+a;
@@ -863,8 +869,7 @@ function newsd1p1(){
     }
   }
   //入力忘れないように
-if(typeof newsjson == "undefined"){
-  
+if(newsjson == 0){
   //この場合 待ち時間が生じるからその処理を
   url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   data = [{
@@ -878,13 +883,13 @@ if(typeof newsjson == "undefined"){
     }
   fetch(url,params)
   console.log("newsd1p1 1");
-  setTimeout(mewsd1p11,2000);
+  setTimeout(newsd1p11,2000);
 }else{
   console.log("newsd1p1 skip");
   wrnews();
 }
   }
-newsjson = "";
+
 function newsd1p11(){
   console.log("newsd1p1 11 start");
   url ="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
@@ -911,7 +916,7 @@ function newsd1p11(){
   
 function newsd1p2(){
   num = 2;
-  wrnumber = 2;
+  wrnumber = 1;
   for(var a = 1; a<=4; a++){
     if(a == num){
       text = "newsd1p"+a;
@@ -945,7 +950,7 @@ function newsd1p2(){
   document.getElementById(text).style.fontWeight = 400;
   document.getElementById(text).style.borderColor = "black"
  
-   if(typeof newsjson == "undefined"){
+   if(newsjson == 0){
   url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   data = [{
     "branch":"getnews"
@@ -958,7 +963,7 @@ function newsd1p2(){
     }
   fetch(url,params)
   console.log("newsd1p1 1");
-  setTimeout(mewsd1p22,2000);
+  setTimeout(newsd1p22,2000);
 }else{
   console.log("newsd1p2 skip");
   wrnews();
@@ -990,7 +995,7 @@ function newsd1p22(){
 }
 function newsd1p3(){
   num = 3;
-  wrnumber =3;
+  wrnumber =2;
   for(var a = 1; a<=4; a++){
     if(a == num){
       text = "newsd1p"+a;
@@ -1024,7 +1029,7 @@ function newsd1p3(){
   document.getElementById(text).style.fontWeight = 400;
   document.getElementById(text).style.borderColor = "black"
   
-  if(typeof newsjson == "undefined"){
+  if(newsjson == 0){
   url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   data = [{
     "branch":"getnews"
@@ -1037,7 +1042,7 @@ function newsd1p3(){
     }
   fetch(url,params)
   console.log("newsd1p1 1");
-  setTimeout(mewsd1p33,2000);
+  setTimeout(newsd1p33,2000);
 }else{
   console.log("newsd1p3 skip");
   wrnews();
@@ -1069,7 +1074,7 @@ function newsd1p33(){
 }
 function newsd1p4(){
   num = 4;
-  wrnunber = 4;
+  wrnumber = 3;
   for(var a = 1; a<=4; a++){
     if(a == num){
       text = "newsd1p"+a;
@@ -1103,7 +1108,7 @@ function newsd1p4(){
   document.getElementById(text).style.fontWeight = 400;
   document.getElementById(text).style.borderColor = "black";
   
-  if(typeof newsjson == "undefined"){
+  if(newsjson == 0){
   url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   data = [{
     "branch":"getnews"
@@ -1116,7 +1121,7 @@ function newsd1p4(){
     }
   fetch(url,params)
   console.log("newsd1p4 4");
-  setTimeout(mewsd1p44,2000);
+  setTimeout(newsd1p44,2000);
 }else{
   console.log("newsd1p4 skip");
   wrnews();
@@ -1163,9 +1168,10 @@ function newsd1s(){
 
 
 function wrnews(){
- data = JSON.parae(newsjson);
-data = data.news[wrnumber];
-data = decodeURI(data);
+  console.log(newsjson);
+ //data = JSON.parae(newsjson);
+data = newsjson[0].news[wrnumber];
+//data = decodeURI(data);
 // 3.10
 //newsd2pre
 document.getElementById("newsd2pre").innerHTML = data;
