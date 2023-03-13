@@ -1,3 +1,6 @@
+body{
+font-family:monospace;
+}
 .left{
     border-right:4px solid black;
     width:35vw;
