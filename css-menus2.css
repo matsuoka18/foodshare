@@ -9,7 +9,7 @@ body {
   color: white;
   background-color: #3A1F00;
   width: 15vw;
-  height: 13vw;
+  height: 7vw;
   text-align: center;
 
 }
@@ -1327,6 +1327,7 @@ img {
   padding: 0;
   margin-right: 3vw;
   margin-left: -2vw;
+  border-radius: 15px;
   width: 7vw;
   height: auto;
 }
@@ -1342,7 +1343,8 @@ img {
 }
 
 .shop1 h2 {
-  font-size: 40px;
+  font-size: 4vw;
+  color:#3A1F00;
   text-align: center;
   border-top: 2px solid #3A1F00;
   border-bottom: 2px solid #3A1F00;
@@ -1386,7 +1388,7 @@ img {
   margin-left: 10px;
   padding-left: 10px;
   border-left: 10px solid red;
-  font-size: 30px;
+  font-size: 2vw;
   font-weight: 600;
 }
 
@@ -1402,9 +1404,9 @@ img {
 
 .button11 h2 {
   margin-left: 2vw;
-  border-left: 10px solid red;
+  border-left: 1.5vw solid red;
   padding-left: 1vw;
-  font-size: 30px;
+  font-size: 3vw;
 }
 
 .button22 h2 {
@@ -1469,11 +1471,14 @@ img {
 
 .menu1 {
   padding: 5px;
-  height: 15vw;
+  height:20vw;
 }
-
+.menu1 img{
+  border-radius:1vw;
+}
 .menu1:hover img {
   box-shadow: 0 0 2px 2px #DDDDDD;
+  border-radius:1vw;
 }
 
 .menu1:hover {
@@ -1481,13 +1486,13 @@ img {
 }
 
 .menu1 h2 {
-  font-size: 40px;
+  font-size: 60px;
   width: 45vw;
 }
 
 .star {
   position: relative;
-  top: -0.5vw;
+  top: -2.5vw;
   width: auto;
   height: 2vw;
   background-color: white;
@@ -1508,7 +1513,8 @@ img {
   z-index: 100;
   border-radius: 10px;
   display:block;
-  padding-bottom:5px;
+  margin:0;
+  padding:0.5vw;
 }
 
 .menu1:hover .review {
@@ -1532,7 +1538,8 @@ img {
   z-index: 100;
   border-radius: 10px;
   display:block;
-
+margin: 0;
+padding:0.5vw;
 }
 
 .menu1:hover .review2 {
@@ -1582,13 +1589,12 @@ img {
 }
 
 .menu1 h4 {
-
-  font-size: 30px;
+  font-size: 50px;
   color: red;
 }
 
 .menu1 span {
-  font-size: 15px;
+  font-size: 30px;
 }
 
 .hey {
@@ -1596,14 +1602,19 @@ img {
   height: 45vw;
   padding: 0;
   margin: 0;
+  
 }
 
 img {
-  height: 45vw;
+  height: 40vw;
   width: auto;
   margin: 0;
-  padding: 0;
+  padding: 1vw;
   float: left;
+  border-radius:5vw;
+  margin-top:1vw;
+  margin-right: 2vw;
+  background-color: white;
 }
 
 .intro {
@@ -1618,8 +1629,7 @@ img {
 .hyouka {
   padding: 10px;
   margin: 0;
-  border-bottom: 1px solid lightgray;
-
+  
 }
 
 .hyouka h1 {
@@ -1629,11 +1639,15 @@ img {
   box-shadow: 0 0 2px 1px white;
   border-radius: 30px;
   color: #3A1F00;
-  font-size: 40px;
+  font-size: 4vw;
 }
 
 .hyouka p {
   display: flex;
+  font-size:2vw;
+  color:#FFD700;
+  padding:0;
+  margin:0;
 }
 
 .sho {
@@ -1652,9 +1666,8 @@ img {
 }
 
 .info {
-  background-color: #EEEEEE;
-  height: 20vw;
-  margin: 5px;
+  background-color: white;
+  margin: 0px;
   padding: 10px;
   border-radius: 15px;
 
@@ -1664,23 +1677,31 @@ img {
   font-family: sans-serif;
   display: block;
   text-align: left;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 1.75vw;
+  border-bottom:2px solid black;
+  margin-bottom:0.1vw;
+  margin-top:0.1vw;
 }
-
+.info ul{
+  font-weight:500;
+  font-size:1.5vw;
+  margin-top:1vw;
+}
 .main {
   width: 100vw;
 }
 
 .main h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 5vw;
+  color:#3A1F00;
   padding-top: 5vw;
   margin-bottom: 0;
   margin-top: 0;
   padding-bottom: 5vw;
-  border-top: 2px solid #3A1F00;
-  border-bottom: 1px solid #3A1F00;
+  
+
 }
 
 .buttons {
@@ -1842,10 +1863,10 @@ a {
 .cart {
   background-color: #FFD700;
   border: 1px solid orange;
-  width: 5vw;
-  padding: 5px;
+  width: 6vw;
+  padding: 0.5vw;
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 1vw;
   color: black;
   font-weight: 500;
   float: right;
@@ -2031,6 +2052,8 @@ text-align: center;
   display:none;
 }
 .imgs{
+  position:absolute;
+  right:3vw;
   display: flex;
   flex-direction: column;
   float:right;
