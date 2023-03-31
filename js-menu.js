@@ -1,5 +1,5 @@
 function getdata() {
-    cookie = document.cookie;
+ cookie = document.cookie;
     //cookie = 'branch=menu|; menumemo={"shop1":["4","7","26","29","42","45"],"shop7":["3","9","19","22","41","44","57","60"],"shop13":["9","12","31","34","47","50"],"shop19":["6","9","28","31","44","47"],"shop25":["6","9","28","31","44","47"],"shop31":["6","9","28","31","44","47"],"shop37":["6","9","28","31","44","47"],"shop43":["6","9","28","31","44","47"],"shop49":["6","9","28","31","44","47"],"shop55":["6","9","28","31","44","47"],"shop61":["6","9","28","31","44","47"],"shop67":["6","9","28","31","44","47"],"shop73":["6","9","28","31","44","47"],"shop79":["6","9","28","31","44","47"],"last":["79"]}-; key=カメラ; loginID=%E3%82%BB%E3%83%96%E3%83%B3!; shopnumber=163#; pass=%E3%82%AB%E3%83%A1%E3%83%A9?';
     loginIDp1 = cookie.indexOf("loginID=") + 8;
     loginIDp2 = cookie.indexOf("!");
@@ -12,6 +12,8 @@ function getdata() {
     shopID = cookie.substring(shopnumberp1, shopnumberp2);//shopID
     console.log(shopID);
     cookie4 = decodeURI(cookie4);
+    //cookie4 = "hhh";
+    //shopID = 1;
     document.getElementById("change1").value = cookie4;
     document.getElementById("nh1").value = cookie4;
     document.getElementById("nh11").innerHTML = cookie4
@@ -388,36 +390,36 @@ function getdata() {
     lfee = document.getElementById("change3").value;
     lexpress = document.getElementById("change4").value;
   }
+document.getElementById("example").addEventListener('change',fileload);
+function fileload(){
+  var img = document.getElementById("example");
+  var file = img.files[0];
 
-
-  //画像処理
-  const fileInput = document.getElementById('example');
-  const handleFileSelect = () => {
-    const files = fileInput.files;
-    for (let i = 0; i < files.length; i++) {
-      previewFile(files[i]);
+  var reader = new FileReader();
+  reader.onload = (event) =>{
+    base64text = event.currentTarget.result;
+    base64last = base64text.length;
+    ba64n = parseInt(base64last/8192+1);//送信回数
+    alert(ba64n);
+    st1 = 0;
+    st2 = 8192;
+    sendtext = [];
+    for(var a=0; a<ba64n; a++){
+     st  = base64text.substring(st1,st2);
+     console.log(st);
+     st1+=8192;
+     st2+=8192;
+     sendtext.push(st);
     }
+    console.log("base64 load fin...");
+    console.log("base64text:"+base64text);
+
+    console.log("base64Last:"+base64last);
+    console.log("base64:"+sendtext);
+
   }
-  fileInput.addEventListener('change', handleFileSelect);
-  function previewFile(file) {
-    // プレビュー画像を追加する要素
-    const preview = document.getElementById('pic');
-
-    // FileReaderオブジェクトを作成
-    const reader = new FileReader();
-
-    // URLとして読み込まれたときに実行する処理
-    reader.onload = function (e) {
-      imageUrl = e.target.result; // URLはevent.target.resultで呼び出せる
-      img = document.createElement("img"); // img要素を作成
-      img.src = imageUrl; // URLをimg要素にセット
-      preview.appendChild(img); // #previewの中に追加
-      //alert(imageUrl);
-    }
-
-    // いざファイルをURLとして読み込む
-    reader.readAsDataURL(file);
-  }
+  reader.readAsDataURL(file)
+}
   function sen() {
     alert(document.getElementById("jan").value);
   }
@@ -425,7 +427,7 @@ function getdata() {
   //送信処理
   function send() {
     shop = cookie4;
-    var url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+    url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
     var data = [{
       "name": shop,
       "name1": menu,
@@ -434,7 +436,7 @@ function getdata() {
       "name4": "追加",
       "name5": shopID,
       "name8": janru,
-      "name9": imageUrl
+      "name9": base64text
     }]
     var params = {
       "method": "post",
@@ -443,6 +445,12 @@ function getdata() {
       "body": JSON.stringify(data)
     }
     fetch(url, params)
+
+
+    
+
+    
+    //画像の送信動作を作る→
     if (firsttime == '1') {
       alert("初出品完了");
       location.href = "menu.html";
@@ -452,8 +460,62 @@ function getdata() {
     ai = 1;
     aniname = "商品button";
     ani();
-    menuu();
+    
+    aa=0;
+    setTimeout(send2,2000);
   }
+
+  function send2(){
+  if(aa <= sendtext.length/4){
+      data = [{
+        "name":shop,
+        "name1":menu,
+        "name4":"画像追加",
+        "name5":shopID,
+        "name9":sendtext[aa-1],
+        "namenumber":aa
+        //なにか情報が入る可能性大
+      }]
+     params2 = {
+        "method":"post",
+        "mode":"no-cors",
+        "Content-Type":"application/json",
+        "body":JSON.stringify(data)
+      }
+
+      console.log("base64 send"+aa+"/"+sendtext.length);
+      fetch(url,params2);
+      setTimeout(send2,500);
+      aa++;
+    }else if(sendtext.length/4 < aa && aa<= sendtext.length ){
+      data = [{
+        "name":shop,
+        "name1":menu,
+        "name4":"画像追加",
+        "name5":shopID,
+        "name9":sendtext[aa-1],
+        "namenumber":aa
+        //なにか情報が入る可能性大
+      }]
+     params2 = {
+        "method":"post",
+        "mode":"no-cors",
+        "Content-Type":"application/json",
+        "body":JSON.stringify(data)
+      }
+
+      console.log("base64 send"+aa+"/"+sendtext.length);
+      fetch(url,params2);
+      setTimeout(send2,100);
+aa++;
+    }else if(sendtext.length == aa){
+      console.log(data);
+      menuu();
+      console.log("base64 send finish");
+    }
+  }
+    
+  
   function ani() {
     if (a > 0 && ai == 1) {
       a--;
