@@ -508,7 +508,7 @@ function fileload(){
       fetch(url,params2);
       setTimeout(send2,100);
 aa++;
-    }else if(sendtext.length == aa){
+    }else if(sendtext.length == aa+1){
       console.log(data);
       menuu();
       console.log("base64 send finish");
