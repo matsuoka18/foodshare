@@ -519,7 +519,7 @@ document.getElementById("search").style.borderColor = "#411C00";
 document.getElementById("search").style.borderWeight = "2px";
 //document.getElementById("search").placeholder = "finish";
 //お知らせの処理開始
-newsd1p1();
+firstnews();
 if(request2 == "next"){
 console.log("menusearch2へ優先処理  in menu2")
 menusearch2(resJson);
@@ -539,6 +539,7 @@ alert("通信失敗2")
 //ロード時に全データ取得のコード　終
 shopname = '';
 function searching(){
+  
 num = 100;
 request3 = '';
 ani();
@@ -842,6 +843,68 @@ function c11(){
 }
 wrnumber = "";
 newsjson = 0;
+//題名と時間だけをとりあえず表示→一番目のお知らせを表示
+function firstnews(){
+  url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  data = [{
+    "branch":"getnews"
+    }]
+  params = {
+    "method":"post",
+    "mode":"no-cors",
+    "Content-Type":"application/json",
+    "body":JSON.stringify(data)
+    }
+  fetch(url,params)
+  console.log("firstnews search start");
+  setTimeout(firstnews2,1000);
+}
+function firstnews2(){
+  url ="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  fetch(url,{
+    "method":"GET",
+    "mode":"cors"
+    })
+    .then(response => {
+      if(response.ok){
+        return response.json()
+        }
+      })
+
+    .then(resJson => {
+      newsjson = resJson;
+      console.log(newsjson);
+      console.log("firstnews2 search finish");
+      firstwrite();
+    })
+    .catch(error => {
+    alert("Error");
+    console.log("newsのエラー");
+    })
+}
+function firstwrite(){
+  for(var a = 0; a<4; a++){
+  data1 = newsjson[0].news1[a];
+  data2 = newsjson[0].news2[a];
+  console.log("data1:"+data1);
+  console.log("data2:"+data2);
+  if(a == 1){
+    document.getElementById("newsd1p1").innerHTML = data1;
+    document.getElementById("newsd1p1s").innerHTML = data2;
+  }else if(a == 2){
+    document.getElementById("newsd1p2").innerHTML = data1;
+    document.getElementById("newsd1p2s").innerHTML = data2;
+  }else if(a == 3){
+    document.getElementById("newsd1p3").innerHTML = data1;
+    document.getElementById("newsd1p3s").innerHTML = data2;
+  }else if(a == 4){
+    document.getElementById("newsd1p4").innerHTML = data1;
+    document.getElementById("newsd1p4s").innerHTML = data2;
+  }else if(a == 5){
+    return;
+  }
+}
+}
 function newsd1p1(){
   num = 1;
   wrnumber =0;
@@ -1170,9 +1233,14 @@ function newsd1s(){
 function wrnews(){
   console.log(newsjson);
  //data = JSON.parae(newsjson);
-data = newsjson[0].news[wrnumber];
+data1 = newsjson[0].news1[wrnumber];
+data2 = newsjson[0].news2[wrnumber];
+data3 = newsjson[0].news3[wrnumber];
 //data = decodeURI(data);
 // 3.10
 //newsd2pre
 document.getElementById("newsd2pre").innerHTML = data;
+}
+function c(){
+  window.open("control.html");
 }
