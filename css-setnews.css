@@ -1,0 +1,58 @@
+body{
+    font-family: monospace;
+}
+.class1{
+    margin-left:5vw;
+    border-left:2px solid;
+    padding-left:1vw;
+}
+.class1 input{
+    width:20vw;
+    height:2vw;
+    font-size:20px;
+    outline:none;
+    border:none;
+    padding:1vw;
+    border-radius:5vw;
+}
+.class1 input:hover{
+    box-shadow: 0 0 10px 2px lightgray;
+}
+.class1 input:focus{
+    box-shadow: 0 0 10px 2px lightgray;
+}
+.class1 textarea{
+    outline:none;
+    border:none;
+    font-size:20px;
+    padding:1vw;
+    border-radius:2vw;
+}
+.class1 textarea:hover{
+    box-shadow: 0 0 10px 2px lightgray;
+}
+.class1 textarea:focus{
+    box-shadow: 0 0 10px 2px lightgray;
+}
+h2{
+    font-size:40px;
+}
+.button{
+    margin-left:5vw;
+    margin-top:1vw;
+    font-size:20px;
+    font-weight:600;
+    background-color: black;
+    color:white;
+    width:5vw;
+    padding:1vw;
+    text-align:center;
+    border-radius:1vw;
+}
+.button:hover{
+    border-radius:2vw;
+}
+.button:active{
+    background-color:white;
+    color:black;
+}
