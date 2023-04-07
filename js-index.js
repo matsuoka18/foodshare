@@ -890,6 +890,7 @@ function firstwrite(){
   console.log("data2:"+data2);
   data = "<p onclick="+"\""+"newsd1p"+a+"()" +"\""+ "id="+"\""+ "newsd1p"+a+"\""+">"+data1+"<span id="+"\""+"newsd1p"+a+"s"+"\""+">"+date2+"</span></p>";
    setnews.insertAdjacentHTML("beforeend",data);
+  console.log("data:"+data);
   }
   console.log("firstwrite finish");
   newsd1p1();
