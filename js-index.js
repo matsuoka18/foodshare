@@ -883,7 +883,7 @@ function firstnews2(){
     })
 }
 function firstwrite(){
-  for(var a = 0; a<4; a++){
+  for(var a = 1; a<=4; a++){
   data1 = newsjson[0].news1[a];
   data2 = newsjson[0].news2[a];
   console.log("data1:"+data1);
