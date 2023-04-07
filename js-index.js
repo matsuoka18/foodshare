@@ -891,6 +891,8 @@ function firstwrite(){
   data = "<p onclick="+"\""+"newsd1p"+a+"()" +"\""+ "id="+"\""+ "newsd1p"+a+"\""+">"+data1+"<span id="+"\""+"newsd1p"+a+"s"+"\""+">"+date2+"</span></p>";
    setnews.insertAdjacent("beforeend",data);
   }
+  console.log("firstwrite finish");
+  newsd1p1();
 }
 function newsd1p1(){
   num = 1;
