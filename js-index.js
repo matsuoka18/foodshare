@@ -888,22 +888,9 @@ function firstwrite(){
   data2 = newsjson[0].news2[a];
   console.log("data1:"+data1);
   console.log("data2:"+data2);
-  if(a == 1){
-    document.getElementById("newsd1p1").innerHTML = data1;
-    document.getElementById("newsd1p1s").innerHTML = data2;
-  }else if(a == 2){
-    document.getElementById("newsd1p2").innerHTML = data1;
-    document.getElementById("newsd1p2s").innerHTML = data2;
-  }else if(a == 3){
-    document.getElementById("newsd1p3").innerHTML = data1;
-    document.getElementById("newsd1p3s").innerHTML = data2;
-  }else if(a == 4){
-    document.getElementById("newsd1p4").innerHTML = data1;
-    document.getElementById("newsd1p4s").innerHTML = data2;
-  }else if(a == 5){
-    return;
+  data = "<p onclick="+"\""+"newsd1p"+a+"()" +"\""+ "id="+"\""+ "newsd1p"+a+"\""+">"+data1+"<span id="+"\""+"newsd1p"+a+"s"+"\""+">"+date2+"</span></p>";
+   setnews.insertAdjacent("beforeend",data);
   }
-}
 }
 function newsd1p1(){
   num = 1;
