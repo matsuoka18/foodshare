@@ -519,7 +519,7 @@ document.getElementById("search").style.borderColor = "#411C00";
 document.getElementById("search").style.borderWeight = "2px";
 //document.getElementById("search").placeholder = "finish";
 //お知らせの処理開始
-firstnews();
+setTimeout(firstnews,1000);
 if(request2 == "next"){
 console.log("menusearch2へ優先処理  in menu2")
 menusearch2(resJson);
@@ -875,7 +875,7 @@ function firstnews2(){
       newsjson = resJson;
       console.log(newsjson);
       console.log("firstnews2 search finish");
-      firstwrite();
+      setTimeout(firstwrite,1000);
     })
     .catch(error => {
     alert("Error");
@@ -884,14 +884,16 @@ function firstnews2(){
 }
 function firstwrite(){
   for(var a = 1; a<=4; a++){
+    console.log("a:"+a);
   data1 = newsjson[0].news1[a];
   data2 = newsjson[0].news2[a];
   console.log("data1:"+data1);
   console.log("data2:"+data2);
-  data = "<p onclick="+"\""+"newsd1p"+a+"()" +"\""+ "id="+"\""+ "newsd1p"+a+"\""+">"+data1+"<span id="+"\""+"newsd1p"+a+"s"+"\""+">"+date2+"</span></p>";
+  data = "<p onclick="+"\""+"newsd1p"+a+"()" +"\""+ "id="+"\""+ "newsd1p"+a+"\""+">"+data1+"<span id="+"\""+"newsd1p"+a+"s"+"\""+">"+data2+"</span></p>";
    setnews.insertAdjacentHTML("beforeend",data);
   console.log("data:"+data);
   }
+  document.getElementById("loadnews").style.display = "none";
   console.log("firstwrite finish");
   newsd1p1();
 }
@@ -1229,7 +1231,7 @@ data3 = newsjson[0].news3[wrnumber];
 //data = decodeURI(data);
 // 3.10
 //newsd2pre
-document.getElementById("newsd2pre").innerHTML = data;
+document.getElementById("newsd2pre").innerHTML = data3;
 }
 function c(){
   window.open("control.html");

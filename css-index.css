@@ -852,11 +852,17 @@ margin-bottom:10vw;
               padding-bottom:10px;
               border-bottom:2px solid black;
             }
-            .newsd1 div{
-              margin-top:2vw;
+            .newsd1s{
+              width:300px;
+              margin-left:4vw;
+              margin-top:3vw;
+              padding-top:0;
               font-weight: 600;
               font-size:1vw;
               color:#3A1F00;
+            }
+            .newsd1s:hover{
+              color:#BC9A78;
             }
             .newsd1 span{
               font-size:0.75vw;
@@ -878,8 +884,7 @@ margin-bottom:10vw;
               width:60vw;
               height:20vw;
               float:right;
-              margin-top:-20vw;
-              
+              margin-top:-24.25vw;
               font-size:1vw;
               background-color: white;
               border-left:2px solid;
@@ -888,6 +893,7 @@ margin-bottom:10vw;
             }
             .newsd2 pre{
               height:20vw;
+
               overflow-y: scroll;
             }
             .newsd2 pre::-webkit-scrollbar{

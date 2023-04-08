@@ -5,42 +5,34 @@
         <title>お知らせ</title>
         <link rel="stylesheet" href="css-news.css">
     </head>
-    <body>
+    <body onload="start()">
      <div class="left">
     <h1 class="toph1">お知らせ</h1>
 <div class="topb">
-    <div class="topb1">最新のお知らせ</div>
-    <div class="topb2">過去のお知らせ></div>
+    <div class="topb1" id="topb1">最新のお知らせ</div>
+    <div class="topb2" id="topb2" onclick="next()">過去のお知らせ></div>
+    <div class="datesearch" id="datesearch">
+    <p>日付で検索</p>
+    <input type="date" id="date" class="date">
 </div>
-    <div class="topber">
-        <div class="tpb1">開店のお知らせ<span>2023/3/9 16:23</span></div>
+</div>
+    <div class="topber" id="topber">
+        <!--div class="tpb1">開店のお知らせ<span>2023/3/9 16:23</span></div>
         <div class="tpb2">営業時間変更のお知らせ<span>2023/3/9 16:23</span></div>
         <div class="tpb3">料金変更のお知らせ<span>2023/3/9 16:23</span></div>
         <div class="tpb4">臨時休業のお知らせ<span>2023/3/9 16:23</span></div>
-        <div class="tpb5">バイト募集のお知らせ<span>2023/3/9 16:23</span></div>
+        <div class="tpb5">バイト募集のお知らせ<span>2023/3/9 16:23</span></div-->
     </div>
+    <div class="topber2" id="topber2">
+        <!--div class="tpb2" id="tpb21" onclick="news1()" >テスト<span>2023/4/6/18:26</span></div-->
 </div>
+<div class="nextb" id="nextb">
+    <div class="bb" onclick="bb()">前の１０件</div>
+    <div class="bn" onclick="bn()">次の１０件</div>
 </div>
-<div class="right">
-    <div class="rtpl">
-    開店のお知らせ
-    <span>
-        2023/3/9 16:33
-    </span>
-    </div>
-<pre>
-    はじめまして。この度オンラインストアを開設しました。
-    ｆでゃｊｋｈｊｋｄふぁｊｈｋだｆじゃｄｋｄｓｋｊｆだｋｆｄ
-    だｆｈｇｋｊｄｓｈｋｆｊｈさｋｊｆｈｄｋｊｆ
-    ｄｈｆｋｊｈｄｓｆｋｈｄｈｆｋｊｄｈｆｋｊｈだｆｌｋｊｈづｆｌｈｒ
-    ５えりｇひうｒへうぎｈりうえｇひれｈぎうｒｈぐいｒｈｇｒ
-    れｈぎうれｈぎうｈれぐいｈｒぎうるひいいいいいいいいいいいれｇあああ
-    あｒげえええええええええええええええええええええええええええええええええっっっっっｇ
-    っっっっっっっっっっっっっっっっっっっっっっっっっっｇｆがあああああああああああああああああああああああ
-    あｆｇっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっｄ
-    あｆｇっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっｄ
-    あｆｇっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっｄ
-</pre>
+<div class="right" id="right">
+    <!--div class="rtpl" id="rtpl"><span id="rtpl2"></span></div><pre id="rtpl3"></pre-->
+        <!--div class="rtpl"><span  id="rtpl">テスト</span><span id="rtpl2">2023/4/6/18:26</span></div-->
 </div>
 <div class="back" onclick="back()">戻る</div>
 <script src="js-news.js"></script>

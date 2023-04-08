@@ -1,99 +1,111 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>フードロスなくそう</title>
   <link rel="stylesheet" href="css-index.css">
   <link href="style_map.css" rel="stylesheet" type="text/css">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
-  </head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+</head>
+
 <body onload="start()">
-  
+
   <div class="alll2" id="alll2">
-      <input type="text" id="logp" value="" placeholder="パスワードを入力してください">
-      <div id="a"></div>
-    </div>
-    <div class="alll" id="alll">
-      <div id="a"></div>
-      <div class="section1">
-        <div class="head">
-          <div class="p">
-            <p onclick="カート()">カート</p>
-         <ul class="l4">
-              <li class="l1"><a class="a1"href="shoped.html">店舗側ページ</a></li>
-              <li class="l2"><a class="a2"href="entry.html">店舗登録</a></li>
-              <li class="l3"><a class="a3"href="login.html">ログイン</a></li>
-              <li class="l5">店舗情報</li>
+    <input type="text" id="logp" value="" placeholder="パスワードを入力してください">
+    <div id="a"></div>
+  </div>
+  <div class="alll" id="alll">
+    <div id="a"></div>
+    <div class="section1">
+      <div class="head">
+        <div class="p">
+          <p onclick="カート()">カート</p>
+          <ul class="l4">
+            <li class="l1"><a class="a1" href="shoped.html">店舗側ページ</a></li>
+            <li class="l2"><a class="a2" href="entry.html">店舗登録</a></li>
+            <li class="l3"><a class="a3" href="login.html">ログイン</a></li>
+            <li class="l5">店舗情報</li>
           </ul>
-              
-          </div>
-          <div class="searchform">
-        <input type="text"class="search"id="search"placeholder="shopname or menu"value="">
-        <button id="s"onclick="searching()"><span id="ss">search</span></button>
+
+        </div>
+        <div class="searchform">
+          <input type="text" class="search" id="search" placeholder="shopname or menu" value="">
+          <button id="s" onclick="searching()"><span id="ss">search</span></button>
+
+        </div>
 
       </div>
-  
-    </div>
       <h1 class="h1">foodshare</h1>
-  
+
     </div>
-  <div class="img4">
-    <div class="im1" id="im1"><img id="img2" class="img2"></div>
-    <div class="im2" id="im2"><img id="img"class="img"></div>
+    <div class="img4">
+      <div class="im1" id="im1"><img id="img2" class="img2"></div>
+      <div class="im2" id="im2"><img id="img" class="img"></div>
 
 
       <!--div class="img3"></div-->
 
-</div>
-<div class="no2">
-<div class="pop">
-  <p class="popp">商品をみる</p>
-</div>
-<div class="f">
-<div class="f1"><p>人気のある商品</p></div>
-<div class="halfr"></div>
-<div class="fi">
-<div class="fi1"><img src="food.jpeg"></div>
-<div class="fi2"><img src="food.jpeg"></div>
-<div class="fi3"><img src="food.jpeg"></div>
-</div>
-</div>
-<div class="ff">
-<div class="f2"><p>新しい商品</p></div>
-<div class="halfl"></div>
-<div class="fi">
-<div class="fi1"><img src="food.jpeg"></div>
-<div class="fi2"><img src="food.jpeg"></div>
-<div class="fi3"><img src="food.jpeg"></div>
-</div>
-<div class="ffmore">もっと見る</div>
-</div>
-<div class="fff">
-  <div class="f3"><p>すべての商品</p></div>
-  <div class="fi1"><img src="food.jpeg"></div>
-  <div class="fffmore">すべて見る</div>
-</div>
-<div class="foot">
-  <div  class="news2">お知らせ</div>
-  <div class="newsl">
-    <div class="newsp"><p>最新のお知らせ</p></div>
-  </div>
-  <div class="newsd1" id="setnews">
-    <!--p onclick="newsd1p1()" id="newsd1p1">ロード中<span id="newsd1p1s">2023/3/9 18:50</span></p>
+    </div>
+    <div class="no2">
+      <div class="pop">
+        <p class="popp">商品をみる</p>
+      </div>
+      <div class="f">
+        <div class="f1">
+          <p>人気のある商品</p>
+        </div>
+        <div class="halfr"></div>
+        <div class="fi">
+          <div class="fi1"><img src="food.jpeg"></div>
+          <div class="fi2"><img src="food.jpeg"></div>
+          <div class="fi3"><img src="food.jpeg"></div>
+        </div>
+      </div>
+      <div class="ff">
+        <div class="f2">
+          <p>新しい商品</p>
+        </div>
+        <div class="halfl"></div>
+        <div class="fi">
+          <div class="fi1"><img src="food.jpeg"></div>
+          <div class="fi2"><img src="food.jpeg"></div>
+          <div class="fi3"><img src="food.jpeg"></div>
+        </div>
+        <div class="ffmore">もっと見る</div>
+      </div>
+      <div class="fff">
+        <div class="f3">
+          <p>すべての商品</p>
+        </div>
+        <div class="fi1"><img src="food.jpeg"></div>
+        <div class="fffmore">すべて見る</div>
+      </div>
+      <div class="foot">
+        <div class="news2">お知らせ</div>
+        <div class="newsl">
+          <div class="newsp">
+            <p>最新のお知らせ</p>
+          </div>
+        </div>
+        <div class="newsd1" id="setnews">
+          <p id="loadnews">読み込み中</p>
+          <!--p onclick="newsd1p1()" id="newsd1p1">ロード中<span id="newsd1p1s">2023/3/9 18:50</span></p>
     <p onclick="newsd1p2()" id="newsd1p2">ロード中<span id="newsd1p2s">2023/3/9 18:50</span></p>
     <p onclick="newsd1p3()" id="newsd1p3">ロード中<span id="newsd1p3s">2023/3/9 18:50</span></p>
     <p onclick="newsd1p4()" id="newsd1p4">ロード中<span id="newsd1p4s">2023/3/9 18:50</span></p-->
-  <div onclick="newsd1s()" id="newsd1s">すべて見る></div>
-  </div>
-  <div class="newsd2">
-    <pre id="newsd2pre">
-    ロード中  クラスでmarginトップの値がおかしいかもとくにホバーされたとき
+
+        </div>
+        <div onclick="newsd1s()" class="newsd1s"id="newsd1s">すべて見る></div>
+        <div class="newsd2">
+          <pre id="newsd2pre">
+
     </pre>
-    <!--div class="loading" id="loading">Loading</div-->
-  </div>
-  <!--div class="news" id="news"-->
-<!--iframe src="news.html" class="news3"></iframe-->
-    <!--p>サイト解説のお知らせ</p>
+          <!--div class="loading" id="loading">Loading</div-->
+        </div>
+        <!--div class="news" id="news"-->
+        <!--iframe src="news.html" class="news3"></iframe-->
+        <!--p>サイト解説のお知らせ</p>
     <p>684213523</p>
     <p>654674</p>
     <p>677604</p>
@@ -101,357 +113,365 @@
     <p>683214</p>
     <p>677604</p>
     <p>7654745</p-->
-<!--/div-->
+        <!--/div-->
 
-</div>
-<div class="place">
-  <div class="place2">エリア検索</div>
-  <div class="place3">
-  <div id="japan-map" class="clearfix">
-    <div id="hokkaido-touhoku" class="clearfix">
-      <p class="area-title">北海道・東北</p>
-      <div class="area">
-        <a href="#">
-              <div id="hokkaido">
-                <p>北海道</p>
-                </div>
-        </a>
-        <a href="#">
-          <div id="aomori">
-            <p>青森</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="akita">
-            <p>秋田</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="iwate">
-            <p>岩手</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="yamagata">
-            <p>山形</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="miyagi">
-            <p>宮城</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="fukushima">
-            <p>福島</p>
-          </div>
-        </a>
       </div>
-    </div>
-    
-    <div id="kantou">
-      <p class="area-title">関東</p>
-      <div class="area">
-        <a href="#">
-          <div id="gunma">
-            <p>群馬</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="tochigi">
-            <p>栃木</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="ibaraki">
-            <p>茨城</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="saitama">
-            <p>埼玉</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="chiba">
-            <p>千葉</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="tokyo">
-            <p>東京</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="kanagawa">
-            <p>神奈川</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    
-    <div id="tyubu" class="clearfix">
-      <p class="area-title">中部</p>
-      <div class="area">
-        <a href="#">
-          <div id="nigata">
-            <p>新潟</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="toyama">
-            <p>富山</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="ishikawa">
-            <p>石川</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="fukui">
-            <p>福井</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="nagano">
-            <p>長野</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="gifu">
-            <p>岐阜</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="yamanashi">
-            <p>山梨</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="aichi">
-            <p>愛知</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="shizuoka">
-            <p>静岡</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    
-    <div id="kinki" class="clearfix">
-      <p class="area-title">近畿</p>
-      <div class="area">
-        <a href="#">
-          <div id="kyoto">
-            <p>京都</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="shiga">
-            <p>滋賀</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="osaka">
-            <p>大阪</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="nara">
-            <p>奈良</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="mie">
-            <p>三重</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="wakayama">
-            <p>和歌山</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="hyougo">
-            <p>兵庫</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    
-    <div id="tyugoku" class="clearfix">
-      <p class="area-title">中国</p>
-      <div class="area">
-        <a href="#">
-          <div id="tottori">
-            <p>鳥取</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="okayama">
-            <p>岡山</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="shimane">
-            <p>島根</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="hiroshima">
-            <p>広島</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="yamaguchi">
-            <p>山口</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    
-    <div id="shikoku" class="clearfix">
-      <p class="area-title">四国</p>
-      <div class="area">
-        <a href="#">
-          <div id="kagawa">
-            <p>香川</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="ehime">
-            <p>愛媛</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="tokushima">
-            <p>徳島</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="kouchi">
-            <p>高知</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    
-    <div id="kyusyu" class="clearfix">
-      <p class="area-title">九州・沖縄</p>
-      <div class="area">
-        <a href="#">
-          <div id="fukuoka">
-            <p>福岡</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="saga">
-            <p>佐賀</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="nagasaki">
-            <p>長崎</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="oita">
-            <p>大分</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="kumamoto">
-            <p>熊本</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="miyazaki">
-            <p>宮崎</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="kagoshima">
-            <p>鹿児島</p>
-          </div>
-        </a>
-        <a href="#">
-          <div id="okinawa">
-            <p>沖縄</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    
-    </div> <!-- japan-map -->
-  </div>
-</div>
-<div class="genre2">
-  <div class="genre3">ジャンルから探す</div>
+      <div class="place">
+        <div class="place2">エリア検索</div>
+        <div class="place3">
+          <div id="japan-map" class="clearfix">
+            <div id="hokkaido-touhoku" class="clearfix">
+              <p class="area-title">北海道・東北</p>
+              <div class="area">
+                <a href="#">
+                  <div id="hokkaido">
+                    <p>北海道</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="aomori">
+                    <p>青森</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="akita">
+                    <p>秋田</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="iwate">
+                    <p>岩手</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="yamagata">
+                    <p>山形</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="miyagi">
+                    <p>宮城</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="fukushima">
+                    <p>福島</p>
+                  </div>
+                </a>
+              </div>
+            </div>
 
-</div>
-<div class="bottom" >
-  <div class="botton1"><img src="foodshare2.PNG">FoodShare</div>
-  <div class="bottom2">
-  <li><a href="index.html">トップページ</a></li>
-  <li>商品について</li>
-  <li><a href="news.html">お知らせ</a></li>
-  </div>
-  <p>copy right FoodShar<span onclick="c()">e</span></p>
+            <div id="kantou">
+              <p class="area-title">関東</p>
+              <div class="area">
+                <a href="#">
+                  <div id="gunma">
+                    <p>群馬</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="tochigi">
+                    <p>栃木</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="ibaraki">
+                    <p>茨城</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="saitama">
+                    <p>埼玉</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="chiba">
+                    <p>千葉</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="tokyo">
+                    <p>東京</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="kanagawa">
+                    <p>神奈川</p>
+                  </div>
+                </a>
+              </div>
+            </div>
 
-</div>
-<style>
-  .bottom{
-            width:100vw;
-            height:10vw;
-            background-color:#3A1F00;
-            text-align:center;
-            color:white;
-            
+            <div id="tyubu" class="clearfix">
+              <p class="area-title">中部</p>
+              <div class="area">
+                <a href="#">
+                  <div id="nigata">
+                    <p>新潟</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="toyama">
+                    <p>富山</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="ishikawa">
+                    <p>石川</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="fukui">
+                    <p>福井</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="nagano">
+                    <p>長野</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="gifu">
+                    <p>岐阜</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="yamanashi">
+                    <p>山梨</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="aichi">
+                    <p>愛知</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="shizuoka">
+                    <p>静岡</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div id="kinki" class="clearfix">
+              <p class="area-title">近畿</p>
+              <div class="area">
+                <a href="#">
+                  <div id="kyoto">
+                    <p>京都</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="shiga">
+                    <p>滋賀</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="osaka">
+                    <p>大阪</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="nara">
+                    <p>奈良</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="mie">
+                    <p>三重</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="wakayama">
+                    <p>和歌山</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="hyougo">
+                    <p>兵庫</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div id="tyugoku" class="clearfix">
+              <p class="area-title">中国</p>
+              <div class="area">
+                <a href="#">
+                  <div id="tottori">
+                    <p>鳥取</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="okayama">
+                    <p>岡山</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="shimane">
+                    <p>島根</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="hiroshima">
+                    <p>広島</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="yamaguchi">
+                    <p>山口</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div id="shikoku" class="clearfix">
+              <p class="area-title">四国</p>
+              <div class="area">
+                <a href="#">
+                  <div id="kagawa">
+                    <p>香川</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="ehime">
+                    <p>愛媛</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="tokushima">
+                    <p>徳島</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="kouchi">
+                    <p>高知</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div id="kyusyu" class="clearfix">
+              <p class="area-title">九州・沖縄</p>
+              <div class="area">
+                <a href="#">
+                  <div id="fukuoka">
+                    <p>福岡</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="saga">
+                    <p>佐賀</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="nagasaki">
+                    <p>長崎</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="oita">
+                    <p>大分</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="kumamoto">
+                    <p>熊本</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="miyazaki">
+                    <p>宮崎</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="kagoshima">
+                    <p>鹿児島</p>
+                  </div>
+                </a>
+                <a href="#">
+                  <div id="okinawa">
+                    <p>沖縄</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div> <!-- japan-map -->
+        </div>
+      </div>
+      <div class="genre2">
+        <div class="genre3">ジャンルから探す</div>
+
+      </div>
+      <div class="bottom">
+        <div class="botton1"><img src="foodshare2.PNG">FoodShare</div>
+        <div class="bottom2">
+          <li><a href="index.html">トップページ</a></li>
+          <li>商品について</li>
+          <li><a href="news.html">お知らせ</a></li>
+        </div>
+        <p>copy right FoodShar<span onclick="c()">e</span></p>
+
+      </div>
+      <style>
+        .bottom {
+          width: 100vw;
+          height: 10vw;
+          background-color: #3A1F00;
+          text-align: center;
+          color: white;
+
         }
-.bottom p{
-    padding-top:2vw;
-}
-.bottom li{
-    display:block;
-    list-style: none;
-    padding:5px;
-}
-.bottom a{
-    color:white;
 
-}
-.botton1{
-    position:relative;top:1vw;left:1vw;
-    width:25vw;
-    height:8vw;
-    background-color:#C6AC8F;
-    border-radius:10px;
-    z-index:100;
-    font-size:2vw;
-    font-weight:600;
-    color:#3A1F00;
-    display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.botton1 img{
-    padding:0;
-    margin-right:3vw;
-    margin-left:-2vw;
-    width:7vw;
-    height:auto;
-}
-.bottom2{
-    position:relative;
-    margin-top:-8vw;
-padding-top:1vw;
-}
+        .bottom p {
+          padding-top: 2vw;
+        }
 
-</style>
-<script src="a.js"></script>
-<script src="js-index.js"></script>
-    </body>
+        .bottom li {
+          display: block;
+          list-style: none;
+          padding: 5px;
+        }
+
+        .bottom a {
+          color: white;
+
+        }
+
+        .botton1 {
+          position: relative;
+          top: 1vw;
+          left: 1vw;
+          width: 25vw;
+          height: 8vw;
+          background-color: #C6AC8F;
+          border-radius: 10px;
+          z-index: 100;
+          font-size: 2vw;
+          font-weight: 600;
+          color: #3A1F00;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .botton1 img {
+          padding: 0;
+          margin-right: 3vw;
+          margin-left: -2vw;
+          width: 7vw;
+          height: auto;
+        }
+
+        .bottom2 {
+          position: relative;
+          margin-top: -8vw;
+          padding-top: 1vw;
+        }
+      </style>
+      <script src="a.js"></script>
+      <script src="js-index.js"></script>
+</body>
+
 </html>

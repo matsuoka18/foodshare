@@ -1,6 +1,3 @@
-body{
-font-family:monospace;
-}
 .left{
     border-right:4px solid black;
     width:35vw;
@@ -71,22 +68,29 @@ font-family:monospace;
     margin-top:-90vh;
     float:right;
 }
-.rtpl{
-    width:60vw;
-    
-    font-size:2vw;
+
+
+.rtpl span:nth-child(1){
+    position:absolute;
+    top:5vw;
     font-weight:550;
-    position:relative;
+    width:60vw;
+    right:3vw;
+    font-size:2vw;
+    float: left;
 }
-.rtpl span{
+.rtpl span:nth-child(2){
     position: absolute;
-    bottom:3px;
+    top:5vw;
     right:5vw;
     font-size:1vw;
-    
+    margin-top:1vw;
     float: right;
 }
 .right pre{
+    position:absolute;
+    top:10vw;
+    right:0vw;
     width:20vw;
     margin-top:5vw;
     font-size:1.25vw;
@@ -110,4 +114,85 @@ font-family:monospace;
 .back:active{
     background-color: white;
     color:black;
+}
+
+.topber2{
+    display: none;
+    height:30vw;
+    font-size:1.5vw;
+    margin-left:5vw;
+    margin-top:5vw;
+    overflow-y: scroll;
+}
+.topber2 span{
+    font-size:0.75vw;
+    
+}
+.topber2 div{
+    margin-bottom:3vw;
+}
+.topber2 div:hover{
+    font-weight:550;
+    font-size:110%;
+    border-bottom:2px solid black;
+    width:90%;
+}
+.datesearch{
+    display: none;
+    margin-top:1vw;
+    border-radius:2vw;
+    padding-bottom:1vw;
+    border:3px solid gray;
+    margin-left:5vw;
+    margin-right:1vw;
+}
+.datesearch p{
+padding-left:2vw;
+font-size:120%;
+font-weight:550;
+
+}
+.date{
+
+    margin-left:2vw;
+    margin-top:1vw;
+    outline:none;
+    border:none;
+    border-radius:2vw;
+    font-weight:550;
+    font-size:120%;
+    width:15vw;
+    height:3vw;
+   box-shadow:0 0 10px 0.5px lightgray;
+}
+.nextb{
+    display:none;
+    opacity: 0;
+    margin-left:5vw;
+    margin-bottom:5vw;
+    font-size:120%;
+    font-weight:600;
+    display:flex;
+
+}
+.nextb div{
+    width:10vw;
+    text-align:center;
+    padding:1vw;
+    font-size:120%;
+    border-radius:2vw;
+    background-color:black;
+    color:white;
+    float:left;
+}
+.nextb div:hover{
+background-color: gray;
+color:black;
+}
+.nextb div:active{
+    background-color: lightgray;
+}
+
+.bn{
+    margin-left:2vw;
 }
