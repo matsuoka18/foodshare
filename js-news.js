@@ -386,3 +386,29 @@ if(aa <= 0){
   }
 }
 }
+function datesearch(){
+  last = newsjson.news1.length;
+  m1=[];
+  m2=[];
+  m3=[];
+  m4=[];
+  m5=[];
+  m6=[];
+  m7=[];
+  m8=[];
+  m9=[];
+  m10=[];
+  m11=[];
+  m12=[];
+  for(var a = 0; a<=last; a++){
+    data1 = newsjson.indexOf("/",0);
+data2 = newsjson.indexOf("/",data1);
+data3 = newsjson.indexOf("/",data2);
+date1 = newsjson.substring(0,data1);
+data2 = newsjson.substring(data1,data2);
+data3 = newsjson.substring(data2,data3);
+    }
+
+
+
+}
