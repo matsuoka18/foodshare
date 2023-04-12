@@ -405,10 +405,45 @@ function datesearch(){
 data2 = newsjson.indexOf("/",data1);
 data3 = newsjson.indexOf("/",data2);
 date1 = newsjson.substring(0,data1);
-data2 = newsjson.substring(data1,data2);
-data3 = newsjson.substring(data2,data3);
-    }
-
-
+date2 = newsjson.substring(data1,data2);
+date3 = newsjson.substring(data2,data3);
+if(date2 ==  1){
+  
+  
+}else if(date2 == 2){
+  
+  
+}else if(date2 == 3){
+  
+  
+}else if(date2 == 4){
+  
+  
+}else if(date2 == 5){
+  
+  
+}else if(date2 == 6){
+  
+  
+}else if(date2 == 7){
+  
+  
+}else if(date2 == 8){
+  
+  
+}else if(date2 == 9){
+  
+  
+}else if(date2 == 10){
+  
+  
+}else if(date2 == 11){
+  
+  
+}else if(date2 == 12){
+  
+  
+}
+}
 
 }
