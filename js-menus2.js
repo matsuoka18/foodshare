@@ -245,6 +245,8 @@ sn='';
 cn='';
 sn2 ='';
 cd="";
+jsondata = '';
+message = "";
 function start(){
  cd= document.cookie;
  // cd = 'branch=menu|; menumemo={"shop1":[0,22,38],"shop7":[14,36,52],"shop13":[4,26,42],"shop19":[1,23,39],"shop25":[1,23,39],"shop31":[1,23,39],"shop37":[1,23,39],"shop43":[1,23,39],"shop49":[1,23,39],"shop55":[23,39],"shop61":[23,39],"shop67":[23,39],"shop73":[23,39],"shop79":[23,39],"last":[79]}-; loginID=%E5%85%AB%E7%99%BE%E5%B1%8B!; pass=%E3%82%84%E3%81%BE%E3%81%8D?; shopnumber=85#; searchname=hello^;searchnum=85$';
@@ -287,7 +289,19 @@ console.log(cd);
       sn = cd.substring(num1+10,num2);
       sn2 = decodeURI(cd.substring(num3+11,num4));
       console.log(sn+":"+sn2);
-     setTimeout(startt,1000)
+      
+      //ショートかあるかの記述開始
+       var data = sn2+sn+"s"+"=";
+      wh = cd.indexOf(data);
+      if(wh !=-1 ){
+        console.log("startt skip");
+        wh2 = cd.indexOf(";",wh);
+        jsondata = cd.substring(wh+data.length,wh2);
+        
+        start11();
+        }else{
+     setTimeout(startt,1000);
+    }
      }
      function startt(){
      console.log("loading start");
@@ -321,6 +335,9 @@ console.log("getting start");
   .then(resJson =>{
 jsondata = resJson;
       console.log("データ取得");
+      data = sn2+sn+"s"+"=";
+      data = data+jsondata+";";
+      document.cookie = data;
       setTimeout(start11,1000);
   })
   .catch(error =>{
@@ -358,7 +375,17 @@ function start11(){
     document.getElementById("mailad2").innerHTML = mailad;
     document.getElementById("phone2").innerHTML = phonead;
                       console.log("データ取得入力完了");
-                      getmenu();
+                      
+      var data = sn2+sn+"m"+"=";
+      wh = cd.indexOf(data);
+      if(wh !=-1 ){
+        console.log("getmenu3 skip");
+        wh2 = cd.indexOf(";",wh);
+        mjson = cd.substring(wh+data.length,wh2);
+        getmenu3();
+        }else{
+            getmenu();
+       }
 }
 function getmenu(){
 console.log("メニューデータ取得開始→");
@@ -392,6 +419,11 @@ fetch(url,{
 .then(resJson =>{
 mjson = resJson;
 console.log("メニューデータ取得完了");
+data = sn2+sn+"m"+"=";
+data = data+mjson+";";
+document.cookie = data;
+
+console.log("menu cookie");
 getmenu3();
 })
 .catch(error =>{
