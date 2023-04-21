@@ -963,6 +963,19 @@ function firstnews2(){
       newsjson = resJson;
       console.log(newsjson);
       console.log("firstnews2 search finish");
+      var data = document.cookie;
+      var ndata1 = data.indexOf("news=");
+      if(ndata1 !=-1){
+        ndata1 = "news=; max-age=0";
+        ndata2 = "newsv=; max-age=0";
+        console.log("clear ndata");
+        }
+      ndata1 = "news="+newsjson;
+      ndata2 = newsjson[0].num;
+      ndata2 = "newsv="+ndata2;
+      document.cookie = ndata1;
+      document.cookie = ndata2;
+      console.log("finish ndata");
       setTimeout(firstwrite,1000);
     })
     .catch(error => {
