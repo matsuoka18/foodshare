@@ -26,8 +26,21 @@ if(typeOf datav == "string" ){
       .then(resJson =>{
         datav1 = resJson;
         });
-  console.log("firstdata start>>");
-firstsearch();//ページ読み込みのに全データを取得
+        .catch(error =>{
+          console.log("error");
+          });
+    var cdata = document.cookie;
+    var vdata = cdata.indexOf("datav=");
+    var vdata2 = cdata.indexOf(";",vdata);
+    var datav = cdata.substring(vdata+6,vdata2);
+    datav1 = datav1[0].num;
+    if(datav1 == datav){
+      success1 = "ok";
+      success2 = "ok";
+      }else{
+      console.log("firstdata start>>");
+      firstsearch();//ページ読み込みのに全データを取得
+        }
   }else{
       url="https://script.google.com/macros/s/AKfycbwBH_";
 var data =[{
@@ -560,6 +573,8 @@ console.log("wait for instructions");
 cookie = document.cookie;
 search1 = cookie.indexOf("datafirst1=");
 search2 = cookie.indexOf("datafirst2=");
+search3 = cookie.indexOf("datav=");
+
 if(search1 !=-1 && search2 !=-1){
   data1 = "firstdata1=; max-age=0";
   data2 = "firstdata2=; max-age=0";
