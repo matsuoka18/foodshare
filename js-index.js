@@ -1,6 +1,7 @@
 a = 0;
 ipadress='';
 resJson = '';
+datav1 = '';
 function start(){
  /* fetch('https://ipinfo.io?callback')
 .then(res => res.json())
@@ -10,8 +11,49 @@ if(ip == '60.134.235.1'){*/
 document.getElementById("alll").style.opacity = "1";
 document.getElementById("alll2").style.display = "none";
 pic();
-console.log("firstdata start>>");
+//if間違ってるかも
+if(typeOf datav == "string" ){
+  url="https://script.google.com/macros/s/AKfycbwBH_";
+  fetch(url, {
+    "method":"GET",
+    "mode":"cors"
+    });
+    .then(response =>{
+      if(response.ok){
+        return response.json;
+        }
+      });
+      .then(resJson =>{
+        datav1 = resJson;
+        });
+  console.log("firstdata start>>");
 firstsearch();//ページ読み込みのに全データを取得
+  }else{
+      url="https://script.google.com/macros/s/AKfycbwBH_";
+var data =[{
+   "branch":"datav"
+}];
+var params = {
+  "method":"post",
+  "mode":"no-cors",
+  "Content-Type":"application/json",
+  "body":JSON.stringify(data)
+  }
+fetch(url,params);
+console.log("datav start");
+var datav = "ok";
+setTimeout(start,1000);
+    }
+
+
+
+//datav start
+
+
+
+//datav finish
+
+
 ///setTimeout(newsd1p1,1000);
 /* }else{
 document.getElementById("alll2").style.opacity = "1";
@@ -29,6 +71,8 @@ function keycheck(){
     pic();
   }*/
 }
+
+
 a = 0;
 count = 0;
 set1 = '';
@@ -531,6 +575,9 @@ datav = "datav="+1;
 document.cookie = datafirst1;
   document.cookie = datafirst2;
   document.cookie = datav;
+  success2 = "ok";
+  success1 = "ok";
+console.log("firstdata cookie finish");
 //このあとgasでdatavを作成、取得することコードを記述する。データはdatavに入力すること予定 4月21日
 
 
