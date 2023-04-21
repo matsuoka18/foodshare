@@ -2,6 +2,7 @@ a = 0;
 ipadress='';
 resJson = '';
 datav1 = '';
+success3 = '';
 function start(){
  /* fetch('https://ipinfo.io?callback')
 .then(res => res.json())
@@ -32,15 +33,25 @@ if(typeOf datav == "string" ){
     var cdata = document.cookie;
     var vdata = cdata.indexOf("datav=");
     var vdata2 = cdata.indexOf(";",vdata);
+    var vnews = cdata.indexOf("newsv=");
+    var vnews2 = cdata.indexOf(";",vnews);
     var datav = cdata.substring(vdata+6,vdata2);
-    datav1 = datav1[0].num;
+    var vnews = cdata.substring(vnews+6,vnews2);
+    datav1 = datav1[0].num1;
+    newsv1 = datav1[0].num2;
     if(datav1 == datav){
       success1 = "ok";
       success2 = "ok";
-      }else{
-      console.log("firstdata start>>");
-      firstsearch();//ページ読み込みのに全データを取得
-        }
+      console.log("same -V data");
+      }
+    if(newsv1 == vnews){
+       success3 = "ok";
+      console.log("sama -V news");
+      }
+      
+      
+      
+      
   }else{
       url="https://script.google.com/macros/s/AKfycbwBH_";
 var data =[{
@@ -933,6 +944,15 @@ wrnumber = "";
 newsjson = 0;
 //題名と時間だけをとりあえず表示→一番目のお知らせを表示
 function firstnews(){
+  if(success3 == "ok"){
+    cookie = document.cookie;
+    data1 = cookie.indexOf("news=");
+    data2 = cookie.indexOf(";",data1);
+    data = cookie.substring(data1+5,data2);
+    newsjson = data;
+    console.log("skip firstnews");
+    firstwrite();
+    }
   url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   data = [{
     "branch":"getnews"
