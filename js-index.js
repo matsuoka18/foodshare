@@ -513,6 +513,32 @@ fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935f
 firstdata2 = resJson;
 console.log("firstdata 1/2 finish");
 console.log("wait for instructions");
+cookie = document.cookie;
+search1 = cookie.indexOf("datafirst1=");
+search2 = cookie.indexOf("datafirst2=");
+if(search1 !=-1 && search2 !=-1){
+  data1 = "firstdata1=; max-age=0";
+  data2 = "firstdata2=; max-age=0";
+  data3 = "datav=; max-age=0";
+  document.cookie = data1;
+  document.cookie = data2;
+  document.cookie = data3;
+  console.log("clear firstdatas");
+}
+datafirst1 = "firstdata1="+firstdata1;
+datafirst2 = "firstdata2="+firstdata2;
+datav = "datav="+1;
+document.cookie = datafirst1;
+  document.cookie = datafirst2;
+  document.cookie = datav;
+//このあとgasでdatavを作成、取得することコードを記述する。データはdatavに入力すること予定 4月21日
+
+
+
+
+
+
+
 success2 = "ok";
 document.getElementById("s").style.backgroundColor ="#1E0000";
 document.getElementById("search").style.borderColor = "#411C00";
