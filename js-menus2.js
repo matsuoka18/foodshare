@@ -337,7 +337,8 @@ jsondata = resJson;
       console.log("データ取得");
       data = sn2+sn+"s"+"=";
       data = data+jsondata+";";
-      document.cookie = data;
+      document.cookie = data "max-age=1000";
+      //クッキーの記述が間違っている可能性がある
       setTimeout(start11,1000);
   })
   .catch(error =>{
@@ -421,7 +422,7 @@ mjson = resJson;
 console.log("メニューデータ取得完了");
 data = sn2+sn+"m"+"=";
 data = data+mjson+";";
-document.cookie = data;
+document.cookie = data "max-age=1000";
 
 console.log("menu cookie");
 getmenu3();
