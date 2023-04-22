@@ -13,7 +13,7 @@ document.getElementById("alll").style.opacity = "1";
 document.getElementById("alll2").style.display = "none";
 pic();
 //if間違ってるかも
-if(typeOf datav == "string" ){
+if(typeOf datav == "string"){
   url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   fetch(url, {
     "method":"GET",
@@ -21,7 +21,7 @@ if(typeOf datav == "string" ){
     });
     .then(response =>{
       if(response.ok){
-        return response.json;
+        return response.json();
         }
       });
       .then(resJson =>{
