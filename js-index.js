@@ -13,7 +13,7 @@ document.getElementById("alll").style.opacity = "1";
 document.getElementById("alll2").style.display = "none";
 pic();
 //if間違ってるかも
-if(typeOf datav == "string"){
+if(typeof datav == "string"){
   url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   fetch(url, {
     "method":"GET",
