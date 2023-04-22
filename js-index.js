@@ -14,7 +14,7 @@ document.getElementById("alll2").style.display = "none";
 pic();
 //if間違ってるかも
 if(typeOf datav == "string" ){
-  url="https://script.google.com/macros/s/AKfycbwBH_";
+  url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   fetch(url, {
     "method":"GET",
     "mode":"cors"
@@ -53,7 +53,7 @@ if(typeOf datav == "string" ){
       
       
   }else{
-      url="https://script.google.com/macros/s/AKfycbwBH_";
+      url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data =[{
    "branch":"datav"
 }];
