@@ -1433,9 +1433,12 @@ datanum  = pagecount*10-10+0;
 favoritenuml+=1;
 data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
 document.cookie = data;
+console.log("data1:"+data);
 document.cookie = "favoritenuml=; max-age=0";
+console.log("clear favoritemunl");
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
+console.log("data2:"+data);
 }else if(n1 == 1){
 document.getElementById("favorite0").style.backgroundColor = "";
 n1 = 0;
@@ -1448,12 +1451,17 @@ d1 = cd.indexOf(d1)+d1.length;
 console.log("d1:"+d1);
 d2 = cd.indexOf(">>*",d1);
 data = cd.substring(d1,d2);
-  console.log("DATA:"+data);
-d3 = data.indexOf("<<*")+3; //3が間違ってるかも
+  console.log("cookieDATA:"+data);
+d3 = data.indexOf("<<*",d1)+3; //3が間違ってるかも
 console.log("d3:"+d3);
+
+/*この文がいらない説がある 4月28日
 d4 = d3+data.length-3;
 console.log("d4:"+d4);
-data2 = data.substring(d3,d4);
+*/
+//おそらくd4はd2を使い回してOK 4月28日
+//favo0のみ
+data2 = data.substring(d3,d2);
 console.log("data2："+data2);
 if(data2 == sn){
 data3 = data.substring(0,d3-3);
