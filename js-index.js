@@ -18,18 +18,18 @@ if(typeof datav == "string"){
   fetch(url, {
     "method":"GET",
     "mode":"cors"
-    });
+    })
     .then(response =>{
       if(response.ok){
         return response.json();
         }
-      });
+      })
       .then(resJson =>{
         datav1 = resJson;
-        });
+        })
         .catch(error =>{
           console.log("error");
-          });
+          })
     var cdata = document.cookie;
     var vdata = cdata.indexOf("datav=");
     var vdata2 = cdata.indexOf(";",vdata);
