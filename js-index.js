@@ -1,9 +1,9 @@
 a = 0;
 ipadress='';
 resJson = '';
-datav1 = '';
+datav11 = '';
 success3 = '';
-function start(){
+function start(datav){
  /* fetch('https://ipinfo.io?callback')
 .then(res => res.json())
 .then(json => {
@@ -14,6 +14,7 @@ document.getElementById("alll2").style.display = "none";
 pic();
 //if間違ってるかも
 if(typeof datav == "string"){
+  console.log("GET");
   url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   fetch(url, {
     "method":"GET",
@@ -25,20 +26,19 @@ if(typeof datav == "string"){
         }
       })
       .then(resJson =>{
-        datav1 = resJson;
-        })
-        .catch(error =>{
-          console.log("error");
-          })
-    var cdata = document.cookie;
+        console.log("datav1:"+JSON.stringify(resJson));
+        datav11 = resJson;
+        var cdata = document.cookie;
     var vdata = cdata.indexOf("datav=");
     var vdata2 = cdata.indexOf(";",vdata);
     var vnews = cdata.indexOf("newsv=");
     var vnews2 = cdata.indexOf(";",vnews);
     var datav = cdata.substring(vdata+6,vdata2);
     var vnews = cdata.substring(vnews+6,vnews2);
-    datav1 = datav1[0].num1;
-    newsv1 = datav1[0].num2;
+    datav1 = datav11[0].v1;
+    console.log("datav1:"+datav1);
+    newsv1 = datav11[0].v2;
+    console.log("newsv1:"+newsv1);
     if(datav1 == datav){
       success1 = "ok";
       success2 = "ok";
@@ -48,11 +48,18 @@ if(typeof datav == "string"){
        success3 = "ok";
       console.log("sama -V news");
       }
+        })
+        .catch(error =>{
+          console.log("error");
+          })
+    
       
       
       
       
   }else{
+    console.log("POST");
+    console.log(typeof datav);
       url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data =[{
    "branch":"datav"
@@ -65,8 +72,8 @@ var params = {
   }
 fetch(url,params);
 console.log("datav start");
-var datav = "ok";
-setTimeout(start,1000);
+datav = "ok";
+setTimeout(start,1000,datav);
     }
 
 
