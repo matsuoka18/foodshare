@@ -422,7 +422,7 @@ mjson = resJson;
 console.log("メニューデータ取得完了");
 data = sn2+sn+"m"+"=";
 data = data+mjson+";";
-document.cookie = data "max-age=1000";
+document.cookie = data+"max-age=1000";
 
 console.log("menu cookie");
 getmenu3();
