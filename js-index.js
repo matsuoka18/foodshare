@@ -11,7 +11,7 @@ ip = json.ip;
 if(ip == '60.134.235.1'){*/
 document.getElementById("alll").style.opacity = "1";
 document.getElementById("alll2").style.display = "none";
-pic();
+
 //if間違ってるかも
 if(typeof datav == "string"){
   console.log("GET");
@@ -29,6 +29,10 @@ if(typeof datav == "string"){
         console.log("datav1:"+JSON.stringify(resJson));
         datav11 = resJson;
         var cdata = document.cookie;
+        if(cdata.length == 0){
+          firstsearch();
+
+        }else{
     var vdata = cdata.indexOf("datav=");
     var vdata2 = cdata.indexOf(";",vdata);
     var vnews = cdata.indexOf("newsv=");
@@ -48,6 +52,8 @@ if(typeof datav == "string"){
        success3 = "ok";
       console.log("sama -V news");
       }
+      firstsearch();
+    }
         })
         .catch(error =>{
           console.log("error");
@@ -58,6 +64,7 @@ if(typeof datav == "string"){
       
       
   }else{
+    pic();
     console.log("POST");
     console.log(typeof datav);
       url="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
