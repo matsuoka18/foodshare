@@ -347,7 +347,7 @@ jsondata = resJson;
 
 }
 function start11(){
-            data = jsondata.data;
+            data = jsondata[0].data;
       console.log("データ："+data);
     pre = data[0].pre;
       console.log(pre);
