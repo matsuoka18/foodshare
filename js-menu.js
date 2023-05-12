@@ -146,7 +146,7 @@ function getdata() {
     menu = jj.changedata[0].name[namee2];
     fee = jj.changedata[0].fee[namee2];
     express = jj.changedata[0].express[namee2];
-    pic = jj.changedata[0].base64[namee2];
+    //pic = jj.changedata[0].base64[namee2];
     genre = jj.changedata[0].genre[namee2];
     ne();
   }
