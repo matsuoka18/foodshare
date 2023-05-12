@@ -609,9 +609,11 @@ if(search1 !=-1 && search2 !=-1){
   document.cookie = data3;
   console.log("clear firstdatas");
 }
+firstdata1 = JSON.stringify(firstdata1);
+firstdata2 = JSON.stringify(firstdata2);
 datafirst1 = "firstdata1="+firstdata1;
 datafirst2 = "firstdata2="+firstdata2;
-datav = "datav="+1;
+datav = "datav="+0;
 document.cookie = datafirst1;
   document.cookie = datafirst2;
   document.cookie = datav;
