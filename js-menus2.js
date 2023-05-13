@@ -336,8 +336,11 @@ console.log("getting start");
 jsondata = resJson;
       console.log("データ取得");
       data = sn2+sn+"s"+"=";
-      data = data+jsondata+";";
-      document.cookie = data+"max-age=1000";
+      var textdata = document.cookie;
+      var textl = textdata.length
+      ;
+      data = data+jsondata+";"+"max-age=1000";
+      document.cookie = data;
       //クッキーの記述が間違っている可能性がある
       setTimeout(start11,1000);
   })
