@@ -337,8 +337,11 @@ jsondata = resJson;
       console.log("データ取得");
       data = sn2+sn+"s"+"=";
       var textdata = document.cookie;
-      var textl = textdata.length
-      ;
+      var textl = textdata.indexOf(data);
+     if(textl >= 0){
+       data2 = sn2+sn+"s=; max-age=0;";
+       document.cookie = data2;
+     }
       data = data+jsondata+";"+"max-age=1000";
       document.cookie = data;
       //クッキーの記述が間違っている可能性がある
