@@ -342,6 +342,7 @@ jsondata = resJson;
        data2 = sn2+sn+"s=; max-age=0;";
        document.cookie = data2;
      }
+       jsondata = JSON.stringify(jsondata);
       data = data+jsondata+";"+"max-age=1000";
       document.cookie = data;
       //クッキーの記述が間違っている可能性がある
@@ -353,6 +354,7 @@ jsondata = resJson;
 
 }
 function start11(){
+  jsondata = JSON.parse(jsondata);
             data = jsondata.data;
       console.log("データ："+data);
     pre = data[0].pre;
