@@ -378,7 +378,7 @@ function start11(){
     document.getElementById("adress").innerHTML = adress;
     document.getElementById("time").innerHTML = time;
     document.getElementById("phone").innerHTML = phonead;
-    document.getElementById("introduce").innerHTML =intro ;
+    //document.getElementById("introduce").innerHTML =intro ;
     document.getElementById("adress2").innerHTML = adress;
     document.getElementById("time2").innerHTML = time;
     document.getElementById("mailad2").innerHTML = mailad;
