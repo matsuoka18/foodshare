@@ -593,7 +593,9 @@ mname = mjson.changedata[0].name[a];
 }
 for(var a =0; a<favoritenuml; a++){
   number = numlist[a];
-  if(last2 < number < lastn){
+  if(last2 < number && number < lastn){
+    //間違っているかも　7月13日
+    number = number-last2;
     text = "favorite"+number;
     document.getElementById(text).style.backgroundColor = "pink";
   }
@@ -601,7 +603,8 @@ for(var a =0; a<favoritenuml; a++){
 if(messagep == "first"){
   lastn = last2;
 }
-for(var a = 0; a<numlist2; a++){
+//使用用途不明
+/*for(var a = 0; a<numlist2; a++){
   var num = numlist[a];
   if(last2 < num < lastn){
     num2 = pagecount*10-10;
@@ -610,7 +613,7 @@ for(var a = 0; a<numlist2; a++){
     var text = "favorite"+num;
     document.getElementById(text).style.backgroundColor = "pink";
   }
-}
+}*/
 }
 function start2(){
 url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
