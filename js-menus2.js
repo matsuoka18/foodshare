@@ -245,12 +245,11 @@ sn='';
 cn='';
 sn2 ='';
 cd="";
-jsondata = '';
-message = "";
 function start(){
  cd= document.cookie;
  // cd = 'branch=menu|; menumemo={"shop1":[0,22,38],"shop7":[14,36,52],"shop13":[4,26,42],"shop19":[1,23,39],"shop25":[1,23,39],"shop31":[1,23,39],"shop37":[1,23,39],"shop43":[1,23,39],"shop49":[1,23,39],"shop55":[23,39],"shop61":[23,39],"shop67":[23,39],"shop73":[23,39],"shop79":[23,39],"last":[79]}-; loginID=%E5%85%AB%E7%99%BE%E5%B1%8B!; pass=%E3%82%84%E3%81%BE%E3%81%8D?; shopnumber=85#; searchname=hello^;searchnum=85$';
-console.log(cd);
+    //cd = 'searchnum=1$; searchname=hhh^; branch=shop|; favoriten1=0<<*1>>*; favoriten2=1<<*1>>*; favoritenuml=2>>!';
+ console.log(cd);
       num1 = cd.indexOf("searchnum=");
       num2 = cd.indexOf("$");
       num3 = cd.indexOf("searchname=");
@@ -288,20 +287,11 @@ console.log(cd);
    document.getElementById("shopname2").innerHTML = sn2;  
       sn = cd.substring(num1+10,num2);
       sn2 = decodeURI(cd.substring(num3+11,num4));
+      /*sn = 1;
+      sn2 = "hhh";*/
+
       console.log(sn+":"+sn2);
-      
-      //ショートかあるかの記述開始
-       var data = sn2+sn+"s"+"=";
-      wh = cd.indexOf(data);
-      if(wh !=-1 ){
-        console.log("startt skip");
-        wh2 = cd.indexOf(";",wh);
-        jsondata = cd.substring(wh+data.length,wh2);
-        
-        start11();
-        }else{
-     setTimeout(startt,1000);
-    }
+     setTimeout(startt,1000)
      }
      function startt(){
      console.log("loading start");
@@ -335,17 +325,6 @@ console.log("getting start");
   .then(resJson =>{
 jsondata = resJson;
       console.log("データ取得");
-      data = sn2+sn+"s"+"=";
-      var textdata = document.cookie;
-      var textl = textdata.indexOf(data);
-     if(textl >= 0){
-       data2 = sn2+sn+"s=; max-age=0;";
-       document.cookie = data2;
-     }
-       jsondata = JSON.stringify(jsondata);
-      data = data+jsondata+";"+"max-age=1000";
-      document.cookie = data;
-      //クッキーの記述が間違っている可能性がある
       setTimeout(start11,1000);
   })
   .catch(error =>{
@@ -354,7 +333,7 @@ jsondata = resJson;
 
 }
 function start11(){
-  jsondata = JSON.parse(jsondata);
+  try{
             data = jsondata.data;
       console.log("データ："+data);
     pre = data[0].pre;
@@ -384,17 +363,12 @@ function start11(){
     document.getElementById("mailad2").innerHTML = mailad;
     document.getElementById("phone2").innerHTML = phonead;
                       console.log("データ取得入力完了");
-                      
-      var data = sn2+sn+"m"+"=";
-      wh = cd.indexOf(data);
-      if(wh !=-1 ){
-        console.log("getmenu3 skip");
-        wh2 = cd.indexOf(";",wh);
-        mjson = cd.substring(wh+data.length,wh2);
-        getmenu3();
-        }else{
-            getmenu();
-       }
+                      getmenu();
+  }
+  catch{
+    start1();
+    console.log("start1() retry")
+  }
 }
 function getmenu(){
 console.log("メニューデータ取得開始→");
@@ -414,7 +388,9 @@ console.log("メニューデータリクエスト→")
 setTimeout(getmenu2,2000)
 }
 mjson = '';
+retrynum1 = 0;//7月13日　データ取得に失敗した際、再度読み込みを行うプログラムをつくる。
 function getmenu2(){
+  retrynum1++;
 url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 fetch(url,{
   "method":"GET",
@@ -428,22 +404,36 @@ fetch(url,{
 .then(resJson =>{
 mjson = resJson;
 console.log("メニューデータ取得完了");
-data = sn2+sn+"m"+"=";
-data = data+mjson+";";
-document.cookie = data+"max-age=1000";
-
-console.log("menu cookie");
+console.log(mjson);
+try{
 getmenu3();
+}
+catch(aa){
+  console.log("getmenu3()のエラー:"+aa)
+  errorm = aa.indexOf(':');
+  errorm = aa.substring(0,errorm);
+  if(errorm == "TypeError"){
+    console.log("retry to load→getmenu3()");
+    getmenu3();
+  }
+}
 })
 .catch(error =>{
-  console.log("通信エラー");
-  alert("通信エラー");
+  console.log("メニューデータ取得失敗");
+  if(retrynum1 < 3){
+  setTimeout(()=>{
+    console.log("retry to load→メニューデータ");
+    getmenu2();
+  },1000)
+}else{
+  console.log("quited to reload→メニューデータ");
+}
 })
 }
 lastn = 0;
 pagecount = 1;
 function getmenu3(){
-json = mjson.changedata[0]
+json = mjson.changedata[0];
 last = json.last;
 console.log(last);
 lastn = lastn +10;
@@ -1441,12 +1431,9 @@ datanum  = pagecount*10-10+0;
 favoritenuml+=1;
 data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
 document.cookie = data;
-console.log("data1:"+data);
 document.cookie = "favoritenuml=; max-age=0";
-console.log("clear favoritemunl");
 data = "favoritenuml="+favoritenuml+">>!";
 document.cookie = data;
-console.log("data2:"+data);
 }else if(n1 == 1){
 document.getElementById("favorite0").style.backgroundColor = "";
 n1 = 0;
@@ -1459,17 +1446,12 @@ d1 = cd.indexOf(d1)+d1.length;
 console.log("d1:"+d1);
 d2 = cd.indexOf(">>*",d1);
 data = cd.substring(d1,d2);
-  console.log("cookieDATA:"+data);
-d3 = data.indexOf("<<*",d1)+3; //3が間違ってるかも
+  console.log("DATA:"+data);
+d3 = data.indexOf("<<*")+3; //3が間違ってるかも
 console.log("d3:"+d3);
-
-/*この文がいらない説がある 4月28日
 d4 = d3+data.length-3;
 console.log("d4:"+d4);
-*/
-//おそらくd4はd2を使い回してOK 4月28日
-//favo0のみ
-data2 = data.substring(d3,d2);
+data2 = data.substring(d3,d4);
 console.log("data2："+data2);
 if(data2 == sn){
 data3 = data.substring(0,d3-3);
@@ -1534,7 +1516,7 @@ data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
 document.cookie = data;
 document.cookie = "favoritenuml=; max-age=0";
 data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;var name
+document.cookie = data;
 }else if(n2 == 1){
 document.getElementById("favorite1").style.backgroundColor = "";
 n2 = 0;
@@ -2248,7 +2230,7 @@ if(favoritenuml == 1){
   return;
 }
 for(var a=data4+1; a<=favoritenuml; a++){
-data = "favoriten"+a+"=";var name
+data = "favoriten"+a+"=";
 data3 = cd.substring(data1,data2); 
 console.log("修正前データ:"+data3);
 ddata = "favoriten"+a+"=; max-age=0";
@@ -2274,21 +2256,22 @@ numlist2 = '';
 function favocheck(){
   console.log("favocheckstart");
 numlist = [];
-for(var a=0; a<favoritenuml; a++){
+for(var a=1; a<=favoritenuml; a++){
   ctext = "favoriten"+a+"=";
+  console.log(ctext);
   ctext3 = "<<*";
   ctext2 = ">>*";
   c1 = cd.indexOf(ctext);
   c3 = cd.indexOf(ctext3,c1);
   c2 = cd.indexOf(ctext2,c1);
   checknum = cd.substring(c3+ctext3.length,c2);
-  console.log("checknum:"+checknum);
+  console.log("checknum(shopnum):"+checknum);
   if(checknum == sn){
     text = cd.substring(c1+ctext.length,c3);
     numlist.push(text);
   }
 }
-console.log("numlist："+numlist);var name
+console.log("numlist："+numlist);
 numlist2 = numlist.length;
 for(var a = 0; a<numlist2; a++){
   var num = numlist[a];

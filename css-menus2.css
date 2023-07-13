@@ -1404,9 +1404,9 @@ img {
 
 .button11 h2 {
   margin-left: 2vw;
-  border-left: 1.5vw solid red;
+  border-left: 1vw solid red;
   padding-left: 1vw;
-  font-size: 3vw;
+  font-size: 2vw;
 }
 
 .button22 h2 {
@@ -1487,7 +1487,7 @@ img {
 
 .menu1 h2 {
   font-size: 60px;
-  width: 45vw;
+  width: 55vw;
 }
 
 .star {
@@ -1597,6 +1597,18 @@ padding:0.5vw;
   font-size: 30px;
 }
 
+
+img{
+  height: 40vw;
+  width: auto;
+  margin: 0;
+  padding:1vw;
+  float: left;
+  border-radius:5vw;
+  margin-top:1vw;
+  margin-right: 2vw;
+  background-color: white;
+}
 .hey {
   width: 100vw;
   height: 45vw;
@@ -1604,17 +1616,18 @@ padding:0.5vw;
   margin: 0;
   
 }
-
-img {
+.hey img{
+  box-shadow:0 0 5px 1px lightgray;
   height: 40vw;
   width: auto;
   margin: 0;
-  padding: 1vw;
+  margin-left:1vw;
+  padding:0;
   float: left;
   border-radius:5vw;
   margin-top:1vw;
   margin-right: 2vw;
-  background-color: white;
+  background-color: none;
 }
 
 .intro {
@@ -1685,7 +1698,7 @@ img {
 }
 .info ul{
   font-weight:500;
-  font-size:1.5vw;
+  font-size:1.25vw;
   margin-top:1vw;
 }
 .main {
@@ -1871,7 +1884,7 @@ a {
   font-weight: 500;
   float: right;
   margin-right: 1vw;
-  box-shadow: 0 2px 5px 1px #FFFFE0;
+  box-shadow: 0 2px 5px 5px #FFFFE0;
 }
 
 .cart:hover {
