@@ -56,7 +56,11 @@ if(typeof datav == "string"){
     }
         })
         .catch(error =>{
-          console.log("error");
+          console.log("start():error");
+          console.log("retry to load start()");
+          setTimeout(()=>{
+start();
+          },1000)
           })
     
       
@@ -532,6 +536,12 @@ fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935f
 })
 .then(resJson =>{
 firstdata1 = resJson;
+fc = firstdata1.indexOf("shopdata");
+console.log("fc:"+fc);
+if(fc > -1){
+  console.log("firstsearch2:loading error→reload")
+  firstsearch2();
+}
 success1 = "ok";
 console.log("firstsearch2 ok");
 console.log("firstsearch finish");
@@ -710,8 +720,8 @@ $('#ss').clearQueue();
 $('#ss').stop();
 document.getElementById("ss").innerHTML = "search";
 document.getElementById("s").style.backgroundColor ="#5A3A1A";
-
-alert("通信失敗1")
+console.log("faild searching2");
+alert("faild searching2");
 })
 }
 
