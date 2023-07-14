@@ -1,4 +1,4 @@
-
+//変更できてる
 function but1() {
   document.getElementById("but1").style.backgroundColor = "#C6AC8F";
   document.getElementById("but1").style.border = "none";
@@ -1310,7 +1310,7 @@ nn4++;
   document.getElementById("s5").style.color = "gray"
 }
 }
-function rsend(){
+async function rsend(){
  json =  [{"total":2.6,"rn":[2,0,2,0,1],"review1":["a","hello","hello","hello","hello","hello","hello"],"review2":["b","Hello World","Hello World","Hello World","Hello World","Hello World","Hello World"]}]
 text1 = document.getElementById("text1").value;
 text2 = document.getElementById("text2").value;
@@ -1330,11 +1330,15 @@ params = {
 "Content-Type":"application/json",
 "body":JSON.stringify(data)
 }
-fetch(url,params);
+const send1 = await function(){
+  console.log("start to send review")
+  fetch(url,params);
+}
 console.log("レビュー送信完了")
 console.log("内容："+text1+"："+text2+"/"+rn)
 document.getElementById("text1").value = "";
 document.getElementById("text2").value = "";
+getreview();
 }
 
 function getreview(){
