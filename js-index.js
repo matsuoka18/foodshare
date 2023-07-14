@@ -560,8 +560,12 @@ $('#ss').clearQueue();
 $('#ss').stop();
 document.getElementById("ss").innerHTML = "search";
 document.getElementById("s").style.backgroundColor ="#5A3A1A";
+console.log("firstsearch2 error");
+setTimeout(()=>{
+  console.log("firstsearch2 retry");
+  firstsearch2();
+},1000)
 
-alert("通信失敗1")
 })
 }
 function firstmenu(){
