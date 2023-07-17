@@ -523,7 +523,6 @@ success1 = "o";
 
 setTimeout(firstsearch2,2000);
 }
-
 function firstsearch2(){
 fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
   method:"GET",
@@ -536,11 +535,14 @@ fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935f
 })
 .then(resJson =>{
 firstdata1 = resJson;
-fc = firstdata1.indexOf("shopdata");
+console.log("firstdata1:"+firstdata1)
+firstdata11 = JSON.stringify(firstdata1);
+console.log("firstdata11:"+firstdata11)
+fc = firstdata11.indexOf("shopdata");
 console.log("fc:"+fc);
-if(fc > -1){
+if(fc == -1){
   console.log("firstsearch2:loading error→reload")
-  firstsearch2();
+  firstsearch();
 }
 success1 = "ok";
 console.log("firstsearch2 ok");
@@ -561,16 +563,17 @@ $('#ss').stop();
 document.getElementById("ss").innerHTML = "search";
 document.getElementById("s").style.backgroundColor ="#5A3A1A";
 console.log("firstsearch2 error");
+console.log(error)
 setTimeout(()=>{
   console.log("firstsearch2 retry");
-  firstsearch2();
+  firstsearch();
 },1000)
 
 })
 }
 function firstmenu(){
 if(request2 == "nomal"){
-console.log("menusearch 通常処理　受付");
+console.log("menusearch 通常処理 受付");
 return;
 }
 console.log("firstmenusearch ok");
@@ -678,7 +681,7 @@ shopname = document.getElementById("search").value;
   if(success1 == "ok"){
   console.log("data:"+firstdata1)
 shopsearch(firstdata1);
-return;
+//return;
 }
 if(success1 == "o"){
 console.log("途中からのリクエスト1");
@@ -728,16 +731,21 @@ console.log("faild searching2");
 alert("faild searching2");
 })
 }
-
-function shopsearch(resJson){
-json = JSON.stringify(resJson);
-json = JSON.parse(json);
-a = "n1";
-json = json.shopdata[0];
-num = json.num+6;
+num='';
+jjson = '';
+function shopsearch(){
+  //a = "n1";
+jjson = JSON.parse(firstdata1);
+jjson1 = jjson.shopdata;
+console.log("jjson1:"+jjson1)
+num = jjson.shopdata[0].num;
+num = parseInt(num)+6;
+console.log("num:"+num);
 for(a = -5; a<num; a+=6){
 text = "n"+a;
-shopname2 = json[text];
+console.log("text:"+text);
+shopname2 = jjson.shopdata[0][text]; 
+console.log("shopname2:"+shopname2);
 if(shopname == shopname2){
 text2 = "searchnum="+a+"$";
 shopname2 = encodeURI(shopname2);
@@ -1029,7 +1037,6 @@ function firstnews2(){
       setTimeout(firstwrite,1000);
     })
     .catch(error => {
-    alert("Error");
     console.log("newsのエラー");
     })
 }
