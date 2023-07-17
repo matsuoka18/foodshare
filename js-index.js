@@ -3,6 +3,13 @@ ipadress='';
 resJson = '';
 datav11 = '';
 success3 = '';
+firstdata1 = '';
+firstdata2 = '';
+success1 =  '';
+success2 =  '';
+request1 = '';
+request2 = '';
+request3 = '';
 function start(datav){
  /* fetch('https://ipinfo.io?callback')
 .then(res => res.json())
@@ -499,13 +506,7 @@ searching();
 });
 
 //取得時に全データ取得　始
-firstdata1 = '';
-firstdata2 = '';
-success1 =  '';
-success2 =  '';
-request1 = '';
-request2 = '';
-request3 = '';
+
 function firstsearch(){
 url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
@@ -638,14 +639,6 @@ document.cookie = datafirst1;
   success1 = "ok";
 console.log("firstdata cookie finish");
 //このあとgasでdatavを作成、取得することコードを記述する。データはdatavに入力すること予定 4月21日
-
-
-
-
-
-
-
-success2 = "ok";
 document.getElementById("s").style.backgroundColor ="#1E0000";
 document.getElementById("search").style.borderColor = "#411C00";
 document.getElementById("search").style.borderWeight = "2px";
@@ -771,7 +764,7 @@ document.getElementById("s").style.backgroundColor ="#5A3A1A";*/
 if(success2 == "ok"){
 console.log("data2:"+firstdata2);
 menusearch2(firstdata2);
-return;
+//return;
 }
 if(success2 == "o"){
 console.log("途中からのリクエスト2");
@@ -867,10 +860,10 @@ if(request3 == "end"){
 console.log("end")
 
 }else{
-jsonnn = JSON.stringify(resJson2);
+jsonnn = resJson2;
 console.log("JSON文字列↓");
 console.log(jsonnn);
-jsonn = JSON.parse(jsonnn);
+jsonn = JSON.parse(resJson2);
 console.log("JS文字列↓");
 console.log(jsonn)
 last = jsonn["last"];
