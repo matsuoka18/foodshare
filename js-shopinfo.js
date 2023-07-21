@@ -1,7 +1,7 @@
 function start(){
     cookie = document.cookie;
 loginIDp1 = cookie.indexOf("loginID=")+8;
-loginIDp2 = cookie.indexOf("!");
+loginIDp2 = cookie.indexOf("!",shopIDp1);
 passp1 = cookie.indexOf("pass=")+5;
 passp2 = cookie.indexOf("?");
 shopnumberp1 = cookie.indexOf("shopnumber=")+11;
