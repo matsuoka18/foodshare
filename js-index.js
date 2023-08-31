@@ -1,15 +1,22 @@
+
+//asyncを使用している関数すべてが読み込みと同時になんか実行されてしまっているからそこの修正を行う必要がある　8月31日
+
+
+
 a = 0;
 ipadress='';
 resJson = '';
 datav11 = '';
 success3 = '';
 firstdata1 = '';
+firstdata11 = '';
 firstdata2 = '';
-success1 =  '';
+success1 =  'o';
 success2 =  '';
 request1 = '';
 request2 = '';
 request3 = '';
+order = '';
 function start(datav){
  /* fetch('https://ipinfo.io?callback')
 .then(res => res.json())
@@ -37,7 +44,7 @@ if(typeof datav == "string"){
         datav11 = resJson;
         var cdata = document.cookie;
         if(cdata.length == 0){
-          firstsearch();
+          firstsearchall();
 
         }else{
     var vdata = cdata.indexOf("datav=");
@@ -59,7 +66,8 @@ if(typeof datav == "string"){
        success3 = "ok";
       console.log("sama -V news");
       }
-      firstsearch();
+      order = 0;
+      firstsearchall();
     }
         })
         .catch(error =>{
@@ -506,7 +514,19 @@ searching();
 });
 
 //取得時に全データ取得　始
-
+async function firstsearchall(){
+  if(order == 0){
+    console.log("firstsearchall OK");
+    let messgae1 = await firstsearch();
+    order = 1;
+    firstsearch2();
+    return messgae1;
+  }
+}
+firstsearchall().then(text =>{
+ 
+  console.log(text);
+})
 function firstsearch(){
 url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
@@ -521,8 +541,6 @@ var params={
 fetch(url,params);
 console.log("firstsearch1 ok")
 success1 = "o";
-
-setTimeout(firstsearch2,2000);
 }
 function firstsearch2(){
 fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec',{
@@ -551,9 +569,9 @@ console.log("firstsearch finish");
 console.log("firstmenusearch start>>");
 if(request1 == "next"){
 console.log("shopsearchへ優先処理")
-shopsearch(resJson);
+shopsearch(firstdata11);
 }else{
-firstmenu();
+firstmenuall();
 }
 })
 .catch(error =>{
@@ -572,7 +590,22 @@ setTimeout(()=>{
 
 })
 }
-function firstmenu(){
+
+async function firstmenuall(){
+  if(order == 1){
+  console.log("firstmenuall OK");
+  let message1 = await firstmenu();
+  order = 2;
+  firstmenu2();
+  return message1
+  }else{
+    return;
+  }
+}
+firstmenuall().then(text=>{
+  console.log(text);
+})
+function firstmenu(){  
 if(request2 == "nomal"){
 console.log("menusearch 通常処理 受付");
 return;
@@ -591,8 +624,10 @@ var params={
 fetch(url,params);
 console.log("firstmenusearch1 ok");
 success2 = "o";
-setTimeout(firstmenu2,2000);
+
 }
+
+
 function firstmenu2(){
 if(request2 == "nomal"){
 console.log("menusearch 通常処理　受付");
@@ -644,7 +679,7 @@ document.getElementById("search").style.borderColor = "#411C00";
 document.getElementById("search").style.borderWeight = "2px";
 //document.getElementById("search").placeholder = "finish";
 //お知らせの処理開始
-setTimeout(firstnews,1000);
+firstnewsall();
 if(request2 == "next"){
 console.log("menusearch2へ優先処理  in menu2")
 menusearch2(resJson);
@@ -659,6 +694,7 @@ document.getElementById("ss").innerHTML = "search";
 document.getElementById("s").style.backgroundColor ="#5A3A1A";
 
 alert("通信失敗2")
+console.log(error)
 })
 }
 //ロード時に全データ取得のコード　終
@@ -672,8 +708,9 @@ document.getElementById("ss").innerHTML = "loading";
 document.getElementById("s").style.backgroundColor ="#C6AC8F"
 shopname = document.getElementById("search").value;
   if(success1 == "ok"){
-  console.log("data:"+firstdata1)
-shopsearch(firstdata1);
+  console.log("data:"+firstdata11)
+shopsearch(firstdata11
+  );
 //return;
 }
 if(success1 == "o"){
@@ -726,7 +763,7 @@ alert("faild searching2");
 }
 num='';
 jjson = '';
-function shopsearch(){
+function shopsearch(firstdata1){
   //a = "n1";
 jjson = JSON.parse(firstdata1);
 jjson1 = jjson.shopdata;
@@ -840,6 +877,7 @@ fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935f
 })
 .then(resJson =>{
   console.log("menusearch2 ok");
+ resJson = JSON.stringify(resJson);
 menusearch2(resJson);
 })
 .catch(error =>{
@@ -974,7 +1012,25 @@ function c11(){
 wrnumber = "";
 newsjson = 0;
 //題名と時間だけをとりあえず表示→一番目のお知らせを表示
+async function firstnewsall(){
+  if(order == 3){
+  console.log("firstnewsall OK");
+let message1 = await firstnews();
+order = 4;
+firstnews22();
+return message1;
+  }else{
+    return;
+  }
+}
+firstnewsall().then(text=>{
+
+  console.log(text);
+})
 function firstnews(){
+  return new Promise(data=>{
+
+  
   if(success3 == "ok"){
     cookie = document.cookie;
     data1 = cookie.indexOf("news=");
@@ -996,9 +1052,27 @@ function firstnews(){
     }
   fetch(url,params)
   console.log("firstnews search start");
-  setTimeout(firstnews2,1000);
+  data =  'firstnews OK';
+})
 }
+async function firstnews22(){
+  if(order == 4){
+  console.log("firstnews22 OK");
+  let message1 = await firstnews2();
+  firstwrite();
+  return message1;
+  }else{
+    return;
+  }
+}
+firstnews22().then(text=>{
+  console.log(text);
+
+})
 function firstnews2(){
+  return new Promise(data=>{
+
+  
   url ="https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   fetch(url,{
     "method":"GET",
@@ -1027,11 +1101,12 @@ function firstnews2(){
       document.cookie = ndata1;
       document.cookie = ndata2;
       console.log("finish ndata");
-      setTimeout(firstwrite,1000);
     })
     .catch(error => {
     console.log("newsのエラー");
     })
+    data = 'firstnews2 OK';
+  })
 }
 function firstwrite(){
   for(var a = 1; a<=4; a++){
