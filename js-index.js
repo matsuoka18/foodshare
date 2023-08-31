@@ -73,6 +73,7 @@ if(typeof datav == "string"){
         .catch(error =>{
           console.log("start():error");
           console.log("retry to load start()");
+          console.log("Error Log:"+error)
           setTimeout(()=>{
 start();
           },1000)
@@ -135,7 +136,7 @@ count = 0;
 set1 = '';
 function pic(){
   count++;
-  console.log("c:"+count)
+  //console.log("c:"+count)
   if(a == 0){
     a =1;
     document.getElementById("img").src="food.jpeg";
@@ -145,7 +146,7 @@ function pic(){
     document.getElementById("img2").src="food.jpeg";
     document.getElementById("img").src="IMG_0064.JPG";
   }
-  console.log(a);
+  //console.log(a);
   $("#img").animate({
     "width":'90vw',
     "height":'51vw',
@@ -585,7 +586,8 @@ console.log("firstsearch2 error");
 console.log(error)
 setTimeout(()=>{
   console.log("firstsearch2 retry");
-  firstsearch();
+  order = 0;
+  firstsearchall();
 },1000)
 
 })
@@ -699,8 +701,9 @@ console.log(error)
 }
 //ロード時に全データ取得のコード　終
 shopname = '';
+errorcheck = '';
 function searching(){
-  
+  errorcheck = 'none';
 num = 100;
 request3 = '';
 ani();
@@ -745,6 +748,7 @@ fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935f
 .then(resJson =>{
   if(request2 == "next"){
     console.log("menusearch2への優先処理");
+    resJson  = JSON.stringify(resJson);
     menusearch2(resJson);
     
   }
@@ -759,6 +763,9 @@ document.getElementById("ss").innerHTML = "search";
 document.getElementById("s").style.backgroundColor ="#5A3A1A";
 console.log("faild searching2");
 alert("faild searching2");
+console.log("firstmenuall() reload")
+order = 0;
+firstmenuall();
 })
 }
 num='';
@@ -767,6 +774,12 @@ function shopsearch(firstdata1){
   //a = "n1";
 jjson = JSON.parse(firstdata1);
 jjson1 = jjson.shopdata;
+if(jjson1){
+console.log("");
+}else{
+  console.log("shopsearch Error→firstsearchall()");
+  firstsearchall();
+}
 console.log("jjson1:"+jjson1)
 num = jjson.shopdata[0].num;
 num = parseInt(num)+6;
@@ -848,6 +861,7 @@ if(num == 1){
 document.getElementById("ss").style.opacity = "1";
 document.getElementById("s").style.backgroundColor ="#5A3A1A";
 }
+
 }
 function menusearch(){
 console.log("menusearch ok");
@@ -976,8 +990,9 @@ end();
 }*/
 if(success2 != "ok"){
 request2 = '';
-console.log("firstmenu  再トライ")
-firstmenu();
+console.log("firstmenuall()  再トライ")
+order = 1;
+firstmenuall();
 }
 request3 = "end";
 console.log("検索終了");
