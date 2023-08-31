@@ -712,8 +712,7 @@ document.getElementById("s").style.backgroundColor ="#C6AC8F"
 shopname = document.getElementById("search").value;
   if(success1 == "ok"){
   console.log("data:"+firstdata11)
-shopsearch(firstdata11
-  );
+shopsearch(firstdata11);
 //return;
 }
 if(success1 == "o"){
@@ -778,6 +777,7 @@ if(jjson1){
 console.log("");
 }else{
   console.log("shopsearch Error→firstsearchall()");
+  order = 0;
   firstsearchall();
 }
 console.log("jjson1:"+jjson1)
