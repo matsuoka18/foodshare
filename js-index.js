@@ -748,7 +748,7 @@ function searching() {
   } else {
     url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
     var data = [{
-      "branch": "shopdata"
+      "branch": "menu"
     }]
     var params = {
       "method": "post",
@@ -1093,7 +1093,7 @@ async function firstnews22() {
   if (order == 4) {
     console.log("firstnews22 OK");
     let message1 = await firstnews2();
-    firstwrite();
+
     return message1;
   } 
 }
@@ -1140,9 +1140,13 @@ function firstnews2() {
         document.cookie = ndata1;
         document.cookie = ndata2;
         console.log("finish ndata");
+        firstwrite();
       })
       .catch(error => {
         console.log("newsのエラー");
+        console.log("firstnews2() →reload firstnewsall()")
+        order = 3;
+        firstnewsall();
       })
   
 }
