@@ -429,7 +429,7 @@ accessToken='';
             const imageData = event.target.result;
             fileName = file.name;
     
-            const uploadUrl = `https://api.github.com/repos/foodshare-pictures/datas/contents/${fileName}`;
+            const uploadUrl = `https://api.github.com/repos/matsuoka18/foodshare-pictures/contents/${fileName}`;
             
             //最新コード8月15日
             const uploadData = {
