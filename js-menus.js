@@ -141,7 +141,7 @@ if(sn3 == "menu"){
        console.log("RELOAD (ERROR)");
        menu2();
        },1000)
-   })
+   
 }
     }
     function show2(){
