@@ -29,12 +29,13 @@ var pass = document.getElementById("password").value;
 var mailad = document.getElementById("mailad").value;
 var url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
-"name":text,
+  "name":text,
 "name4":"店舗",
 "name7":pass,
 "name11":mailad
 }];
 var data2 = [{
+  "name":text,
 "name4":"終了"
 }]
 var params = {
