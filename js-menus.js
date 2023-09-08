@@ -1,3 +1,4 @@
+        url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 function start(){
     document.getElementById("bt1").innerHTML = "Loading";
      cd= document.cookie;
@@ -32,54 +33,13 @@ console.log(cd);
         //sn2 = "hhh";
         //sn3 = "menu";
         //sn4 = {"shop1":["0","22","38"],"shop7":["14","36","52"],"shop13":["4","26","42"],"shop19":["1","23","39"],"shop25":["1","23","39"],"shop31":["1","23","39"],"shop37":["1","23","39"],"shop43":["1","23","39"],"shop49":["1","23","39"],"shop55":["23","39"],"shop61":["23","39"],"shop67":["23","39"],"shop73":["23","39"],"shop79":["23","39"],"last":["79"]};
-
-if(sn3 == "shop"){
-document.getElementById("h1").innerHTML = sn2;
-url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
-//一旦getして店舗名があるかをチェック→なければ"name4"を商品取得"としてpost
-data = [{
-    "name4":"店舗商品取得",
-    "name5":sn,
-    "branch":"menudata"
-}];
-params={
-    "method":"post",
-    "mode":"no-cors",
-    "Content-Type":"application/json",
-    "body":JSON.stringify(data)
-}
-fetch(url,params);
-setTimeout(start2,5000);
-}else if(sn3 == "menu"){
+if(sn3 == "menu"){
     document.getElementById("h1").innerHTML = "商品検索";
     console.log("menu")
   menu();
 }
 }
-function start2(){
-document.getElementById("bt1").innerHTML = "Getting";
-fetch(url,{ 
-    method:"GET",
-    mode:"cors"
-})
-    .then(response =>{
-        if(response.ok){
-            return response.json()
-        }
-    })
-    .then(resJson =>{
-        json = JSON.stringify(resJson);
-        json = JSON.parse(json);
-        console.log(json);
-        number = 0;
-        number2 = 10;
-        show();
-    })
-   .catch(error =>{
-       alert("エラー");
-   })
 
-    }
     function show(){
     document.getElementById("bt1").style.opacity = "0";
                     if(json[0] == "error"){
@@ -128,9 +88,10 @@ fetch(url,{
         show();
     }
     function menu(){
+    console.log("menu START");
       //sn4 = JSON.stringify(sn4);
       sn4 = JSON.parse(sn4);
-        console.log("送信開始");
+        console.log("searching POST");
         url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
      var data = [{
       "searching1":sn4,
@@ -143,9 +104,13 @@ fetch(url,{
         "body":JSON.stringify(data)
      }
       fetch(url,params)
-      setTimeout(menu2,3000);
+      console.log("menu FIN");
+      menu2();
     }
+    rc=0;
     function menu2(){
+    rc++;
+    console.log("menu2 START");
         document.getElementById("bt1").innerHTML = "Getting";
         fetch(url,{ 
     method:"GET",
@@ -160,15 +125,27 @@ fetch(url,{
         json = JSON.stringify(resJson);
         json = JSON.parse(json);
         console.log(json);
+        rc=0;
+        console.log("menu2 FIN");
         show2();
     })
    .catch(error =>{
-       alert("エラー");
+       console.log("menu2 ERROR");
+       console.log(error);
+       if(rc > 2){
+       rc=0;
+       console.log("RELOAD (limit)");
+       menu();
+       }else{
+       setTimeout(()=>{
+       console.log("RELOAD (ERROR)");
+       menu2();
+       },1000)
    })
-
+}
     }
     function show2(){
-
+console.log("show2 START");
         document.getElementById("bt1").style.opacity = "0";
                     if(json == "error"){
             alert("商品が登録されていません");
@@ -188,13 +165,4 @@ fetch(url,{
 
     }
     }
-    function test(){
-        /*name = "potato";
-        fee = "500";
-        express = "this potato is the most delicious potato all over the world!! let's eat this!!"
-        data =  "<div class="+"\""+"no1"+"\""+"><p class="+"\""+"shopname"+"\""+">"+sn2+"</p><div class="+"\""+"menufee"+"\""+"><p class="+"\""+"menu"+"\""+">"+name+"</p><p class="+"\""+"fee"+"\""+">"+fee+"</p></div><p class="+"\""+"express"+"\""+">"+express+"<div class="+"\""+"pic"+"\""+"></div></div>";
-    all.insertAdjacentHTML('afterbegin',data)*/
-         
    
-        
-    }

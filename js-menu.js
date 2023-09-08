@@ -147,7 +147,7 @@ function getdata() {
      menu = jj.changedata[0].name[namee2];
      fee = jj.changedata[0].fee[namee2];
      express = jj.changedata[0].express[namee2];
-     //pic = jj.changedata[0].base64[namee2];
+     fileName = jj.changedata[0].base64[namee2];
      genre = jj.changedata[0].genre[namee2];
      ne();
    }
@@ -376,7 +376,7 @@ function getdata() {
      document.getElementById("chanchan2").innerHTML = document.getElementById("change2").value;
      document.getElementById("chanchan3").innerHTML = document.getElementById("change3").value;
      document.getElementById("chanchan4").innerHTML = document.getElementById("change4").value;
-     //document.getElementById("pic").innerHTML = document.getElementById("cahnge5").value;
+     document.getElementById("pic").innerHTML = document.getElementById("cahnge5").value;
      form = document.fo2.example;
      form2 = form.selectedIndex;
      console.log(form2);
@@ -390,37 +390,84 @@ function getdata() {
      lmenu = document.getElementById("change2").value;
      lfee = document.getElementById("change3").value;
      lexpress = document.getElementById("change4").value;
-   }
- document.getElementById("example").addEventListener('change',fileload);
- function fileload(){
-   var img = document.getElementById("example");
-   var file = img.files[0];
- 
-   var reader = new FileReader();
-   reader.onload = (event) =>{
-     base64text = event.currentTarget.result;
-     base64last = base64text.length;
-     ba64n = parseInt(base64last/8192+1);//送信回数
-     alert(ba64n);
-     st1 = 0;
-     st2 = 8192;
-     sendtext = [];
-     for(var a=0; a<ba64n; a++){
-      st  = base64text.substring(st1,st2);
-      console.log(st);
-      st1+=8192;
-      st2+=8192;
-      sendtext.push(st);
-     }
-     console.log("base64 load fin...");
-     console.log("base64text:"+base64text);
- 
-     console.log("base64Last:"+base64last);
-     console.log("base64:"+sendtext);
- 
-   }
-   reader.readAsDataURL(file)
- }
+    }
+
+accessToken='';
+    document.getElementById("example").addEventListener('change', write);
+    document.getElementById("change5").addEventListener('change', write);
+    function write() {
+        alert("File is ready");
+        url="https://script.google.com/macros/s/AKfycbxR-5U9ojyWM_CgWc9Icog8rFwkDD_LMlbznk-62mtmszRTXz3qrxH5cdCq1elu2R01/exec";
+    fetch(url,{
+        "method":"GET",
+        "mode":"cors"
+        })
+        .then(response =>{
+          if(response.ok){
+            return response.json();
+            }
+          })
+          .then(resJson =>{
+              accessToken = resJson[0];
+    })
+                }
+
+    fileName = '';
+    async function uploadImage() {
+        alert("File is uploading...")
+        alert("Please wait until the message is displayed again")
+        const fileInput = document.getElementById('example');
+        const file = fileInput.files[0];
+    
+        if (!file) {
+            alert('画像ファイルを選択してください');
+            return;
+        }
+    
+        const reader = new FileReader();
+        reader.onload = async function (event) {
+            const imageData = event.target.result;
+            fileName = file.name;
+    
+            const uploadUrl = `https://api.github.com/repos/foodshare-pictures/datas/contents/${fileName}`;
+            
+            //最新コード8月15日
+            const uploadData = {
+                message: '画像のアップロード',
+                content: imageData.split(',')[1],
+            };
+    
+            try {
+                const response = await fetch(uploadUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${accessToken}`,
+                    },
+                    body: JSON.stringify(uploadData),
+                });
+    
+                if (response.ok) {
+                    alert('File is Uploaded');
+                    fileName='';
+                } else {
+                    alert('Faild...');
+                    d = confirm("upload by other means");
+                    if(d){
+                        
+    location.href="https://drive.google.com/drive/mobile/folders/1zVciCLQCF1Zr6pDqftL0b818vRcbk8HR?usp=drive_link&sort=13&direction=a"
+                    }
+                }
+            } catch (error) {
+                console.error('ネットワークエラー:', error);
+            }
+        };
+    
+        reader.readAsDataURL(file);
+    }
+
+
+
    function sen() {
      alert(document.getElementById("jan").value);
    }
@@ -437,7 +484,7 @@ function getdata() {
        "name4": "追加",
        "name5": shopID,
        "name8": janru,
-       "name9": base64text
+       "name9": fileName
      }]
      var params = {
        "method": "post",
@@ -446,11 +493,7 @@ function getdata() {
        "body": JSON.stringify(data)
      }
      fetch(url, params)
- 
- 
-     
- 
-     
+uploadImage();
      //画像の送信動作を作る→
      if (firsttime == '1') {
        alert("初出品完了");
@@ -463,60 +506,8 @@ function getdata() {
      ani();
      
      aa=0;
-     setTimeout(send2,2000);
    }
  
-   function send2(){
-   if(aa <= sendtext.length/4){
-       data = [{
-         "name":shop,
-         "name1":menu,
-         "name4":"画像追加",
-         "name5":shopID,
-         "name9":sendtext[aa-1],
-         "namenumber":aa
-         //なにか情報が入る可能性大
-       }]
-      params2 = {
-         "method":"post",
-         "mode":"no-cors",
-         "Content-Type":"application/json",
-         "body":JSON.stringify(data)
-       }
- 
-       console.log("base64 send"+aa+"/"+sendtext.length);
-       fetch(url,params2);
-       setTimeout(send2,500);
-       aa++;
-     }else if(sendtext.length/4 < aa && aa<= sendtext.length ){
-       data = [{
-         "name":shop,
-         "name1":menu,
-         "name4":"画像追加",
-         "name5":shopID,
-         "name9":sendtext[aa-1],
-         "namenumber":aa
-         //なにか情報が入る可能性大
-       }]
-      params2 = {
-         "method":"post",
-         "mode":"no-cors",
-         "Content-Type":"application/json",
-         "body":JSON.stringify(data)
-       }
- 
-       console.log("base64 send"+aa+"/"+sendtext.length);
-       fetch(url,params2);
-       setTimeout(send2,100);
- aa++;
-     }else if(sendtext.length == aa+1){
-       console.log(data);
-       menuu();
-       console.log("base64 send finish");
-     }
-   }
-     
-   
    function ani() {
      if (a > 0 && ai == 1) {
        a--;
@@ -577,6 +568,7 @@ function getdata() {
        "name4": "商品関係編集",
        "name5": shopID,
        "name8": lgenre,
+       'name9':fileName,
        "name10": namee2
      }]
      var params = {

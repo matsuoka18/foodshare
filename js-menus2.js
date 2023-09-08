@@ -11,7 +11,7 @@ function but1() {
   document.getElementById("but3").style.borderWidth = "1px";
   document.getElementById("but3").style.borderColor = "#3A1F00";
   document.getElementById("but4").style.backgroundColor = "white";
-  document.getElementById("but4").style.borderStyle不明 = "solid";
+  document.getElementById("but4").style.borderStyle = "solid";
   document.getElementById("but4").style.borderWidth = "1px";
   document.getElementById("but4").style.borderColor = "#3A1F00";
   document.getElementById("but5").style.backgroundColor = "white";
@@ -247,9 +247,7 @@ sn2 ='';
 cd="";
 function start(){
  cd= document.cookie;
- // cd = 'branch=menu|; menumemo={"shop1":[0,22,38],"shop7":[14,36,52],"shop13":[4,26,42],"shop19":[1,23,39],"shop25":[1,23,39],"shop31":[1,23,39],"shop37":[1,23,39],"shop43":[1,23,39],"shop49":[1,23,39],"shop55":[23,39],"shop61":[23,39],"shop67":[23,39],"shop73":[23,39],"shop79":[23,39],"last":[79]}-; loginID=%E5%85%AB%E7%99%BE%E5%B1%8B!; pass=%E3%82%84%E3%81%BE%E3%81%8D?; shopnumber=85#; searchname=hello^;searchnum=85$';
-    //cd = 'searchnum=1$; searchname=hhh^; branch=shop|; favoriten1=0<<*1>>*; favoriten2=1<<*1>>*; favoritenuml=2>>!';
-    //cd = 'searchnum=1$; searchname=hhh^; branch=shop|; firstdata1={"shopdata":[{"n1":"hhh","n7":"abc","n13":"大船中学校","n19":"ばーーか","n25":"TULLYS COFFEE","n31":"ミニストップ","n37":"大戸屋","n43":"apple","n49":"あいうえお","n55":"goon","n61":"ppp","n67":"q","n73":"w","n79":"qw","n85":"八百屋","n91":"松","n97":"はか","n103":"q","n109":"a","n115":"re","n121":"rte","n127":"a","n133":"a","n139":"a","n145":"a","n151":"おおおお","n157":"カメラ","n163":"セブン","n169":"テスト","n175":"テスト3","n181":"テスト4","n187":"むじ","n193":"にお","n199":"アイパッド","n205":"ステップ","n211":"asd","n217":"goon","n223":"コーヒー","n229":"手広","n":"hdf","n235":"kama","n241":"hfsg","num":241}]}; datav=0; news=[object Object]; newsv=undefined; favoriten1=0<<*1>>*; favoriten2=1<<*1>>*; favoriten3=2<<*1>>*; favoriten4=3<<*1>>*; favoriten5=5<<*1>>*; favoriten6=11<<*1>>*; favoritenuml=6>>!'
+ 
 
  console.log(cd);
       num1 = cd.indexOf("searchnum=");
@@ -292,10 +290,10 @@ function start(){
 
 
       console.log(sn+":"+sn2);
-     setTimeout(startt,1000)
+     startt();
      }
      function startt(){
-     console.log("loading start");
+     console.log("srartt START");
   url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
 "name4":"店舗商品取得",
@@ -309,10 +307,12 @@ var params={
 "body":JSON.stringify(data)
 }
 fetch(url,params);
-setTimeout(start1,3000);
+console.log("startt FIN");
+start1();
 }
+rc2=0;
 function start1(){
-console.log("getting start");
+console.log("start1 START");
   url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   fetch(url,{
       method:"GET",
@@ -325,15 +325,36 @@ console.log("getting start");
   })
   .then(resJson =>{
 jsondata = resJson;
-      console.log("データ取得");
-      setTimeout(start11,1000);
+jc = JSON.stringify(jsondata);
+jc = jc.indexOf("getmenudata");
+if(jc > 0){
+rc2=0;
+console.log("start1 FIN");
+start11();
+}else{
+if(rc2 >2){
+console.log("RELOAD (limit)");
+rc2=0;
+startt();
+}else{
+rc2=0;
+console.log("RELOAD (other data)");
+start1();
+}
+}
+ 
   })
   .catch(error =>{
-      alert("エラー");
+      console.log("RELOAD ( ERROR )");
+      setTimeout( ()=>{
+       startt();
+       rc2=0;
+       },1000)
   })
 
 }
 function start11(){
+console.log("start11 START");
   try{
             data = jsondata.data;
       console.log("データ："+data);
@@ -363,7 +384,7 @@ function start11(){
     document.getElementById("time2").innerHTML = time;
     document.getElementById("mailad2").innerHTML = mailad;
     document.getElementById("phone2").innerHTML = phonead;
-                      console.log("データ取得入力完了");
+                      console.log("start11 FIN");
                       getmenu();
   }
   catch{
@@ -372,7 +393,8 @@ function start11(){
   }
 }
 function getmenu(){
-console.log("メニューデータ取得開始→");
+console.log("getmenu START");
+
 url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 data = [{
   "name5":sn,
@@ -385,12 +407,14 @@ params = {
   "body":JSON.stringify(data)
 }
 fetch(url,params)
-console.log("メニューデータリクエスト→")
-setTimeout(getmenu2,2000)
+console.log("changedata POST");
+console.log("getmenu FIN");
+getmenu2();
 }
 mjson = '';
-retrynum1 = 0;//7月13日　データ取得に失敗した際、再度読み込みを行うプログラムをつくる。
+retrynum1 = 0;
 function getmenu2(){
+console.log("getmenu2 START");
   retrynum1++;
 url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 fetch(url,{
@@ -404,8 +428,6 @@ fetch(url,{
 })
 .then(resJson =>{
 mjson = resJson;
-console.log("メニューデータ取得完了");
-console.log(mjson);
 try{
 getmenu3();
 }
