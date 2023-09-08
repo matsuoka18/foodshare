@@ -141,9 +141,11 @@ if(sn3 == "menu"){
        console.log("RELOAD (ERROR)");
        menu2();
        },1000)
-   
-
     }
+   })
+
+}
+    
     function show2(){
 console.log("show2 START");
         document.getElementById("bt1").style.opacity = "0";
