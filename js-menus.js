@@ -142,7 +142,7 @@ if(sn3 == "menu"){
        menu2();
        },1000)
    
-}
+
     }
     function show2(){
 console.log("show2 START");
