@@ -39,14 +39,13 @@ body {
 
 .searchform {
   float: right;
-  margin-right: 15vw;
+  margin-right: 10vw;
   margin-top: 5vw;
-
 }
 
 .searchform button {
-  height: 3vw;
-  width: 5vw;
+  height: 4vw;
+  width: 8vw;
   color: white;
   background-color: #5A3A1A;
   border: none;
@@ -66,10 +65,11 @@ body {
 }
 
 .search {
-  border-color: #5A3A1A;
+  border:1px solid #5A3A1A;
+  outline: white;
   border-radius: 10px;
-  width: 25vw;
-  height: 3vw;
+  width: 30vw;
+  height: 4vw;
   font-size: 20px;
 }
 
@@ -80,15 +80,19 @@ body {
 }
 
 .p {
+  position: relative;
   margin-left: 0;
   margin-right: 0;
-  width: 22.5vw;
-  height: 10vw;
+  width: 20vw;
+  height: 8vw;
   float: right;
   z-index: 100;
 }
 
 .p p {
+  position:absolute;
+  right:0;
+  bottom:0;
   width: 100px;
   height: 30px;
   background-color: #5A3A1A;
@@ -97,7 +101,7 @@ body {
   border-radius: 10px;
   float: right;
   margin-top: 6vw;
-  margin-right: 10px;
+  margin-right: 1vw;
   margin-bottom: 0;
   transition: 0.2s;
 }
@@ -1406,14 +1410,14 @@ img {
   margin-left: 2vw;
   border-left: 1vw solid red;
   padding-left: 1vw;
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
 .button22 h2 {
   margin-left: 2vw;
   border-left: 10px solid red;
   padding-left: 1vw;
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
 .button22 {
@@ -1425,7 +1429,7 @@ img {
   margin-left: 2vw;
   border-left: 10px solid red;
   padding-left: 1vw;
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
 .button33 {
@@ -1437,7 +1441,7 @@ img {
   margin-left: 2vw;
   border-left: 10px solid red;
   padding-left: 1vw;
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
 .button44 {
@@ -1449,7 +1453,7 @@ img {
   margin-left: 2vw;
   border-left: 10px solid red;
   padding-left: 1vw;
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
 .button55 {
@@ -1461,7 +1465,7 @@ img {
   margin-left: 2vw;
   border-left: 10px solid red;
   padding-left: 1vw;
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
 .button66 {
@@ -1470,6 +1474,7 @@ img {
 }
 
 .menu1 {
+  position: relative;
   padding: 5px;
   height:20vw;
 }
@@ -1486,13 +1491,14 @@ img {
 }
 
 .menu1 h2 {
-  font-size: 60px;
-  width: 55vw;
+  font-size: 4vw;
+  width: 65vw;
 }
 
 .star {
-  position: relative;
-  top: -2.5vw;
+  position: absolute;
+  top: 5vw;
+  right:0;
   width: auto;
   height: 2vw;
   background-color: white;
@@ -1563,11 +1569,11 @@ padding:0.5vw;
 
 @keyframes hello {
   from {
-    width: 55vw;
+    width: 65vw;
   }
 
   to {
-    width: 100vw;
+    width: 90vw;
   }
 }
 
@@ -1589,7 +1595,10 @@ padding:0.5vw;
 }
 
 .menu1 h4 {
-  font-size: 50px;
+  position:absolute;
+  right:15vw;
+  bottom:0;
+  font-size: 3vw;
   color: red;
 }
 
@@ -1756,8 +1765,8 @@ img{
 
 .head li {
   position: absolute;
-  top: 6vw;
-  left: 85vw;
+  left: 0;
+  bottom:0;
   text-decoration: none;
   list-style-type: none;
   width: 100px;
@@ -1794,6 +1803,9 @@ a {
 }
 
 .l4 {
+  position:absolute;
+  left:0;
+  bottom:0;
   width: 100px;
   height: 30px;
   padding: 0;
@@ -2067,7 +2079,8 @@ text-align: center;
 }
 .imgs{
   position:absolute;
-  right:3vw;
+  right:2vw;
+  bottom: 4vw;
   display: flex;
   flex-direction: column;
   float:right;
