@@ -376,6 +376,9 @@ console.log("start11 START");
       console.log(time);
     adress = pre+city+city2+adress;
       console.log(adress);
+    pic = data[0].pic;
+    console.log(pic);
+    //ここにimgタグと結びつけたコードを書く　データ名はpic 9月13日
     document.getElementById("adress").innerHTML = adress;
     document.getElementById("time").innerHTML = time;
     document.getElementById("phone").innerHTML = phonead;
