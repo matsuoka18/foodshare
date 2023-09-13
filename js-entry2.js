@@ -111,6 +111,7 @@ data = [{
 "intr":introduce,
 "time":time,
 "genru":genru,
+"pic":fileName,
 "branch":"shopmake"
 }]
 params = {
@@ -130,3 +131,77 @@ function fourth2(){
     document.getElementById("all3").style.opacity = "0";
     window.scrollTo(0,0);
 }
+accessToken='';
+//ここのidのとこはhtmlのidに合わせること　9月13日
+    document.getElementById("example").addEventListener('change', write);
+    document.getElementById("change5").addEventListener('change', write);
+    function write() {
+        alert("File is ready");
+        url="https://script.google.com/macros/s/AKfycbxR-5U9ojyWM_CgWc9Icog8rFwkDD_LMlbznk-62mtmszRTXz3qrxH5cdCq1elu2R01/exec";
+    fetch(url,{
+        "method":"GET",
+        "mode":"cors"
+        })
+        .then(response =>{
+          if(response.ok){
+            return response.json();
+            }
+          })
+          .then(resJson =>{
+              accessToken = resJson[0];
+    })
+                }
+
+    fileName = '';
+    async function uploadImage() {
+        alert("File is uploading...")
+        alert("Please wait until the message is displayed again")
+        const fileInput = document.getElementById('example');
+        const file = fileInput.files[0];
+    
+        if (!file) {
+            alert('画像ファイルを選択してください');
+            return;
+        }
+    
+        const reader = new FileReader();
+        reader.onload = async function (event) {
+            const imageData = event.target.result;
+            fileName = file.name;
+    
+            const uploadUrl = `https://api.github.com/repos/matsuoka18/foodshare-pictures/contents/${fileName}`;
+            
+            //最新コード8月15日
+            const uploadData = {
+                message: '画像のアップロード',
+                content: imageData.split(',')[1],
+            };
+    
+            try {
+                const response = await fetch(uploadUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${accessToken}`,
+                    },
+                    body: JSON.stringify(uploadData),
+                });
+    
+                if (response.ok) {
+                    alert('File is Uploaded');
+                    send2();
+                } else {
+                    alert('Faild...');
+                    d = confirm("upload by other means");
+                    if(d){
+                        
+    location.href="https://drive.google.com/drive/mobile/folders/1zVciCLQCF1Zr6pDqftL0b818vRcbk8HR?usp=drive_link&sort=13&direction=a"
+                    }
+                }
+            } catch (error) {
+                console.error('ネットワークエラー:', error);
+            }
+        };
+    
+        reader.readAsDataURL(file);
+    }
