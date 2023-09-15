@@ -80,9 +80,24 @@ function third() {
     introduce = document.getElementById("introduce").value;
     time = document.getElementById("time").value;
     genru = document.getElementById("name2").value;
+    document.getElementById("all2").style.display = "none";
+    document.getElementById("all2").style.opacity = "0";
+
+        window.scrollTo(0,0);
+}
+function third2(){
+
     document.getElementById("all2").style.opacity = "0";
     document.getElementById("all2").style.display = "none";
+        document.getElementById("formm").style.opacity = "1";
+    document.getElementById("formm").style.display = "block";
+        window.scrollTo(0,0);
+}
+function fifth(){
+    document.getElementById("all3").style.display = "block";
     document.getElementById("all3").style.opacity = "1";
+        document.getElementById("all4").style.display = "none";
+    document.getElementById("all4").style.opacity = "0";
     adress = to + city + ku + ad;
     document.getElementById("p11").innerHTML = adress;
     document.getElementById("p22").innerHTML = phone;
@@ -90,12 +105,14 @@ function third() {
     document.getElementById("p44").innerHTML = introduce;
     document.getElementById("p55").innerHTML = time;
     document.getElementById("p66").innerHTML = genru;
+    document.getElementById("sendpic").src = fileName;
     window.scrollTo(0,0);
 }
-function third2(){
-    document.getElementById("formm").style.opacity = "1";
-    document.getElementById("formm").style.display = "block";
-    document.getElementById("all2").style.opacity = "0";
+function fifth2(){
+       document.getElementById("all2").style.display = "block";
+    document.getElementById("all2").style.opacity = "1";
+     document.getElementById("all4").style.display = "none";
+    document.getElementById("all4").style.opacity = "0";
     window.scrollTo(0,0);
 }
 function fourth() {
@@ -134,7 +151,6 @@ function fourth2(){
 accessToken='';
 //ここのidのとこはhtmlのidに合わせること　9月13日
     document.getElementById("example").addEventListener('change', write);
-    document.getElementById("change5").addEventListener('change', write);
     function write() {
         alert("File is ready");
         url="https://script.google.com/macros/s/AKfycbxR-5U9ojyWM_CgWc9Icog8rFwkDD_LMlbznk-62mtmszRTXz3qrxH5cdCq1elu2R01/exec";
