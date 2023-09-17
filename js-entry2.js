@@ -1,7 +1,7 @@
 key = '';
 function entry(){
     text = document.cookie;
-    alert(text);
+    
       /*          text = text.replace(/={/g,"\""+":"+"{");
     text = text.replace(/-; /g,","+"\"");
     text = text.replace(/=/g,"\""+":"+"\"");
@@ -21,9 +21,11 @@ key = text2.key;*/
     key = text.substring(text1,text2);
     key = decodeURI(key);
 console.log(key);
-    alert(key);
+    
 data = "<h2>"+key+"様"+"</h2>";
 namee.insertAdjacentHTML("beforeend",data);
+
+
 }
 
 to = '';
@@ -68,6 +70,7 @@ function second() {
     document.getElementById("formm").style.opacity = "0";
     document.getElementById("formm").style.display = "none";
     document.getElementById("all2").style.opacity = "1";
+    document.getElementById("all2").style.display = "block";
     window.scrollTo(0,0);
 }
 function second2(){
@@ -82,15 +85,19 @@ function third() {
     genru = document.getElementById("name2").value;
     document.getElementById("all2").style.display = "none";
     document.getElementById("all2").style.opacity = "0";
-
+    document.getElementById("all4").style.display = "block";
+    document.getElementById("all4").style.opacity = "1";
         window.scrollTo(0,0);
 }
 function third2(){
-
     document.getElementById("all2").style.opacity = "0";
     document.getElementById("all2").style.display = "none";
-        document.getElementById("formm").style.opacity = "1";
+    document.getElementById("form").style.opacity = "0";
+    document.getElementById("form").style.display = "none";
+    document.getElementById("formm").style.opacity = "1";
     document.getElementById("formm").style.display = "block";
+    document.getElementById("all").style.opacity = "1";
+    document.getElementById("all").style.display = "block";
         window.scrollTo(0,0);
 }
 function fifth(){
@@ -102,10 +109,11 @@ function fifth(){
     document.getElementById("p11").innerHTML = adress;
     document.getElementById("p22").innerHTML = phone;
     document.getElementById("p33").innerHTML = po;
-    document.getElementById("p44").innerHTML = introduce;
+    document.getElementById("p44").value = introduce;
     document.getElementById("p55").innerHTML = time;
     document.getElementById("p66").innerHTML = genru;
-    document.getElementById("sendpic").src = fileName;
+    document.getElementById("p77").innerHTML = fileName;
+    
     window.scrollTo(0,0);
 }
 function fifth2(){
@@ -143,15 +151,18 @@ location.href = "login.html";
 alert("登録完了");
 }
 function fourth2(){
-    document.getElementById("all2").style.opacity = "1";
-    document.getElementById("all2").style.display = "block";
+    document.getElementById("all4").style.opacity = "1";
+    document.getElementById("all4").style.display = "block";
     document.getElementById("all3").style.opacity = "0";
+    document.getElementById("all3").style.display = "none";
     window.scrollTo(0,0);
 }
 accessToken='';
 //ここのidのとこはhtmlのidに合わせること　9月13日
     document.getElementById("example").addEventListener('change', write);
     function write() {
+        document.getElementById("info").style.display = "block";
+        document.getElementById("info").style.opacity = "1";
         alert("File is ready");
         url="https://script.google.com/macros/s/AKfycbxR-5U9ojyWM_CgWc9Icog8rFwkDD_LMlbznk-62mtmszRTXz3qrxH5cdCq1elu2R01/exec";
     fetch(url,{
@@ -165,6 +176,39 @@ accessToken='';
           })
           .then(resJson =>{
               accessToken = resJson[0];
+              const fileInput = document.getElementById('example');
+              const file = fileInput.files[0];
+          
+              if (!file) {
+                  alert('画像ファイルを選択してください');
+                  return;
+              }
+          
+              const reader = new FileReader();
+              reader.onload = async function () {
+                  fileName = file.name;
+                  fmlength = fileName.length;
+                  fileSize = file.size;
+                  if(fmlength > 25){
+                    document.getElementById("d1").style.fontSize = "0.8vw";
+                    document.getElementById("d2").style.fontSize = "0.8vw";
+                    document.getElementById("d3").style.fontSize = "0.8vw";
+                  }
+                  if(fileSize/1000000 > 1){
+                    size = "MB";
+                    fileSize = fileSize/1000000;
+                  }else{
+                    size = "KB";
+                    fileSize = fileSize/1000;
+                  }
+                  date = file.lastModifiedDate;
+                  document.getElementById("d1").innerHTML = "写真名｜ "+fileName;
+                  document.getElementById("d2").innerHTML = "サイズ | "+fileSize+size;
+                  document.getElementById("d3").innerHTML = "日付 | "+date;
+                 
+              };
+              reader.readAsDataURL(file);
+               
     })
                 }
 

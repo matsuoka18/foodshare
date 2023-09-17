@@ -96,6 +96,16 @@
                 <option value="ファストフード">ファストフード</option>
                 <option value="洋食">洋食</option>
                 <option value="和食">和食</option>
+                <option value="中華料理">中華料理</option>
+                <option value="アジア料理">アジア料理</option>
+                <option value="カレー">カレー</option>
+                <option value="焼肉">焼肉</option>
+                <option value="鍋">鍋</option>
+                <option value="居酒屋">居酒屋</option>
+                <option value="ラーメン">ラーメン</option>
+                <option value="カフェ">カフェ</option>
+                <option value="スイーツ">スイーツ</option>
+                <option value="パン">パン</option>
                 <option value="その他">その他</option>
             </select>
         </form>
@@ -105,9 +115,16 @@
     
     
     <div id="all4" class="all4">
-      <div class="file_form">
+      <div class="form6">
       <p>画像をアップロード</p>
+      <label>写真を追加
          <input type="file" id="example" multiple>
+        </label>
+      </div>
+      <div class="info" id="info">
+        <p id="d1">写真名｜</p>
+        <p id="d2">サイズ｜</p>
+        <p id="d3">日付｜</p>
       </div>
       <button class="商品button" onclick="fifth2()">戻る</button>
       <button class="商品button" onclick="fifth()">次へ</button>
@@ -130,7 +147,7 @@
         </div>
         <div class="form7">
             <p>店舗紹介</p>
-            <p class="pp" id="p44"></p>
+            <textarea id="p44" class="introduce" cols="60" rows="10" wrap="hrad" value=""></textarea>
         </div>
         <div class="form7">
             <p>営業時間</p>
@@ -143,7 +160,7 @@
         </div>
         <div class="form7">
          <p>画像</p>
-           <img src=""  id="sendpic">
+         <p class="p" id="p77"></p>
         </div>
         <button class="商品button" onclick="fourth2()">戻る</button>
         <button class="商品button" onclick="fourth()">登録</button>
