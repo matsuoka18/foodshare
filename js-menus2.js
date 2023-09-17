@@ -246,8 +246,8 @@ cn='';
 sn2 ='';
 cd="";
 function start(){
- cd= document.cookie;
- 
+ //cd= document.cookie;
+ cd = 'menumemo={"shop163":["0"],"shop169":["0"],"shop175":["0"],"shop181":["0"],"last":["181"]}-; firstdata1={"shopdata":[{"n1":"hhh","n7":"abc","n13":"大船中学校","n19":"ばーーか","n25":"TULLYS COFFEE","n31":"ミニストップ","n37":"大戸屋","n43":"apple","n49":"あいうえお","n55":"goon","n61":"ppp","n67":"q","n73":"w","n79":"qw","n85":"八百屋","n91":"松","n97":"はか","n103":"q","n109":"a","n115":"re","n121":"rte","n127":"a","n133":"a","n139":"a","n145":"a","n151":"おおおお","n157":"カメラ","n163":"セブン","n169":"テスト","n175":"テスト3","n181":"テスト4","n187":"むじ","n193":"にお","n199":"アイパッド","n205":"ステップ","n211":"asd","n217":"goon","n223":"コーヒー","n229":"手広","n235":"kama","n241":"hfsg","n247":"kazuya","n253":"成田","n259":"あｄｇｆ","num":259}]}; datav=0; searchnum=1$; searchname=hhh^; branch=shop|; favoritenuml=0>>!';
 
  console.log(cd);
       num1 = cd.indexOf("searchnum=");
@@ -376,9 +376,6 @@ console.log("start11 START");
       console.log(time);
     adress = pre+city+city2+adress;
       console.log(adress);
-    pic = data[0].pic;
-    console.log(pic);
-    //ここにimgタグと結びつけたコードを書く　データ名はpic 9月13日
     document.getElementById("adress").innerHTML = adress;
     document.getElementById("time").innerHTML = time;
     document.getElementById("phone").innerHTML = phonead;
@@ -1335,8 +1332,8 @@ nn4++;
   document.getElementById("s5").style.color = "gray"
 }
 }
-async function rsend(){
- json =  [{"total":2.6,"rn":[2,0,2,0,1],"review1":["a","hello","hello","hello","hello","hello","hello"],"review2":["b","Hello World","Hello World","Hello World","Hello World","Hello World","Hello World"]}]
+function rsend(){
+ //json =  [{"total":2.6,"rn":[2,0,2,0,1],"review1":["a","hello","hello","hello","hello","hello","hello"],"review2":["b","Hello World","Hello World","Hello World","Hello World","Hello World","Hello World"]}]
 text1 = document.getElementById("text1").value;
 text2 = document.getElementById("text2").value;
 url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
@@ -1355,10 +1352,9 @@ params = {
 "Content-Type":"application/json",
 "body":JSON.stringify(data)
 }
-const send1 = await function(){
-  console.log("start to send review")
+
   fetch(url,params);
-}
+
 console.log("レビュー送信完了")
 console.log("内容："+text1+"："+text2+"/"+rn)
 document.getElementById("text1").value = "";
