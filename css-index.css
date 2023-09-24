@@ -931,3 +931,11 @@ margin-bottom:10vw;
             .newsd1 div:active{
               color:#3A1F00;
             }
+            .bar{
+              position:relative;
+              top:3vw;
+              height:2px;
+              width:25vw;
+              opacity: 0;
+              background-color:darkblue;
+            }

@@ -209,6 +209,11 @@ function firstmenu() {
   }
   if (request2 == "nomal") {
     console.log("menu priority");
+    $("#bar").animate({
+      'width':'15vw'
+    }, {
+      'duration': 500
+    })
   }
   console.log("firstmenu START");
   url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
@@ -233,6 +238,11 @@ function firstmenu2() {
   rc2++;
   if (request2 == "nomal") {
     console.log("menu priority");
+    $("#bar").animate({
+      'width':'19vw'
+    }, {
+      'duration': 5000
+    })
   }
   console.log("firstmenu2 START");
   fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec', {
@@ -254,6 +264,11 @@ console.log("menu:"+firstdata2);
 console.log("firstmenu2 FIN");
 success2 = "ok";
 if(request2 == "nomal"){
+  $("#bar").animate({
+    'width':'20vw'
+  }, {
+    'duration': 500
+  })
   console.log("menu priority2");
   menusearch2(firstdata2);
 }
@@ -323,6 +338,8 @@ function firstmenuc(){
 shopname = '';
 errorcheck = '';
 function searching() {
+//9月24日　読み込みバー　
+
   console.log("searching START");
   errorcheck = 'none';
   num = 100;
@@ -332,10 +349,32 @@ function searching() {
   document.getElementById("s").style.backgroundColor = "#C6AC8F"
   shopname = document.getElementById("search").value;
   if (success1 == "ok") {
+    $("#bar").animate({
+      'width':0,
+      'opacity':1
+    }, {
+      'duration': 0
+    })
+    $("#bar").animate({
+      'width':'5vw'
+    }, {
+      'duration': 1000
+    })
     shopsearch(firstdata1);
     return;
   }
   if (success1 == "o") {
+    $("#bar").animate({
+      'width':0,
+      'opacity':1
+    }, {
+      'duration': 0
+    })
+    $("#bar").animate({
+      'width':'5vw'
+    }, {
+      'duration': 5000
+    })
     console.log("途中からのリクエスト1");
     request1 = "next";
     return; //違う可能性大
@@ -390,6 +429,11 @@ function searching2() {
 num = '';
 jjson = '';
 function shopsearch(firstdata1) {
+  $("#bar").animate({
+    'width':'10vw'
+  }, {
+    'duration': 500
+  })
   console.log("shopsearch START");
   //a = "n1";
   jjson = JSON.parse(firstdata1);
@@ -409,6 +453,18 @@ function shopsearch(firstdata1) {
     shopname2 = jjson.shopdata[0][text];
     console.log("shopname2:" + shopname2);
     if (shopname == shopname2) {
+      
+      $("#bar").animate({
+        'width':'25vw'
+      }, {
+        'duration': 500
+      })
+      $("#bar").animate({
+        'opacity':0
+      }, {
+        'duration': 500
+      })
+
       text2 = "searchnum=" + a + "$";
       shopname2 = encodeURI(shopname2);
       text3 = "searchname=" + shopname2 + "^";
@@ -417,7 +473,7 @@ function shopsearch(firstdata1) {
       document.getElementById("ss").innerHTML = "jumping";
       ttt = '';
       document.cookie = "branch=shop|";
-      setTimeout(jump, 1000);
+      setTimeout(jump, 1500);
       return;
     }
   }
@@ -439,6 +495,11 @@ function shopsearch(firstdata1) {
       request2 = "nomal";
       return;//間違えて可能性大
     } else {
+      $("#bar").animate({
+        'width':'12.5vw'
+      }, {
+        'duration': 500
+      })
       console.log("menusearch  通常処理")
       request2 = "nomal";
       firstmenu();
@@ -528,6 +589,11 @@ function menu2() {
 
 
 function menusearch2(firstdata2) {
+  $("#bar").animate({
+    'width':'22.5vw'
+  }, {
+    'duration': 500
+  })
   if (request3 == "end") {
     console.log("end")
 
@@ -594,7 +660,17 @@ function menusearch2(firstdata2) {
       document.cookie = "branch=menu|";
       document.cookie = cc;
       document.getElementById("ss").innerHTML = "jumping";
-      jump();
+      $("#bar").animate({
+        'width':'25vw'
+      }, {
+        'duration': 500
+      })
+      $("#bar").animate({
+        'opacity':0
+      }, {
+        'duration': 500
+      })
+      setTimeout(jump,1500)
     } else {
       ani();
       $('#ss').clearQueue();
@@ -608,6 +684,11 @@ function menusearch2(firstdata2) {
       console.log("検索終了");
       end();
       }*/
+      $("#bar").animate({
+        'opacity':0
+      }, {
+        'duration': 100
+      })
       if (success2 != "ok") {
         request2 = '';
         console.log("firstmenu()  再トライ")
@@ -758,7 +839,7 @@ function firstwrite() {
   }
   document.getElementById("loadnews").style.display = "none";
   console.log("firstwrite FIN");
-  newsd1p1();
+  
 }
 function newsd1p1() {
   num = 1;
@@ -1116,8 +1197,8 @@ function pic() {
   }
   //console.log(a);
   $("#img").animate({
-    "width": '90vw',
-    "height": '51vw',
+    "width": '80vw',
+        "height": '48vw',
     "left": 0,
     "top": 0
   }, {
@@ -1141,8 +1222,8 @@ function pic() {
   })
 
   $("#img").animate({
-    "width": '90vw',
-    "height": '51vw',
+    "width": '80vw',
+        "height": '48vw',
     "left": 0,
     "top": 0
   }, {
@@ -1206,8 +1287,8 @@ function pic3() {
   document.getElementById("img2").src = "food.jpeg";
   document.getElementById("img").src = "IMG_0064.JPG";
   $("#img").animate({
-    "width": '90vw',
-    "height": '51vw',
+    "width": '80vw',
+        "height": '48vw',
     "left": 0,
     "top": 0
   }, {
@@ -1231,8 +1312,8 @@ function pic3() {
   })
 
   $("#img").animate({
-    "width": '90vw',
-    "height": '51vw',
+    "width": '80vw',
+        "height": '48vw',
     "left": 0,
     "top": 0
   }, {
@@ -1296,8 +1377,8 @@ function pic2() {
     a = 1;
 
     $("#img").animate({
-      "width": '90vw',
-      "height": '51vw',
+      "width": '80vw',
+          "height": '48vw',
       "left": 0,
       "top": 0
     }, {
@@ -1322,8 +1403,8 @@ function pic2() {
     document.getElementById("img").src = "food.jpeg";
     document.getElementById("img2").src = "IMG_0064.JPG";
     $("#img").animate({
-      "width": '90vw',
-      "height": '51vw',
+      "width": '80vw',
+          "height": '48vw',
       "left": 0,
       "top": 0
     }, {
@@ -1385,8 +1466,8 @@ function pic2() {
     a = 0;
 
     $("#img").animate({
-      "width": '90vw',
-      "height": '51vw',
+      "width": '80vw',
+          "height": '48vw',
       "left": 0,
       "top": 0
     }, {
@@ -1411,8 +1492,8 @@ function pic2() {
     document.getElementById("img").src = "IMG_0064.JPG";
     document.getElementById("img2").src = "food.jpeg";
     $("#img").animate({
-      "width": '90vw',
-      "height": '51vw',
+      "width": '80vw',
+          "height": '48vw',
       "left": 0,
       "top": 0
     }, {

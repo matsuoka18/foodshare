@@ -2149,3 +2149,11 @@ margin-right:0.5vw;
 .allp:hover{
   background-color: #DDDDDD;
 }
+.bar{
+  position:relative;
+  top:3vw;
+  height:2px;
+  width:25vw;
+  opacity: 0;
+  background-color:darkblue;
+}

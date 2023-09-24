@@ -246,6 +246,17 @@ cn='';
 sn2 ='';
 cd="";
 function start(){
+  $("#bar").animate({
+    'width':0,
+    'opacity':1
+  }, {
+    'duration': 0
+  })
+  $("#bar").animate({
+    'width':'2.5vw'
+  }, {
+    'duration': 1000
+  })
  //cd= document.cookie;
  cd = 'menumemo={"shop163":["0"],"shop169":["0"],"shop175":["0"],"shop181":["0"],"last":["181"]}-; firstdata1={"shopdata":[{"n1":"hhh","n7":"abc","n13":"大船中学校","n19":"ばーーか","n25":"TULLYS COFFEE","n31":"ミニストップ","n37":"大戸屋","n43":"apple","n49":"あいうえお","n55":"goon","n61":"ppp","n67":"q","n73":"w","n79":"qw","n85":"八百屋","n91":"松","n97":"はか","n103":"q","n109":"a","n115":"re","n121":"rte","n127":"a","n133":"a","n139":"a","n145":"a","n151":"おおおお","n157":"カメラ","n163":"セブン","n169":"テスト","n175":"テスト3","n181":"テスト4","n187":"むじ","n193":"にお","n199":"アイパッド","n205":"ステップ","n211":"asd","n217":"goon","n223":"コーヒー","n229":"手広","n235":"kama","n241":"hfsg","n247":"kazuya","n253":"成田","n259":"あｄｇｆ","num":259}]}; datav=0; searchnum=1$; searchname=hhh^; branch=shop|; favoritenuml=0>>!';
 
@@ -293,6 +304,11 @@ function start(){
      startt();
      }
      function startt(){
+      $("#bar").animate({
+        'width':'5vw'
+      }, {
+        'duration': 1000
+      })
      console.log("srartt START");
   url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
@@ -312,6 +328,11 @@ start1();
 }
 rc2=0;
 function start1(){
+  $("#bar").animate({
+    'width':'10vw'
+  }, {
+    'duration': 5000
+  })
 console.log("start1 START");
   url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   fetch(url,{
@@ -354,6 +375,11 @@ start1();
 
 }
 function start11(){
+  $("#bar").animate({
+    'width':'12.5vw'
+  }, {
+    'duration': 500
+  })
 console.log("start11 START");
   try{
             data = jsondata.data;
@@ -394,7 +420,11 @@ console.log("start11 START");
 }
 function getmenu(){
 console.log("getmenu START");
-
+$("#bar").animate({
+  'width':'15vw'
+}, {
+  'duration': 500
+})
 url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 data = [{
   "name5":sn,
@@ -414,6 +444,11 @@ getmenu2();
 mjson = '';
 retrynum1 = 0;
 function getmenu2(){
+  $("#bar").animate({
+    'width':'20vw'
+  }, {
+    'duration': 5000
+  })
 console.log("getmenu2 START");
   retrynum1++;
 url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
@@ -436,8 +471,13 @@ catch(aa){
   errorm = aa.indexOf(':');
   errorm = aa.substring(0,errorm);
   if(errorm == "TypeError"){
-    console.log("retry to load→getmenu3()");
-    getmenu3();
+    console.log("retry to load→getmenu2()");
+    $("#bar").animate({
+      'width':'15vw'
+    }, {
+      'duration': 0
+    })
+    getmenu2();
   }
 }
 })
@@ -446,6 +486,11 @@ catch(aa){
   if(retrynum1 < 3){
   setTimeout(()=>{
     console.log("retry to load→メニューデータ");
+    $("#bar").animate({
+      'width':'15vw'
+    }, {
+      'duration': 0
+    })
     getmenu2();
   },1000)
 }else{
@@ -488,6 +533,16 @@ if(favoritenuml > 0){
   console.log("favocheck");
   favocheck();
 }
+$("#bar").animate({
+  'width':'25vw'
+}, {
+  'duration': 500
+})
+$("#bar").animate({
+  'opacity':0
+}, {
+  'duration': 500
+})
 }
 messagep = '';
 function plus(){
