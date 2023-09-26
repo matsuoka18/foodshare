@@ -396,6 +396,13 @@ console.log("start11 START");
       console.log(mailad);
       phonead = data[0].phonenum;
       console.log(phonead);
+    try{
+    pic = data[0].pic;
+    console.log(pic);
+    }catch{
+      pic = "no data";
+console.log("no imagedata");
+    }
     intro = data[0].intro;
       console.log(intro);
     time = data[0].time;
@@ -410,6 +417,10 @@ console.log("start11 START");
     document.getElementById("time2").innerHTML = time;
     document.getElementById("mailad2").innerHTML = mailad;
     document.getElementById("phone2").innerHTML = phonead;
+    picc = pic.indexOf(".jpg");
+    if(picc !=-1){
+    document.getElementById("picture").src = pic;
+    }
                       console.log("start11 FIN");
                       getmenu();
   }
