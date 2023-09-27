@@ -418,8 +418,11 @@ console.log("no imagedata");
     document.getElementById("mailad2").innerHTML = mailad;
     document.getElementById("phone2").innerHTML = phonead;
     picc = pic.indexOf(".jpg");
-    if(picc !=-1){
-    document.getElementById("picture").src = pic;
+    picc2 = pic.indexOf(".JPG");
+    picc3 = pic.indexOf(".jpeg");
+    if(picc !=-1 || picc2 !=-1 || picc3 !=-1){
+    document.getElementById("picture").src = "https://matsuoka18.github.io/foodshare-pictures/"+pic;
+    console.log("Picture-Name:"+"https://matsuoka18.github.io/foodshare-pictures/"+pic);
     }
                       console.log("start11 FIN");
                       getmenu();
