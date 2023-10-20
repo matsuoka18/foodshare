@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: monospace;
+    background-color: rgba(198,172,143,0.5);
   }
   
   .name {
@@ -36,49 +37,42 @@ body {
   }
   
   .form {
-    width: 85vw;
-    padding:2.5vw;
-    margin-left: 7vw;
-    margin-top: 2.5vw;
-    padding-bottom: 5vw;
-    border-radius: 10px;
-    background-color: #C6AC8F;
+    width:100vw;
+    margin-top:5vw;
     text-align: center;
   }
-  
-  .form p {
-    font-size: 30px;
-    padding-top: 2.5vw;
+  .form h1{
+    width:100vw;
+    text-align: center;
+    color:#3A1F00;
+    font-size:40px;
+    margin-bottom:5vw;
   }
   
   .form input {
-    width: 50vw;
-    height: 4vw;
-    font-size: 25px;
-    border-radius: 10px;
+    width: 400px;
+    height: 40px;
+    font-size: 0.75vw;
     text-align: center;
+    border-radius:0.3vw;
     border: none;
-    outline-color: white;
+    outline:none;
+    box-shadow: inset 0 0 2px 0.5px #C6AC8F;
   }
   
   .form2 {
-    margin-left: 15vw;
-    width: 60vw;
-    height: 20vw;
-    background-color: white;
-    border-radius: 10px;
-    color: #5A3A1A;
+    position:relative;
+    left:50%;
+    margin-left:-200px;
+    margin-top:1.5vw;
+    width: 400px;
   }
   
   .form2 p {
-    background-color: #3A1F00;
-    color: white;
-    border-radius: 5px;
-    margin-left: -10px;
-    margin-right: -10px;
-    font-weight: 600;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width:400px;
+    color:#3A1F00;
+    text-align: left;
+    font-size: 15px;
   }
   
   .form2 span {
@@ -86,29 +80,23 @@ body {
   }
   
   .form3 {
-    margin-left: 15vw;
-    width: 60vw;
-    height: 30vw;
-    background-color: white;
-    border-radius: 10px;
-    color: #5A3A1A;
+    position:relative;
+    left:50%;
+    margin-left:-200px;
+    margin-top:1.5vw;
+    width: 400px;
   }
   
   .form3 p {
-    background-color: #3A1F00;
-    color: white;
-    border-radius: 5px;
-    margin-left: -10px;
-    margin-right: -10px;
-    font-weight: 600;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width:400px;
+    color:#3A1F00;
+    text-align: left;
+    font-size: 15px;
   }
   
   .form3 h2 {
-  
-    margin-top: 3vw;
-    font-size: 30px;
+    color:#3A1F00;
+    font-size: 15px;
   }
   
   .form4 {
@@ -166,48 +154,52 @@ body {
   
   button {
     background-color: #3A1F00;
-    width: 15vw;
-    height: 5vw;
+    width: 10vw;
+    height: 3vw;
+    margin-top:2.5vw;
     color: white;
-    font-size: 20px;
+    font-size: 12.5px;
     border: none;
-    border-radius: 100px;
-    margin-top: 5vw;
   }
-  
-  .che {
-    padding:2.5vw;
-    width: 85vw;
-    margin-left: 7vw;
-    margin-top: 2.5vw;
-    padding-bottom: 5vw;
-    border-radius: 10px;
+  button:hover{
+    background-color: #BC9A78;
+  }
+  button:active{
     background-color: #C6AC8F;
-    text-align: center;
+    color:#3A1F00;
   }
-  
-  .che h2 {
-    width: 60vw;
-    background-color: #3A1F00;
-    color: white;
-    font-size:30px;
-    border-radius: 5px;
-    margin-left: -10px;
-    padding-right: 20px;
-    font-weight: 600;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  .che {
+    width:100vw;
     text-align: center;
+    
+  }
+
+  .che h2 {
+    width: 100vw;
+    font-size:40px;
+    font-weight: 600;
+    text-align: center;
+    color:#3A1F00;
+    
   }
   .che p {
-    font-size:30px;
+    position: relative;
+    left:50%;
+    margin-left:-400px;
+    padding-bottom:20px;
+    width:800px;
+    border-bottom:1px solid #3A1F00 ;
+    font-size:20px;
+    font-weight: 550;
+    text-align:left;
+    color: #3A1F00;
+    
+  }
+  .che .last{
+border:none;
   }
   .che2 {
-    background-color: white;
-    width: 60vw;
-    margin-left: 15vw;
-    border-radius: 10px;
-    padding-bottom: 5vw;
+    width :100vw;
   }
 
   .center {
@@ -585,12 +577,12 @@ body {
   }
   
   .商品button:hover {
-    border: 3px solid;
-    border-color: white;
+    background-color: #BC9A78;
   }
   
   .商品button:active {
     background-color: #C6AC8F;
+    color:#3A1F00;
   }
   
   .passfo {
@@ -732,38 +724,14 @@ body {
   }
   
   .all2 {
-    width: 85vw;
-  
-    margin-left: 7vw;
-    margin-top: 2.5vw;
-    padding-bottom: 5vw;
-    border-radius: 10px;
-    background-color: #C6AC8F;
+    display: none;
+    opacity: 0;
+    width:100vw;
+    font-size:30px;
+    color:#3A1F00;
     text-align: center;
   }
-  
-  .all2 p {
-    font-size: 30px;
-    padding: 10px;
-  }
-  
-  .all2 textarea {
-    border: none;
-    outline: none;
-    width: 50vw;
-    font-size: 15px;
-    border-radius: 10px;
-    padding: 10px;
-  }
-  
-  .all2 input {
-    border: none;
-    outline: none;
-    width: 20vw;
-    font-size: 30px;
-    padding: 10px;
-    border-radius: 10px;
-  }
+
   
   .all3 {
     width: 85vw;
@@ -822,28 +790,4 @@ body {
     height: 8vw;
     background-color: #C6AC8F;
   }
-  .all2{
-    width:100vw;  
-    text-align:center;
-    font-size:50px;
-    font-weight:500;
-    background-color:white;
-   opacity: 0;
-   display: none;
-   }
-  .all2 select {
-    margin-top: 10px;
-    font-weight: 600;
-    width: 25vw;
-    height: 3vw;
-    font-size: 30px;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-  }
   
-  .all2 option {
-    height: 100px;
-    font-weight: 600;
-    border-radius: 10px;
-  }

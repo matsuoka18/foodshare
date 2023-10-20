@@ -1,27 +1,62 @@
-function hello(){
-  alert("HELLO");
-  document.cookie = "name=hello";
-  alert(document.cookie);
-}
+
 document.getElementById("che").style.visibility="hidden";
 document.getElementById("send").style.visibility="hidden";
 document.getElementById("password").addEventListener('keyup',pass);
+document.getElementById("password2").addEventListener('keyup',pass2);
+document.getElementById("shopname").addEventListener('keyup',id);
+document.getElementById("mailad").addEventListener('keyup',mail);
+message = '';
 function pass(){
 if(document.getElementById("password").value.length<8){
-document.getElementById("password").style.outlineColor = "red";
+  document.getElementById("password").style.outline = "thin solid red";
 document.getElementById("passw").innerHTML = "8文字以上入力してください";
+document.getElementById("passw").style.color = "	#B1221A";
 }else{
-document.getElementById("password").style.outlineColor = "white";
+document.getElementById("password").style.outline = "none"
 document.getElementById("passw").innerHTML = "";
 }
 }
+function pass2(){
+  document.getElementById("password").style.outline = "none"
+  document.getElementById("password2").style.outline = "none"
+  pass = document.getElementById("password").value
+  pass2 = document.getElementById("password2").value
+  if(pass == pass2){
+    message = "ok";
+  }else{
+    message = '';
+  }
+
+}
+function id(){
+  document.getElementById("shopname").style.outline = "none";
+}
+function mail(){
+  document.getElementById("mailad").style.outline = "none";
+}
 function check(){
+  if(document.getElementById("shopname").value.length > 0 && document.getElementById("mailad").value.length >0 && document.getElementById("password").value.length >7 && message == "ok"){
 document.getElementById("check1").innerHTML = "店舗名:"+document.getElementById("shopname").value;
 document.getElementById("check4").innerHTML = "メールアドレス:" + document.getElementById("mailad").value;
 document.getElementById("check2").innerHTML = "パスワード:"+document.getElementById("password").value;
 document.getElementById("check3").innerHTML = "変更する際はもう一度フォーム欄に入力してください";
 document.getElementById("send").style.visibility="visible";
 document.getElementById("che").style.visibility="visible";
+  }else if(document.getElementById("shopname").value.length <= 0){
+    document.getElementById("shopname").style.outline = "thin solid red";
+    alert("店舗名を入力してください");
+  }else if(document.getElementById("mailad").value.length <=0){
+    document.getElementById("mailad").style.outline = "thin solid red";
+    alert("メールアドレスを入力してください");
+  }else if(document.getElementById("password").value.length < 8){
+    document.getElementById("password").style.outline = "thin solid red" ;
+    alert("8文字以上でパスワードを入力してください");
+  }else if(message.length == 0){
+    document.getElementById("password").style.outline = "thin solid red" ;
+    document.getElementById("password2").style.outline = "thin solid red" ;
+    alert("パスワードが一致していません");
+  }
+
 }
 function send(){
 text = document.getElementById("shopname").value;
@@ -59,9 +94,9 @@ data = "<p>メールアドレスに本登録ページを送信しました</p>";
 all2.insertAdjacentHTML('beforeend',data);
 text = encodeURI(text);
 cookiee= "key="+text+"><";
-alert(cookiee);
+//alert(cookiee);
 document.cookie = cookiee;
-alert(document.cookie);
+//alert(document.cookie);
 var templateParams = {
 mail : mailad,
 shop : text
