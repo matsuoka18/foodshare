@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8">
     <title>hello</title>
-    <link rel="stylesheet" href="css-menus22.css"  media="screen and (max-width: 500px)">
+    <!--link rel="stylesheet" href="css-menus22.css"  media="screen and (max-width: 500px)">
     <link rel="stylesheet" href="css-menus21.css"  media="(min-width:501px) and (max-width: 1280px)">
-    <link rel="stylesheet" href="css-menus2.css"  media="screen and (min-width: 1281px)">
+    <link rel="stylesheet" href="css-menus2.css"  media="screen and (min-width: 1281px)"-->
+    <link rel="stylesheet" href="css-menus2.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
@@ -15,26 +16,28 @@
     <div class="alll" id="alll">
         <div class="section1">
             <div class="head">
-                <div class="p">
-                    <p onclick="カート2()">カート</p>
-                    <ul class="l4">
-                        <li class="l1"><a class="a1" href="menued.html">店舗側ページ</a></li>
-                        <li class="l2"><a class="a2" href="entry.html">店舗登録</a></li>
-                        <li class="l3"><a class="a3" href="login.html">ログイン</a></li>
-                        <li class="l5">店舗情報</li>
-                    </ul>
-
-                </div>
-                <div class="searchform">
-                    <div class="bar" id="bar"></div>
-                    <input type="text" class="search" id="search" placeholder="shopname or menu" value="">
-                    <button id="s" onclick="searching()"><span id="ss">search</span></button>
-                    <!--p class="genre">ジャンルを一覧</p-->
-                </div>
-
+              <div class="p">
+                <p onclick="カート()">会員登録｜ログイン</p>
+                <ul class="l4">
+                  <li class="l1"><a class="a1" href="shoped.html">店舗側ページ</a></li>
+                  <li class="l2"><a class="a2" href="entry.html">店舗登録</a></li>
+                  <li class="l3"><a class="a3" href="login.html">ログイン</a></li>
+                  <li class="l5">店舗情報</li>
+                </ul>
+      
+              </div>
+              <div class="searchform">
+                <div class="bar" id="bar"></div>
+                <div class="form">
+                <input type="text" class="search" id="search" placeholder="  shopname or menu" value="">
+                <button id="s" onclick="searching()"><span id="ss">search</span></button>
+              </div>
+              </div>
+      
             </div>
             <h1 class="h1" onclick="go()">foodshare</h1>
-        </div>
+      
+          </div>
 
         <div class="hey" id="hey">
             <img id="picture" src="test.jpg">
