@@ -7,7 +7,7 @@
     <title>店舗本登録</title>
 </head>
 <body onload="entry()">
-    <div class="name2">
+    <!--div class="name2">
         <h1>店舗本登録</h1>
         <div class="name" onclick="location.href='index.html'">
             <p>foodshare</p>
@@ -16,12 +16,15 @@
 
         </div>
             
-    </div>
+    </div-->
+    <div id="namee">
 
+    </div>
     <div id="all" class="all">
 
         <div id="form" class="form">
-            <img class="img"id="img"src="2.PNG">
+            <h1>FoodShare | 店舗登録</h1>
+            <!--img class="img"id="img"src="2.PNG"-->
             <div class="form6">
                 <p>都道府県</p>
                 <input type="text" id="todouhu" value="" placeholder="都道府県を入力">
@@ -40,48 +43,20 @@
             </div>
             <div class="form6">
                 <p>郵便番号</p>
-                <input type="text" id="po" value="" placeholder="郵便番号(ハイフンなし)">
+                <input type="number" id="po" value="" placeholder="郵便番号(ハイフンなし)">
             </div>
             <div class="form6">
                 <p>電話番号</p>
-                <input type="text" id="phone" value="" placeholder="電話番号(ハイフンなし)">
+                <input type="number" id="phone" value="" placeholder="電話番号(ハイフンなし)">
             </div>
-            <button class="商品button" onclick="first()">確認</button>
-        </div>
-        <div id="formm" class="formm">
-            <img class="img"id="img"src="3.PNG">
-            <div class="form6">
-                <p>都道府県</p>
-                <input type="text" id="todouhu2" value="" placeholder="都道府県を入力">
-            </div>
-            <div class="form6">
-                <p>市町村郡</p>
-                <input type="text" id="city2" value="" placeholder="市町村郡">
-            </div>
-            <div class="form6">
-                <p>区</p>
-                <input type="text" id="ku2" value="" placeholder="区">
-            </div>
-            <div class="form6">
-                <p>上記以下の住所</p>
-                <input type="text" id="ad2" value="" placeholder="上記以下の住所">
-            </div>
-            <div class="form6">
-                <p>郵便番号</p>
-                <input type="text" id="po2" value="" placeholder="郵便番号(ハイフンなし)">
-            </div>
-            <div class="form6">
-                <p>電話番号</p>
-                <input type="text" id="phone2" value="" placeholder="電話番号(ハイフンなし)">
-            </div>
-            <button class="商品button" onclick="second2()">戻る</button>
-            <button class="商品button" onclick="second()">次へ</button>
+            <button class="商品button" onclick="first()">次へ</button>
         </div>
     </div>
     <div id="all2" class="all2">
-                    <img class="img"id="img"src="4.PNG">
+                    <!--img class="img"id="img"src="4.PNG"-->
+                    <h1>FoodShare | 店舗登録</h1>
         <div class="form6">
-            <p>店舗紹介文</p>
+            <p class="s1">店舗紹介文</p>
             <textarea id="introduce" class="introduce" cols="60" rows="10" wrap="hrad"
                 placeholder="例：〜〜がおすすめ！など"></textarea>
         </div>
@@ -115,24 +90,30 @@
     
     
     <div id="all4" class="all4">
+        <h1>FoodShare | 店舗登録</h1>
       <div class="form6">
       <p>画像をアップロード</p>
+      </div>
+     <div class="picb">
       <label>写真を追加
          <input type="file" id="example" multiple>
         </label>
-      </div>
-      <div class="info" id="info">
+       <div class="info" id="info">
         <p id="d1">写真名｜</p>
         <p id="d2">サイズ｜</p>
         <p id="d3">日付｜</p>
+       </div>
       </div>
+      <div class="buttons">
       <button class="商品button" onclick="fifth2()">戻る</button>
       <button class="商品button" onclick="fifth()">次へ</button>
+      </div>
     </div>
     
     
     <div id="all3" class="all3">
-        <img class="img"id="img"src="5.PNG">
+        <h1>FoodShare | 店舗登録</h1>
+        <!--img class="img"id="img"src="5.PNG"-->
         <div class="form7">
             <p>住所</p>
             <p class="p" id="p11"></p>
@@ -151,7 +132,7 @@
         </div>
         <div class="form7">
             <p>営業時間</p>
-            <p class="p" id="p55"></p>
+        <p class="p" id="p55"></p>
         </div>
         <div class="form7">
             <p>ジャンル

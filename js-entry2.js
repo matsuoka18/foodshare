@@ -22,7 +22,7 @@ key = text2.key;*/
     key = decodeURI(key);
 console.log(key);
     
-data = "<h2>"+key+"様"+"</h2>";
+data = "<h2>"+'店舗名：'+key+"</h2>";
 namee.insertAdjacentHTML("beforeend",data);
 
 
@@ -37,6 +37,7 @@ phone = '';
 introduce = '';
 time = '';
 adress = '';
+
 function first() {
     to = document.getElementById("todouhu").value;
     city = document.getElementById("city").value;
@@ -54,31 +55,13 @@ function first() {
         alert("未記入欄があります");
         return;
     }
-    document.getElementById("todouhu2").value = to;
-    document.getElementById("city2").value = city;
-    document.getElementById("ku2").value = ku;
-    document.getElementById("ad2").value = ad;
-    document.getElementById("po2").value = po;
-    document.getElementById("phone2").value = phone;
-    document.getElementById("form").style.display = "none";
     document.getElementById("form").style.opacity = "0";
-    document.getElementById("formm").style.opacity = "1";
-    window.scrollTo(0,0);
-}
-
-function second() {
-    document.getElementById("formm").style.opacity = "0";
-    document.getElementById("formm").style.display = "none";
+    document.getElementById("form").style.display = "none";
     document.getElementById("all2").style.opacity = "1";
     document.getElementById("all2").style.display = "block";
     window.scrollTo(0,0);
 }
-function second2(){
-    document.getElementById("form").style.display = "block";
-    document.getElementById("form").style.opacity = "1";
-    document.getElementById("formm").style.opacity = "0";
-    window.scrollTo(0,0);
-}
+
 function third() {
     introduce = document.getElementById("introduce").value;
     time = document.getElementById("time").value;
@@ -92,10 +75,8 @@ function third() {
 function third2(){
     document.getElementById("all2").style.opacity = "0";
     document.getElementById("all2").style.display = "none";
-    document.getElementById("form").style.opacity = "0";
-    document.getElementById("form").style.display = "none";
-    document.getElementById("formm").style.opacity = "1";
-    document.getElementById("formm").style.display = "block";
+    document.getElementById("form").style.opacity = "1";
+    document.getElementById("form").style.display = "block";
     document.getElementById("all").style.opacity = "1";
     document.getElementById("all").style.display = "block";
         window.scrollTo(0,0);
