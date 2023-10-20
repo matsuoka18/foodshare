@@ -20,6 +20,7 @@ order = '';
 firstdata2ins = '';
 newsins = '';
 newsjson='';
+endm = 'start';
 function start(datav) {
   document.getElementById("alll").style.opacity = "1";
   document.getElementById("alll2").style.display = "none";
@@ -151,19 +152,29 @@ function firstsearch2() {
       rc++;
       firstdata1 = resJson;
       firstdata1 = JSON.stringify(firstdata1);
-      console.log("shopdata:" + firstdata1)
+      firstdata1b = firstdata1;
+      firstdata1c = firstdata1;
+      console.log("shopdata:" + firstdata1);
       fc = firstdata1.indexOf("shopdata");
+      console.log("fc:"+fc);
       if (fc == -1) {
-       fc2 = firstdata1.indexOf("shop1");
-       fc3 = firsrdata1.indexOf("news1");
-        if(fc2 >0){
-          console.log("Replace→firstdata1 to firstdata2");
-          firstdata2ins = 'skip';
-          firstdata2 = firstdata1;
-        }else if(fc3>0){
+        console.log("fc=-1");
+        fc3 = firstdata1b.indexOf("news1");
+        console.log("fc3:"+fc3);
+        if(fc3 >= 0){
+          console.log("fc3");
           console.log("Replace→firstdata1 to news");
           newsins = 'skip';
-          mewsjson = firstdata1;
+          mewsjson = JSON.parse(firstdata1);
+
+        }else{
+           fc2 = firstdata1c.indexOf("menu1")
+           if(fc2 >= 0){
+            console.log("fc2");
+            console.log("Replace→firstdata1 to firstdata2");
+            firstdata2ins = 'skip';
+            firstdata2 = firstdata1;
+          } 
         }
         if(rc >2){
           rc=0;
@@ -173,7 +184,7 @@ function firstsearch2() {
         console.log("RELOAD (other data)");
         firstsearch2();
         }
-      }
+      }else{
       rc=0;
       success1 = "ok";
       console.log("firstsearch2 FIN");
@@ -183,14 +194,15 @@ function firstsearch2() {
       } else {
         firstmenu();
       }
+    }
     })
     .catch(error => {
       num = 1;
-      ani();
-      $('#ss').clearQueue();
-      $('#ss').stop();
-      document.getElementById("ss").innerHTML = "search";
-      document.getElementById("s").style.backgroundColor = "#5A3A1A";
+      //ani();
+      //$('#ss').clearQueue();
+      //$('#ss').stop();
+      //document.getElementById("ss").innerHTML = "search";
+      //document.getElementById("s").style.backgroundColor = "#5A3A1A";
       console.log("firstsearch2 ERROR");
       console.log(error)
       setTimeout(() => {
@@ -271,8 +283,10 @@ if(request2 == "nomal"){
   })
   console.log("menu priority2");
   menusearch2(firstdata2);
-}
+}else{
 firstmenuc();
+}
+
 }else{
   if(rc2>2){
     rc2 = 0;
@@ -321,7 +335,7 @@ function firstmenuc(){
       success1 = "ok";
       console.log("firstmenuc FIN");
       //このあとgasでdatavを作成、取得することコードを記述する。データはdatavに入力すること予定 4月21日
-      document.getElementById("s").style.backgroundColor = "#1E0000";
+      //document.getElementById("s").style.backgroundColor = "#1E0000";
       document.getElementById("search").style.borderColor = "#411C00";
       document.getElementById("search").style.borderWeight = "2px";
       //document.getElementById("search").placeholder = "finish";
@@ -339,14 +353,15 @@ shopname = '';
 errorcheck = '';
 function searching() {
 //9月24日　読み込みバー　
-
+if(endm == "start"){
+  endm = "running";
   console.log("searching START");
   errorcheck = 'none';
   num = 100;
   request3 = '';
   ani();
   document.getElementById("ss").innerHTML = "loading";
-  document.getElementById("s").style.backgroundColor = "#C6AC8F"
+  //document.getElementById("s").style.backgroundColor = "#C6AC8F"
   shopname = document.getElementById("search").value;
   if (success1 == "ok") {
     $("#bar").animate({
@@ -394,6 +409,9 @@ function searching() {
     console.log("searching FIN");
     //searching2();
   }
+}else{
+ console.log("連続クリック");
+}
 }
 rc4=0;
 function searching2() {
@@ -508,9 +526,10 @@ function shopsearch(firstdata1) {
   console.log("shopsearch FIN");
 }
 function jump() {
+  endm = "start";
   num = 1;
   ani();
-  document.getElementById("s").style.backgroundColor = "#5A3A1A";
+  //document.getElementById("s").style.backgroundColor = "#5A3A1A";
   if (typeof ttt == 'undefined') {
     location.href = "menus.html";
   } else {
@@ -539,7 +558,7 @@ function ani() {
   }
   if (num == 1) {
     document.getElementById("ss").style.opacity = "1";
-    document.getElementById("s").style.backgroundColor = "#5A3A1A";
+    //document.getElementById("s").style.backgroundColor = "#5A3A1A";
   }
 
 }
@@ -655,7 +674,7 @@ function menusearch2(firstdata2) {
       $('#ss').clearQueue();
       $('#ss').stop();
       document.getElementById("ss").innerHTML = "search";
-      document.getElementById("s").style.backgroundColor = "#5A3A1A";
+      //document.getElementById("s").style.backgroundColor = "#5A3A1A";
       cc = "menumemo=" + nummemo + "-";
       document.cookie = "branch=menu|";
       document.cookie = cc;
@@ -672,11 +691,13 @@ function menusearch2(firstdata2) {
       })
       setTimeout(jump,1500)
     } else {
+      endm = "start";
       ani();
       $('#ss').clearQueue();
       $('#ss').stop();
       document.getElementById("ss").innerHTML = "search";
-      document.getElementById("s").style.backgroundColor = "#5A3A1A";
+      document.getElementById("ss").style.opacity = 1;
+      //document.getElementById("s").style.backgroundColor = "#5A3A1A";
       console.log("店舗・商品がありません");
       alert("店舗・商品がありません");
       /*if(request2 == "next"){
@@ -816,7 +837,10 @@ function firstnews2() {
       })
   
 }
+wcount = 0;
 function firstwrite() {
+  wcount++;
+if(wcount == 1){
   console.log("firstwrite START");
   /*newsjson2 = JSON.stringify(newsjson);
   newsjson2 = newsjson2.indexOf("news1");
@@ -839,7 +863,7 @@ function firstwrite() {
   }
   document.getElementById("loadnews").style.display = "none";
   console.log("firstwrite FIN");
-  
+} 
 }
 function newsd1p1() {
   num = 1;
@@ -1183,374 +1207,3 @@ function c() {
 a = 0;
 count = 0;
 set1 = '';
-function pic() {
-  count++;
-  //console.log("c:"+count)
-  if (a == 0) {
-    a = 1;
-    document.getElementById("img").src = "food.jpeg";
-    document.getElementById("img2").src = "IMG_0064.JPG";
-  } else {
-    a = 0;
-    document.getElementById("img2").src = "food.jpeg";
-    document.getElementById("img").src = "IMG_0064.JPG";
-  }
-  //console.log(a);
-  $("#img").animate({
-    "width": '80vw',
-        "height": '48vw',
-    "left": 0,
-    "top": 0
-  }, {
-    'duration': 0
-  })
-  $("#im2").animate({
-    "opacity": 1
-  }, {
-    'duration': 0
-  })
-  $("#img2").animate({
-    'left': '90vw',
-    'top': '2.5vw'
-  }, {
-    'duration': 0
-  })
-  $("#im1").animate({
-    "opacity": 0.5
-  }, {
-    'duration': 0
-  })
-
-  $("#img").animate({
-    "width": '80vw',
-        "height": '48vw',
-    "left": 0,
-    "top": 0
-  }, {
-    'duration': 4000
-  })
-  $("#im2").animate({
-    "opacity": 1
-  }, {
-    'duration': 4000
-  })
-  $("#img2").animate({
-    'left': 0,
-    'top': 0
-  }, {
-    'duration': 1000
-  })
-  $("#im1").animate({
-    "opacity": 0.5
-  }, {
-    'duration': 1000
-  })
-
-  $("#img2").animate({
-    'left': 0,
-    'top': 0
-  }, {
-    'duration': 3000
-  })
-  $("#im1").animate({
-    "opacity": 0.5
-  }, {
-    'duration': 3000
-  })
-
-  $("#img").animate({
-    "left": '90vw',
-    "top": 0
-  }, {
-    'duration': 1000
-  })
-  $("#im2").animate({
-    "opacity": 0.5
-  }, {
-    'duration': 1000
-  })
-  $("#img2").animate({
-    'left': '2.5vw',
-    'top': '2.5vw'
-  }, {
-    'duration': 1000
-  })
-  $("#im1").animate({
-    "opacity": 1
-  }, {
-    'duration': 1000
-  })
-  clearInterval(set1);
-  set1 = setInterval(pic, 5100);
-}
-function pic3() {
-  document.getElementById("img2").src = "food.jpeg";
-  document.getElementById("img").src = "IMG_0064.JPG";
-  $("#img").animate({
-    "width": '80vw',
-        "height": '48vw',
-    "left": 0,
-    "top": 0
-  }, {
-    'duration': 0
-  })
-  $("#im2").animate({
-    "opacity": 1
-  }, {
-    'duration': 0
-  })
-  $("#img2").animate({
-    'left': '90vw',
-    'top': '2.5vw'
-  }, {
-    'duration': 0
-  })
-  $("#im1").animate({
-    "opacity": 0.5
-  }, {
-    'duration': 0
-  })
-
-  $("#img").animate({
-    "width": '80vw',
-        "height": '48vw',
-    "left": 0,
-    "top": 0
-  }, {
-    'duration': 4000
-  })
-  $("#im2").animate({
-    "opacity": 1
-  }, {
-    'duration': 4000
-  })
-  $("#img2").animate({
-    'left': 0,
-    'top': 0
-  }, {
-    'duration': 1000
-  })
-  $("#im1").animate({
-    "opacity": 0.5
-  }, {
-    'duration': 1000
-  })
-
-  $("#img2").animate({
-    'left': 0,
-    'top': 0
-  }, {
-    'duration': 3000
-  })
-  $("#im1").animate({
-    "opacity": 0.5
-  }, {
-    'duration': 3000
-  })
-
-  $("#img").animate({
-    "left": '90vw',
-    "top": 0
-  }, {
-    'duration': 1000
-  })
-  $("#im2").animate({
-    "opacity": 0.5
-  }, {
-    'duration': 1000
-  })
-  $("#img2").animate({
-    'left': '2.5vw',
-    'top': '2.5vw'
-  }, {
-    'duration': 1000
-  })
-  $("#im1").animate({
-    "opacity": 1
-  }, {
-    'duration': 1000
-  })
-  setTimeout(pic, 5000)
-}
-function pic2() {
-  if (a == 0) {
-    a = 1;
-
-    $("#img").animate({
-      "width": '80vw',
-          "height": '48vw',
-      "left": 0,
-      "top": 0
-    }, {
-      'duration': 0
-    })
-    $("#im2").animate({
-      "opacity": 1
-    }, {
-      'duration': 0
-    })
-    $("#img2").animate({
-      'left': '90vw',
-      'top': '2.5vw'
-    }, {
-      'duration': 0
-    })
-    $("#im1").animate({
-      "opacity": 0.5
-    }, {
-      'duration': 0
-    })
-    document.getElementById("img").src = "food.jpeg";
-    document.getElementById("img2").src = "IMG_0064.JPG";
-    $("#img").animate({
-      "width": '80vw',
-          "height": '48vw',
-      "left": 0,
-      "top": 0
-    }, {
-      'duration': 4000
-    })
-    $("#im2").animate({
-      "opacity": 1
-    }, {
-      'duration': 4000
-    })
-    $("#img2").animate({
-      'left': 0,
-      'top': 0
-    }, {
-      'duration': 1000
-    })
-    $("#im1").animate({
-      "opacity": 0.5
-    }, {
-      'duration': 1000
-    })
-
-    $("#img2").animate({
-      'left': 0,
-      'top': 0
-    }, {
-      'duration': 3000
-    })
-    $("#im1").animate({
-      "opacity": 0.5
-    }, {
-      'duration': 3000
-    })
-
-    $("#img").animate({
-      "left": '90vw',
-      "top": 0
-    }, {
-      'duration': 1000
-    })
-    $("#im2").animate({
-      "opacity": 0.5
-    }, {
-      'duration': 1000
-    })
-    $("#img2").animate({
-      'left': '2.5vw',
-      'top': '2.5vw'
-    }, {
-      'duration': 1000
-    })
-    $("#im1").animate({
-      "opacity": 1
-    }, {
-      'duration': 1000
-    })
-    setTimeout(pic, 5000)
-  } else {
-    a = 0;
-
-    $("#img").animate({
-      "width": '80vw',
-          "height": '48vw',
-      "left": 0,
-      "top": 0
-    }, {
-      'duration': 0
-    })
-    $("#im2").animate({
-      "opacity": 1
-    }, {
-      'duration': 0
-    })
-    $("#img2").animate({
-      'left': '90vw',
-      'top': '2.5vw'
-    }, {
-      'duration': 0
-    })
-    $("#im1").animate({
-      "opacity": 0.5
-    }, {
-      'duration': 0
-    })
-    document.getElementById("img").src = "IMG_0064.JPG";
-    document.getElementById("img2").src = "food.jpeg";
-    $("#img").animate({
-      "width": '80vw',
-          "height": '48vw',
-      "left": 0,
-      "top": 0
-    }, {
-      'duration': 4000
-    })
-    $("#im2").animate({
-      "opacity": 1
-    }, {
-      'duration': 4000
-    })
-    $("#img2").animate({
-      'left': 0,
-      'top': 0
-    }, {
-      'duration': 1000
-    })
-    $("#im1").animate({
-      "opacity": 0.5
-    }, {
-      'duration': 1000
-    })
-
-    $("#img2").animate({
-      'left': 0,
-      'top': 0
-    }, {
-      'duration': 3000
-    })
-    $("#im1").animate({
-      "opacity": 0.5
-    }, {
-      'duration': 3000
-    })
-
-    $("#img").animate({
-      "left": '90vw',
-      "top": 0
-    }, {
-      'duration': 1000
-    })
-    $("#im2").animate({
-      "opacity": 0.5
-    }, {
-      'duration': 1000
-    })
-    $("#img2").animate({
-      'left': '2.5vw',
-      'top': '2.5vw'
-    }, {
-      'duration': 1000
-    })
-    $("#im1").animate({
-      "opacity": 1
-    }, {
-      'duration': 1000
-    })
-    setTimeout(pic, 5000);
-  }
-}
-
