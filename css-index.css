@@ -122,49 +122,46 @@ body {
   }
   
   .img2 {
-    position: relative;
-    width: 90vw;
-    height: 51vw;
-    margin-top: 2vw;
-    margin-left: 2vw;
-    margin-bottom: 2vw;
+
+    width: 60vw;
+    height: auto;
     z-index: 20;
-    position: relative;
     box-shadow: 0 0 15px 5px #C6AC8F;
-    border-radius: 50px;
+    border-radius: 2vw;
     bottom: 0;
     right: 0;
   }
   
   .img {
-    position: relative;
-    width: 90vw;
-    height: 51vw;
-    margin-top: 2vw;
-    margin-left: 2vw;
-    margin-bottom: 2vw;
+
+    width: 60vw;
+    height: auto;
     z-index: 20;
-    position: relative;
     box-shadow: 0 0 15px 5px #78512B;
-    border-radius: 50px;
+    border-radius: 2vw;
     bottom: 0;
     right: 0;
   }
   
   .im1 {
+    position: absolute;
+    top:10vw;
+    left:50vw;
+    margin-left:-35vw;
     opacity: 0.5;
-  
   }
   
   .im2 {
-    margin-top: -52.5vw;
-    margin-left: 2.5vw;
+    position: absolute;
+    top:12.5vw;
+    left:50vw;
+    margin-left:-32.5vw;
     opacity: 1;
   }
   
   .img4 {
     width: 100vw;
-    height: 60vw;
+    height:35vw;
     margin-top:2vw;
     margin-bottom: 5vw;
     background-color: white;
@@ -675,7 +672,6 @@ margin-bottom:10vw;
               padding:0;
               position: relative;
               
-              
             }
             .f1{
               position:absolute;
@@ -688,7 +684,15 @@ margin-bottom:10vw;
               border-bottom:1.5vw solid #C6AC8F;
              z-index:0;
             }
-
+.f .express{
+  position: absolute;
+  bottom:10vw;
+  width:25vw;
+  letter-spacing: 0.25vw;
+  font-size: 20px;
+  color:#3A1F00;
+  background-color: white;
+}
             .f .fi{
               position: relative;
               width:70vw;
