@@ -94,6 +94,7 @@ function entry_2(){
    user2 = '';
    password2 = '';
    function login(){
+    document.getElementById("but44").innerHTML = "Loading";
     console.log("login START");
     user2 = document.getElementById("userID2").value;
     password2 = document.getElementById("password2").value;
@@ -127,7 +128,7 @@ function entry_2(){
        })
        .then(resJson =>{
         json = resJson;
-        last = json.userid[0].length;
+        last = json.userid.length;
         console.log("last"+last)
         json2 = JSON.stringify(json);
         json2 = json2.indexOf("password");
@@ -138,23 +139,27 @@ function entry_2(){
             console.log("other data");
             login();
         }
-        for(var a =0; a<length; a++){
+        for(var a =0; a<last; a++){
             text = json.userid[a];
             text2 = json.password[a];
             if(text == user2 && text2 == password2){
                   console.log("一致");
                   cdata = "userid="+text+"-";
                   document.cookie = cdata;
+                  document.getElementById("but44").innerHTML = "ログイン";
                   alert("ログインしました");
+                  location.href="index.html";
             }
         }
-        if(cdata.lenght == 0){
+        if(cdata.length == 0){
+            document.getElementById("but44").innerHTML = "ログイン";
             alert("ユーザーID・パスワードが一致しません")
         }
         console.log("login2 FIN");
        })
        .catch(error=>{
         alert("エラーが発生しました")
+        document.getElementById("but44").innerHTML = "ログイン";
         console.log(error)
        })
        

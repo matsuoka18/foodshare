@@ -106,6 +106,16 @@ function start(datav) {
     setTimeout(start, 1000, datav);
   }
   */
+  var cookie = document.cookie;
+  var c1= cookie.indexOf("userid=")+7;
+  if(c1 ==  6){
+
+  }else{
+  var c2 = cookie.indexOf("-",c1);
+  userid = cookie.substring(c1,c2);
+  console.log("userid:"+userid)
+  document.getElementById("lcheck").innerHTML = userid;
+  }
   pic();
  firstsearch();
 }
