@@ -700,7 +700,7 @@ function menusearch2(firstdata2) {
       }, {
         'duration': 500
       })
-      //setTimeout(jump,1500)
+      setTimeout(jump,1500)
     } else {
       endm = "start";
       ani();

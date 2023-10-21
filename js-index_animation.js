@@ -1,4 +1,9 @@
+sum =0;
 function pic() {
+  sum++;
+  if(sum > 200){
+    location.href = "index.html"
+  }
     count++;
     //console.log("c:"+count)
     if (a == 0) {
