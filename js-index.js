@@ -629,7 +629,7 @@ function menusearch2(firstdata2) {
     nummemo = [];
     nummemo2 = [];
     nummemo3 = 0;
-    for (var a = 1; a <= last; a += 6) {
+    for (var a = 1; a <= last-6; a += 6) {
       shopp = String("shop" + a);
       shoppi = "\"" + shopp + "\"" + ":";
       if (jsonnn.includes(shopp) === true) {
@@ -678,6 +678,7 @@ function menusearch2(firstdata2) {
       cc = "menumemo=" + nummemo + "-";
       document.cookie = "branch=menu|";
       document.cookie = cc;
+      console.log("cc:"+cc);
       document.getElementById("ss").innerHTML = "jumping";
       $("#bar").animate({
         'width':'25vw'
@@ -689,7 +690,7 @@ function menusearch2(firstdata2) {
       }, {
         'duration': 500
       })
-      setTimeout(jump,1500)
+      //setTimeout(jump,1500)
     } else {
       endm = "start";
       ani();
