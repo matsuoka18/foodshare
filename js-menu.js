@@ -17,11 +17,11 @@ function getdata() {
      //shopID = 1;
      document.getElementById("change1").value = cookie4;
      document.getElementById("nh1").value = cookie4;
-     document.getElementById("nh11").innerHTML = cookie4
-     document.getElementById("chanchan1").innerHTML = cookie4
+     //document.getElementById("nh11").innerHTML = cookie4
+     //document.getElementById("chanchan1").innerHTML = cookie4
      menuu();
    }
-   document.getElementById("np1").addEventListener('keyup', change);
+ /*  document.getElementById("np1").addEventListener('keyup', change);
    document.getElementById("np11").addEventListener('keyup', change);
    document.getElementById("np111").addEventListener('keyup', change);
    document.getElementById("jann").addEventListener('change', change);
@@ -39,7 +39,7 @@ function getdata() {
      document.getElementById("np2_2").innerHTML = fee;
      document.getElementById("np3_3").innerHTML = express;
      document.getElementById("np4_4").innerHTML = document.getElementById("jann").value;
-   }
+   }*/
    //cookieから来る予定の情報たちの仮入力
    //プレビューと商品の変数追加
    //店舗名の変更
@@ -147,7 +147,7 @@ function getdata() {
      menu = jj.changedata[0].name[namee2];
      fee = jj.changedata[0].fee[namee2];
      express = jj.changedata[0].express[namee2];
-     fileName = jj.changedata[0].base64[namee2];
+     fileName = jj.changedata[0].picture[namee2];
      genre = jj.changedata[0].genre[namee2];
      ne();
    }
@@ -157,9 +157,9 @@ function getdata() {
      document.getElementById("change3").value = fee; //料金
      document.getElementById("change4").value = express; //説明
  
-     //document.getElementById("change5").value = pic;
+     //document.getElementById("change5").value = fileName;
      document.getElementById("change6.2").innerHTML = genre;
-     console.log(menu + fee + express + pic + genre);
+     console.log(menu + fee + express + fileName + genre);
    }
    ii = 0;
  
@@ -365,11 +365,11 @@ function getdata() {
    menuu();*/
  
  
-   document.getElementById("change2").addEventListener('keyup', datachange);
+   /*document.getElementById("change2").addEventListener('keyup', datachange);
    document.getElementById("change3").addEventListener('keyup', datachange);
    document.getElementById("change4").addEventListener('keyup', datachange);
    document.getElementById("change5").addEventListener('keyup', datachange);
-   document.getElementById("change6").addEventListener('change', datachange);
+   document.getElementById("change6").addEventListener('change', datachange);*/
  
    function datachange() {
      document.getElementById("chanchan1").innerHTML = cookie4;
@@ -449,7 +449,11 @@ accessToken='';
     
                 if (response.ok) {
                     alert('File is Uploaded');
+                    if(message2 == "send"){
                     send2();
+                    }else{
+                     change122();
+                    }
                 } else {
                     alert('Faild...');
                     d = confirm("upload by other means");
@@ -473,13 +477,29 @@ accessToken='';
    }
    //画像処理ここまで
    //送信処理
+   message2 = "send";
    function send(){
+    shop = cookie4;
+    menu = document.getElementById("np1").value;
+    fee = document.getElementById("np11").value;
+    express = document.getElementById("np111").value;
+    janru = document.getElementById("jann").value;
+if(menu.length > 0 && fee.length > 0 && express.length > 0 && janru.length > 0 ){
+
     uploadImage();
+}else{
+  alert("未記入欄があります")
+}
    }
    function send2() {
 console.log("fileName:"+fileName);
 console.log("send2 START");
      shop = cookie4;
+     menu = document.getElementById("np1").value;
+     fee = document.getElementById("np11").value;
+     express = document.getElementById("np111").value;
+     janru = document.getElementById("jann").value;
+if(menu.length > 0 && fee.length > 0 && express.length > 0 && janru.length > 0 ){
      url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
      var data = [{
        "name": shop,
@@ -511,6 +531,9 @@ fileName = '';
      ani();
      
      aa=0;
+    }else{
+      alert("未記入欄があります");
+    }
    }
  
    function ani() {
@@ -561,9 +584,19 @@ fileName = '';
      fetch(url, params)
      menuu();
    }
-   function change12() {
+function change12(){
+  message2 = "change";
+  uploadImage();
+}
+   function change122() {
      namee2 = namee2 + 2;
  
+      
+     lmenu= document.getElementById("change2").value; 
+     lfee = document.getElementById("change3").value; 
+     lexpress = document.getElementById("change4").value;  
+     lgenre = document.getElementById("change6").value;
+   
      var url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
      var data = [{
        "name": shopID,
