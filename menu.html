@@ -24,11 +24,14 @@
           <input type="text" class="nh1" id="nh1" value="" placeholder="店舗名を入力"></input>
 
           <div class="nn2">
+            <small>商品名</small>
             <input type="text" class="np1" id="np1" value="" placeholder="商品名を入力"></input>
+            <small>値段</small>
             <input type="text" class="np1" id="np11" value="" placeholder="値段を入力"></input>
           </div>
-
+           <small>商品の説明</small>
           <input type="text" class="np3" id="np111" value="" placeholder="商品説明を入力"></input>
+          <small>商品の写真</small>
           <input type="file" id="example" multiple>
           <p>商品のジャンルを選ぶ</p>
           <form name="example2">
@@ -40,7 +43,7 @@
             </select>
           </form>
         </div>
-        <div class="n1" id="n1">
+        <!--div class="n1" id="n1">
 
           <h1 id="nh11">お店</h1>
           <div class="nn1">
@@ -51,11 +54,12 @@
           <p class="npp3" id="np3_3"></p>
           <p class="npp4" id="np4_4"></p>
           <p>完成型</p>
-        </div>
-      </div>
-
+        </div-->
+      
+</div>
       <button class="商品button" id="商品button" onclick="send()">追加する</button>
       <div class="guid" id="guid"></div>
+      
     </div>
     <div class="new" id="new">
       <div id="preview"></div>
@@ -85,8 +89,8 @@
           </select>
         </form>
         <div class="bt">
-          <button class="bt1" onclick="i32()">前の１０個を見る</button>
-          <button class="bt1" onclick="i3()">次の１０個を見る</button>
+          <button class="bt3" onclick="i32()">前の１０個を見る</button>
+          <button class="bt3" onclick="i3()">次の１０個を見る</button>
           <!--id="ii3"-->
         </div>
         <div class="all1" id="all1">
@@ -95,11 +99,14 @@
             <input type="text" class="nh1" id="change1" value="店舗名を入力">
 
             <div class="nn2">
-              <input type="text" class="np1" id="change2" value="">
+              <small>商品名</small>
+              <input type="text" class="np1" id="change2" value="商品名を入力">
+              <small>値段</small>
               <input type="text" class="np1" id="change3" value="値段を入力"></input>
             </div>
-
+            <small>商品の説明</small>
             <input type="text" class="np3" id="change4" value="商品説明を入力"></input>
+            <small>商品の写真</small>
             <input type="file" id="change5" multiple>
             <p>商品のジャンルを選ぶ</p>
             <form name="fo2">
@@ -111,7 +118,7 @@
               </select>
             </form>
           </div>
-          <div class="n1" id="n1">
+          <!--div class="n1" id="n1">
             <h1 class="nh1" id="chanchan1">店舗名</h1>
 
             <div class="nn1">
@@ -122,7 +129,7 @@
             <p class="np3" id="chanchan4"></p>
             <p class="np4" id="chanchan5"></p>
             <p>完成型</p>
-          </div>
+          </div-->
         </div>
         <button class="change12" id="change12" onclick="change12()">変更</button>
       </div>

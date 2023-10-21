@@ -7,32 +7,37 @@ body {
   .name {
     margin: 0;
     padding: 0;
-    width: 15vw;
-    height: 15vw;
+    width: 10vw;
+    height: 7.5vw;
     background-color: #3A1F00;
+    margin-bottom: 5vw;
   }
   
   .name p {
     margin: 0;
+    padding:0;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     text-align: center;
-    padding-top: 5vw;
+    line-height:7.5vw;
   }
   
   .name2 {
     width: 100vw;
-    height: 10vw;
+    height: 7.5vw;
     border-bottom: 2px solid;
     border-color: #5A3A1A;
+    
   }
   
   .name2 h1 {
     float: right;
-    margin-right: 40vw;
     margin-top: 3vw;
+    width:90vw;
+    text-align: center;
     color: #5A3A1A;
+    font-size:1.5vw;
   }
   
   .form {
@@ -166,15 +171,19 @@ body {
   
   button {
     background-color: #3A1F00;
-    width: 15vw;
-    height: 5vw;
-    color: white;
-    font-size: 20px;
+    width: 10vw;
+    height: 3vw;
+    color:white;
+    font-size: 0.6vw;
     border: none;
-    border-radius: 100px;
-    margin-top: 5vw;
+    margin-top:5vw;
   }
-  
+  button:hover{
+    background-color: #BC9A78;
+  }
+  button:active{
+    color: #3A1F00;
+  }
   .che {
     margin-top: 10vw;
     background-color: #C6AC8F;
@@ -206,26 +215,24 @@ body {
   
   .center {
     width: 85vw;
+    margin-left:7.5vw;
     padding-bottom: 30px;
-    margin-left: 7vw;
-    margin-top: -2.5vw;
     border-radius: 10px;
     background-color: #C6AC8F;
     text-align: center;
-    display: flex;
+    display: inline-block;
   }
   
   .center h1 {
     height: 50px;
-    width: 30vw;
+    width:85vw;
     text-align: center;
-    margin-right: 0;
-    margin-left: 30vw;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 2.5vw;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
   }
-  
+  .center h2{
+    font-size:30px;
+  }
   .center p {
     margin-top: 5vw;
   }
@@ -235,29 +242,26 @@ body {
     margin-bottom: 0;
   }
   
-  .center button {
-    margin: 50px;
-    width: 250px;
-  }
+
   
   .menu {
-    margin-left: -50vw;
-    margin-top: 10vw;
+
+    width: 30vw;
     margin-bottom: 5px;
-    width: 40vw;
-    height: 30vw;
+    margin-right:5vw;
+    padding-bottom:5vw;
     background-color: white;
     border-radius: 10px;
+    display: inline-block;
   }
   
   .menu2 {
-    margin-top: 10vw;
-    margin-right: 10vw;
-    margin-left: 5vw;
-    width: 40vw;
-    height: 30vw;
+    width: 30vw;
+    padding-bottom:5vw;
+    margin-left:5vw;
     background-color: white;
     border-radius: 10px;
+    display: inline-block;
   }
   
   .div1 {
@@ -413,10 +417,7 @@ body {
   }
   
   .div2 {
-    background-color: #C6AC8F;
-    width: 92vw;
-    margin-left: 5vw;
-    border-radius: 10px;
+    width: 100vw;
   }
   
   .div2 h1 {
@@ -578,15 +579,7 @@ body {
     top: -4.5vw;
   }
   
-  .商品button:hover {
-    border: 3px solid;
-    border-color: white;
-  }
-  
-  .商品button:active {
-    background-color: #C6AC8F;
-  }
-  
+ 
   .passfo {
     font-size: 15px;
     padding: 5px;

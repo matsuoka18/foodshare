@@ -1207,3 +1207,12 @@ function c() {
 a = 0;
 count = 0;
 set1 = '';
+function ulogin(){
+  location.href = "ulogin.html";
+}
+function allp(){
+  location.href = "all.html";
+}
+function newp(){
+  location.href = "new.html";
+}

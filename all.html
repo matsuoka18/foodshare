@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>フードロスなくそう</title>
+  <link rel="stylesheet" href="css-all.css">
+  <link href="style_map.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+</head>
+
+<body onload="start()">
+  <div class="alll" id="alll">
+    <div id="a"></div>
+    <div class="section1">
+      <div class="head">
+        <div class="p">
+          <p onclick="ulogin()">すべての商品</p>
+          <ul class="l4">
+            <li class="l1"><a class="a1" href="shoped.html">店舗側ページ</a></li>
+            <li class="l2"><a class="a2" href="entry.html">店舗登録</a></li>
+            <li class="l3"><a class="a3" href="login.html">ログイン</a></li>
+            <li class="l5">店舗情報</li>
+          </ul>
+
+        </div>
+        <div class="searchform">
+          <div class="bar" id="bar"></div>
+          <div class="form">
+          <input type="text" class="search" id="search" placeholder="  shopname or menu" value="">
+          <button id="s" onclick="searching()"><span id="ss">search</span></button>
+        </div>
+        </div>
+
+      </div>
+      <h1 class="h1" onclick="home()">foodshare</h1>
+
+    </div>
+    <div class="theme">
+        <h1>すべての商品</h1>
+    </div>
+  </div>
+  </body>
+  </html>

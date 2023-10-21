@@ -2,43 +2,50 @@ body {
     margin: 0;
     padding: 0;
     font-family: monospace;
+    background-color: rgba(198,172,143,0.5);
   }
   
-.name {
-  margin: 0;
-  padding: 0;
-  width: 10vw;
-  height: 7.5vw;
-  background-color: #3A1F00;
-  margin-bottom: 5vw;
-}
-
-.name p {
-  margin: 0;
-  padding:0;
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  line-height:7.5vw;
-}
-
-.name2 {
-  width: 100vw;
-  height: 7.5vw;
-  border-bottom: 2px solid;
-  border-color: #5A3A1A;
-  background-color: white;
-}
-
-.name2 h1 {
-  float: right;
-  margin-top: 3vw;
-  width:90vw;
-  text-align: center;
-  color: #5A3A1A;
-  font-size:1.5vw;
-}
+  .name {
+    margin: 0;
+    padding: 0;
+    width: 10vw;
+    height: 7.5vw;
+    background-color: #3A1F00;
+  }
+  
+  .name p {
+    margin: 0;
+    color: white;
+    font-size:20px;
+    font-weight:600;
+    background-color: #3A1F00;
+    width: 10vw;
+    height: 7.5vw;
+    text-align: center;
+    line-height: 7.5vw;
+  }
+  
+  .name2 {
+    width: 100vw;
+    height: 7.5vw;
+    border-bottom: 2px solid;
+    background-color: white;
+    border-color:#3A1F00;
+  
+  }
+  
+  .name2 h1 {
+    position:absolute;
+    left:10vw;
+    width:90vw;
+    height:7.5vw;
+    text-align:center;
+    line-height:7.5vw;
+color:#3A1F00;
+margin:0;
+padding:0;
+  }
+  
   .form {
     width: 85vw;
   
@@ -51,8 +58,10 @@ body {
   }
   
   .form p {
+    margin:0;
+    padding:0;
+
     font-size: 30px;
-    padding-top: 2.5vw;
   }
   
   .form input {
@@ -66,23 +75,11 @@ body {
   }
   
   .form2 {
-    margin-left: 15vw;
-    width: 60vw;
-    height: 20vw;
-    background-color: white;
-    border-radius: 10px;
-    color: #5A3A1A;
+    width:40vw;
   }
   
   .form2 p {
-    background-color: #3A1F00;
-    color: white;
-    border-radius: 5px;
-    margin-left: -10px;
-    margin-right: -10px;
     font-weight: 600;
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
   
   .form2 span {
@@ -116,52 +113,87 @@ body {
   }
   
   .form4 {
-    margin-left: 15vw;
-    width: 60vw;
-    height: 20vw;
-    background-color: white;
-    border-radius: 10px;
-    color: #5A3A1A;
+    width:40vw;
   }
   
   .form4 p {
-    background-color: #3A1F00;
-    color: white;
-    border-radius: 5px;
-    margin-left: -10px;
-    margin-right: -10px;
     font-weight: 600;
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
   
   .form4 span {
     display: inline;
   }
-  
-  .form5 {
-    width: 85vw;
-    height: 60vw;
-    margin-left: 7vw;
-    margin-top: 2.5vw;
-    border-radius: 10px;
-    background-color: #C6AC8F;
-    text-align: center;
+  .all{
+    position: relative;
+    width:100vw;
+    height:100vh;
   }
-  
+  .all .h1{
+    width:100vw;
+    font-size:50px;
+    color:#3A1F00;
+    text-align: center;
+}
+.all .div{
+    position: absolute;
+    top:10vw;
+    left: 50%;
+width:0.1px;
+height:15vw;
+border-left:1px solid #3A1F00;
+}
+  .form5 {
+    position: absolute;
+    top:10vw;
+    left:10vw;
+    width: 40vw;
+    
+    text-align: center;
+    display: inline-block;
+  }
   .form5 p {
     font-size: 30px;
-    padding-top: 2.5vw;
+    padding:0;
+    margin:0;
   }
   
   .form5 input {
-    width: 50vw;
-    height: 4vw;
-    font-size: 25px;
-    border-radius: 10px;
+    width: 20vw;
+    height: 2.25vw;
+    font-size: 15px;
     text-align: center;
+    margin-top:1vw;
+    border-radius:5px;
     border: none;
-    outline-color: white;
+    outline:none;
+    box-shadow:inset 0 0 2.5px 1px #C6AC8F;
+  }
+  
+  .form55 {
+    position:absolute;
+    top:10vw;
+    right:10vw;
+    width: 40vw;
+    
+    text-align: center;
+    display: inline-block;
+  }
+  .form55 p {
+    font-size: 30px;
+    padding:0;
+    margin:0;
+  }
+  
+  .form55 input {
+    width: 20vw;
+    height: 2.25vw;
+    font-size: 15px;
+    text-align: center;
+    margin-top:1vw;
+    border-radius:5px;
+    border: none;
+    outline:none;
+    box-shadow:inset 0 0 2.5px 1px #C6AC8F;
   }
   
   .passw {
@@ -170,15 +202,13 @@ body {
   
   button {
     background-color: #3A1F00;
-    width: 15vw;
-    height: 5vw;
+    width: 10vw;
+    height: 3vw;
+    margin-top:2.5vw;
     color: white;
-    font-size: 20px;
+    font-size: 12.5px;
     border: none;
-    border-radius: 100px;
-    margin-top: 5vw;
   }
-
   
   .che {
     margin-top: 10vw;
@@ -266,33 +296,16 @@ body {
   }
   
   .div1 {
-    position:relative;
     margin-left: 5vw;
     width: 90vw;
-  height: 40vw;
+  
     border-radius: 10px;
-  }
-  .div1 button{
-    position: absolute;
-    left:50%;
-    bottom:2vw;
-    height:4vw;
-    width:12.5vw;
-    font-size:0.75vw;
-    border-radius: 0;
-    margin-left:-6.25vw;
-  }
-  .div1 button:hover {
-    border:none;
-    background-color: #5A3A1A;
   }
   
-  .div1 button:active {
-    background-color: #BC9A78;
-  }
   .n1 {
-  border:none;
+    border: 5px solid;
     border-radius: 10px;
+    border-color: #5A3A1A;
     width: 40vw;
     height: 25vw;
   }
@@ -318,13 +331,11 @@ body {
   
   .nh1 {
     border: none;
-    font-size: 1.75vw;
+    font-size: 25px;
     font-weight: bold;
     margin-right: 0;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-left: 1vw;
-  color:#3A1F00;
+    margin-top: 10px;
+  
   }
   
   .nn1 {
@@ -347,17 +358,14 @@ body {
   }
   
   .n2 {
-    position: relative;
-    right:50%;
-    width: 40vw;
-    
-    float: right;
-    display: block;
-    margin-right:-20vw;
-    padding-bottom: 2.5vw;
-    background-color: white;
+    border: 5px solid;
     border-radius: 10px;
-    box-shadow: 0 0 5px 2px #BC9A78;
+    border-color: #5A3A1A;
+    width: 40vw;
+    height: 25vw;
+    margin-right: 5vw;
+    float: right;
+    background-color: white;
   }
   
   .n2 p {
@@ -373,47 +381,25 @@ body {
     margin-top: 0;
     padding-top: 5;
   }
-  .n2 p{
-    margin-left: 1vw;
-    font-size:1.1vw;
-    color:#3A1F00;
-  }
-  .n2 form{
-    margin-left: 1vw;
-  }
+  
   .n2 img {
     width: 25vw;
     float: right;
   }
-  .n2 input{
-    margin-top: 1vw;
-    margin-left: 1vw;
-    border:none;
-    outline:none;
-  }
-  .n2 input:focus{
-    box-shadow: 0 0 10px 0.1px rgba(198,172,143,0.5);;
-  }
+  
   .nn2 {
-display: block;
-
+    display: flex;
+    font-size: 25px;
   }
-  small{
-    color:#3A1F00;
-    font-size:1.1vw;
-    margin-left:1vw;
-  }
-
+  
   .np1 {
     border: none;
-    width: 38vw;
-    height: 2vw;
-    font-size: 0.75vw;
+    width: 19vw;
+    height: 30px;
+    font-size: 25px;
     margin-left: 0;
-    margin-top: 1vw;
-    margin-bottom: 1.25vw;
-    margin-left:1vw;
-  border-radius: 0.25vw;
+    margin-top: 2vw;
+  
   }
   
   .np2 {
@@ -425,15 +411,9 @@ display: block;
   
   .np3 {
     border: none;
-    width: 38vw;
-    height: 2vw;
-    font-size: 0.75vw;
-    margin-left: 0;
-    margin-top: 1vw;
-    
-    margin-left:1vw;
-  border-radius: 0.25vw;
-  display: block;
+    font-size: 15px;
+    margin-top: 0px;
+  
   }
   
   .pic {
@@ -448,7 +428,6 @@ display: block;
     padding-bottom: 5vw;
     padding-left: 2vw;
     padding-top: 1vw;
-    
   }
   
   .div1p {
@@ -457,7 +436,11 @@ display: block;
     font-weight: 600;
     text-align: center;
   }
-
+  
+  .div1 button {
+    margin-left: 37vw;
+  }
+  
   .n1 {
     background-color: white;
     border-radius: 10px;
@@ -500,9 +483,7 @@ display: block;
   }
   
   .div3 {
-    position: relative;
     width: 90vw;
-    height:60vw;
     background-color: #C6AC8F;
     margin-left: 5vw;
     margin-top: 5vw;
@@ -510,30 +491,14 @@ display: block;
     padding-left: 30px;
     padding-bottom: 2vw;
   }
-  .div3 .change12{
-      position: absolute;
-      left:50%;
-      bottom:2vw;
-      height:4vw;
-      width:12.5vw;
-      font-size:0.75vw;
-      border-radius: 0;
-      margin-left:-6.25vw;
-  }
-  .change12:hover {
-    background-color: #5A3A1A;
-  }
   
-  .change12:active {
-    background-color: #BC9A78;
-  }
   .bt {
-    
+    margin-top: 2vw;
     display: flex;
   }
   
   .bt1 {
-    font-size: 0.5vw;
+    font-size: 12px;
     height: 2vw;
     width: 8vw;
     margin-bottom: 2vw;
@@ -546,73 +511,76 @@ display: block;
   }
   
   .fm1 {
+    margin-top: 10vw;
     width: 20vw;
     height: 3vw;
-    font-size: 0,75vw;
+    font-size: 15px;
     border: none;
     background-color: white;
     border-radius: 10px;
     margin-left: 1vw;
-    margin-top:2.5vw;
   }
-
+  
+  .change12 {
+    margin-top: 2vw;
+    margin-left: 35vw;
+  }
+  
+  .change12:hover {
+    border: 3px solid;
+    border-color: white;
+  }
+  
+  .change12:active {
+    background-color: #C6AC8F;
+  }
+  
   .div4 {
-    position: relative;
     margin-top: 2vw;
     margin-left: 5vw;
     border-radius: 10px;
     padding-left: 30px;
     width: 90vw;
-    height:30vw;
     background-color: #C6AC8F;
   }
-  .div4 h1{
-    width:90vw;
-    text-align: center;
-  }
+  
   .bt2 {
-    position:absolute;
-    left:50%;
-      height: 4vw;
-      width: 12.5vw;
-      font-size: 0.75vw;
-      border-radius: 0;
-      margin-left:-6.25vw;
+    margin-left: 10vw;
   }
   
   .bt2:hover {
-    background-color: #5A3A1A;
+    border: 3px solid;
+    border-color: white;
   }
   
   .bt2:active {
-    background-color: #BC9A78;
+    background-color: #C6AC8F;
   }
   
   .bt3 {
-    font-size: 0.5vw;
-    height: 2vw;
-    width: 8vw;
+    font-size: 15px;
+    height: 3vw;
+    width: 10vw;
     margin-bottom: 2vw;
     margin-left: 1vw;
-    margin-top: 1vw;
-  }
-  .bt3:hover{
-    background-color: #5A3A1A;
-  }
-  .bt3:active {
-    color: white;
+    margin-top: 0;
   }
   
-  .button1 {
-    margin-top: 2vw;
+  .bt3:active {
+    background-color: #C6AC8F;
   }
+  
+
   
   .button1:hover {
-    border: 3px solid;
+    background-color: #BC9A78;
   }
-  
+  .button1 {
+    opacity: 1;
+  }
   .button1:active {
     background-color: #C6AC8F;
+    color:#5A3A1A;
   }
   
   .button2 {
@@ -621,7 +589,6 @@ display: block;
   }
   
   .a {
-  
     animation-iteration-count: infinite;
   }
   
@@ -638,12 +605,16 @@ display: block;
   }
   
   .loading span {
+    position:relative;
+    top:-3vw;
+    height:3vw;
     display: block;
     color: white;
-    font-size: 30px;
-    font-weight: 600;
-    position: relative;
-    top: -4.5vw;
+    font-size: 20px;
+    font-weight: 500;
+    padding:0;
+    margin:0;
+  
   }
   
   .商品button:hover {
@@ -656,27 +627,23 @@ display: block;
   }
   
   .passfo {
-    font-size: 15px;
-    padding: 5px;
-    margin-left: 65vw;
-    margin-top: 1vw;
-    margin-bottom: 0;
-    background-color: #5A3A1A;
-    width: 10vw;
-    border-radius: 10px;
-    color: white;
+    position:relative;
+    left:50%;
+    margin-left:2.5vw;
+    width:7.5vw;
+    height:1.5vw;
+    font-size: 10px;
+    color: #5A3A1A;
+    line-height:1.5vw;
   }
   
   .passfo a {
     text-decoration: none;
-    color: white;
+    color: #5A3A1A;
   }
-  
-  .passfo:hover {
-    border: 1px solid;
-    border-color: white;
+  .passfo :hover{
+    color:#3A1F00;
   }
-  
   .passfo:active {
     background-color: #C6AC8F;
   }
@@ -688,7 +655,7 @@ display: block;
   }
   
   .now1 {
-    font-size: 25px;
+    font-size: 15px;
   }
   
   .name:hover {
@@ -900,4 +867,10 @@ display: block;
     height: 100px;
     font-weight: 600;
     border-radius: 10px;
+  }
+  .theme{
+    margin:0;
+    padding: 0;
+   font-size:35px; 
+   color:#3A1F00;
   }
