@@ -901,3 +901,8 @@ display: block;
     font-weight: 600;
     border-radius: 10px;
   }
+  .guid .guidb{
+    position:absolute;
+    bottom:2vw;
+    margin-left:10vw;
+  }
