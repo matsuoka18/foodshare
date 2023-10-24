@@ -425,7 +425,8 @@ console.log("no imagedata");
     console.log("Picture-Name:"+"https://matsuoka18.github.io/foodshare-pictures/"+pic);
     }
                       console.log("start11 FIN");
-                      getmenu();
+                      getmenu3();
+    
   }
   catch{
     start1();
@@ -515,7 +516,7 @@ catch(aa){
 lastn = 0;
 pagecount = 1;
 function getmenu3(){
-json = mjson.changedata[0];
+json = jsondata;
 last = json.last;
 console.log(last);
 lastn = lastn +10;
@@ -523,9 +524,9 @@ if(lastn > last){
   lastn = last;
 }
 for(var a=0; a<lastn; a++){
-  mname = mjson.changedata[0].name[a];
-  mfee = mjson.changedata[0].fee[a];
-  mexpress = mjson.changedata[0].express[a];
+  mname = json.name[a];
+  mfee = json.fee[a];
+  mexpress = json.express[a];
   data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+a+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+a+"\""+"onclick="+"\""+"fevo"+a+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
   allshow2.insertAdjacentHTML("beforeend",data);
 }
