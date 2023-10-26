@@ -266,12 +266,15 @@ body {
   }
   
   .div1 {
-    position:relative;
-    margin-left: 5vw;
+    position: relative;
+    left:5vw;
     width: 90vw;
-  height: 40vw;
+    height:50vw;
     border-radius: 10px;
+      background-color: #C6AC8F;
+      padding-top:2vw;
   }
+ 
   .div1 button{
     position: absolute;
     left:50%;
@@ -348,7 +351,7 @@ body {
   
   .n2 {
     position: relative;
-    right:50%;
+    
     width: 40vw;
     
     float: right;
@@ -441,18 +444,15 @@ display: block;
     float: right;
   }
   
-  .div1 {
-    background-color: #C6AC8F;
-    margin-right: 2vw;
-    margin-top: -2vw;
-    padding-bottom: 5vw;
-    padding-left: 2vw;
-    padding-top: 1vw;
-    
-  }
+ 
   
+  .all1{
+    position: absolute;
+    left:50%;
+    margin-left:-20vw;
+  }
   .div1p {
-    font-size: 30px;
+    font-size: 1.5vw;
     color: #5A3A1A;
     font-weight: 600;
     text-align: center;
@@ -905,4 +905,10 @@ display: block;
     position:absolute;
     bottom:2vw;
     margin-left:10vw;
+  }
+  .date{
+    font-size:0.75vw;
+  }
+  .time{
+    font-size:0.75vw;
   }

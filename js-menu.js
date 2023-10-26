@@ -1,7 +1,17 @@
+
+
+fileName = '';
+date_data = [];
+f_year = '';
+f_month = '';
+f_day ='';
+f_hour = '';
+f_minute ='';
 function getdata() {
+  
   cookie = document.cookie;
      //cookie = 'branch=menu|; menumemo={"shop1":["4","7","26","29","42","45"],"shop7":["3","9","19","22","41","44","57","60"],"shop13":["9","12","31","34","47","50"],"shop19":["6","9","28","31","44","47"],"shop25":["6","9","28","31","44","47"],"shop31":["6","9","28","31","44","47"],"shop37":["6","9","28","31","44","47"],"shop43":["6","9","28","31","44","47"],"shop49":["6","9","28","31","44","47"],"shop55":["6","9","28","31","44","47"],"shop61":["6","9","28","31","44","47"],"shop67":["6","9","28","31","44","47"],"shop73":["6","9","28","31","44","47"],"shop79":["6","9","28","31","44","47"],"last":["79"]}-; key=カメラ; loginID=%E3%82%BB%E3%83%96%E3%83%B3!; shopnumber=163#; pass=%E3%82%AB%E3%83%A1%E3%83%A9?';
-    // cookie = 'firstdata1={"shopdata":[{"n1":"hhh","n7":"abc","n13":"大船中学校","n19":"ばーーか","n25":"TULLYS COFFEE","n31":"ミニストップ","n37":"大戸屋","n43":"apple","n49":"あいうえお","n55":"goon","n61":"ppp","n67":"q","n73":"w","n79":"qw","n85":"八百屋","n91":"松","n97":"はか","n103":"q","n109":"a","n115":"re","n121":"rte","n127":"a","n133":"a","n139":"a","n145":"a","n151":"おおおお","n157":"カメラ","n163":"セブン","n169":"テスト","n175":"テスト3","n181":"テスト4","n187":"むじ","n193":"にお","n199":"アイパッド","n205":"ステップ","n211":"asd","n217":"goon","n223":"コーヒー","n229":"手広","n":"hdf","n235":"kama","n241":"hfsg","num":241}]}; datav=0; news=[object Object]; newsv=undefined; searchnum=1$; searchname=hhh^; branch=shop|; favoritenuml=0>>!; loginID=hhh!; pass=123?; shopnumber=31#'
+     //cookie = 'firstdata1={"shopdata":[{"n1":"hhh","n7":"abc","n13":"大船中学校","n19":"ばーーか","n25":"TULLYS COFFEE","n31":"ミニストップ","n37":"大戸屋","n43":"apple","n49":"あいうえお","n55":"goon","n61":"ppp","n67":"q","n73":"w","n79":"qw","n85":"八百屋","n91":"松","n97":"はか","n103":"q","n109":"a","n115":"re","n121":"rte","n127":"a","n133":"a","n139":"a","n145":"a","n151":"おおおお","n157":"カメラ","n163":"セブン","n169":"テスト","n175":"テスト3","n181":"テスト4","n187":"むじ","n193":"にお","n199":"アイパッド","n205":"ステップ","n211":"asd","n217":"goon","n223":"コーヒー","n229":"手広","n":"hdf","n235":"kama","n241":"hfsg","num":241}]}; datav=0; news=[object Object]; newsv=undefined; searchnum=1$; searchname=hhh^; branch=shop|; favoritenuml=0>>!; loginID=hhh!; pass=123?; shopnumber=1#'
      loginIDp1 = cookie.indexOf("loginID=") + 8;
      loginIDp2 = cookie.indexOf("!",loginIDp1);
      passp1 = cookie.indexOf("pass=") + 5;
@@ -19,7 +29,60 @@ function getdata() {
      document.getElementById("nh1").value = cookie4;
      //document.getElementById("nh11").innerHTML = cookie4
      //document.getElementById("chanchan1").innerHTML = cookie4
+
+     var data = new Date();
+     f_year = data.getFullYear();
+     f_month = data.getMonth()+1;
+     f_day = data.getDate();
+     f_hour = data.getHours();
+     f_minute = data.getMinutes();
+     date_data.push(f_year);
+     date_data.push(f_month);
+     date_data.push(f_day);
+     date_data.push(f_hour);
+     date_data.push(f_minute);
+     console.log(date_data);
+     var date1_data = date_data[0]+"-"+date_data[1]+"-"+date_data[2];
+     var date1_time = date_data[3]+":"+date_data[4];
+     document.getElementById("date1").min = date1_data;
+     document.getElementById("date1").value = date1_data;
+     document.getElementById("time1").min = date1_time;
+     document.getElementById("time1").value = date1_time;
      menuu();
+   }
+   document.getElementById("date1").addEventListener('blur',date1_change);
+   document.getElementById("time1").addEventListener('change',date1_change2);
+   function date1_change(){
+    date = document.getElementById("date1").value;
+    month_data = date.indexOf("-",0);
+    month_data2 = date.indexOf("-",month_data+1);
+    var year = date.substring(0,month_data);
+    var month = date.substring(month_data+1,month_data2);
+    var day = date.substring(month_data2+1,);
+    if(f_year == year && f_month == month && f_day == day){
+
+    }else{
+      document.getElementById("time1").min = "";
+    }
+   }
+   function date1_change2(){
+    time = document.getElementById("time1").value;
+    hour_data = time.indexOf(":");
+    hour = time.substring(0,hour_data);
+    minute = time.substring(hour_data+1,);
+    date = document.getElementById("date1").value;
+    month_data = date.indexOf("-",0);
+    month_data2 = date.indexOf("-",month_data+1);
+    var year = date.substring(0,month_data);
+    var month = date.substring(month_data+1,month_data2);
+    var day = date.substring(month_data2+1,);
+    if(f_year == year && f_month == month && f_day == day && f_hour > hour){
+      document.getElementById("time1").value = '';
+      alert("現在時刻よりも後を指定してください");
+    }else if(f_year == year && f_month == month && f_day == day && f_hour == hour && f_minute > minute){
+      document.getElementById("time1").value = '';
+      alert("現在時刻よりも後を指定してください");
+    }
    }
  /*  document.getElementById("np1").addEventListener('keyup', change);
    document.getElementById("np11").addEventListener('keyup', change);
@@ -69,6 +132,8 @@ function getdata() {
    }
    firsttime = '';
    function n() {
+     message_write = 'no';
+
      fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec', {
        method: "GET",
        mode: "cors"
@@ -395,7 +460,9 @@ function getdata() {
 accessToken='';
     document.getElementById("example").addEventListener('change', write);
     document.getElementById("change5").addEventListener('change', write);
+    message_write = 'no';
     function write() {
+      message_write = 'yes';
         alert("File is ready");
         url="https://script.google.com/macros/s/AKfycbxR-5U9ojyWM_CgWc9Icog8rFwkDD_LMlbznk-62mtmszRTXz3qrxH5cdCq1elu2R01/exec";
     fetch(url,{
@@ -412,7 +479,7 @@ accessToken='';
     })
                 }
 
-    fileName = '';
+    
     async function uploadImage() {
         alert("File is uploading...")
         alert("Please wait until the message is displayed again")
@@ -471,7 +538,10 @@ accessToken='';
     }
 
 
-
+month ='';
+day = '';
+hour = '';
+minute = '';
    function sen() {
      alert(document.getElementById("jan").value);
    }
@@ -484,6 +554,21 @@ accessToken='';
     fee = document.getElementById("np11").value;
     express = document.getElementById("np111").value;
     janru = document.getElementById("jann").value;
+    date = document.getElementById("date1").value;
+    time = document.getElementById("time1").value;
+    month_data = date.indexOf("-",0);
+    month_data2 = date.indexOf("-",month_data+1);
+    month = date.substring(month_data+1,month_data2);
+    day = date.substring(month_data2+1,);
+    hour_data = time.indexOf(":");
+    hour = time.substring(0,hour_data);
+    minute = time.substring(hour_data+1,)
+    console.log(date);
+    console.log(time);
+    console.log(month);
+    console.log(day);
+    console.log(hour);
+    console.log(minute);
 if(menu.length > 0 && fee.length > 0 && express.length > 0 && janru.length > 0 ){
 
     uploadImage();
@@ -492,6 +577,7 @@ if(menu.length > 0 && fee.length > 0 && express.length > 0 && janru.length > 0 )
 }
    }
    function send2() {
+    //日付の追加処理を書くこと 10/26
 console.log("fileName:"+fileName);
 console.log("send2 START");
      shop = cookie4;
@@ -585,8 +671,12 @@ fileName = '';
      menuu();
    }
 function change12(){
+  if(message_write == 'yes'){
   message2 = "change";
   uploadImage();
+  }else{
+    change122();
+  }
 }
    function change122() {
      namee2 = namee2 + 2;
