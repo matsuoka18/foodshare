@@ -7,6 +7,11 @@ f_month = '';
 f_day ='';
 f_hour = '';
 f_minute ='';
+hour = '';
+month = '';
+day = '';
+minute = '';
+
 function getdata() {
   
   cookie = document.cookie;
@@ -200,6 +205,8 @@ function getdata() {
      ki();
    }
    document.getElementById("name").addEventListener('change', aaa);
+   date_data2 = '';
+   time_date2 = '';
    function aaa() {
      namee = document.fo.name2;
      namee2 = namee.selectedIndex;
@@ -214,6 +221,20 @@ function getdata() {
      express = jj.changedata[0].express[namee2];
      fileName = jj.changedata[0].picture[namee2];
      genre = jj.changedata[0].genre[namee2];
+     var date = new Date();
+     year = date.getFullYear();
+     month = jj.changedata[0].month[namee2];
+     if(month.length < 2){
+     month = 0+String(month);
+     }
+     day = jj.changedata[0].day[namee2];
+     if(day.length < 2){
+      day = 0+String(day);
+      }
+     date_data2 = year+"-"+month+"-"+day;
+     hour = jj.changedata[0].hour[namee2];
+     minute = jj.changedata[0].minute[namee2];
+     time_date2 = hour+":"+minute;
      ne();
    }
    function ne() {
@@ -221,7 +242,8 @@ function getdata() {
      document.getElementById("change2").value = menu;  //商品名
      document.getElementById("change3").value = fee; //料金
      document.getElementById("change4").value = express; //説明
- 
+     document.getElementById("date2").value = date_data2;
+     document.getElementById("time2").value = time_date2;
      //document.getElementById("change5").value = fileName;
      document.getElementById("change6.2").innerHTML = genre;
      console.log(menu + fee + express + fileName + genre);
@@ -595,7 +617,11 @@ if(menu.length > 0 && fee.length > 0 && express.length > 0 && janru.length > 0 )
        "name4": "追加",
        "name5": shopID,
        "name8": janru,
-       "name9": fileName
+       "name9": fileName,
+       "month":month,
+       "day":day,
+       "hour":hour,
+       "minute":minute
      }]
      var params = {
        "method": "post",
@@ -686,6 +712,21 @@ function change12(){
      lfee = document.getElementById("change3").value; 
      lexpress = document.getElementById("change4").value;  
      lgenre = document.getElementById("change6").value;
+     date2 = document.getElementById("date2").value;
+     time2 = document.getElementById("time2").value;
+     month_data = date2.indexOf("-",0);
+     month_data2 = date2.indexOf("-",month_data+1);
+     month = date2.substring(month_data+1,month_data2);
+     day = date2.substring(month_data2+1,);
+     hour_data = time2.indexOf(":");
+     hour = time2.substring(0,hour_data);
+     minute = time2.substring(hour_data+1,)
+     console.log(date2);
+     console.log(time2);
+     console.log(month);
+     console.log(day);
+     console.log(hour);
+     console.log(minute);
    
      var url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
      var data = [{
@@ -697,7 +738,11 @@ function change12(){
        "name5": shopID,
        "name8": lgenre,
        'name9':fileName,
-       "name10": namee2
+       "name10": namee2,
+       "month":month,
+       "day":day,
+       "hour":hour,
+       "minute":minute
      }]
      var params = {
        "method": "post",
