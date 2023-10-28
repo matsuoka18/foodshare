@@ -2,7 +2,7 @@ sum =0;
 function pic() {
   sum++;
   console.log(sum)
-  if(sum > 150){
+  if(sum > 100){
     location.href = "index.html"
   }
     count++;
