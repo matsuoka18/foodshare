@@ -58,7 +58,7 @@ body {
   color: #5A3A1A;
   background-color: white;
   border: none;
-  font-size: 15px;
+  font-size: 0.75vw;
   font-weight: 600;
 }
 
@@ -83,7 +83,7 @@ body {
   height: 2.5vw;
   padding: 0;
   margin: 0;
-  font-size: 15px;
+  font-size: 0.75vw;
   border: none;
   outline: none;
 }
@@ -106,14 +106,14 @@ body {
 
 .p p {
   position: absolute;
-  bottom: 30px;
+  bottom: 1.5vw;
   left: 0;
-  width: 150px;
+  width: 8vw;
   height: 2.5vw;
   background-color: #5A3A1A;
   color: white;
   text-align: center;
-  font-size: 12.5px;
+  font-size:0.4vw;
   float: right;
   margin-top: 6vw;
   margin-right: 10px;
@@ -179,7 +179,7 @@ body {
 }
 
 .shopname {
-  font-size: 30px;
+  font-size:1.5vw;
   margin-top: 5px;
   margin-bottom: 0;
 }
@@ -302,7 +302,7 @@ body {
 .name p {
   margin: 0;
   color: white;
-  font-size: 30px;
+  font-size:1.5vw;
   font-weight: 600;
   text-align: center;
   padding-top: 5vw;
@@ -427,7 +427,7 @@ body {
 
 .nameq {
   color: #5A3A1A;
-  font-size: 30px;
+  font-size:1.5vw;
   font-weight: 600;
   width: 490px;
   margin: 0;
@@ -483,7 +483,7 @@ body {
 .name p {
   margin: 0;
   color: white;
-  font-size: 30px;
+  font-size:1.5vw;
   font-weight: 600;
   text-align: center;
   padding-top: 5vw;
@@ -550,7 +550,7 @@ body {
 .form3 h2 {
 
   margin-top: 3vw;
-  font-size: 30px;
+  font-size:1.5vw;
 }
 
 .form4 {
@@ -588,7 +588,7 @@ body {
 }
 
 .form5 p {
-  font-size: 30px;
+  font-size:1.5vw;
   padding-top: 2.5vw;
 }
 
@@ -829,7 +829,7 @@ button {}
 }
 
 .div1p {
-  font-size: 30px;
+  font-size:1.5vw;
   color: #5A3A1A;
   font-weight: 600;
   text-align: center;
@@ -1005,7 +1005,7 @@ button {}
 .loading span {
   display: block;
   color: white;
-  font-size: 30px;
+  font-size:1.5vw;
   font-weight: 600;
   position: relative;
   top: -4.5vw;
@@ -1145,13 +1145,13 @@ button {}
 
 .formm p {
   padding: 10px;
-  font-size: 30px;
+  font-size:1.5vw;
 }
 
 .formm input {
   border: none;
   outline: none;
-  font-size: 30px;
+  font-size:1.5vw;
   font-weight: 600;
   background-color: none;
   padding: 10px;
@@ -1170,7 +1170,7 @@ button {}
 }
 
 .all2 p {
-  font-size: 30px;
+  font-size:1.5vw;
   padding: 10px;
 }
 
@@ -1187,7 +1187,7 @@ button {}
   border: none;
   outline: none;
   width: 20vw;
-  font-size: 30px;
+  font-size:1.5vw;
   padding: 10px;
   border-radius: 10px;
 }
@@ -1255,7 +1255,7 @@ img {
   font-weight: 600;
   width: 25vw;
   height: 3vw;
-  font-size: 30px;
+  font-size:1.5vw;
   border: none;
   outline: none;
   border-radius: 10px;
@@ -1393,14 +1393,14 @@ img {
   margin-left: 2vw;
   border-left: 0.5vw solid red;
   padding-left: 1vw;
-  font-size: 30px;
+  font-size:1.5vw;
 }
 
 .button22 h2 {
   margin-left: 2vw;
   border-left: 10px solid red;
   padding-left: 1vw;
-  font-size: 30px;
+  font-size:1.5vw;
 }
 
 .button22 {
@@ -1412,7 +1412,7 @@ img {
   margin-left: 2vw;
   border-left: 10px solid red;
   padding-left: 1vw;
-  font-size: 30px;
+  font-size:1.5vw;
 }
 
 .button33 {
@@ -1424,7 +1424,7 @@ img {
   margin-left: 2vw;
   border-left: 10px solid red;
   padding-left: 1vw;
-  font-size: 30px;
+  font-size:1.5vw;
 }
 
 .button44 {
@@ -1436,7 +1436,7 @@ img {
   margin-left: 2vw;
   border-left: 10px solid red;
   padding-left: 1vw;
-  font-size: 30px;
+  font-size:1.5vw;
 }
 
 .button55 {
@@ -1448,7 +1448,7 @@ img {
   margin-left: 2vw;
   border-left: 10px solid red;
   padding-left: 1vw;
-  font-size: 30px;
+  font-size:1.5vw;
 }
 
 .button66 {
@@ -1457,6 +1457,7 @@ img {
 }
 
 .menu1 {
+  position:relative;
   padding: 5px;
   height: 15vw;
 }
@@ -1566,7 +1567,13 @@ img {
     width: 100vw;
   }
 }
-
+.menu1 .time_data{
+position:absolute;
+right:15vw;
+bottom:1vw;
+margin:0;
+padding:0;
+}
 .menu1:hover h2 {
   color: black;
   border-bottom: 2px solid #5A3A1A;
@@ -1590,7 +1597,7 @@ img {
 }
 
 .menu1 span {
-  font-size: 30px;
+  font-size: 1.5vw;
 }
 
 
@@ -1708,7 +1715,7 @@ img {
 
 .main h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 3vw;
   color: #3A1F00;
   padding-top: 5vw;
   margin-bottom: 0;
@@ -1756,17 +1763,17 @@ img {
 
 .head li {
   position: absolute;
-  bottom: 30px;
-  left: 200px;
+  bottom: 1.5vw;
+  left: 12vw;
   text-decoration: none;
   list-style-type: none;
-  width: 150px;
+  width: 8vw;
   color: white;
   font-weight: 500;
   height: 2.5vw;
   background-color: #5A3A1A;
   text-align: center;
-  font-size: 12.5px;
+  font-size: 0.5vw;
   line-height: 2.5vw;
 }
 
@@ -1969,7 +1976,7 @@ img {
 
 .r2 h2 {
   text-align: center;
-  font-size: 30px;
+  font-size:1.5vw;
   padding: 2vw;
 }
 
@@ -2028,7 +2035,7 @@ img {
 
 .rb1 {
   width: 100vw;
-  font-size: 30px;
+  font-size:1.5vw;
   font-weight: 600;
   border-left: 10px solid;
   padding-left: 1vw;
@@ -2072,7 +2079,7 @@ img {
 }
 
 .r33 {
-  font-size: 30px;
+  font-size:1.5vw;
   font-weight: 600;
   margin-bottom: 4vw;
 }

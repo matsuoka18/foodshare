@@ -258,7 +258,7 @@ function start(){
     'duration': 1000
   })
  cd= document.cookie;
- //cd = 'menumemo={"shop163":["0"],"shop169":["0"],"shop175":["0"],"shop181":["0"],"last":["181"]}-; firstdata1={"shopdata":[{"n1":"hhh","n7":"abc","n13":"大船中学校","n19":"ばーーか","n25":"TULLYS COFFEE","n31":"ミニストップ","n37":"大戸屋","n43":"apple","n49":"あいうえお","n55":"goon","n61":"ppp","n67":"q","n73":"w","n79":"qw","n85":"八百屋","n91":"松","n97":"はか","n103":"q","n109":"a","n115":"re","n121":"rte","n127":"a","n133":"a","n139":"a","n145":"a","n151":"おおおお","n157":"カメラ","n163":"セブン","n169":"テスト","n175":"テスト3","n181":"テスト4","n187":"むじ","n193":"にお","n199":"アイパッド","n205":"ステップ","n211":"asd","n217":"goon","n223":"コーヒー","n229":"手広","n235":"kama","n241":"hfsg","n247":"kazuya","n253":"成田","n259":"あｄｇｆ","num":259}]}; datav=0; searchnum=1$; searchname=hhh^; branch=shop|; favoritenuml=0>>!';
+ cd = 'menumemo={"shop163":["0"],"shop169":["0"],"shop175":["0"],"shop181":["0"],"last":["181"]}-; firstdata1={"shopdata":[{"n1":"hhh","n7":"abc","n13":"大船中学校","n19":"ばーーか","n25":"TULLYS COFFEE","n31":"ミニストップ","n37":"大戸屋","n43":"apple","n49":"あいうえお","n55":"goon","n61":"ppp","n67":"q","n73":"w","n79":"qw","n85":"八百屋","n91":"松","n97":"はか","n103":"q","n109":"a","n115":"re","n121":"rte","n127":"a","n133":"a","n139":"a","n145":"a","n151":"おおおお","n157":"カメラ","n163":"セブン","n169":"テスト","n175":"テスト3","n181":"テスト4","n187":"むじ","n193":"にお","n199":"アイパッド","n205":"ステップ","n211":"asd","n217":"goon","n223":"コーヒー","n229":"手広","n235":"kama","n241":"hfsg","n247":"kazuya","n253":"成田","n259":"あｄｇｆ","num":259}]}; datav=0; searchnum=1$; searchname=hhh^; branch=shop|; favoritenuml=0>>!';
 
  console.log(cd);
       num1 = cd.indexOf("searchnum=");
@@ -527,7 +527,11 @@ for(var a=0; a<lastn; a++){
   mname = json.name[a];
   mfee = json.fee[a];
   mexpress = json.express[a];
-  data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+a+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+a+"\""+"onclick="+"\""+"fevo"+a+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+  mmonth = json.month[a];
+  mday = json.day[a];
+  mhour = json.hour[a];
+  mminute = json.minute[a];
+  data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+a+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+a+"\""+"onclick="+"\""+"fevo"+a+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4><div class="+"\""+"time_data"+"\""+"><p>掲示終了時間<span>"+mmonth+"月"+mday+"日"+mhour+"："+mminute+"</span></p></div>";
   allshow2.insertAdjacentHTML("beforeend",data);
 }
 number = parseInt(last/10)+1;
@@ -597,10 +601,14 @@ if(lastn >= last){
 }
 for(var a = last2; a<lastn; a++){
 lastn3++;
-mname = mjson.changedata[0].name[a];
-   mfee = mjson.changedata[0].fee[a];
-   mexpress = mjson.changedata[0].express[a];
-   data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+lastn3+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+lastn3+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+mname = json.name[a];
+mfee = json.fee[a];
+mexpress = json.express[a];
+mmonth = json.month[a];
+mday = json.day[a];
+mhour = json.hour[a];
+mminute = json.minute[a];
+data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+a+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+a+"\""+"onclick="+"\""+"fevo"+a+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4><div class="+"\""+"time_data"+"\""+"><p>掲示終了時間<span>"+mmonth+"月"+mday+"日"+mhour+"："+mminute+"</span></p></div>";
    allshow2.insertAdjacentHTML("beforeend",data);
  }
  for(var a =1; a<=favoritenuml; a++){
@@ -677,10 +685,14 @@ if(last2 <= 0){
 }
 for(var a = last2; a<lastn; a++){
 lastn3++;
-mname = mjson.changedata[0].name[a];
-  mfee = mjson.changedata[0].fee[a];
-  mexpress = mjson.changedata[0].express[a];
-  data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+lastn3+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+lastn3+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+mname = json.name[a];
+mfee = json.fee[a];
+mexpress = json.express[a];
+mmonth = json.month[a];
+mday = json.day[a];
+mhour = json.hour[a];
+mminute = json.minute[a];
+data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+a+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+a+"\""+"onclick="+"\""+"fevo"+a+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4><div class="+"\""+"time_data"+"\""+"><p>掲示終了時間<span>"+mmonth+"月"+mday+"日"+mhour+"："+mminute+"</span></p></div>";
   allshow2.insertAdjacentHTML("beforeend",data);
 }
 for(var a =0; a<favoritenuml; a++){
