@@ -269,7 +269,7 @@ body {
     position: relative;
     left:5vw;
     width: 90vw;
-    height:50vw;
+    height:55vw;
     border-radius: 10px;
       background-color: #C6AC8F;
       padding-top:2vw;
@@ -502,7 +502,7 @@ display: block;
   .div3 {
     position: relative;
     width: 90vw;
-    height:60vw;
+    height:65vw;
     background-color: #C6AC8F;
     margin-left: 5vw;
     margin-top: 5vw;
@@ -912,3 +912,9 @@ display: block;
   .time{
     font-size:0.75vw;
   }
+.amount{
+  width:38vw;
+  height:2vw;
+  font-size:0.75vw;
+  border-radius:0.25vw;
+}

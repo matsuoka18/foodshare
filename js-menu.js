@@ -16,7 +16,7 @@ function getdata() {
   
   cookie = document.cookie;
      //cookie = 'branch=menu|; menumemo={"shop1":["4","7","26","29","42","45"],"shop7":["3","9","19","22","41","44","57","60"],"shop13":["9","12","31","34","47","50"],"shop19":["6","9","28","31","44","47"],"shop25":["6","9","28","31","44","47"],"shop31":["6","9","28","31","44","47"],"shop37":["6","9","28","31","44","47"],"shop43":["6","9","28","31","44","47"],"shop49":["6","9","28","31","44","47"],"shop55":["6","9","28","31","44","47"],"shop61":["6","9","28","31","44","47"],"shop67":["6","9","28","31","44","47"],"shop73":["6","9","28","31","44","47"],"shop79":["6","9","28","31","44","47"],"last":["79"]}-; key=カメラ; loginID=%E3%82%BB%E3%83%96%E3%83%B3!; shopnumber=163#; pass=%E3%82%AB%E3%83%A1%E3%83%A9?';
-     //cookie = 'firstdata1={"shopdata":[{"n1":"hhh","n7":"abc","n13":"大船中学校","n19":"ばーーか","n25":"TULLYS COFFEE","n31":"ミニストップ","n37":"大戸屋","n43":"apple","n49":"あいうえお","n55":"goon","n61":"ppp","n67":"q","n73":"w","n79":"qw","n85":"八百屋","n91":"松","n97":"はか","n103":"q","n109":"a","n115":"re","n121":"rte","n127":"a","n133":"a","n139":"a","n145":"a","n151":"おおおお","n157":"カメラ","n163":"セブン","n169":"テスト","n175":"テスト3","n181":"テスト4","n187":"むじ","n193":"にお","n199":"アイパッド","n205":"ステップ","n211":"asd","n217":"goon","n223":"コーヒー","n229":"手広","n":"hdf","n235":"kama","n241":"hfsg","num":241}]}; datav=0; news=[object Object]; newsv=undefined; searchnum=1$; searchname=hhh^; branch=shop|; favoritenuml=0>>!; loginID=hhh!; pass=123?; shopnumber=1#'
+     cookie = 'firstdata1={"shopdata":[{"n1":"hhh","n7":"abc","n13":"大船中学校","n19":"ばーーか","n25":"TULLYS COFFEE","n31":"ミニストップ","n37":"大戸屋","n43":"apple","n49":"あいうえお","n55":"goon","n61":"ppp","n67":"q","n73":"w","n79":"qw","n85":"八百屋","n91":"松","n97":"はか","n103":"q","n109":"a","n115":"re","n121":"rte","n127":"a","n133":"a","n139":"a","n145":"a","n151":"おおおお","n157":"カメラ","n163":"セブン","n169":"テスト","n175":"テスト3","n181":"テスト4","n187":"むじ","n193":"にお","n199":"アイパッド","n205":"ステップ","n211":"asd","n217":"goon","n223":"コーヒー","n229":"手広","n":"hdf","n235":"kama","n241":"hfsg","num":241}]}; datav=0; news=[object Object]; newsv=undefined; searchnum=1$; searchname=hhh^; branch=shop|; favoritenuml=0>>!; loginID=hhh!; pass=123?; shopnumber=1#'
      loginIDp1 = cookie.indexOf("loginID=") + 8;
      loginIDp2 = cookie.indexOf("!",loginIDp1);
      passp1 = cookie.indexOf("pass=") + 5;
@@ -235,6 +235,7 @@ function getdata() {
      hour = jj.changedata[0].hour[namee2];
      minute = jj.changedata[0].minute[namee2];
      time_date2 = hour+":"+minute;
+     amount = jj.changedata[0].amount[namee2];
      ne();
    }
    function ne() {
@@ -244,6 +245,7 @@ function getdata() {
      document.getElementById("change4").value = express; //説明
      document.getElementById("date2").value = date_data2;
      document.getElementById("time2").value = time_date2;
+     document.getElementById("amount2").value = amount;
      //document.getElementById("change5").value = fileName;
      document.getElementById("change6.2").innerHTML = genre;
      console.log(menu + fee + express + fileName + genre);
@@ -607,6 +609,7 @@ console.log("send2 START");
      fee = document.getElementById("np11").value;
      express = document.getElementById("np111").value;
      janru = document.getElementById("jann").value;
+     amount = document.getElementById("amount1").value;
 if(menu.length > 0 && fee.length > 0 && express.length > 0 && janru.length > 0 ){
      url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
      var data = [{
@@ -621,7 +624,8 @@ if(menu.length > 0 && fee.length > 0 && express.length > 0 && janru.length > 0 )
        "month":month,
        "day":day,
        "hour":hour,
-       "minute":minute
+       "minute":minute,
+       "amount":amount
      }]
      var params = {
        "method": "post",
@@ -712,6 +716,7 @@ function change12(){
      lfee = document.getElementById("change3").value; 
      lexpress = document.getElementById("change4").value;  
      lgenre = document.getElementById("change6").value;
+     amount2 = document.getElementById("amount2").value;
      date2 = document.getElementById("date2").value;
      time2 = document.getElementById("time2").value;
      month_data = date2.indexOf("-",0);
@@ -742,7 +747,8 @@ function change12(){
        "month":month,
        "day":day,
        "hour":hour,
-       "minute":minute
+       "minute":minute,
+       "amount":amount2
      }]
      var params = {
        "method": "post",
