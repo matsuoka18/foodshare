@@ -687,6 +687,8 @@ function menusearch2(firstdata2) {
       //document.getElementById("s").style.backgroundColor = "#5A3A1A";
       cc = "menumemo=" + nummemo + "-";
       document.cookie = "branch=menu|";
+      cookie_menuname = "cookie_menuname="+encodeURI(shopname)+"-";
+      document.cookie = cookie_menuname;
       document.cookie = cc;
       console.log("cc:"+cc);
       document.getElementById("ss").innerHTML = "jumping";
