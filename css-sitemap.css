@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding:0;
-    font-family: monospace;
+    font-family: Arial;
   }
   
   .h1 {
@@ -228,3 +228,32 @@ color:white;
 
    color:white;
  }
+ .main{
+  width:80vw;
+  margin-left:10vw;
+  margin-right:10vw;
+ }
+ .main h1{
+  color:#3A1F00;
+ }
+ .main h2{
+  color: #3A1F00;
+ }
+ .main li{
+  display: inline-block;
+  width:15vw;
+  height:3vw;
+  text-align: center;
+  line-height: 3vw;
+ list-style: none;
+ margin-bottom:0.25vw;
+ border: 1px solid #BC9A78;
+ font-size:0.75vw;
+ }
+.main a{
+  text-decoration: none;
+  color:#5A3A1A;
+}
+.main li:hover{
+  box-shadow: 0 0 5px 1px rgba(198,172,143,0.5);
+}

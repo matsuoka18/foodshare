@@ -1,7 +1,7 @@
         url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
         sn5 = '';
 function start(){
-    document.getElementById("bt1").innerHTML = "Loading";
+    //document.getElementById("bt1").innerHTML = "Loading";
   cd= document.cookie;
     //cd = 'branch=menu|; menumemo={"shop1":[22,38],"shop7":[14,36,52],"shop13":[4,26,42],"shop19":[1,23,39],"shop25":[1,23,39],"shop31":[1,23,39],"shop37":[1,23,39],"shop43":[1,23,39],"shop49":[1,23,39],"shop55":[23,39],"shop61":[23,39],"shop67":[23,39],"shop73":[23,39],"shop79":[23,39],"last":[79]}-; loginID=%E5%85%AB%E7%99%BE%E5%B1%8B!; pass=%E3%82%84%E3%81%BE%E3%81%8D?; shopnumber=85#';
     //cd ='branch=menu|; menumemo={"shop1":["3","21","24","37","40","107","108","109"],"shop7":["3","9","19","22","41","44","57","60"],"shop13":["9","12","31","34","47","50"],"shop19":["6","9","28","31","44","47"],"shop25":["6","9","28","31","44","47"],"last":["25"]}-';
@@ -47,6 +47,7 @@ function start(){
 if(sn3 == "menu"){
     
     console.log("menu")
+    document.getElementById("search").value = sn5;
   menu();
 }
 }
@@ -66,7 +67,7 @@ if(sn3 == "menu"){
         express = sd.express[num];
         genre = sd.genre[num];
         //pic = sd.name[num];
-        data = "<div class="+"\""+"allq"+"\""+"><div class="+"\""+"out2q"+"\""+">"+"<div class="+"\""+"nameq"+"\""+">"+name+"<div class="+"\""+"feeq"+"\""+">"+fee+"</div><div class="+"\""+"picq"+"\""+">"+express+"</div></div></div><div class="+"\""+"outq"+"\""+"><div class="+"\""+"nameq"+"\""+">"+name+"<div class="+"\""+"feeq"+"\""+">"+fee+"</div><div class="+"\""+"picq"+"\""+"><img src="+"\""+"a.jpeg"+"\""+"></div></div></div></div>";
+        //data = " <div class="+"\""+"block1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+"><div class="+"\""+"menu_datas"+"\""+"><h1>"+name+"</h1><h4>マクドナルド</h4><p class="fee">¥650</p><p>マクドナルと言われたらこの商品。開店当初から変わらない味付けそして値段。古くからの歴史を感じながらぜひ召し上がってください</p></div></div>";
     all.insertAdjacentHTML('beforeend',data);
         }
     }
@@ -123,7 +124,7 @@ if(sn3 == "menu"){
     function menu2(){
     rc++;
     console.log("menu2 START");
-        document.getElementById("bt1").innerHTML = "Getting";
+        //document.getElementById("bt1").innerHTML = "Getting";
         fetch(url,{ 
     method:"GET",
     mode:"cors"
@@ -160,7 +161,7 @@ if(sn3 == "menu"){
     
     function show2(){
 console.log("show2 START");
-        document.getElementById("bt1").style.opacity = "0";
+        //document.getElementById("bt1").style.opacity = "0";
                     if(json == "error"){
             alert("商品が登録されていません");
         location.href="index.html";
@@ -176,7 +177,7 @@ console.log("show2 START");
         express = sd.express[num];
         genre = sd.genru[num];
         //pic = sd.name[num];
-        data = "<div class="+"\""+"allq"+"\""+"><div class="+"\""+"out2q"+"\""+">"+"<div class="+"\""+"nameq"+"\""+">"+name+"<div class="+"\""+"feeq"+"\""+">"+fee+"</div><div class="+"\""+"picq"+"\""+">"+"<h4>"+shop+"</h4>"+"<p>"+express+"</p>"+"</div></div></div><div class="+"\""+"outq"+"\""+"><div class="+"\""+"nameq"+"\""+">"+name+"<div class="+"\""+"feeq"+"\""+">"+fee+"</div><div class="+"\""+"picq"+"\""+"><img src="+"\""+"a.jpeg"+"\""+"></div></div></div></div>";
+        data = " <div class="+"\""+"block1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+"><div class="+"\""+"menu_datas"+"\""+"><h1>"+name+"</h1><h4>"+shop+"</h4><p class="+"\""+"fee"+"\""+">¥"+fee+"</p><p>"+express+"</p></div></div>";
     all.insertAdjacentHTML('beforeend',data);
 
     }
@@ -185,6 +186,7 @@ console.log("show2 START");
     document.getElementById("total2").style.display = "block";
     document.getElementById("total2").style.opacity = "1"
     document.getElementById("total").innerHTML = lm;
+    document.getElementById("loading").style.display = "none";
     console.log("show2 FIN")
     }
     function home(){

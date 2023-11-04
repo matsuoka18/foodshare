@@ -531,7 +531,8 @@ for(var a=0; a<lastn; a++){
   mday = json.day[a];
   mhour = json.hour[a];
   mminute = json.minute[a];
-  data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+a+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+a+"\""+"onclick="+"\""+"fevo"+a+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4><div class="+"\""+"time_data"+"\""+"><p>掲示終了時間<span>"+mmonth+"月"+mday+"日"+mhour+"："+mminute+"</span></p></div>";
+  mamount = json.amount[a];
+  data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+a+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+a+"\""+"onclick="+"\""+"fevo"+a+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4><div class="+"\""+"time_data"+"\""+"><p>掲示終了時間<span>"+mmonth+"月"+mday+"日"+mhour+"："+mminute+"</span></p><p>残り<span>"+mamount+"</sapn>個</p></div>";
   allshow2.insertAdjacentHTML("beforeend",data);
 }
 number = parseInt(last/10)+1;
