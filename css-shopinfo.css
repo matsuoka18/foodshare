@@ -1,9 +1,10 @@
-body{
-    margin:0;
-   padding:0;
-    font-family:monospace;
-    background-color: rgba(198,172,143,0.5);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  background-color: rgba(198, 172, 143, 0.5);
 }
+
 .name {
   margin: 0;
   padding: 0;
@@ -15,12 +16,12 @@ body{
 
 .name p {
   margin: 0;
-  padding:0;
+  padding: 0;
   color: white;
   font-size: 20px;
   font-weight: 600;
   text-align: center;
-  line-height:7.5vw;
+  line-height: 7.5vw;
 }
 
 .name2 {
@@ -34,77 +35,155 @@ body{
 .name2 h1 {
   float: right;
   margin-top: 3vw;
-  width:90vw;
+  width: 90vw;
   text-align: center;
   color: #5A3A1A;
-  font-size:1.5vw;
+  font-size: 1.5vw;
 }
-  .div2{
-width:100vw;
-margin:0;
-padding:0;
 
-  }
-  .div2 h1{
-   
-  }
-  button{
-    position: relative;
-    left:50%;
-    background-color: #3A1F00;
-    width: 175px;
-    height: 60px;
-    margin-top:2.5vw;
-    margin-left:-87.5px;
-    color: white;
-    font-size: 12.5px;
-    border: none;
-  }
-  button:hover{
-    background-color:#BC9A78;
-    }
-  button:active{
-    color:#3A1F00;
-    }
-  .shopchange{
-    width:100vw;
-  padding-bottom:20px;
-  }
+.div2 {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+
+}
+
+.div2 h1 {}
+
+button {
+  position: relative;
+  left: 50%;
+  background-color: #3A1F00;
+  width: 175px;
+  height: 60px;
+  margin-top: 2.5vw;
+  margin-left: -87.5px;
+  color: white;
+  font-size: 12.5px;
+  border: none;
+}
+
+button:hover {
+  background-color: #BC9A78;
+}
+
+button:active {
+  color: #3A1F00;
+}
+
+.shopchange {
+  width: 100vw;
+  padding-bottom: 20px;
+}
+
+.shopchange input {
+  position: relative;
+  left: 50%;
+  width: 600px;
+  height: 50px;
+  border: none;
+  margin-top: 1vw;
+  margin-left: -300px;
+  font-size: 15px;
+  box-shadow: inset 0 0 2px 1px #BC9A78;
+  outline: none;
+}
+
+.cs1 {
+  width: 100vw;
+  text-align: center;
+  color: #5A3A1A;
+  margin: 0;
+  padding: 0;
+  padding-top: 2.5vw;
+  padding-bottom: 2.5vw;
+}
+
+.now1 {
+  width: 100vw;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: #3A1F00;
+  margin: 0;
+  padding: 0;
+}
+
+.name:hover {
+  background-color: #BC9A78;
+
+}
+
+.name p:hover {
+  color: #5A3A1A;
+}
+
+iframe {
+  width: 100vw;
+
+}
+
+.topbar {
+  width: 100vw;
+  height: 6vh;
+  display: flex;
+
+  background-color: white;
+  border-bottom:5px solid lightgray;}
+
+
+.topbar p {
+  width: 10vw;
+  height: 6vh;
+  font-size: 0.75vw;
+  text-align: center;
+  line-height: 6vh;
+  color: #3A1F00;
+  margin:0;
+  transition:0.2s;
+}
+.topbar p:hover{
+  border-bottom:5px solid #3A1F00;
   
-  .shopchange input{
-    position:relative;
-    left:50%;
-    width:600px;
-    height:50px;
-    border:none;
-    margin-top:1vw;
-    margin-left: -300px;
-    font-size:15px;
-    box-shadow: inset 0 0 2px 1px #BC9A78;
-    outline: none;
-  }
-  .cs1{
-    width:100vw;
-    text-align: center;
-    color:#5A3A1A;
-    margin:0;
-    padding: 0;
-    padding-top: 2.5vw;
-    padding-bottom: 2.5vw;
-  }
-  .now1{
-    width:100vw;
-    font-size:20px;
-    font-weight:500;
-    text-align: center;
-    color:#3A1F00;
-    margin:0;
-    padding:0;
-  }
-  .name:hover{
-    background-color:#BC9A78;
+}
+.topbar div:nth-child(1) {
+  font-weight: 600;
 
-  }
-  .name p:hover{
-           color:#5A3A1A;
-  }
+}
+
+.block1 {
+  position: relative;
+  width: 100vw;
+  height: 120px;
+}
+
+.block1 input {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -300px;
+}
+
+.block1 p {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -290px;
+  font-size:20px;
+  color:#3A1F00;
+}
+
+.textarea{
+  position:relative;
+  left:50%;
+  margin-left:-300px;
+  width:600px;
+  height:100px;
+  border:none;
+  outline:none;
+  box-shadow: inset 0 0 2px 1px #BC9A78;
+}
+.div2{
+  
+  opacity: 0;
+}

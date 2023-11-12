@@ -13,24 +13,95 @@
       <p>foodshare</p>
       </div>
       </div>
-      <div class="div2">
+      <div class="topbar">
+        <div><p id="p1"onclick="p1()">店舗名</p></div>
+        <div><p id="p2"onclick="p2()">メールアドレス</p></div>
+        <div><p id="p3"onclick="p3()">パスワード</p></div>
+        <div><p id="p4"onclick="p4()">住所</p></div>
+        <div><p id="p5"onclick="p5()">店舗紹介</p></div>
+        <div><p id="p6"onclick="p6()">営業時間</p></div>
+        <div><p id="p7"onclick="p7()">店舗写真</p></div>
+      </div>
+      <div class="div2" id="block_1">
         <!--この変更は編集追加で行える-->
-        <h1 class="cs1">店舗・商品の編集を行う</h1>
+        <h1 class="cs1">店舗名の編集を行う</h1>
         <div class="shopchange" id="shopchange0">
           <p class="now1" id="nowname"></p>
           <input type="text" id="shopchange" placeholder="店舗名を入力"value="">
         <p id="shopchange2"></p>
-        <button class="商品button"onclick="shop123()">店舗の変更をする</button>
+        <button class="商品button"onclick="shop123()">変更</button>
         </div>
         </div>
-        <div class="div2">
+        <div class="div2" id="block_2">
             <!--この変更は編集追加で行える-->
+            <h1 class="cs1">メールアドレスを変更する</h1>
+            <div class="shopchange" id="shopchange0">
+                <p class="now1" id="nowmail"></p>
+              <input type="text" id="mailchange" placeholder="メールアドレスを入力"value="">
+            <p id="shopchange2"></p>
+            <button class="商品button"onclick="mail()">変更</button>
+            </div>
+            </div>
+            <div class="div2" id="block_3">
             <h1 class="cs1">店舗のパスワードを変更する</h1>
             <div class="shopchange" id="shopchange0">
                 <p class="now1" id="nowpass"></p>
               <input type="text" id="passchange" placeholder="パスワードを入力"value="">
             <p id="shopchange2"></p>
-            <button class="商品button"onclick="pass()">パスワードを変更</button>
+            <button class="商品button"onclick="pass()">変更</button>
+            </div>
+            </div>
+            <div class="div2" id="block_4">
+            <h1 class="cs1">店舗の住所を変更する</h1>
+            <div class="shopchange" id="shopchange0">
+                <p class="now1" id="nowaddress"></p>
+                <p class="now1" id="nowaddress2"></p>
+                <p class="now1" id="nowaddress3"></p>
+              <div class="block1">
+              <p>都道府県</p>
+              <input type="text" id="prechange" placeholder="都道府県を入力"value="">
+            </div>
+            <div class="block1">
+              <p>市区町村郡</p>
+              <input type="text" id="citychange" placeholder="市区町村郡（区飲みの場合は空欄）"value="">
+              </div>
+              <div class="block1">
+              <p>区</p>
+              <input type="text" id="wardchange" placeholder="区（区でない場合は空欄）"value="">
+              </div>
+              <div class="block1">
+              <p>上記以下の住所</p>
+              <input type="text" id="addresschange" placeholder="上記以外の住所"value="">
+              </div>
+              <div class="block1">
+              <p>郵便番号</p>
+              <input type="text" id="address2change" placeholder="郵便番号（ハイフンなし）"value="">
+              </div>
+              <div class="block1">
+              <p>電話番号</p>
+              <input type="text" id="phonechange" placeholder="電話番号（ハイフンなし）"value="">
+              </div>
+
+            <p id="shopchange2"></p>
+            <button class="商品button"onclick="address()">変更</button>
+            </div>
+            </div>
+            <div class="div2" id="block_5">
+            <h1 class="cs1">店舗紹介文を変更する</h1>
+            <div class="shopchange_text" id="shopchange0">
+                <p class="now1" id="nowtext"></p>
+              <textarea type="text" class="textarea"id="textchange" placeholder="店舗紹介文を入力"value=""></textarea>
+            <p id="shopchange2"></p>
+            <button class="商品button"onclick="text()">変更</button>
+            </div>
+            </div>
+            <div class="div2" id="block_6">
+            <h1 class="cs1">店舗の営業時間を変更する</h1>
+            <div class="shopchange" id="shopchange0">
+                <p class="now1" id="nowtime"></p>
+              <input type="text" id="timechange" placeholder="営業時間を入力"value="">
+            <p id="shopchange2"></p>
+            <button class="商品button"onclick="time()">変更</button>
             </div>
             </div>
             <script src="js-shopinfo.js"></script>
