@@ -33,7 +33,7 @@ function start(){
         sn2 = decodeURI(cd.substring(num3+11,num4));
         sn3 = cd.substring(num5+7,num6);
         sn4 = cd.substring(num7+9,num8);
-        sn5 = cd.substring(num9+num9.length,num10);
+        sn5 = cd.substring(num9+16,num10);
         sn5 = decodeURI(sn5);
         console.log(sn+":"+sn2);
         console.log(sn3);

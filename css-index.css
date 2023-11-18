@@ -102,12 +102,12 @@ body {
     position:absolute;
     bottom:30px;
     left:0;
-    width: 150px;
+    width: 8vw;
     height: 2.5vw;
     background-color: #5A3A1A;
     color: white;
     text-align: center;
-    font-size:12.5px;
+    font-size:0.6vw;
     float: right;
     margin-top: 6vw;
     margin-right: 10px;
@@ -562,13 +562,13 @@ margin-bottom:10vw;
                  left:200px;
                   text-decoration:none;
                    list-style-type:none;
-                   width:150px;
+                   width:8vw;
                    color:white;
                    font-weight:500;
             height:2.5vw;
               background-color:#5A3A1A;
               text-align:center;
-              font-size:12.5px;
+              font-size:0.6vw;
               line-height:2.5vw;
             }
             .a1{
@@ -687,12 +687,16 @@ margin-bottom:10vw;
             }
 .f .express{
   position: absolute;
-  bottom:10vw;
-  width:25vw;
-  letter-spacing: 0.25vw;
-  font-size: 20px;
+  bottom:2vw;
+  width:20vw;
+  
+  padding:1.5vw;
+  letter-spacing: 0.4vw;
+  
+  font-size: 1vw;
   color:#3A1F00;
-  background-color: white;
+  background-color: rgba(198,172,143,0.3);
+  border-radius:1vw;
 }
             .f .fi{
               position: relative;
@@ -963,11 +967,13 @@ margin-bottom:10vw;
               background-color:darkblue;
             }
             .g1{
+              position:relative;
               margin-top: 5vw;
               margin-bottom: 5vw;
               margin-left:5vw;
               margin-right:5vw;
               width:90vw;
+              height:30vh;
               padding:0;
             }
             .g1 p{
@@ -982,6 +988,9 @@ margin-bottom:10vw;
               border-bottom:0.5vw solid #C6AC8F;
             }
             .g1 ul{
+              position: absolute;
+              left:0;
+              bottom:0;
               margin-top:2.5vw;
               margin-left:1.25vw;
             }
