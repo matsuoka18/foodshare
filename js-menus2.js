@@ -1,4 +1,4 @@
-
+//変更できてる
 function but1() {
   document.getElementById("but1").style.backgroundColor = "#C6AC8F";
   document.getElementById("but1").style.border = "none";
@@ -11,7 +11,7 @@ function but1() {
   document.getElementById("but3").style.borderWidth = "1px";
   document.getElementById("but3").style.borderColor = "#3A1F00";
   document.getElementById("but4").style.backgroundColor = "white";
-  document.getElementById("but4").style.borderStyle不明 = "solid";
+  document.getElementById("but4").style.borderStyle = "solid";
   document.getElementById("but4").style.borderWidth = "1px";
   document.getElementById("but4").style.borderColor = "#3A1F00";
   document.getElementById("but5").style.backgroundColor = "white";
@@ -245,11 +245,22 @@ sn='';
 cn='';
 sn2 ='';
 cd="";
+url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+menu_names = [];
 function start(){
+  $("#bar").animate({
+    'width':0,
+    'opacity':1
+  }, {
+    'duration': 0
+  })
+  $("#bar").animate({
+    'width':'2.5vw'
+  }, {
+    'duration': 1000
+  })
  cd= document.cookie;
- // cd = 'branch=menu|; menumemo={"shop1":[0,22,38],"shop7":[14,36,52],"shop13":[4,26,42],"shop19":[1,23,39],"shop25":[1,23,39],"shop31":[1,23,39],"shop37":[1,23,39],"shop43":[1,23,39],"shop49":[1,23,39],"shop55":[23,39],"shop61":[23,39],"shop67":[23,39],"shop73":[23,39],"shop79":[23,39],"last":[79]}-; loginID=%E5%85%AB%E7%99%BE%E5%B1%8B!; pass=%E3%82%84%E3%81%BE%E3%81%8D?; shopnumber=85#; searchname=hello^;searchnum=85$';
-    //cd = 'searchnum=1$; searchname=hhh^; branch=shop|; favoriten1=0<<*1>>*; favoriten2=1<<*1>>*; favoritenuml=2>>!';
-    //cd = 'searchnum=1$; searchname=hhh^; branch=shop|; firstdata1={"shopdata":[{"n1":"hhh","n7":"abc","n13":"大船中学校","n19":"ばーーか","n25":"TULLYS COFFEE","n31":"ミニストップ","n37":"大戸屋","n43":"apple","n49":"あいうえお","n55":"goon","n61":"ppp","n67":"q","n73":"w","n79":"qw","n85":"八百屋","n91":"松","n97":"はか","n103":"q","n109":"a","n115":"re","n121":"rte","n127":"a","n133":"a","n139":"a","n145":"a","n151":"おおおお","n157":"カメラ","n163":"セブン","n169":"テスト","n175":"テスト3","n181":"テスト4","n187":"むじ","n193":"にお","n199":"アイパッド","n205":"ステップ","n211":"asd","n217":"goon","n223":"コーヒー","n229":"手広","n":"hdf","n235":"kama","n241":"hfsg","num":241}]}; datav=0; news=[object Object]; newsv=undefined; favoriten1=0<<*1>>*; favoriten2=1<<*1>>*; favoriten3=2<<*1>>*; favoriten4=3<<*1>>*; favoriten5=5<<*1>>*; favoriten6=11<<*1>>*; favoritenuml=6>>!'
+ cd = 'menumemo={"shop163":["0"],"shop169":["0"],"shop175":["0"],"shop181":["0"],"last":["181"]}-; firstdata1={"shopdata":[{"n1":"hhh","n7":"abc","n13":"大船中学校","n19":"ばーーか","n25":"TULLYS COFFEE","n31":"ミニストップ","n37":"大戸屋","n43":"apple","n49":"あいうえお","n55":"goon","n61":"ppp","n67":"q","n73":"w","n79":"qw","n85":"八百屋","n91":"松","n97":"はか","n103":"q","n109":"a","n115":"re","n121":"rte","n127":"a","n133":"a","n139":"a","n145":"a","n151":"おおおお","n157":"カメラ","n163":"セブン","n169":"テスト","n175":"テスト3","n181":"テスト4","n187":"むじ","n193":"にお","n199":"アイパッド","n205":"ステップ","n211":"asd","n217":"goon","n223":"コーヒー","n229":"手広","n235":"kama","n241":"hfsg","n247":"kazuya","n253":"成田","n259":"あｄｇｆ","num":259}]}; datav=0; searchnum=1$; searchname=hhh^; branch=shop|; favoritenuml=0>>!; userid=kazuya-; login_status=yes!';
 
  console.log(cd);
       num1 = cd.indexOf("searchnum=");
@@ -292,10 +303,15 @@ function start(){
 
 
       console.log(sn+":"+sn2);
-     setTimeout(startt,1000)
+     startt();
      }
      function startt(){
-     console.log("loading start");
+      $("#bar").animate({
+        'width':'5vw'
+      }, {
+        'duration': 1000
+      })
+     console.log("srartt START");
   url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var data = [{
 "name4":"店舗商品取得",
@@ -309,10 +325,17 @@ var params={
 "body":JSON.stringify(data)
 }
 fetch(url,params);
-setTimeout(start1,3000);
+console.log("startt FIN");
+start1();
 }
+rc2=0;
 function start1(){
-console.log("getting start");
+  $("#bar").animate({
+    'width':'10vw'
+  }, {
+    'duration': 5000
+  })
+console.log("start1 START");
   url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
   fetch(url,{
       method:"GET",
@@ -325,15 +348,41 @@ console.log("getting start");
   })
   .then(resJson =>{
 jsondata = resJson;
-      console.log("データ取得");
-      setTimeout(start11,1000);
+jc = JSON.stringify(jsondata);
+jc = jc.indexOf("getmenudata");
+if(jc > 0){
+rc2=0;
+console.log("start1 FIN");
+start11();
+}else{
+if(rc2 >2){
+console.log("RELOAD (limit)");
+rc2=0;
+startt();
+}else{
+rc2=0;
+console.log("RELOAD (other data)");
+start1();
+}
+}
+ 
   })
   .catch(error =>{
-      alert("エラー");
+      console.log("RELOAD ( ERROR )");
+      setTimeout( ()=>{
+       startt();
+       rc2=0;
+       },1000)
   })
 
 }
 function start11(){
+  $("#bar").animate({
+    'width':'12.5vw'
+  }, {
+    'duration': 500
+  })
+console.log("start11 START");
   try{
             data = jsondata.data;
       console.log("データ："+data);
@@ -349,6 +398,13 @@ function start11(){
       console.log(mailad);
       phonead = data[0].phonenum;
       console.log(phonead);
+    try{
+    pic = data[0].pic;
+    console.log(pic);
+    }catch{
+      pic = "no data";
+console.log("no imagedata");
+    }
     intro = data[0].intro;
       console.log(intro);
     time = data[0].time;
@@ -363,8 +419,16 @@ function start11(){
     document.getElementById("time2").innerHTML = time;
     document.getElementById("mailad2").innerHTML = mailad;
     document.getElementById("phone2").innerHTML = phonead;
-                      console.log("データ取得入力完了");
-                      getmenu();
+    picc = pic.indexOf(".jpg");
+    picc2 = pic.indexOf(".JPG");
+    picc3 = pic.indexOf(".jpeg");
+    if(picc !=-1 || picc2 !=-1 || picc3 !=-1){
+    document.getElementById("picture").src = "https://matsuoka18.github.io/foodshare-pictures/"+pic;
+    console.log("Picture-Name:"+"https://matsuoka18.github.io/foodshare-pictures/"+pic);
+    }
+                      console.log("start11 FIN");
+                      getmenu3();
+    
   }
   catch{
     start1();
@@ -372,7 +436,12 @@ function start11(){
   }
 }
 function getmenu(){
-console.log("メニューデータ取得開始→");
+console.log("getmenu START");
+$("#bar").animate({
+  'width':'15vw'
+}, {
+  'duration': 500
+})
 url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 data = [{
   "name5":sn,
@@ -385,12 +454,19 @@ params = {
   "body":JSON.stringify(data)
 }
 fetch(url,params)
-console.log("メニューデータリクエスト→")
-setTimeout(getmenu2,2000)
+console.log("changedata POST");
+console.log("getmenu FIN");
+getmenu2();
 }
 mjson = '';
-retrynum1 = 0;//7月13日　データ取得に失敗した際、再度読み込みを行うプログラムをつくる。
+retrynum1 = 0;
 function getmenu2(){
+  $("#bar").animate({
+    'width':'20vw'
+  }, {
+    'duration': 5000
+  })
+console.log("getmenu2 START");
   retrynum1++;
 url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 fetch(url,{
@@ -404,8 +480,6 @@ fetch(url,{
 })
 .then(resJson =>{
 mjson = resJson;
-console.log("メニューデータ取得完了");
-console.log(mjson);
 try{
 getmenu3();
 }
@@ -414,8 +488,13 @@ catch(aa){
   errorm = aa.indexOf(':');
   errorm = aa.substring(0,errorm);
   if(errorm == "TypeError"){
-    console.log("retry to load→getmenu3()");
-    getmenu3();
+    console.log("retry to load→getmenu2()");
+    $("#bar").animate({
+      'width':'15vw'
+    }, {
+      'duration': 0
+    })
+    getmenu2();
   }
 }
 })
@@ -424,6 +503,11 @@ catch(aa){
   if(retrynum1 < 3){
   setTimeout(()=>{
     console.log("retry to load→メニューデータ");
+    $("#bar").animate({
+      'width':'15vw'
+    }, {
+      'duration': 0
+    })
     getmenu2();
   },1000)
 }else{
@@ -434,18 +518,29 @@ catch(aa){
 lastn = 0;
 pagecount = 1;
 function getmenu3(){
-json = mjson.changedata[0];
+json = jsondata.getmenudata[0];
 last = json.last;
+//menu_namesに商品名登録
+for(var a = 0; a <= last; a++){
+var name_data = json.name[a];
+menu_names.push(name_data);
+console.log(a+"/"+last+" 登録済み");
+}
 console.log(last);
 lastn = lastn +10;
 if(lastn > last){
   lastn = last;
 }
 for(var a=0; a<lastn; a++){
-  mname = mjson.changedata[0].name[a];
-  mfee = mjson.changedata[0].fee[a];
-  mexpress = mjson.changedata[0].express[a];
-  data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+a+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+a+"\""+"onclick="+"\""+"fevo"+a+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+  mname = json.name[a];
+  mfee = json.fee[a];
+  mexpress = json.express[a];
+  mmonth = json.month[a];
+  mday = json.day[a];
+  mhour = json.hour[a];
+  mminute = json.minute[a];
+  mamount = json.amount[a];
+  data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+a+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+a+"\""+"onclick="+"\""+"fevo"+a+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4><div class="+"\""+"time_data"+"\""+"><p>掲示終了時間<span>"+mmonth+"月"+mday+"日"+mhour+"："+mminute+"</span></p><p>残り<span>"+mamount+"</sapn>個</p></div>";
   allshow2.insertAdjacentHTML("beforeend",data);
 }
 number = parseInt(last/10)+1;
@@ -466,20 +561,30 @@ if(favoritenuml > 0){
   console.log("favocheck");
   favocheck();
 }
+$("#bar").animate({
+  'width':'25vw'
+}, {
+  'duration': 500
+})
+$("#bar").animate({
+  'opacity':0
+}, {
+  'duration': 500
+})
 }
 messagep = '';
 function plus(){
 //毎回cookieを呼び出してお気に入りが消えないように[商品番号をcookieに]
-n1=0;
-n2=0;
-n3=0;
-n4=0;
-n5=0;
-n6=0;
-n7=0;
-n8=0;
-n9=0;
-n10=0;
+n1+=10;
+n2+=10;
+n3+=10;
+n4+=10;
+n5+=10;
+n6+=10;
+n7+=10;
+n8+=10;
+n9+=10;
+n10+=10;
 if(messagep == "end"){
   alert("最後のページです");
   return;
@@ -492,7 +597,7 @@ pagecount+=1;
 var text = "wp"+pagecount;
 document.getElementById(text).style.backgroundColor = "#3A1F00";
 last2 = lastn;
-lastn3 = 0;
+lastn3 = -1;
 lastn = lastn+10;
 element = document.getElementById("allshow2");
 element.remove();
@@ -505,10 +610,14 @@ if(lastn >= last){
 }
 for(var a = last2; a<lastn; a++){
 lastn3++;
-mname = mjson.changedata[0].name[a];
-   mfee = mjson.changedata[0].fee[a];
-   mexpress = mjson.changedata[0].express[a];
-   data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+lastn3+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+lastn3+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+mname = json.name[a];
+mfee = json.fee[a];
+mexpress = json.express[a];
+mmonth = json.month[a];
+mday = json.day[a];
+mhour = json.hour[a];
+mminute = json.minute[a];
+data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+a+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+lastn3+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4><div class="+"\""+"time_data"+"\""+"><p>掲示終了時間<span>"+mmonth+"月"+mday+"日"+mhour+"："+mminute+"</span></p></div>";
    allshow2.insertAdjacentHTML("beforeend",data);
  }
  for(var a =1; a<=favoritenuml; a++){
@@ -540,16 +649,16 @@ mname = mjson.changedata[0].name[a];
 }
 function mina(){
 //毎回cookieを呼び出してお気に入りが消えないように[商品番号をcookieに]
-n1=0;
-n2=0;
-n3=0;
-n4=0;
-n5=0;
-n6=0;
-n7=0;
-n8=0;
-n9=0;
-n10=0;
+n1-=10;
+n2-=10;
+n3-=10;
+n4-=10;
+n5-=10;
+n6-=10;
+n7-=10;
+n8-=10;
+n9-=10;
+n10-=10;
 if(pagecount < 1){
   pagecount =1;
 }
@@ -569,7 +678,7 @@ document.getElementById(text).style.backgroundColor = "#C6AC8F";
 pagecount-=1;
 var text = "wp"+pagecount;
 document.getElementById(text).style.backgroundColor = "#3A1F00";
-lastn3 = 0;
+lastn3 = -1;
 element = document.getElementById("allshow2");
 element.remove();
 data = "<div class="+"\""+"allshow2"+"\""+" id="+"\""+"allshow2"+"\""+"></div>"
@@ -585,10 +694,14 @@ if(last2 <= 0){
 }
 for(var a = last2; a<lastn; a++){
 lastn3++;
-mname = mjson.changedata[0].name[a];
-  mfee = mjson.changedata[0].fee[a];
-  mexpress = mjson.changedata[0].express[a];
-  data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+lastn3+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+lastn3+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+lastn3+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4></div>";
+mname = json.name[a];
+mfee = json.fee[a];
+mexpress = json.express[a];
+mmonth = json.month[a];
+mday = json.day[a];
+mhour = json.hour[a];
+mminute = json.minute[a];
+data = "<div class="+"\""+"menu1"+"\""+"><img src="+"\""+"a.jpeg"+"\""+" class="+"\""+"menupic"+"\""+"><h2 class="+"\""+"time1  hh2"+"\""+"id="+"\""+"menuh2"+"\""+">"+mname+"</h2><img src="+"\""+"star2.PNG"+"\""+" class="+"\""+"star"+"\""+"id="+"\""+"star"+a+"\""+"><p>"+mexpress+"</p><div class="+"\""+"imgs"+"\""+"><img src="+"\""+"レビュー.PNG"+"\""+" class="+"\""+"review"+"\""+" onclick="+"\""+"review"+a+"()"+"\""+"><img src="+"\""+"お気に入り.PNG"+"\""+" class="+"\""+"review2"+"\""+" id="+"\""+"favorite"+lastn3+"\""+"onclick="+"\""+"fevo"+lastn3+"()"+"\""+"></div><h4>"+mfee+"<span>"+"円"+"</span></h4><div class="+"\""+"time_data"+"\""+"><p>掲示終了時間<span>"+mmonth+"月"+mday+"日"+mhour+"："+mminute+"</span></p></div>";
   allshow2.insertAdjacentHTML("beforeend",data);
 }
 for(var a =0; a<favoritenuml; a++){
@@ -1310,8 +1423,8 @@ nn4++;
   document.getElementById("s5").style.color = "gray"
 }
 }
-async function rsend(){
- json =  [{"total":2.6,"rn":[2,0,2,0,1],"review1":["a","hello","hello","hello","hello","hello","hello"],"review2":["b","Hello World","Hello World","Hello World","Hello World","Hello World","Hello World"]}]
+function rsend(){
+ //json =  [{"total":2.6,"rn":[2,0,2,0,1],"review1":["a","hello","hello","hello","hello","hello","hello"],"review2":["b","Hello World","Hello World","Hello World","Hello World","Hello World","Hello World"]}]
 text1 = document.getElementById("text1").value;
 text2 = document.getElementById("text2").value;
 url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
@@ -1330,10 +1443,9 @@ params = {
 "Content-Type":"application/json",
 "body":JSON.stringify(data)
 }
-const send1 = await function(){
-  console.log("start to send review")
+
   fetch(url,params);
-}
+
 console.log("レビュー送信完了")
 console.log("内容："+text1+"："+text2+"/"+rn)
 document.getElementById("text1").value = "";
@@ -1437,831 +1549,638 @@ final='';
 
 
  
-n1 = 0;
+n1 = 1;
+nc1=0;
 function fevo0(){
-if(n1 == 0){
+  nc1++;
+  if(nc1 == 1){
 document.getElementById("favorite0").style.backgroundColor = "pink";
-n1++;
-datanum  = pagecount*10-10+0;
-favoritenuml+=1;
-data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-}else if(n1 == 1){
-document.getElementById("favorite0").style.backgroundColor = "";
-n1 = 0;
-cd = document.cookie;
-  datanum  = pagecount*10-10+0;
-datanum2 = datanum;
-for(var a=1; a<=favoritenuml; a++){
-d1 = "favoriten"+a+"=";
-d1 = cd.indexOf(d1)+d1.length;
-console.log("d1:"+d1);
-d2 = cd.indexOf(">>*",d1);
-data = cd.substring(d1,d2);
-  console.log("DATA:"+data);
-d3 = data.indexOf("<<*")+3; //3が間違ってるかも
-console.log("d3:"+d3);
-d4 = d3+data.length-3;
-console.log("d4:"+d4);
-data2 = data.substring(d3,d4);
-console.log("data2："+data2);
-if(data2 == sn){
-data3 = data.substring(0,d3-3);
-console.log("no.2:"+data3);
-if(data3 == datanum2){
-console.log("find");
-data4 = a;
-}
-}
-}
-//削除機能重大欠陥あり　対処必須
-//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
-//次にforを使って番号1と一致するときの番号を割り出す。
-//最後に一致した番号を用いてCookieからの削除を行う
-//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
-if(typeof data4== 'undefined'){
-  console.log("I can't find data4");
-  return;
-}
-data = "favoriten"+data4+"=; max-age=0";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
-//上記の処理をforを用いて実行 ここも完了.   1/30
-if(favoritenuml == 1){
-  console.log("修正完了...");
-  favoritenuml = 0;
-  document.cookie = "favoritenuml=0>>!";
-  return;
-}
-for(var a=data4+1; a<=favoritenuml; a++){
-data = "favoriten"+a+"=";
-data2 = ">>*";
-data1 = cd.indexOf(data)+data.length;
-data2 = cd.indexOf(data2,data1)+data2.length;
-data3 = cd.substring(data1,data2); 
-console.log("修正前データ:"+data3);
-ddata = "favoriten"+a+"=; max-age=0";
-document.cookie = ddata;
-console.log("修正前データ削除完了");
-a = parseInt(a);
-a2 = a-1;
-pdata = "favoriten"+a2+"="+data3;
-console.log("pdata:"+pdata);
-document.cookie = pdata;
-console.log("修正"+a+"完了→"+a2);
-}
-favoritenuml-=1;
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-console.log("修正完了");
-}
-}
-n2 = 0;
-function fevo1(){
-if(n2 == 0){
-document.getElementById("favorite1").style.backgroundColor = "pink";
-n2++;
-datanum  = pagecount*10-10+1;
-favoritenuml+=1;
-data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-}else if(n2 == 1){
-document.getElementById("favorite1").style.backgroundColor = "";
-n2 = 0;
-cd = document.cookie;
-  datanum  = pagecount*10-10+1;
-datanum2 = datanum;
-for(var a=1; a<=favoritenuml; a++){
-d1 = "favoriten"+a+"=";
-d1 = cd.indexOf(d1)+d1.length;
-console.log("d1:"+d1);
-d2 = cd.indexOf(">>*",d1);
-data = cd.substring(d1,d2);
-  console.log("DATA:"+data);
-d3 = data.indexOf("<<*")+3; //3が間違ってるかも
-console.log("d3:"+d3);
-d4 = d3+data.length-3;
-console.log("d4:"+d4);
-data2 = data.substring(d3,d4);
-console.log("data2："+data2);
-if(data2 == sn){
-data3 = data.substring(0,d3-3);
-console.log("no.2:"+data3);
-if(data3 == datanum2){
-console.log("find");
-data4 = a;
-}
-}
-}
-//削除機能重大欠陥あり　対処必須
-//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
-//次にforを使って番号1と一致するときの番号を割り出す。
-//最後に一致した番号を用いてCookieからの削除を行う
-//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
-if(typeof data4== 'undefined'){
-  console.log("I can't find data4");
-  return;
-}
-data = "favoriten"+data4+"=; max-age=0";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
-//上記の処理をforを用いて実行 ここも完了.   1/30
-if(favoritenuml == 1){
-  console.log("修正完了...");
-  favoritenuml = 0;
-  document.cookie = "favoritenuml=0>>!";
-  return;
-}
-for(var a=data4+1; a<=favoritenuml; a++){
-data = "favoriten"+a+"=";
-data2 = ">>*";
-data1 = cd.indexOf(data)+data.length;
-data2 = cd.indexOf(data2,data1)+data2.length;
-data3 = cd.substring(data1,data2); 
-console.log("修正前データ:"+data3);
-ddata = "favoriten"+a+"=; max-age=0";
-document.cookie = ddata;
-console.log("修正前データ削除完了");
-a = parseInt(a);
-a2 = a-1;
-pdata = "favoriten"+a2+"="+data3;
-console.log("pdata:"+pdata);
-document.cookie = pdata;
-console.log("修正"+a+"完了→"+a2);
-}
-favoritenuml-=1;
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-console.log("修正完了");
-}
-}
-n3= 0;
-function fevo2(){
-if(n3 == 0){
-  document.getElementById("favorite2").style.backgroundColor = "pink";
-  n3++;
-  datanum  = pagecount*10-10+2;
-favoritenuml+=1;
-data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-}else if(n3 == 1){
-  document.getElementById("favorite2").style.backgroundColor = "";
-n3 = 0;
-cd = document.cookie;
-  datanum  = pagecount*10-10+2;
-datanum2 = datanum;
-for(var a=1; a<=favoritenuml; a++){
-d1 = "favoriten"+a+"=";
-d1 = cd.indexOf(d1)+d1.length;
-console.log("d1:"+d1);
-d2 = cd.indexOf(">>*",d1);
-data = cd.substring(d1,d2);
-  console.log("DATA:"+data);
-d3 = data.indexOf("<<*")+3; //3が間違ってるかも
-console.log("d3:"+d3);
-d4 = d3+data.length-3;
-console.log("d4:"+d4);
-data2 = data.substring(d3,d4);
-console.log("data2："+data2);
-if(data2 == sn){
-data3 = data.substring(0,d3-3);
-console.log("no.2:"+data3);
-if(data3 == datanum2){
-console.log("find");
-data4 = a;
-}
-}
-}
-//削除機能重大欠陥あり　対処必須
-//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
-//次にforを使って番号1と一致するときの番号を割り出す。
-//最後に一致した番号を用いてCookieからの削除を行う
-//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
-if(typeof data4== 'undefined'){
-  console.log("I can't find data4");
-  return;
-}
-data = "favoriten"+data4+"=; max-age=0";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
-//上記の処理をforを用いて実行 ここも完了.   1/30
-if(favoritenuml == 1){
-  console.log("修正完了...");
-  favoritenuml = 0;
-  document.cookie = "favoritenuml=0>>!";
-  return;
-}
-for(var a=data4+1; a<=favoritenuml; a++){
-data = "favoriten"+a+"=";
-data2 = ">>*";
-data1 = cd.indexOf(data)+data.length;
-data2 = cd.indexOf(data2,data1)+data2.length;
-data3 = cd.substring(data1,data2); 
-console.log("修正前データ:"+data3);
-ddata = "favoriten"+a+"=; max-age=0";
-document.cookie = ddata;
-console.log("修正前データ削除完了");
-a = parseInt(a);
-a2 = a-1;
-pdata = "favoriten"+a2+"="+data3;
-console.log("pdata:"+pdata);
-document.cookie = pdata;
-console.log("修正"+a+"完了→"+a2);
-}
-favoritenuml-=1;
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-console.log("修正完了");
-}
-}
-n4 = 0;
-function fevo3(){
-if(n4 == 0){
-  document.getElementById("favorite3").style.backgroundColor = "pink";
-  n4++;
-  datanum  = pagecount*10-10+3;
-favoritenuml+=1;
-data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-}else if(n4 == 1){
-  document.getElementById("favorite3").style.backgroundColor = "";
-n4 = 0;
-cd = document.cookie;
-  datanum  = pagecount*10-10+3;
-datanum2 = datanum;
-for(var a=1; a<=favoritenuml; a++){
-d1 = "favoriten"+a+"=";
-d1 = cd.indexOf(d1)+d1.length;
-console.log("d1:"+d1);
-d2 = cd.indexOf(">>*",d1);
-data = cd.substring(d1,d2);
-  console.log("DATA:"+data);
-d3 = data.indexOf("<<*")+3; //3が間違ってるかも
-console.log("d3:"+d3);
-d4 = d3+data.length-3;
-console.log("d4:"+d4);
-data2 = data.substring(d3,d4);
-console.log("data2："+data2);
-if(data2 == sn){
-data3 = data.substring(0,d3-3);
-console.log("no.2:"+data3);
-if(data3 == datanum2){
-console.log("find");
-data4 = a;
-}
-}
-}
-//削除機能重大欠陥あり　対処必須
-//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
-//次にforを使って番号1と一致するときの番号を割り出す。
-//最後に一致した番号を用いてCookieからの削除を行う
-//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
-if(typeof data4== 'undefined'){
-  console.log("I can't find data4");
-  return;
-}
-data = "favoriten"+data4+"=; max-age=0";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
-//上記の処理をforを用いて実行 ここも完了.   1/30
-if(favoritenuml == 1){
-  console.log("修正完了...");
-  favoritenuml = 0;
-  document.cookie = "favoritenuml=0>>!";
-  return;
-}
-for(var a=data4+1; a<=favoritenuml; a++){
-data = "favoriten"+a+"=";
-data2 = ">>*";
-data1 = cd.indexOf(data)+data.length;
-data2 = cd.indexOf(data2,data1)+data2.length;
-data3 = cd.substring(data1,data2); 
-console.log("修正前データ:"+data3);
-ddata = "favoriten"+a+"=; max-age=0";
-document.cookie = ddata;
-console.log("修正前データ削除完了");
-a = parseInt(a);
-a2 = a-1;
-pdata = "favoriten"+a2+"="+data3;
-console.log("pdata:"+pdata);
-document.cookie = pdata;
-console.log("修正"+a+"完了→"+a2);
-}
-favoritenuml-=1;
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-console.log("修正完了");
-}
-}
-n5 = 0;
-function fevo4(){
-if(n5 == 0){
-document.getElementById("favorite4").style.backgroundColor = "pink";
-n5++;
-datanum  = pagecount*10-10+4;
-favoritenuml+=1;
-data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-}else if(n5 == 1){
-document.getElementById("favorite4").style.backgroundColor = "";
-n5 = 0;
-cd = document.cookie;
-  datanum  = pagecount*10-10+4;
-datanum2 = datanum;
-for(var a=1; a<=favoritenuml; a++){
-d1 = "favoriten"+a+"=";
-d1 = cd.indexOf(d1)+d1.length;
-console.log("d1:"+d1);
-d2 = cd.indexOf(">>*",d1);
-data = cd.substring(d1,d2);
-  console.log("DATA:"+data);
-d3 = data.indexOf("<<*")+3; //3が間違ってるかも
-console.log("d3:"+d3);
-d4 = d3+data.length-3;
-console.log("d4:"+d4);
-data2 = data.substring(d3,d4);
-console.log("data2："+data2);
-if(data2 == sn){
-data3 = data.substring(0,d3-3);
-console.log("no.2:"+data3);
-if(data3 == datanum2){
-console.log("find");
-data4 = a;
-}
-}
-}
-//削除機能重大欠陥あり　対処必須
-//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
-//次にforを使って番号1と一致するときの番号を割り出す。
-//最後に一致した番号を用いてCookieからの削除を行う
-//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
-if(typeof data4== 'undefined'){
-  console.log("I can't find data4");
-  return;
-}
-data = "favoriten"+data4+"=; max-age=0";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
-//上記の処理をforを用いて実行 ここも完了.   1/30
-if(favoritenuml == 1){
-  console.log("修正完了...");
-  favoritenuml = 0;
-  document.cookie = "favoritenuml=0>>!";
-  return;
-}
-for(var a=data4+1; a<=favoritenuml; a++){
-data = "favoriten"+a+"=";
-data2 = ">>*";
-data1 = cd.indexOf(data)+data.length;
-data2 = cd.indexOf(data2,data1)+data2.length;
-data3 = cd.substring(data1,data2); 
-console.log("修正前データ:"+data3);
-ddata = "favoriten"+a+"=; max-age=0";
-document.cookie = ddata;
-console.log("修正前データ削除完了");
-a = parseInt(a);
-a2 = a-1;
-pdata = "favoriten"+a2+"="+data3;
-console.log("pdata:"+pdata);
-document.cookie = pdata;
-console.log("修正"+a+"完了→"+a2);
-}
-favoritenuml-=1;
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-console.log("修正完了");
-}
-}
-n6 = 0;
-function fevo5(){
-if(n6 == 0){
-document.getElementById("favorite5").style.backgroundColor = "pink";
-n6++;
-datanum  = pagecount*10-10+5;
-favoritenuml+=1;
-data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-}else if(n6 == 1){
-document.getElementById("favorite5").style.backgroundColor = "";
-n6 = 0;
-cd = document.cookie;
-  datanum  = pagecount*10-10+5;
-datanum2 = datanum;
-for(var a=1; a<=favoritenuml; a++){
-d1 = "favoriten"+a+"=";
-d1 = cd.indexOf(d1)+d1.length;
-console.log("d1:"+d1);
-d2 = cd.indexOf(">>*",d1);
-data = cd.substring(d1,d2);
-  console.log("DATA:"+data);
-d3 = data.indexOf("<<*")+3; //3が間違ってるかも
-console.log("d3:"+d3);
-d4 = d3+data.length-3;
-console.log("d4:"+d4);
-data2 = data.substring(d3,d4);
-console.log("data2："+data2);
-if(data2 == sn){
-data3 = data.substring(0,d3-3);
-console.log("no.2:"+data3);
-if(data3 == datanum2){
-console.log("find");
-data4 = a;
-}
-}
-}
-//削除機能重大欠陥あり　対処必須
-//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
-//次にforを使って番号1と一致するときの番号を割り出す。
-//最後に一致した番号を用いてCookieからの削除を行う
-//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
-if(typeof data4== 'undefined'){
-  console.log("I can't find data4");
-  return;
-}
-data = "favoriten"+data4+"=; max-age=0";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
-//上記の処理をforを用いて実行 ここも完了.   1/30
-if(favoritenuml == 1){
-  console.log("修正完了...");
-  favoritenuml = 0;
-  document.cookie = "favoritenuml=0>>!";
-  return;
-}
-for(var a=data4+1; a<=favoritenuml; a++){
-data = "favoriten"+a+"=";
-data2 = ">>*";
-data1 = cd.indexOf(data)+data.length;
-data2 = cd.indexOf(data2,data1)+data2.length;
-data3 = cd.substring(data1,data2); 
-console.log("修正前データ:"+data3);
-ddata = "favoriten"+a+"=; max-age=0";
-document.cookie = ddata;
-console.log("修正前データ削除完了");
-a = parseInt(a);
-a2 = a-1;
-pdata = "favoriten"+a2+"="+data3;
-console.log("pdata:"+pdata);
-document.cookie = pdata;
-console.log("修正"+a+"完了→"+a2);
-}
-favoritenuml-=1;
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-console.log("修正完了");
-}
-}
-n7 = 0;
-function fevo6(){
-if(n7 == 0){
-  document.getElementById("favorite6").style.backgroundColor = "pink";
-  n7++;
-  datanum  = pagecount*10-10+6;
-favoritenuml+=1;
-data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-}else if(n7 == 1){
-  document.getElementById("favorite6").style.backgroundColor = "";
-n7 = 0;
-cd = document.cookie;
-  datanum  = pagecount*10-10+6;
-datanum2 = datanum;
-for(var a=1; a<=favoritenuml; a++){
-d1 = "favoriten"+a+"=";
-d1 = cd.indexOf(d1)+d1.length;
-console.log("d1:"+d1);
-d2 = cd.indexOf(">>*",d1);
-data = cd.substring(d1,d2);
-  console.log("DATA:"+data);
-d3 = data.indexOf("<<*")+3; //3が間違ってるかも
-console.log("d3:"+d3);
-d4 = d3+data.length-3;
-console.log("d4:"+d4);
-data2 = data.substring(d3,d4);
-console.log("data2："+data2);
-if(data2 == sn){
-data3 = data.substring(0,d3-3);
-console.log("no.2:"+data3);
-if(data3 == datanum2){
-console.log("find");
-data4 = a;
-}
-}
-}
-//削除機能重大欠陥あり　対処必須
-//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
-//次にforを使って番号1と一致するときの番号を割り出す。
-//最後に一致した番号を用いてCookieからの削除を行う
-//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
-if(typeof data4== 'undefined'){
-  console.log("I can't find data4");
-  return;
-}
-data = "favoriten"+data4+"=; max-age=0";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
-//上記の処理をforを用いて実行 ここも完了.   1/30
-if(favoritenuml == 1){
-  console.log("修正完了...");
-  favoritenuml = 0;
-  document.cookie = "favoritenuml=0>>!";
-  return;
-}
-for(var a=data4+1; a<=favoritenuml; a++){
-data = "favoriten"+a+"=";
-data2 = ">>*";
-data1 = cd.indexOf(data)+data.length;
-data2 = cd.indexOf(data2,data1)+data2.length;
-data3 = cd.substring(data1,data2); 
-console.log("修正前データ:"+data3);
-ddata = "favoriten"+a+"=; max-age=0";
-document.cookie = ddata;
-console.log("修正前データ削除完了");
-a = parseInt(a);
-a2 = a-1;
-pdata = "favoriten"+a2+"="+data3;
-console.log("pdata:"+pdata);
-document.cookie = pdata;
-console.log("修正"+a+"完了→"+a2);
-}
-favoritenuml-=1;
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-console.log("修正完了");
-}
-}
-n8 = 0;
-function fevo7(){
-if(n8 == 0){
-  document.getElementById("favorite7").style.backgroundColor = "pink";
-  n8++;
-  datanum  = pagecount*10-10+7;
-favoritenuml+=1;
-data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-}else if(n8 == 1){
-  document.getElementById("favorite7").style.backgroundColor = "";
-n8 = 0;
-cd = document.cookie;
-  datanum  = pagecount*10-10+7;
-datanum2 = datanum;
-for(var a=1; a<=favoritenuml; a++){
-d1 = "favoriten"+a+"=";
-d1 = cd.indexOf(d1)+d1.length;
-console.log("d1:"+d1);
-d2 = cd.indexOf(">>*",d1);
-data = cd.substring(d1,d2);
-  console.log("DATA:"+data);
-d3 = data.indexOf("<<*")+3; //3が間違ってるかも
-console.log("d3:"+d3);
-d4 = d3+data.length-3;
-console.log("d4:"+d4);
-data2 = data.substring(d3,d4);
-console.log("data2："+data2);
-if(data2 == sn){
-data3 = data.substring(0,d3-3);
-console.log("no.2:"+data3);
-if(data3 == datanum2){
-console.log("find");
-data4 = a;
-}
-}
-}
-//削除機能重大欠陥あり　対処必須
-//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
-//次にforを使って番号1と一致するときの番号を割り出す。
-//最後に一致した番号を用いてCookieからの削除を行う
-//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
-if(typeof data4== 'undefined'){
-  console.log("I can't find data4");
-  return;
-}
-data = "favoriten"+data4+"=; max-age=0";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
-//上記の処理をforを用いて実行 ここも完了.   1/30
-if(favoritenuml == 1){
-  console.log("修正完了...");
-  favoritenuml = 0;
-  document.cookie = "favoritenuml=0>>!";
-  return;
-}
-for(var a=data4+1; a<=favoritenuml; a++){
-data = "favoriten"+a+"=";
-data2 = ">>*";
-data1 = cd.indexOf(data)+data.length;
-data2 = cd.indexOf(data2,data1)+data2.length;
-data3 = cd.substring(data1,data2); 
-console.log("修正前データ:"+data3);
-ddata = "favoriten"+a+"=; max-age=0";
-document.cookie = ddata;
-console.log("修正前データ削除完了");
-a = parseInt(a);
-a2 = a-1;
-pdata = "favoriten"+a2+"="+data3;
-console.log("pdata:"+pdata);
-document.cookie = pdata;
-console.log("修正"+a+"完了→"+a2);
-}
-favoritenuml-=1;
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-console.log("修正完了");
-}
-}
-n9 = 0;
-function fevo8(){
-if(n9 == 0){
-document.getElementById("favorite8").style.backgroundColor = "pink";
-n9++;
-datanum  = pagecount*10-10+8;
-favoritenuml+=1;
-data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-}else if(n9 == 1){
-document.getElementById("favorite8").style.backgroundColor = "";
-n9 = 0;
-cd = document.cookie;
-  datanum  = pagecount*10-10+8;
-datanum2 = datanum;
-for(var a=1; a<=favoritenuml; a++){
-d1 = "favoriten"+a+"=";
-d1 = cd.indexOf(d1)+d1.length;
-console.log("d1:"+d1);
-d2 = cd.indexOf(">>*",d1);
-data = cd.substring(d1,d2);
-  console.log("DATA:"+data);
-d3 = data.indexOf("<<*")+3; //3が間違ってるかも
-console.log("d3:"+d3);
-d4 = d3+data.length-3;
-console.log("d4:"+d4);
-data2 = data.substring(d3,d4);
-console.log("data2："+data2);
-if(data2 == sn){
-data3 = data.substring(0,d3-3);
-console.log("no.2:"+data3);
-if(data3 == datanum2){
-console.log("find");
-data4 = a;
-}
-}
-}
-//削除機能重大欠陥あり　対処必須
-//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
-//次にforを使って番号1と一致するときの番号を割り出す。
-//最後に一致した番号を用いてCookieからの削除を行う
-//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
-if(typeof data4== 'undefined'){
-  console.log("I can't find data4");
-  return;
-}
-data = "favoriten"+data4+"=; max-age=0";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
-//上記の処理をforを用いて実行 ここも完了.   1/30
-if(favoritenuml == 1){
-  console.log("修正完了...");
-  favoritenuml = 0;
-  document.cookie = "favoritenuml=0>>!";
-  return;
-}
-for(var a=data4+1; a<=favoritenuml; a++){
-data = "favoriten"+a+"=";
-data2 = ">>*";
-data1 = cd.indexOf(data)+data.length;
-data2 = cd.indexOf(data2,data1)+data2.length;
-data3 = cd.substring(data1,data2); 
-console.log("修正前データ:"+data3);
-ddata = "favoriten"+a+"=; max-age=0";
-document.cookie = ddata;
-console.log("修正前データ削除完了");
-a = parseInt(a);
-a2 = a-1;
-pdata = "favoriten"+a2+"="+data3;
-console.log("pdata:"+pdata);
-document.cookie = pdata;
-console.log("修正"+a+"完了→"+a2);
-}
-favoritenuml-=1;
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-console.log("修正完了");
-}
-}
-n10 = 0;
-function fevo9(){
-if(n10 == 0){
-document.getElementById("favorite9").style.backgroundColor = "pink";
-n10++;
-datanum  = pagecount*10-10+9;
-favoritenuml+=1;
-data = "favoriten"+favoritenuml+"="+datanum+"<<*"+sn+">>*";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-data = "favoritenuml="+favoritenuml+">>!";
-document.cookie = data;
-}else if(n10 == 1){
-document.getElementById("favorite9").style.backgroundColor = "";
-n10 = 0;
-cd = document.cookie;
-  datanum  = pagecount*10-10+9
-datanum2 = datanum;
-for(var a=1; a<=favoritenuml; a++){
-d1 = "favoriten"+a+"=";
-d1 = cd.indexOf(d1)+d1.length;
-console.log("d1:"+d1);
-d2 = cd.indexOf(">>*",d1);
-data = cd.substring(d1,d2);
-  console.log("DATA:"+data);
-d3 = data.indexOf("<<*")+3; //3が間違ってるかも
-console.log("d3:"+d3);
-d4 = d3+data.length-3;
-console.log("d4:"+d4);
-data2 = data.substring(d3,d4);
-console.log("data2："+data2);
-if(data2 == sn){
-data3 = data.substring(0,d3-3);
-console.log("no.2:"+data3);
-if(data3 == datanum2){
-console.log("find");
-data4 = a;
-}
-}
-}
-//削除機能重大欠陥あり　対処必須
-//番号から検索してfavoritenumlを割り出す 具体的にはdatanumと0-9の計算で番号1をだす
-//次にforを使って番号1と一致するときの番号を割り出す。
-//最後に一致した番号を用いてCookieからの削除を行う
-//空いてしまった番号をつめる処理を行う ここまで完了　　1/30
-if(typeof data4== 'undefined'){
-  console.log("I can't find data4");
-  return;
-}
-data = "favoriten"+data4+"=; max-age=0";
-document.cookie = data;
-document.cookie = "favoritenuml=; max-age=0";
-//空いてしまった番号の次の番号のデータを取得→番号を-1して再度Cookieに記載する
-//上記の処理をforを用いて実行 ここも完了.   1/30
-if(favoritenuml == 1){
-  console.log("修正完了...");
-  favoritenuml = 0;
-  document.cookie = "favoritenuml=0>>!";
-  return;
-}
-for(var a=data4+1; a<=favoritenuml; a++){
-data = "favoriten"+a+"=";
-data3 = cd.substring(data1,data2); 
-console.log("修正前データ:"+data3);
-ddata = "favoriten"+a+"=; max-age=0";
-document.cookie = ddata;
-console.log("修正前データ削除完了");
-a = parseInt(a);
-a2 = a-1;
-pdata = "favoriten"+a2+"="+data3;
-console.log("pdata:"+pdata);
-document.cookie = pdata;
-console.log("修正"+a+"完了→"+a2);
-}
-favoritenuml-=1;var name
-}
-}
+//cd = document.cookie;
 
+d1 = "login_status=";
+d2 = "!";
+d1 = parseInt(cd.indexOf(d1))+d1.length;
+console.log(d1);
+d2 = cd.indexOf(d2,d1);
+console.log(d2);
+
+d3 = "userid=";
+d4 = "-";
+d3 = parseInt(cd.indexOf(d3))+d3.length;
+console.log(d3);
+d4 = cd.indexOf(d4,d3);
+console.log(d4);
+if(d1 == 12){
+  login_status = "NO";
+  var result = confirm("お気に入り機能はログイン後に利用できます。ログイン・会員登録しますか？");
+  if(result){
+   location.href="ulogin.html";
+  }else{
+    document.getElementById("favorite0").style.backgroundColor = "white";
+   return;
+  }
+}else{
+login_status = cd.substring(d1,d2);
+userid = cd.substring(d3,d4);
+console.log("userid:"+userid);
+console.log("login_status:"+login_status);
+console.log("Now n_number:"+n1);
+var menu_name = menu_names[n1-1];
+console.log("menu_name:"+menu_name);
+data = [{
+  "userid":userid,
+  "shopname":sn2,
+  "menuname":menu_name,
+  "n_number":n1,
+  "message":"register"
+}];
+console.log("Menu_name:"+menu_name+",registerd");
+favoritesend(data);
+}
+  }else{
+    var menu_name = menu_names[n1-1];
+console.log("menu_name:"+menu_name);
+    document.getElementById("favorite0").style.backgroundColor = "white";
+    nc1 = 0;
+    data = [{
+      "userid":userid,
+      "shopname":sn2,
+      "menuname":menu_name,
+      "n_number":n1,
+      "message":"delete"
+    }];
+    console.log("Menu_name:"+menu_name+",deleted");
+    favoritesend(data);
+  }
+}
+n2 = 2;
+nc2 = 0;
+function fevo1(){
+  nc2++;
+  if(nc2 == 1){
+  document.getElementById("favorite1").style.backgroundColor = "pink";
+//cd = document.cookie;
+d1 = "login_status=";
+d2 = "!";
+d1 = parseInt(cd.indexOf(d1))+d1.length;
+console.log(d1);
+d2 = cd.indexOf(d2,d1);
+console.log(d2);
+d3 = "userid=";
+d4 = "-";
+d3 = parseInt(cd.indexOf(d3))+d3.length;
+console.log(d3);
+d4 = cd.indexOf(d4,d3);
+console.log(d4);
+if(d1 == 12){
+  login_status = "NO";
+  var result = confirm("お気に入り機能はログイン後に利用できます。ログイン・会員登録しますか？");
+  if(result){
+   location.href="ulogin.html";
+  }else{
+    document.getElementById("favorite1").style.backgroundColor = "white";
+   return;
+  }
+}else{
+login_status = cd.substring(d1,d2);
+userid = cd.substring(d3,d4);
+console.log("userid:"+userid);
+console.log("login_status:"+login_status);
+console.log("Now n_number:"+n2);
+var menu_name = menu_names[n2-1];
+console.log("menu_name:"+menu_name);
+data = [{
+  "userid":userid,
+  "shopname":sn2,
+  "menuname":menu_name,
+  "n_number":n2,
+  "message":"register"
+}];
+console.log("Menu_name:"+menu_name+",registerd");
+favoritesend(data);
+}
+  }else{
+    document.getElementById("favorite1").style.backgroundColor = "white";
+    var menu_name = menu_names[n2-1];
+console.log("menu_name:"+menu_name);
+    nc2 =0;
+    data = [{
+      "userid":userid,
+      "shopname":sn2,
+      "menuname":menu_name,
+      "n_number":n2,
+      "message":"delete"
+    }];
+    console.log("Menu_name:"+menu_name+",deleted");
+    favoritesend(data);
+  }
+}
+n3= 3;
+nc3 = 0;
+function fevo2(){
+  nc3++;
+  if(nc3 == 1){
+  document.getElementById("favorite2").style.backgroundColor = "pink";
+//cd = document.cookie;
+d1 = "login_status=";
+d2 = "!";
+d1 = parseInt(cd.indexOf(d1))+d1.length;
+console.log(d1);
+d2 = cd.indexOf(d2,d1);
+console.log(d2);
+d3 = "userid=";
+d4 = "-";
+d3 = parseInt(cd.indexOf(d3))+d3.length;
+console.log(d3);
+d4 = cd.indexOf(d4,d3);
+console.log(d4);
+if(d1 == 12){
+  login_status = "NO";
+  var result = confirm("お気に入り機能はログイン後に利用できます。ログイン・会員登録しますか？");
+  if(result){
+   location.href="ulogin.html";
+  }else{
+    document.getElementById("favorite2").style.backgroundColor = "white";
+   return;
+  }
+}else{
+login_status = cd.substring(d1,d2);
+userid = cd.substring(d3,d4);
+console.log("userid:"+userid);
+console.log("login_status:"+login_status);
+console.log("Now n_number:"+n3);
+var menu_name = menu_names[n3-1];
+console.log("menu_name:"+menu_name);
+data = [{
+  "userid":userid,
+  "shopname":sn2,
+  "menuname":menu_name,
+  "n_number":n3,
+  "message":"register"
+}];
+console.log("Menu_name:"+menu_name+",registerd");
+favoritesend(data);
+}
+  }else{
+    document.getElementById("favorite2").style.backgroundColor = "white";
+    var menu_name = menu_names[n3-1];
+console.log("menu_name:"+menu_name);
+    nc3 = 0;
+    data = [{
+      "userid":userid,
+      "shopname":sn2,
+      "menuname":menu_name,
+      "n_number":n3,
+      "message":"delete"
+    }];
+    console.log("Menu_name:"+menu_name+",deleted");
+    favoritesend(data);
+  }
+}
+n4 = 4;
+nc4 = 0;
+function fevo3(){
+  nc4++;
+  if(nc4 == 1){
+  document.getElementById("favorite3").style.backgroundColor = "pink";
+ //cd = document.cookie;
+d1 = "login_status=";
+d2 = "!";
+d1 = parseInt(cd.indexOf(d1))+d1.length;
+console.log(d1);
+d2 = cd.indexOf(d2,d1);
+console.log(d2);
+d3 = "userid=";
+d4 = "-";
+d3 = parseInt(cd.indexOf(d3))+d3.length;
+console.log(d3);
+d4 = cd.indexOf(d4,d3);
+console.log(d4);
+if(d1 == 12){
+  login_status = "NO";
+  var result = confirm("お気に入り機能はログイン後に利用できます。ログイン・会員登録しますか？");
+  if(result){
+   location.href="ulogin.html";
+  }else{
+    document.getElementById("favorite3").style.backgroundColor = "white";
+   return;
+  }
+}else{
+login_status = cd.substring(d1,d2);
+userid = cd.substring(d3,d4);
+console.log("userid:"+userid);
+console.log("login_status:"+login_status);
+console.log("Now n_number:"+n4);
+var menu_name = menu_names[n4-1];
+console.log("menu_name:"+menu_name);
+data = [{
+  "userid":userid,
+  "shopname":sn2,
+  "menuname":menu_name,
+  "n_number":n4,
+  "message":"register"
+}];
+console.log("Menu_name:"+menu_name+",registerd");
+favoritesend(data);
+}
+  }else{
+    document.getElementById("favorite3").style.backgroundColor = "white";
+    var menu_name = menu_names[n4-1];
+console.log("menu_name:"+menu_name);
+    nc4 = 0;
+    data = [{
+      "userid":userid,
+      "shopname":sn2,
+      "menuname":menu_name,
+      "n_number":n4,
+      "message":"delete"
+    }];
+    console.log("Menu_name:"+menu_name+",deleted");
+    favoritesend(data);
+  }
+}
+n5 = 5;
+nc5 = 0;
+function fevo4(){
+nc5++;
+if(nc5 == 1){
+document.getElementById("favorite4").style.backgroundColor = "pink";
+//cd = document.cookie;
+d1 = "login_status=";
+d2 = "!";
+d1 = parseInt(cd.indexOf(d1))+d1.length;
+console.log(d1);
+d2 = cd.indexOf(d2,d1);
+console.log(d2);
+d3 = "userid=";
+d4 = "-";
+d3 = parseInt(cd.indexOf(d3))+d3.length;
+console.log(d3);
+d4 = cd.indexOf(d4,d3);
+console.log(d4);
+if(d1 == 12){
+  login_status = "NO";
+  var result = confirm("お気に入り機能はログイン後に利用できます。ログイン・会員登録しますか？");
+  if(result){
+   location.href="ulogin.html";
+  }else{
+    document.getElementById("favorite4").style.backgroundColor = "white";
+   return;
+  }
+}else{
+login_status = cd.substring(d1,d2);
+userid = cd.substring(d3,d4);
+console.log("userid:"+userid);
+console.log("login_status:"+login_status);
+console.log("Now n_number:"+n5);
+var menu_name = menu_names[n5-1];
+console.log("menu_name:"+menu_name);
+data = [{
+  "userid":userid,
+  "shopname":sn2,
+  "menuname":menu_name,
+  "n_number":n5,
+  "message":"register"
+}];
+console.log("Menu_name:"+menu_name+",registerd");
+favoritesend(data);
+}
+}else{
+  document.getElementById("favorite4").style.backgroundColor = "white";
+  var menu_name = menu_names[n5-1];
+console.log("menu_name:"+menu_name);
+nc5 = 0;
+  data = [{
+    "userid":userid,
+    "shopname":sn2,
+    "menuname":menu_name,
+    "n_number":n5,
+    "message":"delete"
+  }];
+  console.log("Menu_name:"+menu_name+",deleted");
+  favoritesend(data);
+}
+}
+n6 = 6;
+nc6 = 0;
+function fevo5(){
+  nc6++;
+  if(nc6 == 1){
+document.getElementById("favorite5").style.backgroundColor = "pink";
+//cd = document.cookie;
+d1 = "login_status=";
+d2 = "!";
+d1 = parseInt(cd.indexOf(d1))+d1.length;
+console.log(d1);
+d2 = cd.indexOf(d2,d1);
+console.log(d2);
+d3 = "userid=";
+d4 = "-";
+d3 = parseInt(cd.indexOf(d3))+d3.length;
+console.log(d3);
+d4 = cd.indexOf(d4,d3);
+console.log(d4);
+if(d1 == 12){
+  login_status = "NO";
+  var result = confirm("お気に入り機能はログイン後に利用できます。ログイン・会員登録しますか？");
+  if(result){
+   location.href="ulogin.html";
+  }else{
+    document.getElementById("favorite5").style.backgroundColor = "white";
+   return;
+  }
+}else{
+login_status = cd.substring(d1,d2);
+userid = cd.substring(d3,d4);
+console.log("userid:"+userid);
+console.log("login_status:"+login_status);
+console.log("Now n_number:"+n6);
+var menu_name = menu_names[n6-1];
+console.log("menu_name:"+menu_name);
+data = [{
+  "userid":userid,
+  "shopname":sn2,
+  "menuname":menu_name,
+  "n_number":n6,
+  "message":"register"
+}];
+console.log("Menu_name:"+menu_name+",registerd");
+favoritesend(data);
+}
+  }else{
+    document.getElementById("favorite5").style.backgroundColor = "white";
+    var menu_name = menu_names[n6-1];
+console.log("menu_name:"+menu_name);
+    nc6 = 0;
+    data = [{
+      "userid":userid,
+      "shopname":sn2,
+      "menuname":menu_name,
+      "n_number":n6,
+      "message":"delete"
+    }];
+    console.log("Menu_name:"+menu_name+",deleted");
+    favoritesend(data);
+  }
+}
+n7 = 7;
+nc7= 0;
+function fevo6(){
+  nc7++;
+  if(nc7 == 1){
+  document.getElementById("favorite6").style.backgroundColor = "pink";
+ //cd = document.cookie;
+d1 = "login_status=";
+d2 = "!";
+d1 = parseInt(cd.indexOf(d1))+d1.length;
+console.log(d1);
+d2 = cd.indexOf(d2,d1);
+console.log(d2);
+d3 = "userid=";
+d4 = "-";
+d3 = parseInt(cd.indexOf(d3))+d3.length;
+console.log(d3);
+d4 = cd.indexOf(d4,d3);
+console.log(d4);
+if(d1 == 12){
+  login_status = "NO";
+  var result = confirm("お気に入り機能はログイン後に利用できます。ログイン・会員登録しますか？");
+  if(result){
+   location.href="ulogin.html";
+  }else{
+    document.getElementById("favorite6").style.backgroundColor = "white";
+   return;
+  }
+}else{
+login_status = cd.substring(d1,d2);
+userid = cd.substring(d3,d4);
+console.log("userid:"+userid);
+console.log("login_status:"+login_status);
+console.log("Now n_number:"+n7);
+var menu_name = menu_names[n7-1];
+console.log("menu_name:"+menu_name);
+data = [{
+  "userid":userid,
+  "shopname":sn2,
+  "menuname":menu_name,
+  "n_number":n7,
+  "message":"register"
+}];
+console.log("Menu_name:"+menu_name+",registerd");
+favoritesend(data);
+}
+  }else{
+    document.getElementById("favorite6").style.backgroundColor = "white";
+    var menu_name = menu_names[n7-1];
+console.log("menu_name:"+menu_name);
+    nc7 = 0;
+    data = [{
+      "userid":userid,
+      "shopname":sn2,
+      "menuname":menu_name,
+      "n_number":n7,
+      "message":"delete"
+    }];
+    console.log("Menu_name:"+menu_name+",deleted");
+    favoritesend(data);
+  }
+}
+n8 = 8;
+nc8 = 0;
+function fevo7(){
+  nc8++;
+ if(nc8 == 1){
+  document.getElementById("favorite7").style.backgroundColor = "pink";
+ //cd = document.cookie;
+d1 = "login_status=";
+d2 = "!";
+d1 = parseInt(cd.indexOf(d1))+d1.length;
+console.log(d1);
+d2 = cd.indexOf(d2,d1);
+console.log(d2);
+d3 = "userid=";
+d4 = "-";
+d3 = parseInt(cd.indexOf(d3))+d3.length;
+console.log(d3);
+d4 = cd.indexOf(d4,d3);
+console.log(d4);
+if(d1 == 12){
+  login_status = "NO";
+  var result = confirm("お気に入り機能はログイン後に利用できます。ログイン・会員登録しますか？");
+  if(result){
+   location.href="ulogin.html";
+  }else{
+    document.getElementById("favorite7").style.backgroundColor = "white";
+   return;
+  }
+}else{
+login_status = cd.substring(d1,d2);
+userid = cd.substring(d3,d4);
+console.log("userid:"+userid);
+console.log("login_status:"+login_status);
+console.log("Now n_number:"+n8);
+var menu_name = menu_names[n8-1];
+console.log("menu_name:"+menu_name);
+data = [{
+  "userid":userid,
+  "shopname":sn2,
+  "menuname":menu_name,
+  "n_number":n8,
+  "message":"register"
+}];
+console.log("Menu_name:"+menu_name+",registerd");
+favoritesend(data);
+}
+ }else{
+  document.getElementById("favorite7").style.backgroundColor = "white";
+  var menu_name = menu_names[n8-1];
+console.log("menu_name:"+menu_name);
+  nc8 = 0;
+  data = [{
+    "userid":userid,
+    "shopname":sn2,
+    "menuname":menu_name,
+    "n_number":n8,
+    "message":"delete"
+  }];
+  console.log("Menu_name:"+menu_name+",deleted");
+  favoritesend(data);
+ }
+}
+n9 = 9;
+nc9 = 0;
+function fevo8(){
+  nc9++;
+  if(nc9 == 1){
+document.getElementById("favorite8").style.backgroundColor = "pink";
+//cd = document.cookie;
+d1 = "login_status=";
+d2 = "!";
+d1 = parseInt(cd.indexOf(d1))+d1.length;
+console.log(d1);
+d2 = cd.indexOf(d2,d1);
+console.log(d2);
+d3 = "userid=";
+d4 = "-";
+d3 = parseInt(cd.indexOf(d3))+d3.length;
+console.log(d3);
+d4 = cd.indexOf(d4,d3);
+console.log(d4);
+if(d1 == 12){
+  login_status = "NO";
+  var result = confirm("お気に入り機能はログイン後に利用できます。ログイン・会員登録しますか？");
+  if(result){
+   location.href="ulogin.html";
+  }else{
+    document.getElementById("favorite8").style.backgroundColor = "white";
+   return;
+  }
+}else{
+login_status = cd.substring(d1,d2);
+userid = cd.substring(d3,d4);
+console.log("userid:"+userid);
+console.log("login_status:"+login_status);
+console.log("Now n_number:"+n9);
+var menu_name = menu_names[n9-1];
+console.log("menu_name:"+menu_name);
+data = [{
+  "userid":userid,
+  "shopname":sn2,
+  "menuname":menu_name,
+  "n_number":n9,
+  "message":"register"
+}];
+console.log("Menu_name:"+menu_name+",registerd");
+favoritesend(data);
+}
+  }else{
+    document.getElementById("favorite8").style.backgroundColor = "white";
+    var menu_name = menu_names[n9-1];
+console.log("menu_name:"+menu_name);
+    nc9 = 0;
+    data = [{
+      "userid":userid,
+      "shopname":sn2,
+      "menuname":menu_name,
+      "n_number":n9,
+      "message":"delete"
+    }];
+    console.log("Menu_name:"+menu_name+",deleted");
+    favoritesend(data);
+  }
+}
+n10 = 10;
+nc10 = 0;
+function fevo9(){
+  nc10++;
+  if(nc10 == 1){
+document.getElementById("favorite9").style.backgroundColor = "pink";
+//cd = document.cookie;
+d1 = "login_status=";
+d2 = "!";
+d1 = parseInt(cd.indexOf(d1))+d1.length;
+console.log(d1);
+d2 = cd.indexOf(d2,d1);
+console.log(d2);
+d3 = "userid=";
+d4 = "-";
+d3 = parseInt(cd.indexOf(d3))+d3.length;
+console.log(d3);
+d4 = cd.indexOf(d4,d3);
+console.log(d4);
+if(d1 == 12){
+  login_status = "NO";
+  var result = confirm("お気に入り機能はログイン後に利用できます。ログイン・会員登録しますか？");
+  if(result){
+   location.href="ulogin.html";
+  }else{
+    document.getElementById("favorite9").style.backgroundColor = "white";
+   return;
+  }
+}else{
+login_status = cd.substring(d1,d2);
+userid = cd.substring(d3,d4);
+console.log("userid:"+userid);
+console.log("login_status:"+login_status);
+console.log("Now n_number:"+n10);
+var menu_name = menu_names[n10-1];
+console.log("menu_name:"+menu_name);
+data = [{
+  "userid":userid,
+  "shopname":sn2,
+  "menuname":menu_name,
+  "n_number":n10,
+  "message":"register"
+}];
+console.log("Menu_name:"+menu_name+",registerd");
+favoritesend(data);
+}
+  }else{
+    document.getElementById("favorite9").style.backgroundColor = "white";
+    var menu_name = menu_names[n10-1];
+console.log("menu_name:"+menu_name);
+    nc10 = 0;
+    data = [{
+      "userid":userid,
+      "shopname":sn2,
+      "menuname":menu_name,
+      "n_number":n10,
+      "message":"delete"
+    }];
+    console.log("Menu_name:"+menu_name+",deleted");
+    favoritesend(data);
+  }
+}
+function favoritesend(data){
+  console.log(data);
+  params = {
+    "method":"post",
+    "mode":"no-cors",
+    "Content-Type":"application/json",
+    "body":JSON.stringify(data)
+  }
+  fetch(url,params);
+}
 
 function go(){
 location.href="index.html";
