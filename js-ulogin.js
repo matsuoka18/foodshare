@@ -145,6 +145,8 @@ function entry_2(){
             if(text == user2 && text2 == password2){
                   console.log("一致");
                   cdata = "userid="+text+"-";
+                  cdata2 = "login_status=yes!";
+                  document.cookie = cdata2;
                   document.cookie = cdata;
                   document.getElementById("but44").innerHTML = "ログイン";
                   alert("ログインしました");
