@@ -19,7 +19,7 @@ request3 = '';
 order = '';
 firstdata2ins = '';
 newsins = '';
-newsjson='';
+newsjson = '';
 endm = 'start';
 function start(datav) {
   document.getElementById("alll").style.opacity = "1";
@@ -31,93 +31,93 @@ function start(datav) {
  if(ip == '60.134.235.1'){*/
 
 
- /* document.getElementById("alll").style.opacity = "1";
-  document.getElementById("alll2").style.display = "none";
-
-  //if間違ってるかも
-  if (typeof datav == "string") {
-    console.log("GET");
-    url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
-    fetch(url, {
-      "method": "GET",
-      "mode": "cors"
-    })
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        }
-      })
-      .then(resJson => {
-        console.log("datav1:" + JSON.stringify(resJson));
-        datav11 = resJson;
-        var cdata = document.cookie;
-        if (cdata.length == 0) {
-          firstsearch();
-
-        } else {
-          var vdata = cdata.indexOf("datav=");
-          var vdata2 = cdata.indexOf(";", vdata);
-          var vnews = cdata.indexOf("newsv=");
-          var vnews2 = cdata.indexOf(";", vnews);
-          var datav = cdata.substring(vdata + 6, vdata2);
-          var vnews = cdata.substring(vnews + 6, vnews2);
-          datav1 = datav11[0].v1;
-          console.log("datav1:" + datav1);
-          newsv1 = datav11[0].v2;
-          console.log("newsv1:" + newsv1);
-          if (datav1 == datav) {
-            success1 = "ok";
-            success2 = "ok";
-            console.log("same -V data");
-          }
-          if (newsv1 == vnews) {
-            success3 = "ok";
-            console.log("sama -V news");
-          }
-          order = 0;
-          firstsearchall();
-        }
-      })
-      .catch(error => {
-        console.log("start():error");
-        console.log("retry to load start()");
-        console.log("Error Log:" + error)
-        setTimeout(() => {
-          start();
-        }, 1000)
-      })
-  } else {
-    pic();
-    console.log("POST");
-    console.log(typeof datav);
-    url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
-    var data = [{
-      "branch": "datav"
-    }];
-    var params = {
-      "method": "post",
-      "mode": "no-cors",
-      "Content-Type": "application/json",
-      "body": JSON.stringify(data)
-    }
-    fetch(url, params);
-    console.log("datav start");
-    datav = "ok";
-    setTimeout(start, 1000, datav);
-  }
-  */
+  /* document.getElementById("alll").style.opacity = "1";
+   document.getElementById("alll2").style.display = "none";
+ 
+   //if間違ってるかも
+   if (typeof datav == "string") {
+     console.log("GET");
+     url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+     fetch(url, {
+       "method": "GET",
+       "mode": "cors"
+     })
+       .then(response => {
+         if (response.ok) {
+           return response.json();
+         }
+       })
+       .then(resJson => {
+         console.log("datav1:" + JSON.stringify(resJson));
+         datav11 = resJson;
+         var cdata = document.cookie;
+         if (cdata.length == 0) {
+           firstsearch();
+ 
+         } else {
+           var vdata = cdata.indexOf("datav=");
+           var vdata2 = cdata.indexOf(";", vdata);
+           var vnews = cdata.indexOf("newsv=");
+           var vnews2 = cdata.indexOf(";", vnews);
+           var datav = cdata.substring(vdata + 6, vdata2);
+           var vnews = cdata.substring(vnews + 6, vnews2);
+           datav1 = datav11[0].v1;
+           console.log("datav1:" + datav1);
+           newsv1 = datav11[0].v2;
+           console.log("newsv1:" + newsv1);
+           if (datav1 == datav) {
+             success1 = "ok";
+             success2 = "ok";
+             console.log("same -V data");
+           }
+           if (newsv1 == vnews) {
+             success3 = "ok";
+             console.log("sama -V news");
+           }
+           order = 0;
+           firstsearchall();
+         }
+       })
+       .catch(error => {
+         console.log("start():error");
+         console.log("retry to load start()");
+         console.log("Error Log:" + error)
+         setTimeout(() => {
+           start();
+         }, 1000)
+       })
+   } else {
+     pic();
+     console.log("POST");
+     console.log(typeof datav);
+     url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+     var data = [{
+       "branch": "datav"
+     }];
+     var params = {
+       "method": "post",
+       "mode": "no-cors",
+       "Content-Type": "application/json",
+       "body": JSON.stringify(data)
+     }
+     fetch(url, params);
+     console.log("datav start");
+     datav = "ok";
+     setTimeout(start, 1000, datav);
+   }
+   */
   var cookie = document.cookie;
-  var c1= cookie.indexOf("userid=")+7;
-  if(c1 ==  6){
+  var c1 = cookie.indexOf("userid=") + 7;
+  if (c1 == 6) {
 
-  }else{
-  var c2 = cookie.indexOf("-",c1);
-  userid = cookie.substring(c1,c2);
-  console.log("userid:"+userid)
-  document.getElementById("lcheck").innerHTML = userid;
+  } else {
+    var c2 = cookie.indexOf("-", c1);
+    userid = cookie.substring(c1, c2);
+    console.log("userid:" + userid)
+    document.getElementById("lcheck").innerHTML = userid;
   }
   pic();
- firstsearch();
+  firstsearch();
 }
 function shop() {
   location.href = "entry.html";
@@ -147,6 +147,7 @@ function firstsearch() {
   firstsearch2();
 }
 rc = 0;//リロードのカウンター
+rc11 = 0;
 function firstsearch2() {
   console.log("firstsearch2 START");
   fetch('https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec', {
@@ -166,45 +167,58 @@ function firstsearch2() {
       firstdata1c = firstdata1;
       console.log("shopdata:" + firstdata1);
       fc = firstdata1.indexOf("shopdata");
-      console.log("fc:"+fc);
+      console.log("fc:" + fc);
       if (fc == -1) {
         console.log("fc=-1");
         fc3 = firstdata1b.indexOf("news1");
-        console.log("fc3:"+fc3);
-        if(fc3 >= 0){
+        console.log("fc3:" + fc3);
+        if (fc3 >= 0) {
           console.log("fc3");
           console.log("Replace→firstdata1 to news");
           newsins = 'skip';
           mewsjson = JSON.parse(firstdata1);
 
-        }else{
-           fc2 = firstdata1c.indexOf("menu1")
-           if(fc2 >= 0){
+        } else {
+          fc2 = firstdata1c.indexOf("menu1")
+          if (fc2 >= 0) {
             console.log("fc2");
             console.log("Replace→firstdata1 to firstdata2");
             firstdata2ins = 'skip';
             firstdata2 = firstdata1;
-          } 
+          }
         }
-        if(rc >2){
-          rc=0;
+        if(rc11 > 2){
+          var errorlog = [2,"店舗読み込みエラーが発生しました"];
+          error_noti(errorlog);
+        }
+        else if (rc > 2) {
+          rc11++;
+          rc = 0;
+          var errorlog = [1,"読み込みにさらに時間がかかる場合があります"];
+          error_noti(errorlog);
           console.log("RELOAD (limit)");
           firstsearch();
-        }else{
-        console.log("RELOAD (other data)");
-        firstsearch2();
+        } else {
+          var errorlog = [1,"読み込みに時間がかかる場合があります"];
+          error_noti(errorlog);
+          console.log("RELOAD (other data)");
+          firstsearch2();
         }
-      }else{
-      rc=0;
-      success1 = "ok";
-      console.log("firstsearch2 FIN");
-      if (request1 == "next") {
-        console.log("shopsearchへ優先処理")
-        shopsearch(firstdata1);
       } else {
-        firstmenu();
+        rc = 0;
+        success1 = "ok";
+        console.log("firstsearch2 FIN");
+        if (request1 == "next") {
+          console.log("shopsearchへ優先処理")
+          var errorlog = [3];
+          error_noti(errorlog);
+          shopsearch(firstdata1);
+        } else {
+          var errorlog = [3];
+          error_noti(errorlog);
+          firstmenu();
+        }
       }
-    }
     })
     .catch(error => {
       num = 1;
@@ -213,10 +227,12 @@ function firstsearch2() {
       //$('#ss').stop();
       //document.getElementById("ss").innerHTML = "search";
       //document.getElementById("s").style.backgroundColor = "#5A3A1A";
+      var errorlog = [1,"読み込みに時間がかかる場合があります"];
+      error_noti(errorlog);
       console.log("firstsearch2 ERROR");
       console.log(error)
       setTimeout(() => {
-        rc=0;
+        rc = 0;
         console.log("RELOAD (ERROR)");
         firstsearch();
       }, 1000)
@@ -225,14 +241,14 @@ function firstsearch2() {
 
 
 function firstmenu() {
-  if(firstdata2ins == 'skip'){
+  if (firstdata2ins == 'skip') {
     console.log("firstmenu SKIP")
     firstmenuc();
   }
   if (request2 == "nomal") {
     console.log("menu priority");
     $("#bar").animate({
-      'width':'15vw'
+      'width': '15vw'
     }, {
       'duration': 500
     })
@@ -256,12 +272,13 @@ function firstmenu() {
 }
 
 rc2 = 0; //リロードのやつ
+rc22 = 0 //読み込み中止用のカウンター
 function firstmenu2() {
   rc2++;
   if (request2 == "nomal") {
     console.log("menu priority");
     $("#bar").animate({
-      'width':'19vw'
+      'width': '19vw'
     }, {
       'duration': 5000
     })
@@ -280,150 +297,169 @@ function firstmenu2() {
       firstdata2 = resJson;
       firstdata2 = JSON.stringify(firstdata2);
       firstdata2n = firstdata2.indexOf('shop1');
-if(firstdata2n > 0){
-  rc2=0;
-console.log("menu:"+firstdata2);
-console.log("firstmenu2 FIN");
-success2 = "ok";
-if(request2 == "nomal"){
-  $("#bar").animate({
-    'width':'20vw'
-  }, {
-    'duration': 500
-  })
-  console.log("menu priority2");
-  menusearch2(firstdata2);
-}else{
-firstmenuc();
-}
+      if (firstdata2n > 0) {
+        rc2 = 0;
+        console.log("menu:" + firstdata2);
+        console.log("firstmenu2 FIN");
+        success2 = "ok";
+        if (request2 == "nomal") {
+          $("#bar").animate({
+            'width': '20vw'
+          }, {
+            'duration': 500
+          })
+          console.log("menu priority2");
+          var errorlog = [3];
+          error_noti(errorlog);
+          menusearch2(firstdata2);
+        } else {
+          var errorlog = [3];
+          error_noti(errorlog);
+          firstmenuc();
+        }
 
-}else{
-  if(rc2>2){
-    rc2 = 0;
-    console.log("RELOAD (limit)");
-    firstmenu();
-  }else{
-  console.log("RELOAD (other data)");
-  firstmenu2();
-  }
-}
+      } else {
+        if (rc22 > 2) {
+          rc22 = 0;
+          var errorlog = [2,"商品読み込みエラーが発生しました"];
+          error_noti(errorlog);
+          console.log("firstmenu2にて読み込み失敗")
+          return;
+        } else if (rc2 > 2) {
+          rc2 = 0;
+          rc22++;
+          console.log("RELOAD (limit)");
+          firstmenu();
+        } else {
+          //読み込みに時間がかかっているメッセジーの表示処理
+          console.log("RELOAD (other data)");
+          var errorlog = [1,"読み込みに時間がかかる場合があります"]
+          error_noti(errorlog);
+          firstmenu2();
+        }
+      }
     })
     .catch(error => {
       num = 1;
-
+      var errorlog = [2,"商品読み込みエラーが発生しました"];
+          error_noti(errorlog);
       console.log("firstmenu2 ERROR")
       console.log(error)
       setTimeout(() => {
-        rc2=0;
+        rc2 = 0;
         console.log("RELOAD (ERROR)");
         firstmenu();
       }, 1000)
     })
 }
-function firstmenuc(){
+function firstmenuc() {
+  document.getElementById("errorm").style.display = "none";
+  document.getElementById("errorm").style.opacity = "0";
+  document.getElementById("errorm2").style.display = "none";
+  document.getElementById("errorm2").style.opacity = "0";
   console.log("firstmenuc START");
   cookie = document.cookie;
-      search1 = cookie.indexOf("datafirst1=");
-      search2 = cookie.indexOf("datafirst2=");
-      search3 = cookie.indexOf("datav=");
-      if (search1 != -1 && search2 != -1) {
-        data1 = "firstdata1=; max-age=0";
-        data2 = "firstdata2=; max-age=0";
-        data3 = "datav=; max-age=0";
-        document.cookie = data1;
-        document.cookie = data2;
-        document.cookie = data3;
-        console.log("clear firstdatas");
-      }
-      datafirst1 = "firstdata1=" + firstdata1;
-      datafirst2 = "firstdata2=" + firstdata2;
-      datav = "datav=" + 0;
-      document.cookie = datafirst1;
-      document.cookie = datafirst2;
-      document.cookie = datav;
-      success2 = "ok";
-      success1 = "ok";
-      console.log("firstmenuc FIN");
-      //このあとgasでdatavを作成、取得することコードを記述する。データはdatavに入力すること予定 4月21日
-      //document.getElementById("s").style.backgroundColor = "#1E0000";
-      document.getElementById("search").style.borderColor = "#411C00";
-      document.getElementById("search").style.borderWeight = "2px";
-      //document.getElementById("search").placeholder = "finish";
-      console.log("wait for instructions");
-      //お知らせの処理開始
-      firstnews();
-      if (request2 == "next") {
-        console.log("menusearch2へ優先処理  in menu2")
-        menusearch2(resJson);
-      }
+  search1 = cookie.indexOf("datafirst1=");
+  search2 = cookie.indexOf("datafirst2=");
+  search3 = cookie.indexOf("datav=");
+  if (search1 != -1 && search2 != -1) {
+    data1 = "firstdata1=; max-age=0";
+    data2 = "firstdata2=; max-age=0";
+    data3 = "datav=; max-age=0";
+    document.cookie = data1;
+    document.cookie = data2;
+    document.cookie = data3;
+    console.log("clear firstdatas");
+  }
+  datafirst1 = "firstdata1=" + firstdata1;
+  datafirst2 = "firstdata2=" + firstdata2;
+  datav = "datav=" + 0;
+  document.cookie = datafirst1;
+  document.cookie = datafirst2;
+  document.cookie = datav;
+  success2 = "ok";
+  success1 = "ok";
+  console.log("firstmenuc FIN");
+  //このあとgasでdatavを作成、取得することコードを記述する。データはdatavに入力すること予定 4月21日
+  //document.getElementById("s").style.backgroundColor = "#1E0000";
+  document.getElementById("search").style.borderColor = "#411C00";
+  document.getElementById("search").style.borderWeight = "2px";
+  //document.getElementById("search").placeholder = "finish";
+  console.log("wait for instructions");
+  //お知らせの処理開始
+  firstnews();
+  if (request2 == "next") {
+    console.log("menusearch2へ優先処理  in menu2")
+    menusearch2(resJson);
+  }
 }
 
 //ロード時に全データ取得のコード　終
 shopname = '';
 errorcheck = '';
 function searching() {
-//9月24日　読み込みバー　
-if(endm == "start"){
-  endm = "running";
-  console.log("searching START");
-  errorcheck = 'none';
-  num = 100;
-  request3 = '';
-  ani();
-  document.getElementById("ss").innerHTML = "loading";
-  //document.getElementById("s").style.backgroundColor = "#C6AC8F"
-  shopname = document.getElementById("search").value;
-  if (success1 == "ok") {
-    $("#bar").animate({
-      'width':0,
-      'opacity':1
-    }, {
-      'duration': 0
-    })
-    $("#bar").animate({
-      'width':'5vw'
-    }, {
-      'duration': 1000
-    })
-    shopsearch(firstdata1);
-    return;
-  }
-  if (success1 == "o") {
-    $("#bar").animate({
-      'width':0,
-      'opacity':1
-    }, {
-      'duration': 0
-    })
-    $("#bar").animate({
-      'width':'5vw'
-    }, {
-      'duration': 5000
-    })
-    console.log("途中からのリクエスト1");
-    request1 = "next";
-    return; //違う可能性大
-  } else {
-    /*console.log("menu POST");
-    url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
-    var data = [{
-      "branch": "menu"
-    }]
-    var params = {
-      "method": "post",
-      "mode": "no-cors",
-      "Content-Type": "application/json",
-      "body": JSON.stringify(data)
+  //9月24日　読み込みバー　
+  if (endm == "start") {
+    endm = "running";
+    console.log("searching START");
+    errorcheck = 'none';
+    num = 100;
+    request3 = '';
+    ani();
+    document.getElementById("ss").innerHTML = "loading";
+    //document.getElementById("s").style.backgroundColor = "#C6AC8F"
+    shopname = document.getElementById("search").value;
+    if (success1 == "ok") {
+      $("#bar").animate({
+        'width': 0,
+        'opacity': 1
+      }, {
+        'duration': 0
+      })
+      $("#bar").animate({
+        'width': '5vw'
+      }, {
+        'duration': 1000
+      })
+      shopsearch(firstdata1);
+      return;
     }
-    fetch(url, params);*/
-    console.log("searching FIN");
-    //searching2();
+    if (success1 == "o") {
+      $("#bar").animate({
+        'width': 0,
+        'opacity': 1
+      }, {
+        'duration': 0
+      })
+      $("#bar").animate({
+        'width': '5vw'
+      }, {
+        'duration': 5000
+      })
+      console.log("途中からのリクエスト1");
+      request1 = "next";
+      return; //違う可能性大
+    } else {
+      /*console.log("menu POST");
+      url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+      var data = [{
+        "branch": "menu"
+      }]
+      var params = {
+        "method": "post",
+        "mode": "no-cors",
+        "Content-Type": "application/json",
+        "body": JSON.stringify(data)
+      }
+      fetch(url, params);*/
+      console.log("searching FIN");
+      //searching2();
+    }
+  } else {
+    console.log("連続クリック");
   }
-}else{
- console.log("連続クリック");
 }
-}
-rc4=0;
+rc4 = 0;
 function searching2() {
   rc4++;
   console.log("searching2 START");
@@ -458,7 +494,7 @@ num = '';
 jjson = '';
 function shopsearch(firstdata1) {
   $("#bar").animate({
-    'width':'10vw'
+    'width': '10vw'
   }, {
     'duration': 500
   })
@@ -481,14 +517,14 @@ function shopsearch(firstdata1) {
     shopname2 = jjson.shopdata[0][text];
     console.log("shopname2:" + shopname2);
     if (shopname == shopname2) {
-      
+
       $("#bar").animate({
-        'width':'25vw'
+        'width': '25vw'
       }, {
         'duration': 500
       })
       $("#bar").animate({
-        'opacity':0
+        'opacity': 0
       }, {
         'duration': 500
       })
@@ -524,7 +560,7 @@ function shopsearch(firstdata1) {
       return;//間違えて可能性大
     } else {
       $("#bar").animate({
-        'width':'12.5vw'
+        'width': '12.5vw'
       }, {
         'duration': 500
       })
@@ -619,7 +655,7 @@ function menu2() {
 
 function menusearch2(firstdata2) {
   $("#bar").animate({
-    'width':'22.5vw'
+    'width': '22.5vw'
   }, {
     'duration': 500
   })
@@ -639,7 +675,7 @@ function menusearch2(firstdata2) {
     nummemo = [];
     nummemo2 = [];
     nummemo3 = 0;
-    for (var a = 1; a <= last-6; a += 6) {
+    for (var a = 1; a <= last - 6; a += 6) {
       shopp = String("shop" + a);
       shoppi = "\"" + shopp + "\"" + ":";
       if (jsonnn.includes(shopp) === true) {
@@ -687,22 +723,22 @@ function menusearch2(firstdata2) {
       //document.getElementById("s").style.backgroundColor = "#5A3A1A";
       cc = "menumemo=" + nummemo + "-";
       document.cookie = "branch=menu|";
-      cookie_menuname = "cookie_menuname="+encodeURI(shopname)+"-";
+      cookie_menuname = "cookie_menuname=" + encodeURI(shopname) + "-";
       document.cookie = cookie_menuname;
       document.cookie = cc;
-      console.log("cc:"+cc);
+      console.log("cc:" + cc);
       document.getElementById("ss").innerHTML = "jumping";
       $("#bar").animate({
-        'width':'25vw'
+        'width': '25vw'
       }, {
         'duration': 500
       })
       $("#bar").animate({
-        'opacity':0
+        'opacity': 0
       }, {
         'duration': 500
       })
-      setTimeout(jump,1500)
+      setTimeout(jump, 1500)
     } else {
       endm = "start";
       ani();
@@ -719,7 +755,7 @@ function menusearch2(firstdata2) {
       end();
       }*/
       $("#bar").animate({
-        'opacity':0
+        'opacity': 0
       }, {
         'duration': 100
       })
@@ -764,119 +800,133 @@ newsjson = 0;
 
 function firstnews() {
   console.log("firstmews START");
-    if (success3 == "ok") {
-      cookie = document.cookie;
-      data1 = cookie.indexOf("news=");
-      data2 = cookie.indexOf(";", data1);
-      data = cookie.substring(data1 + 5, data2);
-      newsjson = data;
-      console.log("skip firstnews");
-      firstwrite();
-    }else if(newsins == 'skip'){
-      console.log("firstmews SKIP");
-      firstwrite();
-    }
-    url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
-    data = [{
-      "branch": "getnews"
-    }]
-    params = {
-      "method": "post",
-      "mode": "no-cors",
-      "Content-Type": "application/json",
-      "body": JSON.stringify(data)
-    }
-    fetch(url, params)
-    console.log("getnews POST");
-    console.log("firstnews FIN");
-    firstnews2();
+  if (success3 == "ok") {
+    cookie = document.cookie;
+    data1 = cookie.indexOf("news=");
+    data2 = cookie.indexOf(";", data1);
+    data = cookie.substring(data1 + 5, data2);
+    newsjson = data;
+    console.log("skip firstnews");
+    firstwrite();
+  } else if (newsins == 'skip') {
+    console.log("firstmews SKIP");
+    firstwrite();
+  }
+  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  data = [{
+    "branch": "getnews"
+  }]
+  params = {
+    "method": "post",
+    "mode": "no-cors",
+    "Content-Type": "application/json",
+    "body": JSON.stringify(data)
+  }
+  fetch(url, params)
+  console.log("getnews POST");
+  console.log("firstnews FIN");
+  firstnews2();
 }
 rc3 = 0;
+rc33 = 0;
 function firstnews2() {
   rc3++;
   console.log("firstmews2 START");
-    url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
-    fetch(url, {
-      "method": "GET",
-      "mode": "cors"
+  url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+  fetch(url, {
+    "method": "GET",
+    "mode": "cors"
+  })
+    .then(response => {
+      if (response.ok) {
+        return response.json()
+      }
     })
-      .then(response => {
-        if (response.ok) {
-          return response.json()
-        }
-      })
 
-      .then(resJson => {
-        newsjson = resJson;
-        newsjson2 = JSON.stringify(newsjson);
-        newsjson2 = newsjson2.indexOf("news1");
-        if(newsjson2 >0 ){
-          console.log("news:"+newsjson2);
-        }else{
-          if(rc3>2){
-            rc3=0;
-            console.log("RELOAD (limit)")  
-            firstnews();
-          }else{
+    .then(resJson => {
+      newsjson = resJson;
+      newsjson2 = JSON.stringify(newsjson);
+      newsjson2 = newsjson2.indexOf("news1");
+      if (newsjson2 > 0) {
+        console.log("news:" + newsjson2);
+        var errorlog = [3];
+        error_noti(errorlog);
+      } else {
+        if(rc33 > 2){
+          var errorlog = [2,"ニュース読み込みエラーが発生しました"];
+          error_noti(errorlog);
+        }
+        else if (rc3 > 2) {
+          rc33++;
+          rc3 = 0;
+          console.log("RELOAD (limit)")
+          var errorlog = [1,"読み込みにさらに時間がかかる場合があります"];
+          error_noti(errorlog);
+          firstnews();
+        } else {
+          var errorlog = [1,"読み込みに時間がかかる場合があります"];
+          error_noti(errorlog);
           console.log("RELOAD (other data)")
           firstnews2();
-          }
         }
-        
-        var data = document.cookie;
-        var ndata1 = data.indexOf("news=");
-        if (ndata1 != -1) {
-          ndata1 = "news=; max-age=0";
-          ndata2 = "newsv=; max-age=0";
-          console.log("clear ndata");
-        }
-        ndata1 = "news=" + newsjson;
-        ndata2 = newsjson[0].num;
-        ndata2 = "newsv=" + ndata2;
-        document.cookie = ndata1;
-        document.cookie = ndata2;
-        rc3=0;
-        console.log("firstnews2 FIN");
-        firstwrite();
-      })
-      .catch(error => {
-        console.log("firstnews2 ERROR");
-        console.log(error);
-        console.log("RELOAD (ERROR)")
-        rc3=0;
-        setTimeout(()=>{
-          firstnews();
-        },1000)
-      })
-  
+      }
+
+      var data = document.cookie;
+      var ndata1 = data.indexOf("news=");
+      if (ndata1 != -1) {
+        ndata1 = "news=; max-age=0";
+        ndata2 = "newsv=; max-age=0";
+        console.log("clear ndata");
+      }
+      ndata1 = "news=" + newsjson;
+      ndata2 = newsjson[0].num;
+      ndata2 = "newsv=" + ndata2;
+      document.cookie = ndata1;
+      document.cookie = ndata2;
+      rc3 = 0;
+      console.log("firstnews2 FIN");
+      firstwrite();
+    })
+    .catch(error => {
+      var errorlog = [1,"読み込みに時間がかかる場合があります"];
+      error_noti(errorlog);
+      console.log("firstnews2 ERROR");
+      console.log(error);
+      console.log("RELOAD (ERROR)")
+      rc3 = 0;
+      setTimeout(() => {
+        firstnews();
+      }, 1000)
+    })
+
 }
 wcount = 0;
 function firstwrite() {
   wcount++;
-if(wcount == 1){
-  console.log("firstwrite START");
-  /*newsjson2 = JSON.stringify(newsjson);
-  newsjson2 = newsjson2.indexOf("news1");
-  if(newsjson2 >0 ){
-
-  }else{
-    console.log("firstnews2() →reload firstnewsall()")
-    order = 3;
-    firstnewsall();
-  }*/
-  for (var a = 1; a <= 4; a++) {
-    console.log("a:" + a);
-    data1 = newsjson[0].news1[a];
-    data2 = newsjson[0].news2[a];
-    console.log("data1:" + data1);
-    console.log("data2:" + data2);
-    data = "<p onclick=" + "\"" + "newsd1p" + a + "()" + "\"" + "id=" + "\"" + "newsd1p" + a + "\"" + ">" + data1 + "<span id=" + "\"" + "newsd1p" + a + "s" + "\"" + ">" + data2 + "</span></p>";
-    setnews.insertAdjacentHTML("beforeend", data);
-    console.log("data:" + data);
+  if (wcount == 1) {
+    console.log("firstwrite START");
+    /*newsjson2 = JSON.stringify(newsjson);
+    newsjson2 = newsjson2.indexOf("news1");
+    if(newsjson2 >0 ){
+  
+    }else{
+      console.log("firstnews2() →reload firstnewsall()")
+      order = 3;
+      firstnewsall();
+    }*/
+    for (var a = 1; a <= 4; a++) {
+      console.log("a:" + a);
+      data1 = newsjson[0].news1[a];
+      data2 = newsjson[0].news2[a];
+      console.log("data1:" + data1);
+      console.log("data2:" + data2);
+      data = "<p onclick=" + "\"" + "newsd1p" + a + "()" + "\"" + "id=" + "\"" + "newsd1p" + a + "\"" + ">" + data1 + "<span id=" + "\"" + "newsd1p" + a + "s" + "\"" + ">" + data2 + "</span></p>";
+      setnews.insertAdjacentHTML("beforeend", data);
+      console.log("data:" + data);
+    }
+    document.getElementById("loadnews").style.display = "none";
+    console.log("firstwrite FIN");
   }
-  document.getElementById("loadnews").style.display = "none";
-  console.log("firstwrite FIN");
-} 
 }
 function newsd1p1() {
   num = 1;
@@ -1220,12 +1270,36 @@ function c() {
 a = 0;
 count = 0;
 set1 = '';
-function ulogin(){
+function ulogin() {
   location.href = "ulogin.html";
 }
-function allp(){
+function allp() {
   location.href = "all.html";
 }
-function newp(){
+function newp() {
   location.href = "new.html";
+}
+function reload() {
+  location.href = "index.html"
+}
+function error_noti(data){
+  var branch = data[0];
+  if(branch == 1){
+  document.getElementById("errorm").style.display = "block";
+  document.getElementById("errorm").style.opacity = "1";
+  document.getElementById("errorm2").style.display = "none";
+  document.getElementById("errorm2").style.opacity = "0";
+  document.getElementById("errorm").innerHTML = data[1];
+  }else if(branch == 2){
+    document.getElementById("errorm").style.display = "block";
+  document.getElementById("errorm").style.opacity = "1";
+  document.getElementById("errorm2").style.display = "block";
+  document.getElementById("errorm2").style.opacity = "1";
+  document.getElementById("errorm").innerHTML = data[1];
+  }else{
+    document.getElementById("errorm").style.display = "none";
+    document.getElementById("errorm").style.opacity = "0";
+    document.getElementById("errorm2").style.display = "none";
+    document.getElementById("errorm2").style.opacity = "0";
+  }
 }

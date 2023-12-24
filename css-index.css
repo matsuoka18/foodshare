@@ -1052,3 +1052,39 @@ margin-bottom:10vw;
               color:white;
               border:none;
             }
+            .errorm{
+              position:absolute;
+              left:45%;
+              top:0;
+              width:20vw;
+              height:5vh;
+              margin-left:-10vw;
+              padding-left:5vw;
+              font-size:0.75vw;
+              font-weight:600;
+              background-color: rgb(0,0,0,0.1);
+              color: rgb(0,0,0,10);
+              line-height:5vh;
+              text-align:left;
+              z-index:10000;
+              display: none;
+            }
+            .errorm2{
+              position: absolute;
+              left:55%;
+              text-align:center;
+              width:5vw;
+              height:5vh;
+              line-height:5vh;
+              background-color: rgb(0,0,0,0.1);
+              display: none;
+              z-index:20000;
+            }
+            .errorm2:hover{
+              position: absolute;
+              right:0;
+              text-align:center;
+              width:5vw;
+              background-color: rgb(0,0,0,0.2);
+              display: inline-block;
+            }

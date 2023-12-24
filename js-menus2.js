@@ -260,7 +260,7 @@ function start(){
     'duration': 1000
   })
  cd= document.cookie;
- //cd = 'menumemo={"shop163":["0"],"shop169":["0"],"shop175":["0"],"shop181":["0"],"last":["181"]}-; firstdata1={"shopdata":[{"n1":"hhh","n7":"abc","n13":"大船中学校","n19":"ばーーか","n25":"TULLYS COFFEE","n31":"ミニストップ","n37":"大戸屋","n43":"apple","n49":"あいうえお","n55":"goon","n61":"ppp","n67":"q","n73":"w","n79":"qw","n85":"八百屋","n91":"松","n97":"はか","n103":"q","n109":"a","n115":"re","n121":"rte","n127":"a","n133":"a","n139":"a","n145":"a","n151":"おおおお","n157":"カメラ","n163":"セブン","n169":"テスト","n175":"テスト3","n181":"テスト4","n187":"むじ","n193":"にお","n199":"アイパッド","n205":"ステップ","n211":"asd","n217":"goon","n223":"コーヒー","n229":"手広","n235":"kama","n241":"hfsg","n247":"kazuya","n253":"成田","n259":"あｄｇｆ","num":259}]}; datav=0; searchnum=1$; searchname=hhh^; branch=shop|; favoritenuml=0>>!; userid=kazuya-; login_status=yes!';
+ cd = 'menumemo={"shop163":["0"],"shop169":["0"],"shop175":["0"],"shop181":["0"],"last":["181"]}-; firstdata1={"shopdata":[{"n1":"hhh","n7":"abc","n13":"大船中学校","n19":"ばーーか","n25":"TULLYS COFFEE","n31":"ミニストップ","n37":"大戸屋","n43":"apple","n49":"あいうえお","n55":"goon","n61":"ppp","n67":"q","n73":"w","n79":"qw","n85":"八百屋","n91":"松","n97":"はか","n103":"q","n109":"a","n115":"re","n121":"rte","n127":"a","n133":"a","n139":"a","n145":"a","n151":"おおおお","n157":"カメラ","n163":"セブン","n169":"テスト","n175":"テスト3","n181":"テスト4","n187":"むじ","n193":"にお","n199":"アイパッド","n205":"ステップ","n211":"asd","n217":"goon","n223":"コーヒー","n229":"手広","n235":"kama","n241":"hfsg","n247":"kazuya","n253":"成田","n259":"あｄｇｆ","num":259}]}; datav=0; searchnum=1$; searchname=hhh^; branch=shop|; favoritenuml=0>>!; userid=kazuya-; login_status=yes!';
 
  console.log(cd);
       num1 = cd.indexOf("searchnum=");
@@ -298,6 +298,7 @@ function start(){
       sn2 = decodeURI(cd.substring(num3+11,num4));
    document.getElementById("shopname").innerHTML = sn2;
    document.getElementById("shopname2").innerHTML = sn2;  
+   document.getElementById("title").innerHTML = sn2+"ページ";  
       sn = cd.substring(num1+10,num2);
       sn2 = decodeURI(cd.substring(num3+11,num4));
 
