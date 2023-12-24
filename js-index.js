@@ -116,7 +116,7 @@ function start(datav) {
     console.log("userid:" + userid)
     document.getElementById("lcheck").innerHTML = userid;
   }
-  pic();
+  
   firstsearch();
 }
 function shop() {

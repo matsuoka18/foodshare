@@ -13,14 +13,14 @@ cookie7 = cookie.indexOf("shopnumber=");
   cookie6 = cookie.substring(cookie5,cookie7);//pass
   cookie9 = cookie.substring(cookie8,);//shopID
   cookie3 = cookie3-2;
-   /* if(cookie4 && cookie6){
+   if(cookie4 && cookie6){
       dis();
     }else{
       
       alert("ログインしてください");
     location.href="login.html";
-    }*/
-    dis();
+    }
+    //dis();
 }
 function dis(){
   document.getElementById("no").style.display = "none";
