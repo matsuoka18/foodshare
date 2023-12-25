@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>フードロスなくそう</title>
-  <link rel="stylesheet" href="css-index.css">
+  <link rel="stylesheet" href="css-menus22.css"  media="screen and (max-width: 500px)">
+  <link rel="stylesheet" href="css-index2.css"  media="(min-width:501px) and (max-width: 1280px)">
+  <link rel="stylesheet" href="css-index.css"  media="screen and (min-width: 1281px)">
   <link href="style_map.css" rel="stylesheet" type="text/css">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
 </head>
@@ -16,11 +18,15 @@
     <div id="a"></div>
   </div>
   <div class="alll" id="alll">
+    <div class="errorm" id="errorm"></div>
+    <div class="errorm2" id="errorm2" onclick="reload()">↻</div>
+    
+
     <div id="a"></div>
     <div class="section1">
       <div class="head">
         <div class="p">
-          <p onclick="カート()">カート</p>
+          <p onclick="ulogin()" id="lcheck">会員登録｜ログイン</p>
           <ul class="l4">
             <li class="l1"><a class="a1" href="shoped.html">店舗側ページ</a></li>
             <li class="l2"><a class="a2" href="entry.html">店舗登録</a></li>
@@ -30,17 +36,20 @@
 
         </div>
         <div class="searchform">
-          <input type="text" class="search" id="search" placeholder="shopname or menu" value="">
+          <div class="bar" id="bar"></div>
+          <div class="form">
+          <input type="text" class="search" id="search" placeholder="  shopname or menu" value="">
           <button id="s" onclick="searching()"><span id="ss">search</span></button>
-
+        </div>
         </div>
 
       </div>
-      <h1 class="h1">foodshare</h1>
+      <h1 class="h1" onclick="home()">foodshare</h1>
 
     </div>
     <div class="img4">
-      <div class="im1" id="im1"><img id="img2" class="img2"></div>
+      <iframe src="images.html" class="iframe" scrolling="no"></iframe>
+      <!--div class="im1" id="im1"><img id="img2" class="img2"></div>
       <div class="im2" id="im2"><img id="img" class="img"></div>
 
 
@@ -55,6 +64,7 @@
         <div class="f1">
           <p>人気のある商品</p>
         </div>
+        <p class="express">フードロスをなくそうという観点からできたてでない、形が崩れてしまっている、消費期限が近い、など品質はおとるかもしれません。しかし、おいしいことにかわりありません。ぜひこちらの商品をお試しください</p>
         <div class="halfr"></div>
         <div class="fi">
           <div class="fi1"><img src="food.jpeg"></div>
@@ -72,14 +82,14 @@
           <div class="fi2"><img src="food.jpeg"></div>
           <div class="fi3"><img src="food.jpeg"></div>
         </div>
-        <div class="ffmore">もっと見る</div>
+        <div class="ffmore" onclick="newp()">もっと見る</div>
       </div>
       <div class="fff">
         <div class="f3">
           <p>すべての商品</p>
         </div>
         <div class="fi1"><img src="food.jpeg"></div>
-        <div class="fffmore">すべて見る</div>
+        <div class="fffmore" onclick="allp()">すべて見る</div>
       </div>
       <div class="foot">
         <div class="news2">お知らせ</div>
@@ -402,14 +412,126 @@
       </div>
       <div class="genre2">
         <div class="genre3">ジャンルから探す</div>
+           <div class="g1">
+            <div>
+            <p>和食</p>
+            </div>
+            <div class="top">
+              <div class="black"><img src="udon.jpg"></div>
+              <p>うどん</p>
+            </div>
+            <div class="top">
+              <div class="black"><img src="okonomi.jpg"></div>
+              <p>お好み焼き</p>
+            </div>
+            <div class="top">
+              <div class="black"><img src="sushi.jpg"></div>
+              <p>寿司</p>
+            </div>
+            <div class="top">
+              <div class="black"><img src="ramen.jpg"></div>
+              <p>ラーメン</p>
+            </div>
+            <div class="top">
+              <div class="black"><img src="tonkatsu.jpg"></div>
+              <p>とんかつ</p>
+            </div>
+            <div class="top">
+              <div class="black"><img src="katu.jpg"></div>
+              <p>丼</p>
+            </div>
+             <ul>
+               <li>海鮮</li>
+               <li>揚げ物</li>
+               <li>たこ焼き</li>
+               <li>焼き鳥・鳥料理</li>
+               <li>その他</li>
+             </ul>
+           </div>
+        <div class="g1">
+        <div>
+        <p>洋食</p>
+        </div>
+  
+        <div class="top">
+          <div class="black"><img src="hunb.jpg"></div>
+          <p>ハンバーガー</p>
+        </div>
+        <div class="top">
+          <div class="black"><img src="pizza2.jpg"></div>
+          <p>ピザ</p>
+        </div>
+        <div class="top">
+          <div class="black"><img src="pasuta.jpg"></div>
+          <p>パスタ</p>
+        </div>
+        <div class="top">
+          <div class="black"><img src="hunb.jpg"></div>
+          <p>ハンバーグ</p>
+        </div>
+        <div class="top">
+          <div class="black"><img src="steki.jpg"></div>
+          <p>ステーキ</p>
+        </div>
+        <div class="top">
+          <div class="black"><img src="chikin.jpg"></div>
+          <p>フライドチキン</p>
+        </div>
+ 
 
+         <ul>
+           <li>アメリカ料理</li>
+           <li>フレンチ</li>
+           <li>イタリアン</li>
+           <li>スペイン料理</li>
+           <li>その他ヨーロッパ料理</li>
+           <li>その他洋食</li>
+         </ul>
+  
       </div>
+    <div class="g1">
+    <div>
+    <p>その他</p>
+    </div>
+    <div class="top">
+      <div class="black"><img src="china.jpg"></div>
+      <p>中華料理</p>
+    </div>
+    <div class="top">
+      <div class="black"><img src="ajia.jpg"></div>
+      <p>アジア料理</p>
+    </div>
+    <div class="top">
+      <div class="black"><img src="yaki.jpg"></div>
+      <p>焼肉</p>
+    </div>
+    <div class="top">
+      <div class="black"><img src="bread.jpg"></div>
+      <p>パン</p>
+    </div>
+    <div class="top">
+      <div class="black"><img src="suit.jpg"></div>
+      <p>スイーツ</p>
+    </div>
+    <div class="top">
+      <div class="black"><img src="coffee.jpg"></div>
+      <p>飲み物</p>
+    </div>
+     <ul>
+       <li>鍋料理</li>
+       <li>その他</li>
+     </ul>
+   </div>
+   <p class="last">▶ジャンル一覧へ</p>
+</div>
+
       <div class="bottom">
         <div class="botton1"><img src="foodshare2.PNG">FoodShare</div>
         <div class="bottom2">
           <li><a href="index.html">トップページ</a></li>
           <li>商品について</li>
           <li><a href="news.html">お知らせ</a></li>
+          <li><a href="sitemap.html">サイトマップ</a></li>
         </div>
         <p>copy right FoodShar<span onclick="c()">e</span></p>
 
@@ -472,6 +594,8 @@
       </style>
       <script src="a.js"></script>
       <script src="js-index.js"></script>
+      <!--script src="js-index_animation.js"></script-->
+    
 </body>
 
 </html>
