@@ -2393,7 +2393,7 @@ function review0(){
  function favoritesend(data){
 var url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
 var params = {
-  "method":"body",
+  "method":"post",
   "mode":"no-cors",
   "Content-Type":"application/json",
   "body":JSON.stringify(data)
