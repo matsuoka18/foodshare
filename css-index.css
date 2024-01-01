@@ -182,8 +182,8 @@ body {
   }
   
   .popp {
-    width:90vw;
-    margin-left:5vw;
+    width:100vw;
+    
     text-align: center;
     color: #3A1F00;
     font-size: 50px;
@@ -966,6 +966,7 @@ margin-bottom:10vw;
               opacity: 0;
               background-color:darkblue;
             }
+
             .g1{
               position:relative;
               margin-top: 5vw;
@@ -973,7 +974,7 @@ margin-bottom:10vw;
               margin-left:5vw;
               margin-right:5vw;
               width:90vw;
-              height:30vh;
+              height:35vh;
               padding:0;
             }
             .g1 p{

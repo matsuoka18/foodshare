@@ -900,6 +900,7 @@ function firstnews2() {
     })
 
 }
+last_number = 0;
 wcount = 0;
 function firstwrite() {
   wcount++;
@@ -914,10 +915,16 @@ function firstwrite() {
       order = 3;
       firstnewsall();
     }*/
+    console.log("All News Datas:"+newsjson[0]);
+    last_number = parseInt(newsjson[0].news1.length);
+    last_number2 = parseInt(newsjson[0].news3.length);
+    console.log("Last_Number:"+last_number);
+    console.log("Last_Number2:"+last_number2);
     for (var a = 1; a <= 4; a++) {
-      console.log("a:" + a);
-      data1 = newsjson[0].news1[a];
-      data2 = newsjson[0].news2[a];
+      console.log("Now Write:" + a+"/4");
+      var write_number = last_number-a;
+      data1 = newsjson[0].news1[write_number];
+      data2 = newsjson[0].news2[write_number];
       console.log("data1:" + data1);
       console.log("data2:" + data2);
       data = "<p onclick=" + "\"" + "newsd1p" + a + "()" + "\"" + "id=" + "\"" + "newsd1p" + a + "\"" + ">" + data1 + "<span id=" + "\"" + "newsd1p" + a + "s" + "\"" + ">" + data2 + "</span></p>";
@@ -1255,6 +1262,7 @@ function newsd1s() {
 
 function wrnews() {
   console.log(newsjson);
+  wrnumber = last_number-wrnumber-1;
   //data = JSON.parae(newsjson);
   data1 = newsjson[0].news1[wrnumber];
   data2 = newsjson[0].news2[wrnumber];
