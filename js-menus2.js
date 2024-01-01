@@ -298,6 +298,7 @@ function start(){
       sn2 = decodeURI(cd.substring(num3+11,num4));
    document.getElementById("shopname").innerHTML = sn2;
    document.getElementById("shopname2").innerHTML = sn2;  
+   document.getElementById("title").innerHTML = sn2+"ページ";  
       sn = cd.substring(num1+10,num2);
       sn2 = decodeURI(cd.substring(num3+11,num4));
 
@@ -1592,7 +1593,7 @@ data = [{
   "shopname":sn2,
   "menuname":menu_name,
   "n_number":n1,
-  "message":"register"
+  "branch":"register"
 }];
 console.log("Menu_name:"+menu_name+",registerd");
 favoritesend(data);
@@ -1607,7 +1608,7 @@ console.log("menu_name:"+menu_name);
       "shopname":sn2,
       "menuname":menu_name,
       "n_number":n1,
-      "message":"delete"
+      "branch":"delete"
     }];
     console.log("Menu_name:"+menu_name+",deleted");
     favoritesend(data);
@@ -1654,7 +1655,7 @@ data = [{
   "shopname":sn2,
   "menuname":menu_name,
   "n_number":n2,
-  "message":"register"
+  "branch":"register"
 }];
 console.log("Menu_name:"+menu_name+",registerd");
 favoritesend(data);
@@ -1669,7 +1670,7 @@ console.log("menu_name:"+menu_name);
       "shopname":sn2,
       "menuname":menu_name,
       "n_number":n2,
-      "message":"delete"
+      "branch":"delete"
     }];
     console.log("Menu_name:"+menu_name+",deleted");
     favoritesend(data);
@@ -1716,7 +1717,7 @@ data = [{
   "shopname":sn2,
   "menuname":menu_name,
   "n_number":n3,
-  "message":"register"
+  "branch":"register"
 }];
 console.log("Menu_name:"+menu_name+",registerd");
 favoritesend(data);
@@ -1731,7 +1732,7 @@ console.log("menu_name:"+menu_name);
       "shopname":sn2,
       "menuname":menu_name,
       "n_number":n3,
-      "message":"delete"
+      "branch":"delete"
     }];
     console.log("Menu_name:"+menu_name+",deleted");
     favoritesend(data);
@@ -1778,7 +1779,7 @@ data = [{
   "shopname":sn2,
   "menuname":menu_name,
   "n_number":n4,
-  "message":"register"
+  "branch":"register"
 }];
 console.log("Menu_name:"+menu_name+",registerd");
 favoritesend(data);
@@ -1793,7 +1794,7 @@ console.log("menu_name:"+menu_name);
       "shopname":sn2,
       "menuname":menu_name,
       "n_number":n4,
-      "message":"delete"
+      "branch":"delete"
     }];
     console.log("Menu_name:"+menu_name+",deleted");
     favoritesend(data);
@@ -1840,7 +1841,7 @@ data = [{
   "shopname":sn2,
   "menuname":menu_name,
   "n_number":n5,
-  "message":"register"
+  "branch":"register"
 }];
 console.log("Menu_name:"+menu_name+",registerd");
 favoritesend(data);
@@ -1855,7 +1856,7 @@ nc5 = 0;
     "shopname":sn2,
     "menuname":menu_name,
     "n_number":n5,
-    "message":"delete"
+    "branch":"delete"
   }];
   console.log("Menu_name:"+menu_name+",deleted");
   favoritesend(data);
@@ -1902,7 +1903,7 @@ data = [{
   "shopname":sn2,
   "menuname":menu_name,
   "n_number":n6,
-  "message":"register"
+  "branch":"register"
 }];
 console.log("Menu_name:"+menu_name+",registerd");
 favoritesend(data);
@@ -1917,7 +1918,7 @@ console.log("menu_name:"+menu_name);
       "shopname":sn2,
       "menuname":menu_name,
       "n_number":n6,
-      "message":"delete"
+      "branch":"delete"
     }];
     console.log("Menu_name:"+menu_name+",deleted");
     favoritesend(data);
@@ -1964,7 +1965,7 @@ data = [{
   "shopname":sn2,
   "menuname":menu_name,
   "n_number":n7,
-  "message":"register"
+  "branch":"register"
 }];
 console.log("Menu_name:"+menu_name+",registerd");
 favoritesend(data);
@@ -1979,7 +1980,7 @@ console.log("menu_name:"+menu_name);
       "shopname":sn2,
       "menuname":menu_name,
       "n_number":n7,
-      "message":"delete"
+      "branch":"delete"
     }];
     console.log("Menu_name:"+menu_name+",deleted");
     favoritesend(data);
@@ -2026,7 +2027,7 @@ data = [{
   "shopname":sn2,
   "menuname":menu_name,
   "n_number":n8,
-  "message":"register"
+  "branch":"register"
 }];
 console.log("Menu_name:"+menu_name+",registerd");
 favoritesend(data);
@@ -2041,7 +2042,7 @@ console.log("menu_name:"+menu_name);
     "shopname":sn2,
     "menuname":menu_name,
     "n_number":n8,
-    "message":"delete"
+    "branch":"delete"
   }];
   console.log("Menu_name:"+menu_name+",deleted");
   favoritesend(data);
@@ -2088,7 +2089,7 @@ data = [{
   "shopname":sn2,
   "menuname":menu_name,
   "n_number":n9,
-  "message":"register"
+  "branch":"register"
 }];
 console.log("Menu_name:"+menu_name+",registerd");
 favoritesend(data);
@@ -2103,7 +2104,7 @@ console.log("menu_name:"+menu_name);
       "shopname":sn2,
       "menuname":menu_name,
       "n_number":n9,
-      "message":"delete"
+      "branch":"delete"
     }];
     console.log("Menu_name:"+menu_name+",deleted");
     favoritesend(data);
@@ -2150,7 +2151,7 @@ data = [{
   "shopname":sn2,
   "menuname":menu_name,
   "n_number":n10,
-  "message":"register"
+  "branch":"register"
 }];
 console.log("Menu_name:"+menu_name+",registerd");
 favoritesend(data);
@@ -2165,7 +2166,7 @@ console.log("menu_name:"+menu_name);
       "shopname":sn2,
       "menuname":menu_name,
       "n_number":n10,
-      "message":"delete"
+      "branch":"delete"
     }];
     console.log("Menu_name:"+menu_name+",deleted");
     favoritesend(data);
@@ -2388,3 +2389,15 @@ function review0(){
                     document.getElementById("h4").innerHTML = fee;
                     getreview();
                     }
+
+ function favoritesend(data){
+var url = "https://script.google.com/macros/s/AKfycbwBH_VrPaXcJg8HOXfoWHJY8f0Ir3935fqlJlURpyAkd8IdEQ/exec";
+var params = {
+  "method":"post",
+  "mode":"no-cors",
+  "Content-Type":"application/json",
+  "body":JSON.stringify(data)
+}
+fetch(url,params);
+console.log("Favorite Send");
+ }
