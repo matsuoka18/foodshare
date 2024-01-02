@@ -317,6 +317,7 @@ function start(){
 var data = [{
 "name4":"店舗商品取得",
   "name5":sn,
+  "userid":userid,
 "branch":"menudata"
 }]
 var params={
@@ -572,7 +573,15 @@ $("#bar").animate({
 }, {
   'duration': 500
 })
+favo_info();
 }
+function favo_info(){
+  var shopname = jsondata[0].shopname;
+  var menuname = jsondata[0].menudata;
+  var menununber = jsondata[0].menunumber;
+  //それぞれの変数からデータ取得して、id名を作成し、get elementに代入
+  
+  }
 messagep = '';
 function plus(){
 //毎回cookieを呼び出してお気に入りが消えないように[商品番号をcookieに]
