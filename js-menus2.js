@@ -576,11 +576,32 @@ $("#bar").animate({
 favo_info();
 }
 function favo_info(){
-  var shopname = jsondata[0].shopname;
-  var menuname = jsondata[0].menudata;
-  var menununber = jsondata[0].menunumber;
+  var shopname = jsondata.getmenudata[0].shopname;
+  var menuname = jsondata.getmenudata[0].menudata;
+  var menununber = jsondata.getmenudata[0].menunumber;
+  var menuname2 = jaondata.getmenudata[0].mname;
   //それぞれの変数からデータ取得して、id名を作成し、get elementに代入
-  
+  var last = shopname.length;
+  var last2 = menuname.length;
+  var last3 = menunumber.length;
+  var data1 =[];
+  var data2 =[];
+  if(last == last2 == last3){
+    console.log("favo_info length OK");
+    
+      for(var a= 0; a<last; a++){
+        console.log(a+"/"+last+"終了");
+        var data3 = shopname[a];
+        if(shopname == sn2){
+          data1.push(menuname[a]);
+          data2.push(menunumber[a];
+          }
+        }
+      //今のページが何個から何個までなのかを取得してmenununberがその範囲内なら書き込みという形にする
+      
+    }else{
+      console.log("favo_info length Error");
+      }
   }
 messagep = '';
 function plus(){
