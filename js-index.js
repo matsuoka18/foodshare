@@ -1,6 +1,8 @@
 
 //asyncを使用している関数すべてが読み込みと同時になんか実行されてしまっているからそこの修正を行う必要がある　8月31日
 
+const { Action } = require("selenium-webdriver/lib/input");
+
 
 
 a = 0;
@@ -1310,4 +1312,8 @@ function error_noti(data){
     document.getElementById("errorm2").style.display = "none";
     document.getElementById("errorm2").style.opacity = "0";
   }
+}
+document.getElementById("top11").addEventListener('click',ac);
+function ac(){
+  alert()
 }
