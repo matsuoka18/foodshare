@@ -1,7 +1,7 @@
 
 //asyncを使用している関数すべてが読み込みと同時になんか実行されてしまっているからそこの修正を行う必要がある　8月31日
 
-const { Action } = require("selenium-webdriver/lib/input");
+//const { Action } = require("selenium-webdriver/lib/input");
 
 
 
